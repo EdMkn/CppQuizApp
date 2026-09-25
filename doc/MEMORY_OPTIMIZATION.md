@@ -15,10 +15,10 @@
 ### 2. **Using ADB Commands** (Command Line)
 ```bash
 # Get memory info for your app
-adb shell dumpsys meminfo com.javaguiz.app
+adb shell dumpsys meminfo com.cppquiz.app
 
 # Monitor memory in real-time
-adb shell dumpsys meminfo com.javaguiz.app | grep -E "TOTAL|Java Heap|Native Heap"
+adb shell dumpsys meminfo com.cppquiz.app | grep -E "TOTAL|Java Heap|Native Heap"
 ```
 
 ### 3. **On-Device Testing**

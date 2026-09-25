@@ -1,10 +1,10 @@
-# Java Quiz App - Android Application
+# C++ Quiz App - Android Application
 
-A modern Android quiz application focused on Java 17-21 features. Perfect for learning Android development if you're coming from web development!
+A modern Android quiz application focused on C++ language fundamentals and modern C++11-23 features. Perfect for learning Android development if you're coming from web development!
 
 ## 🎯 Features
 
-- **100+ Questions**: Comprehensive questions about Java 17, 18, 19, 20, and 21 features
+- **60+ Questions**: Comprehensive questions about core C++ concepts plus C++11, 14, 17, 20, and 23 features
 - **Intuitive UI**: Clean, Material Design interface
 - **Interactive Quiz**: Multiple choice questions with instant feedback
 - **Score Tracking**: See your results at the end of each quiz
@@ -17,7 +17,7 @@ For web developers, here's how Android projects map to web concepts:
 ```
 app/
 ├── src/main/
-│   ├── java/com/javaguiz/app/     # Your "backend" logic (like controllers/services)
+│   ├── java/com/cppquiz/app/     # Your "backend" logic (like controllers/services)
 │   │   ├── MainActivity.kt        # Welcome screen (like a landing page)
 │   │   ├── QuizActivity.kt       # Quiz screen (like a component/page)
 │   │   ├── ResultsActivity.kt    # Results screen
@@ -123,6 +123,8 @@ The app follows a simple, intuitive architecture:
 
 This is similar to MVC/MVP patterns in web development.
 
+> **Note:** this app is itself written in Kotlin and built on the JVM (Android's runtime) — the "JDK 17+" prerequisite below is a build-tool requirement, unrelated to the C++ quiz content.
+
 ## 🐳 Docker & Distribution
 
 ### Building with Docker
@@ -131,10 +133,10 @@ This project includes Docker support for consistent builds:
 
 ```bash
 # Build the Docker image
-docker build -t javaguiz-app .
+docker build -t cppquiz-app .
 
 # Build the APK inside the container
-docker run --rm -v $(pwd):/app -w /app javaguiz-app ./gradlew assembleDebug
+docker run --rm -v $(pwd):/app -w /app cppquiz-app ./gradlew assembleDebug
 ```
 
 **Why Docker?**
@@ -179,7 +181,7 @@ docker run --rm -v $(pwd):/app -w /app javaguiz-app ./gradlew assembleDebug
 
 ### ✅ Completed Features
 - [x] User preferences (dark mode, question count)
-- [x] Categories by Java version
+- [x] Categories by C++ version
 - [x] Database for questions (Room)
 - [x] Multi-version selection for quizzes
 

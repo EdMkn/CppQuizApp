@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.javaguiz.app"
+    namespace = "com.cppquiz.app"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.javaguiz.app"
+        applicationId = "com.cppquiz.app"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

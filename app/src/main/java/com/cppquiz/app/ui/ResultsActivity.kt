@@ -1,4 +1,4 @@
-package com.javaguiz.app.ui
+package com.cppquiz.app.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,9 +6,9 @@ import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
-import com.javaguiz.app.R
-import com.javaguiz.app.ui.QuizActivity
-import com.javaguiz.app.ui.MainActivity
+import com.cppquiz.app.R
+import com.cppquiz.app.ui.QuizActivity
+import com.cppquiz.app.ui.MainActivity
 /**
  * Results Activity - Shows quiz results
  * Similar to a results/summary page in web development

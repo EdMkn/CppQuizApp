@@ -44,7 +44,7 @@ jobs:
           context: .
           push: false
           load: true
-          tags: javaguiz-app:latest
+          tags: cppquiz-app:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: |
@@ -57,7 +57,7 @@ jobs:
             -v gradle-cache:/root/.gradle/caches \
             -v gradle-wrapper:/root/.gradle/wrapper \
             -w /app \
-            javaguiz-app:latest \
+            cppquiz-app:latest \
             ./gradlew assembleDebug --no-daemon
       
       - name: Upload APK artifact

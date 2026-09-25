@@ -1,4 +1,4 @@
-package com.javaguiz.app.ui
+package com.cppquiz.app.ui
 
 import android.content.Context
 import android.content.Intent
@@ -13,12 +13,12 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.google.android.material.button.MaterialButton
-import com.javaguiz.app.util.PreferencesManager
-import com.javaguiz.app.data.Question
-import com.javaguiz.app.data.QuestionRepository
-import com.javaguiz.app.ui.ResultsActivity
-import com.javaguiz.app.QuizApplication
-import com.javaguiz.app.R
+import com.cppquiz.app.util.PreferencesManager
+import com.cppquiz.app.data.Question
+import com.cppquiz.app.data.QuestionRepository
+import com.cppquiz.app.ui.ResultsActivity
+import com.cppquiz.app.QuizApplication
+import com.cppquiz.app.R
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.flow.first

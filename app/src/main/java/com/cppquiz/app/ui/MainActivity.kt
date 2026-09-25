@@ -1,14 +1,14 @@
-package com.javaguiz.app.ui
+package com.cppquiz.app.ui
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import com.google.android.material.button.MaterialButton
-import com.javaguiz.app.util.PreferencesManager
-import com.javaguiz.app.R
-import com.javaguiz.app.ui.SettingsActivity
-import com.javaguiz.app.ui.CategorySelectionActivity
+import com.cppquiz.app.util.PreferencesManager
+import com.cppquiz.app.R
+import com.cppquiz.app.ui.SettingsActivity
+import com.cppquiz.app.ui.CategorySelectionActivity
 // Welcome screen - first thing users see
 class MainActivity : AppCompatActivity() {
 

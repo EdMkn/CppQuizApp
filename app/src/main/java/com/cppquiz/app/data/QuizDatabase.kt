@@ -1,4 +1,4 @@
-package com.javaguiz.app.data
+package com.cppquiz.app.data
 
 import android.content.Context
 import androidx.room.Database

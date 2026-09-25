@@ -1,4 +1,4 @@
-package com.javaguiz.app.util
+package com.cppquiz.app.util
 
 import android.content.Context
 import android.content.SharedPreferences

@@ -37,14 +37,14 @@ Docker is **NOT useful** for:
 export DOCKER_BUILDKIT=1
 
 # Build the Docker image (with layer caching)
-docker build -t javaguiz-app .
+docker build -t cppquiz-app .
 
 # Build APK with Gradle cache mounted (faster subsequent builds)
 docker run --rm \
   -v $(pwd):/app \
   -v gradle-cache:/root/.gradle/caches \
   -v gradle-wrapper:/root/.gradle/wrapper \
-  javaguiz-app ./gradlew assembleDebug --no-daemon
+  cppquiz-app ./gradlew assembleDebug --no-daemon
 
 # The APK will be in: app/build/outputs/apk/debug/app-debug.apk
 ```
@@ -53,10 +53,10 @@ docker run --rm \
 
 ```bash
 # Build the Docker image
-docker build -t javaguiz-app .
+docker build -t cppquiz-app .
 
 # Build the APK inside the container
-docker run --rm -v $(pwd):/app -w /app javaguiz-app ./gradlew assembleDebug
+docker run --rm -v $(pwd):/app -w /app cppquiz-app ./gradlew assembleDebug
 
 # The APK will be in: app/build/outputs/apk/debug/app-debug.apk
 ```
@@ -65,8 +65,8 @@ docker run --rm -v $(pwd):/app -w /app javaguiz-app ./gradlew assembleDebug
 
 ```bash
 # Pull and run
-docker pull your-registry/javaguiz-app:latest
-docker run --rm -v $(pwd):/app -w /app your-registry/javaguiz-app ./gradlew assembleDebug
+docker pull your-registry/cppquiz-app:latest
+docker run --rm -v $(pwd):/app -w /app your-registry/cppquiz-app ./gradlew assembleDebug
 ```
 
 ## 🔄 Automated Distribution Workflows
@@ -166,30 +166,30 @@ For production releases, you need to sign your APK:
 export DOCKER_BUILDKIT=1
 
 # Build image (with layer caching)
-docker build -t javaguiz-app .
+docker build -t cppquiz-app .
 
 # Build APK (debug) with Gradle cache
 docker run --rm \
   -v $(pwd):/app \
   -v gradle-cache:/root/.gradle/caches \
   -v gradle-wrapper:/root/.gradle/wrapper \
-  javaguiz-app ./gradlew assembleDebug --no-daemon
+  cppquiz-app ./gradlew assembleDebug --no-daemon
 
 # Build APK (release) with Gradle cache
 docker run --rm \
   -v $(pwd):/app \
   -v gradle-cache:/root/.gradle/caches \
   -v gradle-wrapper:/root/.gradle/wrapper \
-  javaguiz-app ./gradlew assembleRelease --no-daemon
+  cppquiz-app ./gradlew assembleRelease --no-daemon
 
 # Run tests with cache
 docker run --rm \
   -v $(pwd):/app \
   -v gradle-cache:/root/.gradle/caches \
-  javaguiz-app ./gradlew test --no-daemon
+  cppquiz-app ./gradlew test --no-daemon
 
 # Clean build
-docker run --rm -v $(pwd):/app javaguiz-app ./gradlew clean
+docker run --rm -v $(pwd):/app cppquiz-app ./gradlew clean
 ```
 
 ## 💾 Caching Strategy
@@ -236,8 +236,8 @@ The Dockerfile uses **multi-layer caching** for optimal performance:
 
 2. **For Docker builds:**
    ```bash
-   docker build -t javaguiz-app .
-   docker run --rm -v $(pwd):/app -w /app javaguiz-app ./gradlew assembleDebug
+   docker build -t cppquiz-app .
+   docker run --rm -v $(pwd):/app -w /app cppquiz-app ./gradlew assembleDebug
    ```
 
 3. **For automated releases:**

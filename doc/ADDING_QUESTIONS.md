@@ -2,70 +2,66 @@
 
 ## 📊 Current Status
 
-You currently have **65 questions**:
-- Core Java: 47 questions
-- Java 17: 4 questions
-- Java 18: 2 questions
-- Java 19: 4 questions
-- Java 20: 2 questions
-- Java 21: 3 questions
-- Java 8: 3 questions
+You currently have **61 questions**:
+- Core Concepts: 25 questions
+- Language Features: 20 questions
+- Collections: 8 questions
+- Advanced: 7 questions
+- Concurrency: 1 question
 
-**Target:** Add 200+ more questions (total ~265+)
+By C++ version:
+- Core (version-agnostic fundamentals): 37 questions
+- C++11: 10 questions
+- C++14: 3 questions
+- C++17: 5 questions
+- C++20: 4 questions
+- C++23: 2 questions
+
+**Target:** Add 100+ more questions (total ~160+)
 
 ---
 
-## 🎯 Best Resources for Java 17-21 Questions
+## 🎯 Best Resources for C++ Questions
 
-### 1. **Official Oracle Documentation** ⭐ (Most Reliable)
-- **Java 17 Release Notes**: https://www.oracle.com/java/technologies/javase/17-relnotes.html
-- **Java 18 Release Notes**: https://www.oracle.com/java/technologies/javase/18-relnotes.html
-- **Java 19 Release Notes**: https://www.oracle.com/java/technologies/javase/19-relnotes.html
-- **Java 20 Release Notes**: https://www.oracle.com/java/technologies/javase/20-relnotes.html
-- **Java 21 Release Notes**: https://www.oracle.com/java/technologies/javase/21-relnotes.html
-- **JEPs (Java Enhancement Proposals)**: https://openjdk.org/jeps/
+### 1. **cppreference.com** ⭐ (Most Reliable)
+- **Language reference**: https://en.cppreference.com/w/cpp/language
+- **Standard Library reference**: https://en.cppreference.com/w/cpp/header
+- **Compiler support tables** (which version added what): https://en.cppreference.com/w/cpp/compiler_support
 
-**Why:** Official, accurate, comprehensive. Best for understanding new features.
+**Why:** Community-maintained but extremely accurate, comprehensive, and precise about which standard version introduced each feature.
 
-### 2. **Baeldung** ⭐ (Excellent Tutorials)
-- **Java 17 Guide**: https://www.baeldung.com/java-17-new-features
-- **Java 18 Guide**: https://www.baeldung.com/java-18-new-features
-- **Java 19 Guide**: https://www.baeldung.com/java-19-new-features
-- **Java 20 Guide**: https://www.baeldung.com/java-20-new-features
-- **Java 21 Guide**: https://www.baeldung.com/java-21-new-features
+### 2. **isocpp.org / WG21 Papers** ⭐ (Most Authoritative)
+- **ISO C++ website**: https://isocpp.org/
+- **WG21 papers (proposals for each standard)**: https://www.open-std.org/jtc1/sc22/wg21/docs/papers/
+- **C++ FAQ**: https://isocpp.org/faq
 
-**Why:** Well-structured, code examples, beginner-friendly.
+**Why:** Straight from the standards committee. Best for understanding *why* a feature was added and its exact rationale.
 
-### 3. **JavaWorld / InfoWorld**
-- Articles on new Java features
-- Real-world examples
-- Good for practical scenarios
+### 3. **Learncpp.com** ⭐ (Excellent Tutorials)
+- https://www.learncpp.com/
 
-### 4. **GitHub - OpenJDK Project**
-- **Project Loom** (Virtual Threads): https://github.com/openjdk/loom
-- **Project Amber** (Pattern Matching, Records): https://github.com/openjdk/amber
-- **Project Valhalla** (Value Types): https://github.com/openjdk/valhalla
+**Why:** Well-structured, beginner-friendly, thorough coverage of core language fundamentals (pointers, references, OOP, templates).
 
-**Why:** Source code, examples, technical deep-dives.
+### 4. **C++ Core Guidelines**
+- https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
 
-### 5. **Stack Overflow**
-- Search: "Java 17 new features"
-- Search: "Java 21 questions"
-- Real developer questions and answers
+**Why:** Great source for "best practice" style questions (RAII, resource management, modern idioms vs. old C-style patterns).
+
+### 5. **Compiler Explorer (godbolt.org)**
+- https://godbolt.org/
+
+**Why:** Verify that a code example actually compiles and behaves as expected on a given standard version before writing a question about it.
+
+### 6. **Stack Overflow**
+- Search: "C++17 new features"
+- Search: "C++20 concepts explained"
 
 **Why:** Practical scenarios, edge cases, common misunderstandings.
 
-### 6. **YouTube Channels**
-- **Java**: Official Oracle channel
-- **Amigoscode**: Java tutorials
-- **Java Brains**: Feature explanations
-
-**Why:** Visual explanations, code walkthroughs.
-
 ### 7. **Books**
-- "Modern Java in Action" by Raoul-Gabriel Urma
-- "Java: The Complete Reference" (latest edition)
-- "Effective Java" by Joshua Bloch (updated editions)
+- "The C++ Programming Language" by Bjarne Stroustrup
+- "Effective Modern C++" by Scott Meyers
+- "C++ Primer" by Lippman, Lajoie, Moo
 
 ---
 
@@ -77,27 +73,27 @@ You currently have **65 questions**:
 - ✅ Generating question structure and format
 - ✅ Creating plausible multiple-choice options
 - ✅ Writing clear explanations
-- ✅ Understanding Java syntax and concepts
+- ✅ Understanding C++ syntax and concepts
 - ✅ Formatting JSON correctly
 
 **What I Struggle With:**
-- ❌ **Version-specific details** - I might confuse which feature came in which version
-- ❌ **Edge cases** - Subtle behavior differences
-- ❌ **Recent changes** - My training data might not include latest Java 21 details
-- ❌ **Technical precision** - API method names, exact syntax
+- ❌ **Version-specific details** - I might confuse which feature came in which standard (e.g. C++20 vs C++23)
+- ❌ **Edge cases** - Subtle behavior differences (e.g. exact rules around implicit conversions, overload resolution)
+- ❌ **Recent changes** - My training data might not include the latest C++23/26 details or defect reports
+- ❌ **Technical precision** - Exact standard library signatures, header names, undefined-behavior nuances
 
 ### **Risk Areas:**
 1. **Version Attribution** (30% error risk)
-   - Example: I might say a feature is in Java 19 when it's actually Java 20
-   - **Solution:** Always verify against official docs
+   - Example: I might say a feature is in C++17 when it's actually C++20
+   - **Solution:** Always verify against cppreference.com's compiler support tables
 
 2. **API Details** (20% error risk)
-   - Method names, parameter types, return values
-   - **Solution:** Check Javadoc or official docs
+   - Header names, function signatures, return types
+   - **Solution:** Check cppreference.com
 
-3. **Behavioral Nuances** (15% error risk)
-   - How features interact, edge cases
-   - **Solution:** Test code examples
+3. **Behavioral Nuances / Undefined Behavior** (15% error risk)
+   - How features interact, edge cases, UB
+   - **Solution:** Test code examples on godbolt.org
 
 ### **Recommended Approach:**
 
@@ -108,10 +104,10 @@ You currently have **65 questions**:
 4. **You correct** any mistakes
 
 #### Option 2: **I Generate, You Verify**
-1. I generate 200+ questions
+1. I generate a batch of questions
 2. You review and verify each one
 3. You correct version numbers, API details
-4. You test edge cases
+4. You test edge cases on godbolt.org
 
 #### Option 3: **You Write, I Format**
 1. You write questions from official sources
@@ -122,54 +118,46 @@ You currently have **65 questions**:
 
 ## 📝 Question Generation Strategy
 
-### Focus Areas for 200+ Questions:
+### Focus Areas for 100+ More Questions:
 
-#### Java 17 (Target: 50+ questions)
-- Sealed Classes & Interfaces
-- Pattern Matching for instanceof
-- Records
-- Text Blocks
-- Switch Expressions
-- Helpful NullPointerExceptions
-- Foreign Function & Memory API (Preview)
-- Vector API (Preview)
+#### Core C++ (Target: 20+ more)
+- Templates (function templates, class templates, specialization)
+- Exception handling (try/catch, exception hierarchies, noexcept)
+- The preprocessor (#define, macros, include guards vs #pragma once)
+- Casts (static_cast, dynamic_cast, const_cast, reinterpret_cast)
+- Undefined behavior and common pitfalls
 
-#### Java 18 (Target: 30+ questions)
-- Simple Web Server (jwebserver)
-- UTF-8 by Default
-- Code Snippets in JavaDoc
-- Reimplement Core Reflection with Method Handles
-- Internet-Address Resolution SPI
+#### C++11 (Target: 15+ more)
+- std::thread and the memory model
+- std::function and std::bind
+- Delegating and inherited constructors
+- Uniform initialization / initializer lists
+- decltype
 
-#### Java 19 (Target: 30+ questions)
-- Virtual Threads (Project Loom)
-- Pattern Matching for switch (Third Preview)
-- Record Patterns (Preview)
-- Foreign Function & Memory API (Second Preview)
-- Structured Concurrency (Preview)
+#### C++14 (Target: 10+ more)
+- Variable templates
+- std::exchange
+- [[deprecated]] attribute (technically C++14)
 
-#### Java 20 (Target: 30+ questions)
-- Scoped Values (Preview)
-- Record Patterns (Second Preview)
-- Pattern Matching for switch (Fourth Preview)
-- Foreign Function & Memory API (Third Preview)
-- Virtual Threads (Second Preview)
+#### C++17 (Target: 15+ more)
+- std::filesystem
+- Parallel algorithms (execution policies)
+- Guaranteed copy elision
+- Nested namespace definitions (namespace A::B { ... })
+- constexpr if in more depth
 
-#### Java 21 (Target: 50+ questions)
-- Virtual Threads (Final)
-- Record Patterns (Final)
-- Pattern Matching for switch (Final)
-- Sequenced Collections
-- String Templates (Preview)
-- Unnamed Patterns and Variables (Preview)
-- Generational ZGC
+#### C++20 (Target: 20+ more)
+- Modules (import/export)
+- std::span
+- Designated initializers
+- consteval and constinit
+- std::jthread
 
-#### Core Java (Target: 20+ more)
-- Collections Framework
-- Streams API
-- Lambda Expressions
-- Optional
-- Concurrency (CompletableFuture, etc.)
+#### C++23 (Target: 10+ more)
+- std::print / std::println
+- Multidimensional subscript operator (operator[](args...))
+- std::stacktrace
+- if consteval
 
 ---
 
@@ -181,7 +169,7 @@ Edit `app/src/main/assets/questions.json`:
 
 ```json
 {
-  "id": 66,
+  "id": 62,
   "questionText": "Your question here?",
   "options": [
     "Option 1",
@@ -191,22 +179,24 @@ Edit `app/src/main/assets/questions.json`:
   ],
   "correctAnswerIndex": 0,
   "explanation": "Detailed explanation here.",
-  "languageVersion": "17"
+  "languageVersion": "17",
+  "category": "Language Features"
 }
 ```
 
-**Important:** 
+**Important:**
 - IDs must be unique and sequential
 - `correctAnswerIndex` is 0-based (0, 1, 2, or 3)
-- `languageVersion` should be "17", "18", "19", "20", "21", "8", or "Core"
+- `languageVersion` should be "11", "14", "17", "20", "23", or "Core"
+- `category` should be one of: "Core Concepts", "Language Features", "Collections", "Advanced", "Concurrency", "APIs", or "General" — these match the fixed filter buttons in `CategorySelectionActivity.kt`; using any other string means the question is reachable only via "All Questions"
 
 ### Method 2: Add to QuestionBank.kt
 
-Edit `app/src/main/java/com/javaguiz/app/data/QuestionBank.kt`:
+Edit `app/src/main/java/com/cppquiz/app/data/QuestionBank.kt`:
 
 ```kotlin
 Question(
-    id = 66,
+    id = 62,
     questionText = "Your question here?",
     options = listOf(
         "Option 1",
@@ -216,11 +206,12 @@ Question(
     ),
     correctAnswerIndex = 0,
     explanation = "Detailed explanation here.",
-    languageVersion = "17"
+    languageVersion = "17",
+    category = "Language Features"
 ),
 ```
 
-**Note:** The app loads from JSON first, then falls back to QuestionBank.
+**Note:** The app loads from `questions.json` first, then falls back to `QuestionBank.kt` if the JSON fails to load or parse. Keep both in sync if you want the fallback path to have the same content.
 
 ---
 
@@ -228,12 +219,13 @@ Question(
 
 Before adding a question, verify:
 
-- [ ] **Version is correct** - Feature actually exists in that Java version
-- [ ] **API names are accurate** - Check Javadoc
-- [ ] **Explanation is correct** - Test with code if possible
-- [ ] **Options are plausible** - Wrong answers should be believable
-- [ ] **No typos** - Especially in code examples
+- [ ] **Version is correct** - Feature actually exists in that C++ standard (check cppreference.com's compiler support page)
+- [ ] **API/syntax is accurate** - Check cppreference.com, don't rely on memory
+- [ ] **Explanation is correct** - Test with a real compiler (e.g. godbolt.org) if possible
+- [ ] **Options are plausible** - Wrong answers should be believable, ideally common misconceptions
+- [ ] **No typos** - Especially in code examples (C++ syntax is unforgiving)
 - [ ] **Format is valid JSON** - Use a JSON validator
+- [ ] **Category matches an existing filter** - see the list in Method 1 above
 
 ---
 
@@ -241,25 +233,25 @@ Before adding a question, verify:
 
 If you want me to generate questions, I recommend:
 
-1. **Start with 50 questions** (one batch)
+1. **Start with 20-30 questions** (one batch)
 2. **You review and verify** them
 3. **I correct any mistakes** you find
-4. **Repeat** until we have 200+
+4. **Repeat** until we have 160+
 
 This iterative approach ensures quality.
 
 ### What I Need From You:
 
-**Option A:** Just say "generate 50 Java 17 questions" and I'll create them
+**Option A:** Just say "generate 20 C++20 questions" and I'll create them
 - You'll need to verify version numbers and technical details
 
 **Option B:** Provide specific topics, e.g.:
-- "Generate 20 questions about Records in Java 17"
-- "Generate 15 questions about Virtual Threads in Java 19"
+- "Generate 10 questions about concepts in C++20"
+- "Generate 10 questions about move semantics in C++11"
 - I'll be more accurate with specific topics
 
 **Option C:** Provide source material:
-- "Generate questions from this Baeldung article: [URL]"
+- "Generate questions from this cppreference page: [URL]"
 - I'll extract key points and create questions
 
 ---
@@ -268,26 +260,27 @@ This iterative approach ensures quality.
 
 ```json
 {
-  "id": 66,
-  "questionText": "What is the main advantage of using a record instead of a regular class for data transfer objects?",
+  "id": 62,
+  "questionText": "What is the main advantage of std::unique_ptr over a raw owning pointer?",
   "options": [
-    "Records support inheritance",
-    "Records automatically generate equals(), hashCode(), and toString() methods",
-    "Records can have mutable fields",
-    "Records are faster than classes"
+    "It supports shared ownership across multiple objects",
+    "It automatically deletes the owned object when it goes out of scope, preventing leaks",
+    "It is faster than any raw pointer at runtime",
+    "It can be implicitly converted to any other pointer type"
   ],
   "correctAnswerIndex": 1,
-  "explanation": "Records automatically generate several boilerplate methods including equals(), hashCode(), and toString(), reducing the amount of code you need to write for simple data carriers. This is one of the main benefits of using records.",
-  "languageVersion": "17"
+  "explanation": "std::unique_ptr applies RAII to heap ownership: when it goes out of scope, its destructor automatically deletes the object it owns, eliminating a whole class of manual delete-related bugs and leaks.",
+  "languageVersion": "11",
+  "category": "Advanced"
 }
 ```
 
 **Why this is good:**
 - ✅ Clear, specific question
 - ✅ Correct answer is accurate
-- ✅ Wrong answers are plausible
+- ✅ Wrong answers are plausible (shared ownership is std::shared_ptr, not unique_ptr)
 - ✅ Explanation is helpful
-- ✅ Version is correct (Records finalized in Java 17)
+- ✅ Version is correct (unique_ptr was introduced in C++11)
 
 ---
 
@@ -299,36 +292,34 @@ This iterative approach ensures quality.
    - [ ] Hybrid approach
 
 2. **Start small:**
-   - Generate 50 questions first
+   - Generate 20-30 questions first
    - Review and correct
    - Establish quality baseline
 
 3. **Scale up:**
    - Once quality is confirmed, generate in batches
-   - Focus on one Java version at a time
+   - Focus on one C++ standard (or one category) at a time
 
 4. **Final review:**
-   - Verify all version numbers
-   - Test any code examples
+   - Verify all version numbers against cppreference.com
+   - Test any code examples on godbolt.org
    - Check for duplicates
 
 ---
 
 ## 💡 Pro Tips
 
-1. **Use official JEPs** - Most accurate source for version info
-2. **Test code examples** - Run them to verify correctness
-3. **Check multiple sources** - Cross-reference for accuracy
-4. **Focus on practical scenarios** - Real-world usage is more valuable
-5. **Include edge cases** - Makes questions more challenging
+1. **Use cppreference.com's compiler support tables** - Most accurate source for "which version added this"
+2. **Test code examples on godbolt.org** - Confirm behavior before writing the explanation
+3. **Check multiple sources** - Cross-reference for accuracy, especially around undefined behavior
+4. **Focus on practical scenarios** - Real-world usage (RAII, smart pointers, STL) is more valuable than trivia
+5. **Include edge cases** - Makes questions more challenging (e.g. move-from state, iterator invalidation)
 
 ---
 
 **Ready to start?** Tell me:
-- How many questions you want initially (recommend 50)
-- Which Java version to focus on first
+- How many questions you want initially (recommend 20-30)
+- Which C++ standard to focus on first
 - Any specific topics/features you want covered
 
 I'll generate them, and you can verify against official sources!
-
-

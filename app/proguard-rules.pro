@@ -64,4 +64,4 @@
 }
 
 # Keep BuildConfig
--keep class com.javaguiz.app.BuildConfig { *; }
+-keep class com.cppquiz.app.BuildConfig { *; }

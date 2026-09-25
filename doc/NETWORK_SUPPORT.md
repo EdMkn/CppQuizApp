@@ -80,12 +80,12 @@ Update `app/src/main/AndroidManifest.xml`:
 
 ### Step 3: Create API Response Models
 
-Create `app/src/main/java/com/javaguiz/app/data/network/ApiResponse.kt`:
+Create `app/src/main/java/com/cppquiz/app/data/network/ApiResponse.kt`:
 
 ```kotlin
-package com.javaguiz.app.data.network
+package com.cppquiz.app.data.network
 
-import com.javaguiz.app.data.Question
+import com.cppquiz.app.data.Question
 
 /**
  * Response model from the API
@@ -110,10 +110,10 @@ data class ApiError(
 
 ### Step 4: Create Retrofit API Service
 
-Create `app/src/main/java/com/javaguiz/app/data/network/QuestionApiService.kt`:
+Create `app/src/main/java/com/cppquiz/app/data/network/QuestionApiService.kt`:
 
 ```kotlin
-package com.javaguiz.app.data.network
+package com.cppquiz.app.data.network
 
 import retrofit2.Response
 import retrofit2.http.GET
@@ -131,7 +131,7 @@ interface QuestionApiService {
     suspend fun getAllQuestions(): Response<QuestionsApiResponse>
     
     /**
-     * Get questions by Java version
+     * Get questions by C++ version
      */
     @GET("questions")
     suspend fun getQuestionsByVersion(
@@ -166,10 +166,10 @@ data class QuestionMetadata(
 
 ### Step 5: Create Network Module
 
-Create `app/src/main/java/com/javaguiz/app/data/network/NetworkModule.kt`:
+Create `app/src/main/java/com/cppquiz/app/data/network/NetworkModule.kt`:
 
 ```kotlin
-package com.javaguiz.app.data.network
+package com.cppquiz.app.data.network
 
 import android.content.Context
 import android.net.ConnectivityManager
@@ -254,8 +254,8 @@ object NetworkModule {
 **Note:** You'll need to add `BuildConfig` import or create a simple config:
 
 ```kotlin
-// Create app/src/main/java/com/javaguiz/app/BuildConfig.kt
-package com.javaguiz.app
+// Create app/src/main/java/com/cppquiz/app/BuildConfig.kt
+package com.cppquiz.app
 
 object BuildConfig {
     const val DEBUG = true // Or use actual BuildConfig.DEBUG
@@ -264,14 +264,14 @@ object BuildConfig {
 
 ### Step 6: Create Network Repository
 
-Create `app/src/main/java/com/javaguiz/app/data/network/QuestionNetworkRepository.kt`:
+Create `app/src/main/java/com/cppquiz/app/data/network/QuestionNetworkRepository.kt`:
 
 ```kotlin
-package com.javaguiz.app.data.network
+package com.cppquiz.app.data.network
 
 import android.content.Context
 import android.util.Log
-import com.javaguiz.app.data.Question
+import com.cppquiz.app.data.Question
 import retrofit2.HttpException
 import java.io.IOException
 
@@ -320,7 +320,7 @@ class QuestionNetworkRepository(context: Context) {
     }
     
     /**
-     * Fetch questions by Java version
+     * Fetch questions by C++ version
      */
     suspend fun fetchQuestionsByVersion(version: String): Result<List<Question>> {
         return try {
@@ -401,15 +401,15 @@ class NetworkException(message: String, cause: Throwable? = null) : Exception(me
 
 ### Step 7: Update QuestionRepository
 
-Update `app/src/main/java/com/javaguiz/app/data/QuestionRepository.kt`:
+Update `app/src/main/java/com/cppquiz/app/data/QuestionRepository.kt`:
 
 ```kotlin
-package com.javaguiz.app.data
+package com.cppquiz.app.data
 
 import android.content.Context
 import android.util.Log
-import com.javaguiz.app.data.network.QuestionNetworkRepository
-import com.javaguiz.app.data.network.NetworkException
+import com.cppquiz.app.data.network.QuestionNetworkRepository
+import com.cppquiz.app.data.network.NetworkException
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
@@ -531,14 +531,14 @@ fun setAutoSyncEnabled(enabled: Boolean) {
 
 ### Step 9: Create Sync Service/Manager
 
-Create `app/src/main/java/com/javaguiz/app/data/SyncManager.kt`:
+Create `app/src/main/java/com/cppquiz/app/data/SyncManager.kt`:
 
 ```kotlin
-package com.javaguiz.app.data
+package com.cppquiz.app.data
 
 import android.content.Context
 import android.util.Log
-import com.javaguiz.app.util.PreferencesManager
+import com.cppquiz.app.util.PreferencesManager
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -620,10 +620,10 @@ sealed class SyncResult {
 
 ### Step 10: Add Sync UI
 
-Create `app/src/main/java/com/javaguiz/app/ui/SyncActivity.kt`:
+Create `app/src/main/java/com/cppquiz/app/ui/SyncActivity.kt`:
 
 ```kotlin
-package com.javaguiz.app.ui
+package com.cppquiz.app.ui
 
 import android.os.Bundle
 import android.view.View
@@ -632,10 +632,10 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.javaguiz.app.R
-import com.javaguiz.app.data.SyncManager
-import com.javaguiz.app.data.SyncResult
-import com.javaguiz.app.util.PreferencesManager
+import com.cppquiz.app.R
+import com.cppquiz.app.data.SyncManager
+import com.cppquiz.app.data.SyncResult
+import com.cppquiz.app.util.PreferencesManager
 import kotlinx.coroutines.launch
 
 class SyncActivity : AppCompatActivity() {
@@ -844,7 +844,7 @@ app.get('/questions', (req, res) => {
     
     let filtered = questions;
     if (version && version !== 'All') {
-        filtered = questions.filter(q => q.javaVersion === version);
+        filtered = questions.filter(q => q.languageVersion === version);
     }
     
     res.json({
@@ -859,7 +859,7 @@ app.get('/questions', (req, res) => {
 app.get('/questions/metadata', (req, res) => {
     res.json({
         totalQuestions: questions.length,
-        availableVersions: [...new Set(questions.map(q => q.javaVersion))],
+        availableVersions: [...new Set(questions.map(q => q.languageVersion))],
         lastUpdated: Date.now(),
         apiVersion: '1.0'
     });

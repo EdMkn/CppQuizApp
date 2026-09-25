@@ -11,8 +11,8 @@ export COMPOSE_DOCKER_CLI_BUILD=1
 # Build the Docker image with cache
 echo "Building Docker image with cache..."
 if ! docker build \
-  --tag javaguiz-app:latest \
-  --cache-from javaguiz-app:latest \
+  --tag cppquiz-app:latest \
+  --cache-from cppquiz-app:latest \
   .; then
   echo "❌ Docker image build failed!"
   exit 1
@@ -25,7 +25,7 @@ if ! docker run --rm \
   -v gradle-cache:/root/.gradle/caches \
   -v gradle-wrapper:/root/.gradle/wrapper \
   -w /app \
-  javaguiz-app:latest \
+  cppquiz-app:latest \
   ./gradlew assembleDebug --no-daemon; then
   echo "❌ APK build failed!"
   exit 1

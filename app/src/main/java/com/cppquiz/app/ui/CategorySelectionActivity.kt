@@ -1,4 +1,4 @@
-package com.javaguiz.app.ui
+package com.cppquiz.app.ui
 
 import android.content.Intent
 import android.graphics.Color
@@ -16,9 +16,9 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.button.MaterialButton
-import com.javaguiz.app.data.QuestionRepository
-import com.javaguiz.app.QuizApplication
-import com.javaguiz.app.R
+import com.cppquiz.app.data.QuestionRepository
+import com.cppquiz.app.QuizApplication
+import com.cppquiz.app.R
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 

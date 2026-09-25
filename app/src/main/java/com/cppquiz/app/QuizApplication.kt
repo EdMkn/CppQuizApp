@@ -1,11 +1,11 @@
-package com.javaguiz.app
+package com.cppquiz.app
 
 import android.app.Application
 import android.util.Log
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.javaguiz.app.data.Question
-import com.javaguiz.app.data.QuestionRepository
+import com.cppquiz.app.data.Question
+import com.cppquiz.app.data.QuestionRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -31,7 +31,7 @@ class QuizApplication : Application() {
                 Log.e("QuizApplication", "Error loading questions from JSON", e)
                 // Fallback: try to load from QuestionBank if JSON fails
                 try {
-                    val fallbackQuestions = com.javaguiz.app.data.QuestionBank.getAllQuestions()
+                    val fallbackQuestions = com.cppquiz.app.data.QuestionBank.getAllQuestions()
                     questionRepository.initializeDatabase(fallbackQuestions)
                     Log.d("QuizApplication", "Loaded ${fallbackQuestions.size} questions from QuestionBank (fallback)")
                 } catch (fallbackError: Exception) {

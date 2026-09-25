@@ -2,9 +2,9 @@
 # Quick memory test script for Android app
 # Usage: ./test_memory.sh
 
-PACKAGE_NAME="com.javaguiz.app"
+PACKAGE_NAME="com.cppquiz.app"
 
-echo "=== Memory Test for Java Quiz App ==="
+echo "=== Memory Test for C++ Quiz App ==="
 echo ""
 echo "Package: $PACKAGE_NAME"
 echo ""

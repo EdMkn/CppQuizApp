@@ -1,4 +1,4 @@
-package com.javaguiz.app.ui
+package com.cppquiz.app.ui
 
 import android.os.Bundle
 import android.os.Handler
@@ -9,8 +9,8 @@ import androidx.preference.Preference
 import androidx.preference.ListPreference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
-import com.javaguiz.app.util.PreferencesManager
-import com.javaguiz.app.R
+import com.cppquiz.app.util.PreferencesManager
+import com.cppquiz.app.R
 
 class SettingsActivity : AppCompatActivity() {
 

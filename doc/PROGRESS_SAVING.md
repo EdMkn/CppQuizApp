@@ -48,10 +48,10 @@ Progress saving allows users to:
 
 ### Step 1: Create Progress Data Class
 
-Create a new file: `app/src/main/java/com/javaguiz/app/data/QuizProgress.kt`
+Create a new file: `app/src/main/java/com/cppquiz/app/data/QuizProgress.kt`
 
 ```kotlin
-package com.javaguiz.app.data
+package com.cppquiz.app.data
 
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -64,7 +64,7 @@ data class QuizProgress(
     val currentQuestionIndex: Int,     // Current position (0-based)
     val score: Int,                     // Current score
     val selectedAnswers: List<Int?>,    // Answers selected so far (null = not answered)
-    val languageVersion: String?,           // Selected Java version filter (null = all)
+    val languageVersion: String?,           // Selected C++ version filter (null = all)
     val timestamp: Long                 // When quiz was started
 ) {
     companion object {
@@ -371,10 +371,10 @@ For a more robust solution with quiz history, create these additional files:
 
 ### Step 1: Create QuizSession Entity
 
-`app/src/main/java/com/javaguiz/app/data/QuizSession.kt`
+`app/src/main/java/com/cppquiz/app/data/QuizSession.kt`
 
 ```kotlin
-package com.javaguiz.app.data
+package com.cppquiz.app.data
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

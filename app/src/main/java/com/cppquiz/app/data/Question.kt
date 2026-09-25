@@ -1,4 +1,4 @@
-package com.javaguiz.app.data
+package com.cppquiz.app.data
 
 /**
  * Data class representing a quiz question

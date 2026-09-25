@@ -17,7 +17,7 @@
 ## 📱 What You'll See
 
 1. **Welcome Screen**: Tap "Start Quiz"
-2. **Quiz Screen**: Answer 10 questions about Java 17-21
+2. **Quiz Screen**: Answer 10 questions about modern C++
 3. **Results Screen**: See your score and restart
 
 ## 🎯 Key Files to Explore
@@ -31,7 +31,7 @@
 
 - Questions are randomized each time
 - Currently shows 10 questions (change in `QuizActivity.kt` line 40)
-- All questions are about Java 17-21 features
+- All questions are about C++ fundamentals and C++11-23 features
 - Explanations appear after each answer
 
 ## 🐛 Common Issues
