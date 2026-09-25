@@ -60,8 +60,8 @@ class QuestionRepository(context: Context) {
     /**
      * Get a random subset of questions filtered by Java version
      */
-    suspend fun getRandomQuestionsByVersion(count: Int, javaVersion: String?): List<Question> {
-        val allQuestions = getQuestionsByVersion(javaVersion).first()
+    suspend fun getRandomQuestionsByVersion(count: Int, languageVersion: String?): List<Question> {
+        val allQuestions = getQuestionsByVersion(languageVersion).first()
         return allQuestions.shuffled().take(count)
     }
     
@@ -154,8 +154,8 @@ class QuestionRepository(context: Context) {
     /**
      * Get a random subset of questions filtered by version and category
      */
-    suspend fun getRandomQuestionsByVersionAndCategory(count: Int, javaVersion: String?, category: String?): List<Question> {
-        val allQuestions = getQuestionsByVersionAndCategory(javaVersion, category).first()
+    suspend fun getRandomQuestionsByVersionAndCategory(count: Int, languageVersion: String?, category: String?): List<Question> {
+        val allQuestions = getQuestionsByVersionAndCategory(languageVersion, category).first()
         return allQuestions.shuffled().take(count)
     }
     

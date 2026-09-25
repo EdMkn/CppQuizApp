@@ -10,7 +10,7 @@ data class Question(
     val options: List<String>, // List of answer options
     val correctAnswerIndex: Int, // Index of the correct answer (0-based)
     val explanation: String, // Explanation shown after answering
-    val javaVersion: String, // Java version this question relates to (17, 18, 19, 20, 21)
+    val languageVersion: String, // Language version this question relates to (17, 18, 19, 20, 21)
     val category: String = "General" // Category of the question (e.g., "Language Features", "Concurrency", "Collections", etc.)
 )
 

@@ -16,7 +16,7 @@ data class QuestionEntity(
     val options: List<String>, // Will be converted to JSON string
     val correctAnswerIndex: Int,
     val explanation: String,
-    val javaVersion: String,
+    val languageVersion: String,
     val category: String = "General"
 ) {
     /**
@@ -29,7 +29,7 @@ data class QuestionEntity(
             options = options,
             correctAnswerIndex = correctAnswerIndex,
             explanation = explanation,
-            javaVersion = javaVersion,
+            languageVersion = languageVersion,
             category = category
         )
     }
@@ -45,7 +45,7 @@ data class QuestionEntity(
                 options = question.options,
                 correctAnswerIndex = question.correctAnswerIndex,
                 explanation = question.explanation,
-                javaVersion = question.javaVersion,
+                languageVersion = question.languageVersion,
                 category = question.category
             )
         }

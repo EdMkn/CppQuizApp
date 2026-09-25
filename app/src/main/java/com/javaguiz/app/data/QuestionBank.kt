@@ -3,939 +3,952 @@ package com.javaguiz.app.data
 /**
  * Repository class containing all quiz questions
  * Think of this as your data source (like a database or API in web dev)
+ *
+ * Note: the `languageVersion` field is reused here to hold the C++ standard
+ * ("Core", "11", "14", "17", "20", "23").
  */
 object QuestionBank {
-    
+
     fun getAllQuestions(): List<Question> {
         return listOf(
-            // Java 17 Questions
+            // ===================== Core Concepts =====================
             Question(
                 id = 1,
-                questionText = "What is a sealed class in Java 17?",
+                questionText = "What is C++?",
                 options = listOf(
-                    "A class that cannot be instantiated",
-                    "A class that restricts which classes can extend it",
-                    "A class that is automatically serializable",
-                    "A class that can only be used in interfaces"
+                    "A purely functional programming language",
+                    "A general-purpose, compiled language that extends C with object-oriented and generic programming features",
+                    "A scripting language that runs inside a browser",
+                    "A markup language for describing documents"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Sealed classes (and interfaces) restrict which other classes or interfaces may extend or implement them. This is a preview feature in Java 15 and became a standard feature in Java 17.",
-                javaVersion = "17"
+                explanation = "C++ is a general-purpose programming language created as an extension of C, adding object-oriented, generic, and (later) functional features while keeping low-level memory control and high performance.",
+                languageVersion = "Core",
+                category = "Core Concepts"
             ),
             Question(
                 id = 2,
-                questionText = "Which feature was finalized in Java 17?",
+                questionText = "What is the main difference between C and C++?",
                 options = listOf(
-                    "Pattern matching for switch",
-                    "Records",
-                    "Text blocks",
-                    "All of the above"
+                    "C++ is interpreted while C is compiled",
+                    "C++ adds object-oriented programming, templates, and the STL on top of C's procedural model",
+                    "C and C++ are the same language with different file extensions",
+                    "C++ cannot call C libraries"
                 ),
-                correctAnswerIndex = 3,
-                explanation = "Java 17 (LTS) finalized several features including Records, Pattern matching for switch, and Text blocks that were previously in preview.",
-                javaVersion = "17"
+                correctAnswerIndex = 1,
+                explanation = "C++ was designed as 'C with Classes'. It keeps C's low-level capabilities but adds classes, inheritance, templates, exceptions, and the Standard Template Library.",
+                languageVersion = "Core",
+                category = "Core Concepts"
             ),
             Question(
                 id = 3,
-                questionText = "What is the purpose of a record in Java 17?",
+                questionText = "What is a pointer in C++?",
                 options = listOf(
-                    "To store database records",
-                    "To create immutable data carriers with less boilerplate",
-                    "To record method calls",
-                    "To create audio recordings"
+                    "A variable that stores a fixed value",
+                    "A variable that stores the memory address of another variable",
+                    "A type of array",
+                    "A function that returns void"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Records are a special kind of class in Java that are designed to be transparent carriers for immutable data. They automatically generate constructors, getters, equals(), hashCode(), and toString().",
-                javaVersion = "17"
+                explanation = "A pointer holds the memory address of another variable. It is declared using the * symbol, e.g. int* ptr, and can be dereferenced with * to access the value it points to.",
+                languageVersion = "Core",
+                category = "Core Concepts"
             ),
-            
-            // Java 18 Questions
             Question(
                 id = 4,
-                questionText = "What is the Simple Web Server introduced in Java 18?",
+                questionText = "What is a reference in C++?",
                 options = listOf(
-                    "A full-featured web server like Tomcat",
-                    "A minimal HTTP server for prototyping and testing",
-                    "A web server for production use",
-                    "A replacement for Apache HTTP Server"
+                    "A pointer that can be reassigned freely",
+                    "An alias for an existing variable that must be initialized when declared and cannot be null",
+                    "A copy of a variable's value",
+                    "A keyword used only in templates"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Java 18 introduced jwebserver, a simple command-line tool to start a minimal web server that serves static files. It's intended for prototyping, testing, and ad-hoc coding.",
-                javaVersion = "18"
+                explanation = "A reference (declared with &) is an alias for an existing object. Unlike a pointer, it must be bound to a valid object at declaration and cannot later refer to a different object or be null.",
+                languageVersion = "Core",
+                category = "Core Concepts"
             ),
             Question(
                 id = 5,
-                questionText = "What does UTF-8 by default mean in Java 18?",
+                questionText = "What is a key difference between a pointer and a reference?",
                 options = listOf(
-                    "All strings are UTF-8 encoded",
-                    "The default charset for the standard Java APIs is UTF-8",
-                    "Files are automatically saved as UTF-8",
-                    "Network protocols use UTF-8"
+                    "References can be reseated to point elsewhere; pointers cannot",
+                    "Pointers can be null and reassigned; references must be initialized and always refer to the same object",
+                    "There is no difference, they are interchangeable in every context",
+                    "References use more memory than pointers"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Java 18 changed the default charset for the standard Java APIs from the platform default to UTF-8, ensuring consistent behavior across different platforms.",
-                javaVersion = "18"
+                explanation = "Pointers can be null, reassigned, and support pointer arithmetic. References must be bound at initialization, cannot be null, and cannot be made to refer to a different object afterward.",
+                languageVersion = "Core",
+                category = "Core Concepts"
             ),
-            
-            // Java 19 Questions
             Question(
                 id = 6,
-                questionText = "What are Virtual Threads (Project Loom) in Java 19?",
+                questionText = "What does the const keyword do in C++?",
                 options = listOf(
-                    "Threads that run in virtual machines",
-                    "Lightweight threads managed by the JVM",
-                    "Threads that can only run virtual methods",
-                    "Threads for virtual reality applications"
+                    "It marks a variable as thread-local",
+                    "It indicates that a variable, parameter, or method promises not to modify the value it applies to",
+                    "It makes a variable global",
+                    "It allocates memory on the heap"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Virtual threads are lightweight threads that are scheduled by the Java virtual machine rather than the operating system. They dramatically reduce the effort of writing, maintaining, and observing high-throughput concurrent applications.",
-                javaVersion = "19"
+                explanation = "const declares that a value cannot be modified after initialization. Applied to a member function (e.g. void foo() const), it promises the method will not modify the object's state.",
+                languageVersion = "Core",
+                category = "Core Concepts"
             ),
             Question(
                 id = 7,
-                questionText = "What is Pattern Matching for switch expressions in Java 19?",
+                questionText = "What does the static keyword mean when applied to a class member in C++?",
                 options = listOf(
-                    "Using regex patterns in switch",
-                    "Matching patterns and extracting components in switch statements",
-                    "Switching between design patterns",
-                    "Pattern matching for file paths"
+                    "The member can only be used once",
+                    "The member belongs to the class itself rather than to any single instance, and is shared across all instances",
+                    "The member is automatically const",
+                    "The member is stored on the stack instead of the heap"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Pattern matching for switch allows you to match patterns and extract components from objects directly in switch expressions and statements, making code more concise and readable.",
-                javaVersion = "19"
+                explanation = "A static member belongs to the class rather than to individual objects. There is exactly one copy shared by all instances, and it can be accessed without creating an object.",
+                languageVersion = "Core",
+                category = "Core Concepts"
             ),
-            
-            // Java 20 Questions
             Question(
                 id = 8,
-                questionText = "What is Scoped Values in Java 20?",
+                questionText = "What is the purpose of a header file (.h / .hpp) in C++?",
                 options = listOf(
-                    "Values scoped to a method",
-                    "Immutable data that can be shared within and across threads",
-                    "Values with limited visibility",
-                    "Database scoped values"
+                    "It contains compiled machine code",
+                    "It declares interfaces (classes, functions, constants) so multiple source files can share them via #include",
+                    "It stores runtime configuration",
+                    "It replaces the need for a compiler"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Scoped Values (preview) enable the sharing of immutable data within and across threads. They are preferred to thread-local variables, especially when using virtual threads.",
-                javaVersion = "20"
+                explanation = "Header files contain declarations (function prototypes, class definitions, constants) that are shared between translation units using #include, separating interface from implementation.",
+                languageVersion = "Core",
+                category = "Core Concepts"
             ),
             Question(
                 id = 9,
-                questionText = "What does Record Patterns allow in Java 20?",
+                questionText = "What are the main stages of building a C++ program?",
                 options = listOf(
-                    "Pattern matching on record components",
-                    "Recording method patterns",
-                    "Patterns for database records",
-                    "Recording design patterns"
+                    "Writing and running only",
+                    "Preprocessing, compilation, assembly, and linking",
+                    "Interpretation and garbage collection",
+                    "Bytecode generation and JIT compilation"
                 ),
-                correctAnswerIndex = 0,
-                explanation = "Record Patterns (preview) extend pattern matching to deconstruct record values, allowing you to match patterns and extract components from records directly.",
-                javaVersion = "20"
+                correctAnswerIndex = 1,
+                explanation = "A C++ build pipeline preprocesses source (handling #include/#define), compiles it to assembly, assembles it to object code, then links object files and libraries into an executable.",
+                languageVersion = "Core",
+                category = "Core Concepts"
             ),
-            
-            // Java 21 Questions
             Question(
                 id = 10,
-                questionText = "What is the main feature of Java 21 (LTS)?",
+                questionText = "What is the standard signature of the main function in C++?",
                 options = listOf(
-                    "Virtual threads are finalized",
-                    "Pattern matching is finalized",
-                    "Sequenced Collections are introduced",
-                    "All of the above"
+                    "void main()",
+                    "int main() or int main(int argc, char* argv[])",
+                    "public static void main(String[] args)",
+                    "def main():"
                 ),
-                correctAnswerIndex = 3,
-                explanation = "Java 21 is an LTS release that finalizes Virtual Threads, Pattern Matching for switch, and introduces Sequenced Collections, among other features.",
-                javaVersion = "21"
+                correctAnswerIndex = 1,
+                explanation = "The C++ standard requires main to return an int, either taking no parameters or taking argc/argv for command-line arguments. Returning 0 conventionally signals success.",
+                languageVersion = "Core",
+                category = "Core Concepts"
             ),
             Question(
                 id = 11,
-                questionText = "What are Sequenced Collections in Java 21?",
+                questionText = "What is the difference between struct and class in C++?",
                 options = listOf(
-                    "Collections that can only store sequences",
-                    "New interfaces for collections with a defined encounter order",
-                    "Collections for DNA sequences",
-                    "Collections that sequence operations"
+                    "struct cannot have member functions",
+                    "The only difference is the default access level: public for struct, private for class",
+                    "class cannot be used with templates",
+                    "struct is only for C compatibility and has no other use"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Sequenced Collections introduce new interfaces (SequencedSet, SequencedCollection, SequencedMap) that define collections with a well-defined encounter order, supporting operations at both ends.",
-                javaVersion = "21"
+                explanation = "In C++, struct and class are almost identical; the only difference is default member and inheritance access, which is public for struct and private for class.",
+                languageVersion = "Core",
+                category = "Core Concepts"
             ),
             Question(
                 id = 12,
-                questionText = "What does String Templates (Preview) allow in Java 21?",
+                questionText = "What is function overloading in C++?",
                 options = listOf(
-                    "Templating strings with placeholders",
-                    "String interpolation with embedded expressions",
-                    "Creating string templates from files",
-                    "Template method pattern for strings"
+                    "Calling a function too many times",
+                    "Defining multiple functions with the same name but different parameter lists",
+                    "Overriding a virtual function in a derived class",
+                    "Using too many arguments in a single function"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "String Templates (preview) enable string interpolation by embedding expressions in template strings, making it easier to create strings that include computed values.",
-                javaVersion = "21"
+                explanation = "Function overloading allows multiple functions to share a name as long as their parameter lists differ in number or type, letting the compiler pick the right one at compile time.",
+                languageVersion = "Core",
+                category = "Core Concepts"
             ),
-            
-            // More Java 17-21 Questions
             Question(
                 id = 13,
-                questionText = "What is the instanceof pattern matching introduced in Java 17?",
+                questionText = "What is a namespace in C++?",
                 options = listOf(
-                    "Using instanceof with type casting",
-                    "Combining instanceof checks with variable binding",
-                    "Pattern matching for instance variables",
-                    "Matching instance methods"
+                    "A block of memory reserved at runtime",
+                    "A declarative region that provides a scope to group identifiers and avoid naming collisions",
+                    "A type of template",
+                    "A synonym for a header file"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Pattern matching for instanceof allows you to combine type checking and variable binding in a single expression, eliminating the need for explicit casting after instanceof checks.",
-                javaVersion = "17"
+                explanation = "A namespace (e.g. namespace std { ... }) groups related identifiers under a named scope, preventing name clashes between libraries or modules.",
+                languageVersion = "Core",
+                category = "Core Concepts"
             ),
             Question(
                 id = 14,
-                questionText = "What is the Foreign Function & Memory API in Java 19?",
+                questionText = "What are default parameters in C++?",
                 options = listOf(
-                    "API for foreign key constraints",
-                    "API for calling native code and managing off-heap memory",
-                    "API for foreign exchange rates",
-                    "API for internationalization"
+                    "Parameters that are always ignored",
+                    "Function parameters that are given a default value used when the caller omits an argument",
+                    "Parameters that must be pointers",
+                    "Parameters automatically generated by the compiler for every function"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "The Foreign Function & Memory API (preview) enables Java programs to interoperate with code and data outside of the Java runtime, allowing calls to native libraries and management of native memory.",
-                javaVersion = "19"
+                explanation = "A default parameter (e.g. void greet(std::string name = \"World\")) supplies a value used automatically when the caller does not provide one, reducing the need for overloads.",
+                languageVersion = "Core",
+                category = "Core Concepts"
             ),
             Question(
                 id = 15,
-                questionText = "What does Structured Concurrency (Preview) provide in Java 19?",
+                questionText = "What is the this pointer in C++?",
                 options = listOf(
-                    "Structured programming for concurrency",
-                    "A structured approach to managing multiple tasks running in different threads",
-                    "Concurrency with data structures",
-                    "Structured error handling for threads"
+                    "A pointer to the parent class",
+                    "An implicit pointer available in non-static member functions that points to the object the method was called on",
+                    "A pointer to the first element of an array",
+                    "A global pointer to the main function"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Structured Concurrency (preview) provides a structured approach to managing multiple tasks running in different threads, treating groups of related tasks as a single unit of work.",
-                javaVersion = "19"
+                explanation = "Inside a non-static member function, this is an implicit pointer to the calling object, used to access its members or to distinguish them from same-named parameters.",
+                languageVersion = "Core",
+                category = "Core Concepts"
             ),
-            
-            // Basics and Syntax
+
+            // ===================== OOP =====================
             Question(
                 id = 16,
-                questionText = "What is Java?",
+                questionText = "What is Object-Oriented Programming in the context of C++?",
                 options = listOf(
-                    "A low-level programming language",
-                    "A high-level, object-oriented programming language designed to run on any platform",
-                    "A database management system",
-                    "A web browser"
+                    "Programming that only uses objects, never functions",
+                    "A paradigm organizing code into classes and objects that bundle data with the operations on that data",
+                    "A style unique to Java that C++ merely imitates",
+                    "A programming style with no data types"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Java is a high-level, class-based, object-oriented programming language designed to have as few implementation dependencies as possible. It follows the 'write once, run anywhere' (WORA) principle.",
-                javaVersion = "Core"
+                explanation = "C++ supports OOP by letting you define classes that bundle data (member variables) with behavior (member functions), enabling encapsulation, inheritance, and polymorphism.",
+                languageVersion = "Core",
+                category = "Core Concepts"
             ),
             Question(
                 id = 17,
-                questionText = "Explain the JDK, JRE, and JVM.",
+                questionText = "What are the four main pillars of OOP in C++?",
                 options = listOf(
-                    "They are all the same thing",
-                    "JDK contains JRE, JRE contains JVM. JDK is for development, JRE is for running applications, JVM executes bytecode",
-                    "JVM is the largest, containing both JDK and JRE",
-                    "They are unrelated components"
+                    "Compilation, Linking, Loading, Execution",
+                    "Encapsulation, Abstraction, Inheritance, Polymorphism",
+                    "Public, Private, Protected, Static",
+                    "Stack, Heap, Global, Local"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "JVM (Java Virtual Machine) executes Java bytecode. JRE (Java Runtime Environment) contains JVM plus libraries needed to run Java applications. JDK (Java Development Kit) contains JRE plus development tools like compiler and debugger.",
-                javaVersion = "Core"
+                explanation = "Encapsulation hides internal state, abstraction exposes only essential details, inheritance lets classes derive from others, and polymorphism lets one interface work with multiple types.",
+                languageVersion = "Core",
+                category = "Core Concepts"
             ),
             Question(
                 id = 18,
-                questionText = "What are variables in Java?",
+                questionText = "What is inheritance in C++?",
                 options = listOf(
-                    "Methods that store data",
-                    "Containers for storing data values with a specific type",
-                    "Classes that hold multiple values",
-                    "Functions that return values"
+                    "Copying a class's code manually into another file",
+                    "A mechanism where a derived class acquires members and behavior from a base class",
+                    "A way to import a library",
+                    "A feature only available for structs, not classes"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Variables are containers for storing data values. In Java, each variable must be declared with a data type that designates the type and quantity of value it can hold. Java is statically typed.",
-                javaVersion = "Core"
+                explanation = "Inheritance lets a derived class reuse and extend the members of a base class, expressed with class Derived : public Base { ... } for public inheritance.",
+                languageVersion = "Core",
+                category = "Core Concepts"
             ),
             Question(
                 id = 19,
-                questionText = "What is typecasting in Java?",
+                questionText = "What is polymorphism in C++?",
                 options = listOf(
-                    "Converting a variable from one type to another",
-                    "Creating new types",
-                    "Type checking at runtime",
-                    "Type erasure"
+                    "Having several variables with the same name",
+                    "The ability to call the correct derived-class implementation of a function through a base-class pointer or reference",
+                    "Defining a class with multiple constructors",
+                    "Using multiple namespaces in one file"
                 ),
-                correctAnswerIndex = 0,
-                explanation = "Typecasting is the process of converting a variable from one type to another. Widening casting (implicit) converts smaller to larger types automatically. Narrowing casting (explicit) requires explicit conversion from larger to smaller types.",
-                javaVersion = "Core"
+                correctAnswerIndex = 1,
+                explanation = "Runtime polymorphism in C++ lets code that holds a base-class pointer or reference invoke the actual derived-class implementation of a virtual function, chosen at runtime.",
+                languageVersion = "Core",
+                category = "Core Concepts"
             ),
             Question(
                 id = 20,
-                questionText = "How do you declare an array in Java?",
+                questionText = "What is a virtual function in C++?",
                 options = listOf(
-                    "array int[] = new int[10]",
-                    "int[] myArray = new int[10]",
-                    "int myArray = array[10]",
-                    "new array int[10]"
+                    "A function that exists only during debugging",
+                    "A member function declared in a base class that can be overridden in derived classes and is resolved at runtime via dynamic dispatch",
+                    "A function that cannot be called directly",
+                    "A function that runs on a separate thread"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "An array is declared using: type[] arrayName = new type[size]. For example: int[] myIntArray = new int[10] declares an array of integers with 10 elements.",
-                javaVersion = "Core"
+                explanation = "Declaring a base-class method virtual enables dynamic dispatch: calling it through a base pointer/reference invokes the most-derived override, using the object's vtable at runtime.",
+                languageVersion = "Core",
+                category = "Core Concepts"
             ),
             Question(
                 id = 21,
-                questionText = "What is the signature of the main method in Java?",
+                questionText = "What is a pure virtual function and how does it create an abstract class?",
                 options = listOf(
-                    "public void main(String[] args)",
-                    "public static void main(String[] args)",
-                    "static void main(String args)",
-                    "public static main(String[] args)"
+                    "A virtual function with an empty body that behaves like any normal function",
+                    "A virtual function declared with = 0, which has no implementation in that class and forces any concrete derived class to override it, making the class abstract",
+                    "A function that can only be called from main()",
+                    "A static function that cannot be inherited"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "The main method is the entry point for any Java program. It must be public (accessible), static (can be called without creating an object), void (returns nothing), and accept a String array as parameter.",
-                javaVersion = "Core"
+                explanation = "Declaring virtual void foo() = 0; makes foo a pure virtual function. A class with at least one pure virtual function becomes abstract and cannot be instantiated directly.",
+                languageVersion = "Core",
+                category = "Core Concepts"
             ),
             Question(
                 id = 22,
-                questionText = "What are literals in Java?",
+                questionText = "What is operator overloading in C++?",
                 options = listOf(
-                    "Variables that cannot be changed",
-                    "Fixed values assigned to variables, like 100, 'A', or \"Hello\"",
-                    "Methods that return constant values",
-                    "Classes that represent constants"
+                    "Using too many operators in one expression",
+                    "Defining custom behavior for operators (like +, ==, <<) when applied to user-defined types",
+                    "A compiler error caused by ambiguous operators",
+                    "Overloading only arithmetic operators is allowed"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Literals refer to the fixed values assigned to variables in Java. Examples include: 100 (integer), -90 (integer), 3.14F (float), 'A' (character), and \"Hello\" (string).",
-                javaVersion = "Core"
+                explanation = "C++ allows you to redefine what operators like +, ==, or << do for your own classes, e.g. operator+(const T& other), so objects can be used naturally with familiar syntax.",
+                languageVersion = "Core",
+                category = "Core Concepts"
             ),
             Question(
                 id = 23,
-                questionText = "What is a constructor in Java?",
+                questionText = "What is the diamond problem in C++?",
                 options = listOf(
-                    "A method that returns a value",
-                    "A block of code called when an instance of an object is created, with the same name as the class",
-                    "A static method that initializes the class",
-                    "A method that destroys objects"
+                    "A performance issue related to nested loops",
+                    "An ambiguity that arises with multiple inheritance when a class inherits from two classes that share a common base, causing duplicate base subobjects",
+                    "A syntax error when using templates",
+                    "A memory alignment issue with structs"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "A constructor in Java is a block of code similar to a method that's called when an instance of an object is created. Unlike methods, constructors have no explicit return type and have the same name as the class itself.",
-                javaVersion = "Core"
+                explanation = "If classes B and C both inherit from A, and D inherits from both B and C, D ends up with two copies of A's members unless A is inherited virtually (virtual inheritance).",
+                languageVersion = "Core",
+                category = "Core Concepts"
             ),
             Question(
                 id = 24,
-                questionText = "What is a package in Java?",
+                questionText = "What is encapsulation in C++?",
                 options = listOf(
-                    "A compressed file format",
-                    "A namespace that organizes related classes and interfaces",
-                    "A method for packaging applications",
-                    "A deployment unit"
+                    "Combining every class into a single file",
+                    "Bundling data and the methods that operate on it together, restricting direct access to internal state via access specifiers like private",
+                    "Compiling code into a single binary",
+                    "Wrapping a function in a try/catch block"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "A package in Java is a namespace that organizes a set of related classes and interfaces. Conceptually, you can think of packages as being similar to different folders on your computer.",
-                javaVersion = "Core"
+                explanation = "Encapsulation groups data and behavior inside a class and controls access using public, protected, and private specifiers, protecting internal state from unintended external modification.",
+                languageVersion = "Core",
+                category = "Core Concepts"
             ),
-            
-            // Object-Oriented Programming (OOP)
             Question(
                 id = 25,
-                questionText = "What is Object-Oriented Programming?",
+                questionText = "What are constructors and destructors in C++?",
                 options = listOf(
-                    "Programming with objects only",
-                    "A programming paradigm based on objects containing data (fields) and code (methods)",
-                    "Programming without classes",
-                    "A database programming model"
+                    "Functions that must be called manually to create and delete objects",
+                    "Special member functions: a constructor initializes an object when it is created, a destructor (~ClassName) cleans up when it is destroyed",
+                    "Keywords used only with pointers",
+                    "Functions that only exist for structs"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Object-oriented programming (OOP) is a programming paradigm based on the concept of 'objects', which can contain data in the form of fields (attributes or properties) and code in the form of procedures (methods).",
-                javaVersion = "Core"
+                explanation = "A constructor (same name as the class) runs automatically when an object is created to initialize it; a destructor (prefixed with ~) runs automatically when the object goes out of scope or is deleted, freeing resources.",
+                languageVersion = "Core",
+                category = "Core Concepts"
             ),
+
+            // ===================== Memory Management (Advanced) =====================
             Question(
                 id = 26,
-                questionText = "What are the main principles of OOP?",
+                questionText = "What is RAII in C++?",
                 options = listOf(
-                    "Variables, Methods, Classes, Objects",
-                    "Encapsulation, Abstraction, Inheritance, Polymorphism",
-                    "Public, Private, Protected, Static",
-                    "Compile, Run, Debug, Deploy"
+                    "A naming convention for private members",
+                    "Resource Acquisition Is Initialization: tying a resource's lifetime to an object's lifetime so it is automatically released when the object is destroyed",
+                    "A type of runtime exception",
+                    "A keyword for declaring arrays"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "The four main principles of OOP are: Encapsulation (binding data and methods, hiding implementation), Abstraction (hiding complexity, exposing simple interface), Inheritance (acquiring properties from parent class), and Polymorphism (one interface, multiple implementations).",
-                javaVersion = "Core"
+                explanation = "RAII acquires a resource (memory, file handle, lock) in a constructor and releases it in the destructor, so resources are automatically freed when the owning object goes out of scope, even during exceptions.",
+                languageVersion = "Core",
+                category = "Advanced"
             ),
             Question(
                 id = 27,
-                questionText = "What is inheritance in Java?",
+                questionText = "What is the difference between new/delete and malloc/free in C++?",
                 options = listOf(
-                    "Copying code from one class to another",
-                    "A mechanism where one object acquires all properties and behaviors of a parent object",
-                    "Sharing variables between classes",
-                    "Importing classes from other packages"
+                    "They are identical and interchangeable in every case",
+                    "new/delete call constructors and destructors and are type-safe; malloc/free only allocate raw memory without initialization",
+                    "malloc is faster in all cases so it should always be preferred",
+                    "delete cannot free memory allocated by new"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Inheritance in Java is a mechanism where one object acquires all the properties and behaviors of a parent object. It is an important part of OOPs (Object-Oriented programming systems) and promotes code reusability.",
-                javaVersion = "Core"
+                explanation = "new invokes the type's constructor after allocating memory and delete invokes the destructor before freeing it. malloc/free (inherited from C) only manage raw memory and know nothing about object construction.",
+                languageVersion = "Core",
+                category = "Advanced"
             ),
             Question(
                 id = 28,
-                questionText = "What is an interface in Java?",
+                questionText = "What is a memory leak in C++?",
                 options = listOf(
-                    "A class that cannot be instantiated",
-                    "A reference type similar to a class that contains only constants, method signatures, default methods, and static methods",
-                    "A graphical user interface",
-                    "A connection between two classes"
+                    "When a program uses too much CPU",
+                    "When dynamically allocated memory is never freed, so it remains unreachable but still reserved for the program's lifetime",
+                    "When a variable is declared but never used",
+                    "When a file is opened but never read"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "An interface in Java is a reference type, similar to a class, that can contain only constants, method signatures, default methods, static methods, and nested types. Interfaces cannot contain instance fields. Methods in interfaces are abstract by default.",
-                javaVersion = "Core"
+                explanation = "A memory leak occurs when memory allocated with new (or malloc) is never released with delete (or free), and no pointer to it remains, so it cannot be reclaimed until the process exits.",
+                languageVersion = "Core",
+                category = "Advanced"
             ),
             Question(
                 id = 29,
-                questionText = "What is the difference between abstract classes and interfaces?",
+                questionText = "What is a dangling pointer?",
                 options = listOf(
-                    "There is no difference",
-                    "Abstract classes can have both abstract and non-abstract methods; interfaces typically contain abstract methods only (plus default/static from Java 8+)",
-                    "Interfaces can be instantiated; abstract classes cannot",
-                    "Abstract classes are faster than interfaces"
+                    "A pointer that has never been initialized",
+                    "A pointer that still refers to memory that has already been freed or gone out of scope",
+                    "A pointer that points to a constant",
+                    "A pointer used inside a template"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Abstract classes can have both abstract and non-abstract methods and are used to provide a base for subclasses. Interfaces typically contain abstract methods only (though Java 8+ allows default and static methods). A class can implement multiple interfaces but extend only one class.",
-                javaVersion = "Core"
+                explanation = "A dangling pointer points to memory that has been deallocated (e.g. after delete) or to a local variable that has gone out of scope. Dereferencing it causes undefined behavior.",
+                languageVersion = "Core",
+                category = "Advanced"
             ),
             Question(
                 id = 30,
-                questionText = "What is polymorphism in Java?",
+                questionText = "What is std::unique_ptr (C++11)?",
                 options = listOf(
-                    "Having multiple variables with the same name",
-                    "The ability of an object to take on many forms, often when a parent class reference refers to a child class object",
-                    "Having multiple classes with the same name",
-                    "Using multiple inheritance"
+                    "A pointer that can be shared by multiple owners simultaneously",
+                    "A smart pointer that exclusively owns a dynamically allocated object and automatically deletes it when it goes out of scope",
+                    "A raw pointer wrapper with no automatic cleanup",
+                    "A pointer only usable inside templates"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Polymorphism in Java is the ability of an object to take on many forms. Most commonly, it is when a parent class reference is used to refer to a child class object. This allows one interface to be used for a general class of actions.",
-                javaVersion = "Core"
+                explanation = "std::unique_ptr provides exclusive ownership of a heap object; it cannot be copied (only moved) and automatically calls delete on the owned object when the unique_ptr is destroyed.",
+                languageVersion = "11",
+                category = "Advanced"
             ),
             Question(
                 id = 31,
-                questionText = "What is method overriding?",
+                questionText = "What is std::shared_ptr (C++11)?",
                 options = listOf(
-                    "Having multiple methods with the same name but different parameters",
-                    "A subclass providing a specific implementation of a method already provided by its superclass",
-                    "Calling a method multiple times",
-                    "Overloading a method with too many parameters"
+                    "A pointer that must be manually reference-counted by the programmer",
+                    "A smart pointer that allows multiple owners of the same object via reference counting, deleting it once the last owner is destroyed",
+                    "A pointer that can never be null",
+                    "A pointer that only works with arrays"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Method overriding, in object-oriented programming, is a language feature that allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its superclasses or parent classes.",
-                javaVersion = "Core"
+                explanation = "std::shared_ptr uses an internal reference count so multiple shared_ptr instances can co-own the same object; the object is deleted automatically once the last shared_ptr referencing it is destroyed.",
+                languageVersion = "11",
+                category = "Advanced"
             ),
             Question(
                 id = 32,
-                questionText = "What is method overloading?",
+                questionText = "What is the Rule of Three (and Rule of Five) in C++?",
                 options = listOf(
-                    "A subclass providing a different implementation of a method",
-                    "A feature allowing a class to have multiple methods with the same name but different parameter lists",
-                    "Calling a method recursively",
-                    "Making a method too complex"
+                    "A rule limiting classes to three member functions",
+                    "If a class manages a resource, it should define its own copy constructor, copy assignment operator, and destructor (and, since C++11, also the move constructor and move assignment operator)",
+                    "A rule about how many times a loop can run",
+                    "A naming convention for template parameters"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Method overloading is a feature that allows a class to have more than one method having the same name, if their parameter lists are different. It is related to compile-time (or static) polymorphism.",
-                javaVersion = "Core"
+                explanation = "If you must define one of the destructor, copy constructor, or copy assignment operator because a class owns a resource, you generally need all three (Rule of Three); C++11 extends this to five by adding the move constructor and move assignment operator.",
+                languageVersion = "Core",
+                category = "Advanced"
             ),
-            
-            // String, StringBuilder, StringBuffer
+
+            // ===================== STL / Collections =====================
             Question(
                 id = 33,
-                questionText = "What is the difference between String, StringBuilder, and StringBuffer?",
+                questionText = "What is the STL in C++?",
                 options = listOf(
-                    "They are all the same",
-                    "String is immutable; StringBuilder is mutable and not thread-safe; StringBuffer is mutable and thread-safe",
-                    "StringBuffer is immutable; StringBuilder is thread-safe",
-                    "String is mutable; StringBuilder and StringBuffer are immutable"
+                    "A build tool for compiling C++ programs",
+                    "The Standard Template Library: a collection of generic containers, iterators, and algorithms",
+                    "A GUI framework bundled with the compiler",
+                    "A networking library"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "String is immutable - once created, its value cannot be changed. StringBuilder is mutable and not thread-safe, making it faster for single-threaded operations. StringBuffer is mutable and thread-safe due to synchronized methods, but slower than StringBuilder.",
-                javaVersion = "Core"
+                explanation = "The Standard Template Library (STL) provides generic, reusable containers (vector, map, set...), iterators to traverse them, and algorithms (sort, find, accumulate...) that work across container types.",
+                languageVersion = "Core",
+                category = "Collections"
             ),
             Question(
                 id = 34,
-                questionText = "What is the difference between == and .equals() in Java?",
+                questionText = "What is the difference between std::vector and std::array?",
                 options = listOf(
-                    "They are the same",
-                    "== compares references; .equals() compares content/values (when overridden)",
-                    "== compares values; .equals() compares references",
-                    "== is for primitives; .equals() is for objects"
+                    "They are exactly the same",
+                    "std::vector is a dynamically resizable array on the heap; std::array is a fixed-size array whose size is known at compile time",
+                    "std::array can grow at runtime while std::vector cannot",
+                    "std::vector cannot store primitive types"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "The == operator compares references, checking if two references point to the same object. The .equals() method compares the content of objects for equality. The default implementation compares references, but many classes override it to compare values.",
-                javaVersion = "Core"
+                explanation = "std::vector manages a dynamically resizable, heap-allocated array that can grow or shrink at runtime. std::array (C++11) is a fixed-size, stack-allocated array whose size is a compile-time constant.",
+                languageVersion = "Core",
+                category = "Collections"
             ),
             Question(
                 id = 35,
-                questionText = "What is the purpose of the final keyword in Java?",
+                questionText = "What is the difference between std::vector and std::list?",
                 options = listOf(
-                    "To mark the last element in a collection",
-                    "final variable: cannot be changed; final method: cannot be overridden; final class: cannot be subclassed",
-                    "To indicate the end of a program",
-                    "To make variables public"
+                    "They provide identical performance for every operation",
+                    "std::vector stores elements contiguously (fast random access, slower middle insert/erase); std::list is a doubly-linked list (fast insert/erase anywhere, no random access)",
+                    "std::list cannot store custom objects",
+                    "std::vector is always slower than std::list"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "The final keyword has different meanings: final variable - value cannot be changed once assigned; final method - cannot be overridden by subclasses; final class - cannot be subclassed (extended).",
-                javaVersion = "Core"
+                explanation = "std::vector keeps elements in contiguous memory, giving O(1) random access but O(n) insertion/removal in the middle. std::list is a doubly-linked list with O(1) insertion/removal anywhere but only sequential access.",
+                languageVersion = "Core",
+                category = "Collections"
             ),
-            
-            // Exception Handling
             Question(
                 id = 36,
-                questionText = "What is an exception in Java?",
+                questionText = "What is std::map in C++?",
                 options = listOf(
-                    "A compile-time error",
-                    "An event that disrupts the normal flow of the program's instructions",
-                    "A warning message",
-                    "A syntax error"
+                    "An unordered hash table with no sorting guarantees",
+                    "An associative container that stores key-value pairs sorted by key, typically implemented as a balanced binary search tree",
+                    "A container that can only store strings",
+                    "A synonym for std::vector"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "An exception is an event that disrupts the normal flow of the program's instructions. When an exception occurs, an exception object is created and thrown in the method that caused it.",
-                javaVersion = "Core"
+                explanation = "std::map stores unique keys mapped to values, keeping them sorted by key (usually via a red-black tree), giving O(log n) lookup, insertion, and removal.",
+                languageVersion = "Core",
+                category = "Collections"
             ),
             Question(
                 id = 37,
-                questionText = "What is the difference between checked and unchecked exceptions?",
+                questionText = "What is an iterator in C++?",
                 options = listOf(
-                    "There is no difference",
-                    "Checked exceptions must be handled at compile time; unchecked exceptions (RuntimeException) don't need to be declared",
-                    "Unchecked exceptions must be handled; checked exceptions don't",
-                    "Checked exceptions are errors; unchecked are warnings"
+                    "A function that repeats a loop a fixed number of times",
+                    "An object that behaves like a pointer, used to traverse elements of a container without exposing its internal representation",
+                    "A keyword for declaring a for loop",
+                    "A container that stores only integers"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Checked exceptions must be caught or declared in the method signature using throws. They are checked at compile time. Unchecked exceptions (RuntimeException and its subclasses) don't need to be declared and are checked at runtime.",
-                javaVersion = "Core"
+                explanation = "Iterators provide a uniform, pointer-like interface (operator++, operator*, etc.) for traversing containers, letting STL algorithms work with vectors, lists, maps, and more without knowing their internals.",
+                languageVersion = "Core",
+                category = "Collections"
             ),
             Question(
                 id = 38,
-                questionText = "What is the try-catch-finally block?",
+                questionText = "What does std::sort do, and where does it live?",
                 options = listOf(
-                    "A loop structure",
-                    "A mechanism to handle exceptions: try (code that may throw), catch (handle exception), finally (always executes)",
-                    "A conditional statement",
-                    "A method declaration"
+                    "It is a member function of every container defined in <vector>",
+                    "It is a generic algorithm in <algorithm> that sorts a range given by two iterators, typically using an introsort-based approach",
+                    "It only works on arrays of integers",
+                    "It permanently modifies the type of the container"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "The try-catch-finally block is used for exception handling. The try block contains code that might throw an exception. The catch block handles the exception. The finally block always executes, whether an exception occurs or not.",
-                javaVersion = "Core"
+                explanation = "std::sort, declared in <algorithm>, sorts elements in the range [first, last) given by iterators, and works with any container offering random-access iterators, such as std::vector.",
+                languageVersion = "Core",
+                category = "Collections"
             ),
             Question(
                 id = 39,
-                questionText = "What is the throw keyword used for?",
+                questionText = "What is the difference between std::map and std::unordered_map?",
                 options = listOf(
-                    "To throw away code",
-                    "To explicitly throw an exception",
-                    "To catch exceptions",
-                    "To ignore exceptions"
+                    "There is no meaningful difference",
+                    "std::map keeps keys sorted using a tree (O(log n) operations); std::unordered_map uses a hash table for average O(1) operations but no ordering",
+                    "std::unordered_map can only store one element",
+                    "std::map cannot use custom key types"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "The throw keyword is used to explicitly throw an exception. You can throw either checked or unchecked exceptions. The throw statement requires a single argument: a throwable object.",
-                javaVersion = "Core"
+                explanation = "std::map maintains keys in sorted order via a balanced tree, giving O(log n) operations. std::unordered_map (C++11) uses a hash table for average O(1) operations but does not maintain any particular order.",
+                languageVersion = "11",
+                category = "Collections"
             ),
             Question(
                 id = 40,
-                questionText = "What is the throws keyword used for?",
+                questionText = "What is std::pair (and std::tuple) used for?",
                 options = listOf(
-                    "To throw an exception",
-                    "To declare that a method might throw an exception",
-                    "To catch an exception",
-                    "To ignore exceptions"
+                    "Only for storing two numbers",
+                    "std::pair bundles exactly two values of possibly different types; std::tuple generalizes this to any fixed number of values",
+                    "They are containers that can grow dynamically like std::vector",
+                    "They replace the need for structs entirely"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "The throws keyword is used in a method signature to declare that the method might throw one or more exceptions. It's used for checked exceptions that the method doesn't handle itself.",
-                javaVersion = "Core"
+                explanation = "std::pair<T1, T2> groups two heterogeneous values (e.g. map entries are std::pair<Key, Value>). std::tuple extends this idea to an arbitrary fixed number of heterogeneous values.",
+                languageVersion = "Core",
+                category = "Collections"
             ),
-            
-            // Collections - List
+
+            // ===================== C++11 =====================
             Question(
                 id = 41,
-                questionText = "What is the List interface in Java?",
+                questionText = "What does the auto keyword do in C++11?",
                 options = listOf(
-                    "A class for storing arrays",
-                    "Part of the Collections Framework representing an ordered collection (sequence) with index-based access",
-                    "A method for listing files",
-                    "A database table"
+                    "It marks a variable for automatic garbage collection",
+                    "It tells the compiler to deduce a variable's type automatically from its initializer",
+                    "It makes a variable thread-local",
+                    "It is only usable for function return types before C++14"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "The List interface is part of the Java Collections Framework and represents an ordered collection (also known as a sequence). The user can access elements by their integer index (position in the list), and search for elements in the list.",
-                javaVersion = "Core"
+                explanation = "auto instructs the compiler to infer the variable's type from its initializer at compile time, e.g. auto x = 5; deduces x as int. It does not mean dynamic typing.",
+                languageVersion = "11",
+                category = "Language Features"
             ),
             Question(
                 id = 42,
-                questionText = "What is the difference between ArrayList and LinkedList?",
+                questionText = "What is a range-based for loop, introduced in C++11?",
                 options = listOf(
-                    "They are the same",
-                    "ArrayList uses dynamic array (fast random access, slow insertions/deletions); LinkedList uses doubly-linked list (fast insertions/deletions, slow random access)",
-                    "LinkedList is faster for all operations",
-                    "ArrayList cannot store objects"
+                    "A loop that can only iterate over arrays of fixed size",
+                    "A concise for-loop syntax that iterates directly over the elements of a container or array without explicit indices or iterators",
+                    "A loop that automatically parallelizes across threads",
+                    "A loop that replaces while loops entirely"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "ArrayList is a resizable-array implementation best for storing and accessing data. LinkedList is a doubly-linked list implementation better for operations that require frequent addition and removal of elements from any part of the list.",
-                javaVersion = "Core"
+                explanation = "Range-based for loops, written as for (auto& elem : container), iterate over every element of a range (container, array, initializer list) without manually managing indices or iterators.",
+                languageVersion = "11",
+                category = "Language Features"
             ),
             Question(
                 id = 43,
-                questionText = "What are Vector and Stack classes?",
+                questionText = "What is a lambda expression in C++11?",
                 options = listOf(
-                    "They don't exist in Java",
-                    "Vector is similar to ArrayList but synchronized; Stack extends Vector with stack operations",
-                    "They are the same as ArrayList",
-                    "Vector is for graphics; Stack is for networking"
+                    "A macro that expands at compile time",
+                    "An anonymous, inline function object that can capture variables from its enclosing scope",
+                    "A special kind of class template",
+                    "A function that can only be called once"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Vector is similar to ArrayList, but it is synchronized (thread-safe). Stack extends Vector with five operations that allow a vector to be treated as a stack (LIFO - Last In First Out).",
-                javaVersion = "Core"
+                explanation = "A lambda, e.g. [x](int y) { return x + y; }, defines an unnamed function object inline. The capture list [x] specifies which enclosing variables it can use, by value or reference.",
+                languageVersion = "11",
+                category = "Language Features"
             ),
             Question(
                 id = 44,
-                questionText = "What is the difference between Iterator and ListIterator?",
+                questionText = "What is nullptr, introduced in C++11?",
                 options = listOf(
-                    "They are the same",
-                    "Iterator traverses forward only; ListIterator can traverse both directions, modify list, and get current position",
-                    "ListIterator is only for arrays",
-                    "Iterator is faster than ListIterator"
+                    "A macro equal to the integer 0, identical to the old NULL",
+                    "A type-safe keyword representing a null pointer value, distinct from integer 0, that avoids overload-resolution ambiguity",
+                    "A pointer that always points to the first element of an array",
+                    "A reserved variable name that cannot be reassigned"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Iterator can traverse the list in the forward direction only. ListIterator can traverse the list in either direction, modify the list during iteration, and obtain the iterator's current position in the list.",
-                javaVersion = "Core"
+                explanation = "nullptr has its own type (std::nullptr_t) and unambiguously represents a null pointer, fixing issues where the old NULL macro (often defined as 0) could be confused with an integer in overload resolution.",
+                languageVersion = "11",
+                category = "Language Features"
             ),
-            
-            // Concurrency
             Question(
                 id = 45,
-                questionText = "What is a thread in Java?",
+                questionText = "What are move semantics and rvalue references (C++11)?",
                 options = listOf(
-                    "A type of variable",
-                    "A lightweight process that allows concurrent execution of multiple parts of a program",
-                    "A collection class",
-                    "A method modifier"
+                    "A way to physically relocate objects in memory automatically",
+                    "A mechanism (using && rvalue references) that lets resources be transferred from a temporary or expiring object instead of deep-copied, improving performance",
+                    "A restriction preventing objects from being copied at all",
+                    "A feature exclusive to primitive types like int and double"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "A thread is a lightweight process that allows concurrent execution of multiple parts of a program. Threads share the same memory space, making communication between threads easier than between processes.",
-                javaVersion = "Core"
+                explanation = "Rvalue references (T&&) let code detect temporary (movable) objects and 'steal' their internal resources via a move constructor/assignment instead of performing an expensive deep copy.",
+                languageVersion = "11",
+                category = "Language Features"
             ),
             Question(
                 id = 46,
-                questionText = "What is the difference between Thread and Runnable?",
+                questionText = "What are variadic templates in C++11?",
                 options = listOf(
-                    "They are the same",
-                    "Thread is a class; Runnable is an interface. Runnable is preferred as Java doesn't support multiple inheritance",
-                    "Runnable is a class; Thread is an interface",
-                    "Thread is faster than Runnable"
+                    "Templates that can only accept exactly two type parameters",
+                    "Templates that accept an arbitrary number of template arguments of possibly different types",
+                    "A way to define templates without any parameters",
+                    "Templates restricted to numeric types only"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Thread is a class that implements Runnable. Runnable is an interface with a single run() method. Using Runnable is preferred because Java doesn't support multiple inheritance, so if you extend Thread, you can't extend another class.",
-                javaVersion = "Core"
+                explanation = "Variadic templates, using a parameter pack (typename... Args), let a template function or class accept any number of arguments of varying types, enabling things like a type-safe printf replacement.",
+                languageVersion = "11",
+                category = "Language Features"
             ),
             Question(
                 id = 47,
-                questionText = "What is synchronization in Java?",
+                questionText = "What is an enum class (scoped enumeration) in C++11?",
                 options = listOf(
-                    "Making code run faster",
-                    "A mechanism that ensures only one thread can access a shared resource at a time",
-                    "Synchronizing with a database",
-                    "Making methods static"
+                    "An enum whose values can implicitly convert to int and pollute the surrounding scope",
+                    "A strongly-typed enumeration whose enumerators are scoped to the enum's name and do not implicitly convert to int",
+                    "A class that behaves exactly like a plain enum",
+                    "An enum that can only hold string values"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Synchronization is a mechanism that ensures only one thread can access a shared resource at a time. It prevents thread interference and consistency problems. It can be achieved using synchronized methods or synchronized blocks.",
-                javaVersion = "Core"
+                explanation = "enum class Color { Red, Green }; requires Color::Red to access enumerators, and disallows implicit conversion to int, avoiding the naming collisions and unsafe conversions of plain C-style enums.",
+                languageVersion = "11",
+                category = "Language Features"
             ),
+
+            // ===================== C++14 =====================
             Question(
                 id = 48,
-                questionText = "What is the difference between wait() and sleep()?",
+                questionText = "What are generic lambdas, introduced in C++14?",
                 options = listOf(
-                    "They are the same",
-                    "wait() releases the lock and is called on an object; sleep() doesn't release the lock and is called on Thread",
-                    "sleep() releases the lock; wait() doesn't",
-                    "wait() is for threads; sleep() is for processes"
+                    "Lambdas that can never capture variables",
+                    "Lambdas whose parameters can be declared auto, letting a single lambda work with multiple argument types like a template",
+                    "Lambdas that must specify every type explicitly",
+                    "A feature that lets lambdas be recursive by default"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "wait() is called on an object and releases the lock, allowing other threads to acquire it. sleep() is called on Thread and doesn't release any locks. wait() must be called from a synchronized context.",
-                javaVersion = "Core"
+                explanation = "C++14 allows lambda parameters to be declared auto, e.g. [](auto a, auto b) { return a + b; }, making the lambda's operator() effectively a template that works with any compatible types.",
+                languageVersion = "14",
+                category = "Language Features"
             ),
-            
-            // Stream API
             Question(
                 id = 49,
-                questionText = "What is the Stream API in Java 8?",
+                questionText = "What does std::make_unique do, added in C++14?",
                 options = listOf(
-                    "A way to read files",
-                    "A sequence of elements supporting sequential and parallel aggregate operations",
-                    "A networking API",
-                    "A database streaming API"
+                    "It creates a std::shared_ptr",
+                    "It safely constructs an object and wraps it in a std::unique_ptr in a single, exception-safe expression",
+                    "It converts a raw pointer into a reference",
+                    "It duplicates an existing unique_ptr"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "The Stream API in Java 8 provides a functional approach to processing collections of objects. It allows you to perform operations like filter, map, reduce, etc., on collections in a declarative way.",
-                javaVersion = "8"
+                explanation = "std::make_unique<T>(args...) allocates and constructs a T and returns it owned by a std::unique_ptr, avoiding manual new calls and certain exception-safety pitfalls. (std::make_shared existed since C++11.)",
+                languageVersion = "14",
+                category = "Language Features"
             ),
             Question(
                 id = 50,
-                questionText = "What is the difference between intermediate and terminal operations in Stream API?",
+                questionText = "What changed with constexpr functions in C++14?",
                 options = listOf(
-                    "They are the same",
-                    "Intermediate operations return streams and are lazy; terminal operations produce results and trigger execution",
-                    "Terminal operations return streams; intermediate operations produce results",
-                    "Intermediate operations are faster"
+                    "constexpr functions were removed entirely",
+                    "Restrictions were relaxed so constexpr functions could contain loops, local variables, and multiple statements, not just a single return expression",
+                    "constexpr became the default for every function",
+                    "constexpr functions can now throw exceptions at compile time"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Intermediate operations (like filter, map) return a stream and are lazy - they don't execute until a terminal operation is called. Terminal operations (like collect, forEach) produce a result and trigger the execution of the stream pipeline.",
-                javaVersion = "8"
+                explanation = "C++11 constexpr functions were limited to essentially a single return statement. C++14 relaxed this, allowing loops, conditionals, and multiple local variables inside constexpr functions.",
+                languageVersion = "14",
+                category = "Language Features"
             ),
+
+            // ===================== C++17 =====================
             Question(
                 id = 51,
-                questionText = "What is the reduce operation in Stream API?",
+                questionText = "What are structured bindings, introduced in C++17?",
                 options = listOf(
-                    "Reducing the size of a collection",
-                    "Combining all elements of a stream into a single result using a binary operator",
-                    "Removing elements from a stream",
-                    "Reducing memory usage"
+                    "A way to bind a function to a specific thread",
+                    "Syntax that lets you unpack multiple values from a pair, tuple, struct, or array into individually named variables in one declaration",
+                    "A feature restricted to arrays of exactly three elements",
+                    "A replacement for the auto keyword"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "The reduce operation combines all elements of the stream into a single result by applying a binary operator. This operation takes two parameters: an initial value (optional), and a binary operator function.",
-                javaVersion = "8"
+                explanation = "Structured bindings, e.g. auto [key, value] = *mapIterator;, let you destructure a pair, tuple, struct, or array into named variables in a single statement.",
+                languageVersion = "17",
+                category = "Language Features"
             ),
-            
-            // JDBC
             Question(
                 id = 52,
-                questionText = "What is JDBC?",
+                questionText = "What is std::optional, introduced in C++17?",
                 options = listOf(
-                    "A Java database",
-                    "Java Database Connectivity - an API that enables Java programs to execute SQL statements",
-                    "A Java development tool",
-                    "A Java compiler"
+                    "A container that can hold an unlimited number of values",
+                    "A wrapper type that may or may not contain a value, providing a type-safe alternative to using a sentinel value or a pointer to represent 'no value'",
+                    "A replacement for exceptions",
+                    "A pointer that is optional to dereference"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "JDBC (Java Database Connectivity) is an API that enables Java programs to execute SQL statements. This allows Java applications to interact with any SQL-compliant database.",
-                javaVersion = "Core"
+                explanation = "std::optional<T> represents a value that may or may not be present, avoiding the need for sentinel values (like -1) or nullable pointers to express 'no result' in a type-safe way.",
+                languageVersion = "17",
+                category = "Language Features"
             ),
             Question(
                 id = 53,
-                questionText = "What are the core components of JDBC?",
+                questionText = "What does if constexpr do in C++17?",
                 options = listOf(
-                    "Classes and methods only",
-                    "DriverManager, Driver, Connection, Statement, ResultSet, and SQLException",
-                    "Only Connection and Statement",
-                    "Database and tables"
+                    "It makes a normal if statement run faster at runtime",
+                    "It evaluates a condition at compile time and discards the untaken branch entirely, commonly used in templates to select code per type",
+                    "It replaces the switch statement",
+                    "It forces both branches of an if to always execute"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "The core components of JDBC include DriverManager (manages database drivers), Driver (interface for database drivers), Connection (represents a connection to a database), Statement (executes SQL queries), ResultSet (represents query results), and SQLException (handles database errors).",
-                javaVersion = "Core"
+                explanation = "if constexpr (condition) evaluates the condition at compile time; the branch not taken is discarded from compilation entirely, which is especially useful for writing templates that behave differently per type without SFINAE tricks.",
+                languageVersion = "17",
+                category = "Language Features"
             ),
             Question(
                 id = 54,
-                questionText = "What is the difference between Statement and PreparedStatement?",
+                questionText = "What is std::string_view, introduced in C++17?",
                 options = listOf(
-                    "They are the same",
-                    "Statement is for simple queries with no parameters; PreparedStatement is for parameterized queries and better performance",
-                    "PreparedStatement is simpler than Statement",
-                    "Statement is only for SELECT queries"
+                    "A mutable, owning string type that replaces std::string",
+                    "A lightweight, non-owning view over a contiguous sequence of characters, avoiding unnecessary string copies",
+                    "A view that can only be created from string literals",
+                    "A synchronization primitive for strings shared between threads"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Statement is used to execute a simple SQL query with no parameters. PreparedStatement is used for executing SQL statements multiple times or when you need to bind parameters to the query. PreparedStatement is precompiled and offers better performance and security.",
-                javaVersion = "Core"
+                explanation = "std::string_view holds a pointer and length referring to existing character data without owning or copying it, making functions that only need to read a string cheaper to call.",
+                languageVersion = "17",
+                category = "Language Features"
             ),
             Question(
                 id = 55,
-                questionText = "What is ResultSet in JDBC?",
+                questionText = "What is std::variant, introduced in C++17?",
                 options = listOf(
-                    "A database table",
-                    "A table of data representing a database result set generated by executing a query",
-                    "A SQL statement",
-                    "A database connection"
+                    "A container that stores multiple values of the same type",
+                    "A type-safe tagged union that holds a value which can be one of several specified alternative types",
+                    "A replacement for std::optional",
+                    "A type used exclusively for error codes"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "ResultSet is a table of data representing a database result set, which is generated by executing a statement that queries the database. It provides methods to navigate through the rows and retrieve column values.",
-                javaVersion = "Core"
+                explanation = "std::variant<T1, T2, ...> can hold a value of exactly one of its listed alternative types at a time, giving a type-safe alternative to a raw C-style union.",
+                languageVersion = "17",
+                category = "Language Features"
             ),
+
+            // ===================== C++20 =====================
             Question(
                 id = 56,
-                questionText = "What is Connection Pooling?",
+                questionText = "What are concepts, introduced in C++20?",
                 options = listOf(
-                    "A pool of database tables",
-                    "A technique to improve performance by reusing database connections instead of creating new ones",
-                    "A way to store connections in a pool",
-                    "A database backup method"
+                    "A runtime type-checking mechanism",
+                    "Named compile-time predicates that constrain what types a template can accept, producing clearer errors than raw SFINAE",
+                    "A new kind of comment syntax",
+                    "A replacement for the auto keyword everywhere"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Connection pooling is a technique used to improve performance in applications that need to make calls to a database by reusing the connections instead of creating a new one each time. This reduces overhead and improves response time.",
-                javaVersion = "Core"
+                explanation = "Concepts let you express requirements on template parameters directly, e.g. template<std::integral T>, giving readable compile-time constraints and far clearer error messages than traditional SFINAE-based techniques.",
+                languageVersion = "20",
+                category = "Language Features"
             ),
-            
-            // Additional Core Java Questions
             Question(
                 id = 57,
-                questionText = "What are primitive data types in Java?",
+                questionText = "What does the Ranges library add in C++20?",
                 options = listOf(
-                    "int, float, String, Object",
-                    "byte, short, int, long, float, double, char, boolean - basic types that store actual values",
-                    "ArrayList, HashMap, String",
-                    "Classes and interfaces"
+                    "A way to define numeric ranges like Python's range() only",
+                    "Composable, lazily-evaluated views and adaptors that let algorithms operate directly on ranges (containers) instead of requiring begin/end iterator pairs, and can be chained with the pipe operator",
+                    "A replacement for all STL containers",
+                    "A networking API for HTTP ranges"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Primitive data types are the basic types: byte, short, int, long, float, double, char, and boolean. They store actual values (not references) and use less memory than objects. They cannot be null.",
-                javaVersion = "Core"
+                explanation = "std::ranges lets algorithms work directly on a whole range instead of iterator pairs, and range adaptors (like views::filter, views::transform) can be composed lazily with the | operator.",
+                languageVersion = "20",
+                category = "Language Features"
             ),
             Question(
                 id = 58,
-                questionText = "What is the difference between primitives and objects in Java?",
+                questionText = "What are coroutines, introduced in C++20?",
                 options = listOf(
-                    "There is no difference",
-                    "Primitives store values and use less memory; objects store references, use more memory, can be null, and have methods",
-                    "Objects are faster than primitives",
-                    "Primitives can have methods"
+                    "A way to run multiple threads simultaneously with automatic synchronization",
+                    "Functions that can suspend execution and later resume, using co_await, co_yield, or co_return, enabling asynchronous and generator-style code",
+                    "A feature exclusive to lambda expressions",
+                    "A new kind of exception-handling mechanism"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Primitives store actual values and use less memory. Objects store references to memory locations, use more memory, can be null, and have methods. Primitives are generally faster to access and manipulate.",
-                javaVersion = "Core"
+                explanation = "Coroutines are functions whose execution can be suspended with co_await or co_yield and resumed later, providing language-level support for asynchronous operations and generators without manual state machines.",
+                languageVersion = "20",
+                category = "Concurrency"
             ),
             Question(
                 id = 59,
-                questionText = "What is garbage collection in Java?",
+                questionText = "What is the spaceship operator (<=>), introduced in C++20?",
                 options = listOf(
-                    "Manual memory management",
-                    "Automatic memory management that reclaims memory occupied by objects that are no longer in use",
-                    "Collecting unused code",
-                    "A database operation"
+                    "An operator used only for comparing pointers",
+                    "The three-way comparison operator, which can be defaulted to auto-generate all six relational operators (<, <=, >, >=, ==, !=) for a type",
+                    "A bitwise operator for shifting bits",
+                    "An operator that replaces the ternary conditional operator"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "Garbage collection is the automatic memory management process in Java. The JVM automatically identifies and removes objects that are no longer referenced, freeing up memory. Developers don't need to manually deallocate memory.",
-                javaVersion = "Core"
+                explanation = "The three-way comparison operator <=> returns an ordering result, and declaring auto operator<=>(const T&) const = default; lets the compiler generate all the relational operators automatically.",
+                languageVersion = "20",
+                category = "Language Features"
             ),
+
+            // ===================== C++23 =====================
             Question(
                 id = 60,
-                questionText = "What is the static keyword in Java?",
+                questionText = "What does std::expected, introduced in C++23, provide?",
                 options = listOf(
-                    "A method that cannot be changed",
-                    "A keyword that makes a member belong to the class rather than instances, shared across all instances",
-                    "A constant value",
-                    "A method modifier for speed"
+                    "A container that guarantees a value will never be missing",
+                    "A type that holds either an expected value or an error, offering an alternative to exceptions for representing recoverable failures",
+                    "A synonym for std::optional with no real difference",
+                    "A type used exclusively for parsing JSON"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "The static keyword makes a member (variable or method) belong to the class rather than to instances of the class. Static members are shared across all instances and can be accessed without creating an object.",
-                javaVersion = "Core"
+                explanation = "std::expected<T, E> holds either a valid value of type T or an error of type E, letting functions report recoverable errors as part of their return type instead of throwing exceptions.",
+                languageVersion = "23",
+                category = "Language Features"
             ),
             Question(
                 id = 61,
-                questionText = "What is the this keyword in Java?",
+                questionText = "What is 'deducing this', introduced in C++23?",
                 options = listOf(
-                    "A reference to another object",
-                    "A reference to the current object instance",
-                    "A method name",
-                    "A class name"
+                    "A way to remove the this pointer from member functions entirely",
+                    "A feature allowing member functions to declare an explicit object parameter, letting a single function template deduce const-ness, value category, and even the derived type of the caller",
+                    "A debugging tool for inspecting the this pointer at runtime",
+                    "A macro that renames this to self"
                 ),
                 correctAnswerIndex = 1,
-                explanation = "The 'this' keyword is a reference to the current object instance. It can be used to refer to instance variables, call other constructors, or pass the current object as a parameter.",
-                javaVersion = "Core"
-            ),
-            Question(
-                id = 62,
-                questionText = "What are access modifiers in Java?",
-                options = listOf(
-                    "public, private, protected, default - they control the visibility and accessibility of classes, methods, and variables",
-                    "static, final, abstract",
-                    "int, String, boolean",
-                    "try, catch, finally"
-                ),
-                correctAnswerIndex = 0,
-                explanation = "Access modifiers control the visibility and accessibility of classes, methods, and variables. public (accessible everywhere), private (only within the class), protected (within package and subclasses), and default/package-private (within the same package).",
-                javaVersion = "Core"
-            ),
-            Question(
-                id = 63,
-                questionText = "What is the super keyword in Java?",
-                options = listOf(
-                    "A method that is superior",
-                    "A reference to the parent class, used to access parent class members and call parent class constructors",
-                    "A class modifier",
-                    "A variable type"
-                ),
-                correctAnswerIndex = 1,
-                explanation = "The 'super' keyword is a reference to the parent class. It can be used to access parent class members (variables and methods), call parent class constructors, and distinguish between parent and child class members with the same name.",
-                javaVersion = "Core"
-            ),
-            Question(
-                id = 64,
-                questionText = "What is autoboxing and unboxing in Java?",
-                options = listOf(
-                    "Packing and unpacking boxes",
-                    "Automatic conversion between primitive types and their corresponding wrapper classes",
-                    "Converting between different number types",
-                    "A database operation"
-                ),
-                correctAnswerIndex = 1,
-                explanation = "Autoboxing is the automatic conversion of primitive types to their corresponding wrapper class objects (e.g., int to Integer). Unboxing is the automatic conversion of wrapper class objects to their primitive types (e.g., Integer to int).",
-                javaVersion = "Core"
-            ),
-            Question(
-                id = 65,
-                questionText = "What is a wrapper class in Java?",
-                options = listOf(
-                    "A class that wraps other classes",
-                    "A class that wraps a primitive type in an object (e.g., Integer, Double, Boolean)",
-                    "A class for packaging",
-                    "A container class"
-                ),
-                correctAnswerIndex = 1,
-                explanation = "Wrapper classes are classes that wrap primitive types in objects. Examples include Integer (for int), Double (for double), Boolean (for boolean), Character (for char), etc. They allow primitives to be used in contexts that require objects.",
-                javaVersion = "Core"
+                explanation = "Deducing this lets you write an explicit object parameter (e.g. void foo(this Self&& self)) so one function template can replace multiple const/non-const or lvalue/rvalue overloads, and enables patterns like CRTP without inheritance boilerplate.",
+                languageVersion = "23",
+                category = "Language Features"
             )
         )
     }
-    
+
     /**
      * Get a random subset of questions for a quiz
      */
     fun getRandomQuestions(count: Int): List<Question> {
-        val allQuestions = getAllQuestions()
-        return allQuestions.shuffled().take(count)
+        return getAllQuestions().shuffled().take(count)
     }
-    
+
     /**
-     * Get all questions filtered by Java version
-     * @param javaVersion The Java version to filter by (e.g., "17", "18", "19", "20", "21", "Core", "8", or null for all)
+     * Get all questions filtered by C++ standard
+     * @param languageVersion The standard to filter by ("Core", "11", "14", "17", "20", "23", or null/"All" for all)
      */
-    fun getQuestionsByVersion(javaVersion: String?): List<Question> {
+    fun getQuestionsByVersion(languageVersion: String?): List<Question> {
         val allQuestions = getAllQuestions()
-        return if (javaVersion == null || javaVersion == "All") {
+        return if (languageVersion == null || languageVersion == "All") {
             allQuestions
         } else {
-            allQuestions.filter { it.javaVersion == javaVersion }
+            allQuestions.filter { it.languageVersion == languageVersion }
         }
     }
-    
+
     /**
-     * Get a random subset of questions filtered by Java version
+     * Get a random subset of questions filtered by C++ standard
      * @param count Number of questions to return
-     * @param javaVersion The Java version to filter by (e.g., "17", "18", "19", "20", "21", "Core", "8", or null for all)
+     * @param languageVersion The standard to filter by ("Core", "11", "14", "17", "20", "23", or null/"All" for all)
      */
-    fun getRandomQuestionsByVersion(count: Int, javaVersion: String?): List<Question> {
-        val filteredQuestions = getQuestionsByVersion(javaVersion)
-        return filteredQuestions.shuffled().take(count)
+    fun getRandomQuestionsByVersion(count: Int, languageVersion: String?): List<Question> {
+        return getQuestionsByVersion(languageVersion).shuffled().take(count)
     }
-    
+
     /**
-     * Get available Java version categories
-     * Returns versions sorted: Core, 8, then numeric versions in descending order (21, 20, 19, ...)
+     * Get available C++ standard categories
+     * Returns versions sorted: Core first, then numeric standards in descending order (23, 20, 17, 14, 11)
      */
     fun getAvailableVersions(): List<String> {
         val versions = getAllQuestions()
-            .map { it.javaVersion }
+            .map { it.languageVersion }
             .distinct()
-        
-        // Separate into categories
+
         val coreVersions = versions.filter { it == "Core" }
-        val java8 = versions.filter { it == "8" }
         val numericVersions = versions
-            .filter { it != "Core" && it != "8" && it != "All" }
+            .filter { it != "Core" && it != "All" }
             .mapNotNull { it.toIntOrNull() }
             .sortedDescending()
             .map { it.toString() }
-        
-        // Combine in desired order: Core, 8, then numeric versions (21, 20, 19, ...)
-        return coreVersions + java8 + numericVersions
+
+        return coreVersions + numericVersions
+    }
+
+    /**
+     * Get all questions in a given category (e.g. "Core Concepts", "Advanced", "Collections")
+     */
+    fun getQuestionsByCategory(category: String?): List<Question> {
+        val allQuestions = getAllQuestions()
+        return if (category == null || category == "All") {
+            allQuestions
+        } else {
+            allQuestions.filter { it.category == category }
+        }
+    }
+
+    /**
+     * Get the distinct categories present in the question bank, in first-seen order
+     */
+    fun getAvailableCategories(): List<String> {
+        return getAllQuestions().map { it.category }.distinct()
     }
 }
-

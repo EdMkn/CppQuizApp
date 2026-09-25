@@ -23,13 +23,13 @@ interface QuestionDao {
     /**
      * Get questions filtered by Java version as a Flow
      */
-    @Query("SELECT * FROM questions WHERE javaVersion = :version ORDER BY id")
+    @Query("SELECT * FROM questions WHERE languageVersion = :version ORDER BY id")
     fun getQuestionsByVersion(version: String): Flow<List<QuestionEntity>>
 
     /**
      * Get questions filtered by Java versions 
      */
-    @Query("SELECT * FROM questions WHERE javaVersion IN (:versions) ORDER BY id")
+    @Query("SELECT * FROM questions WHERE languageVersion IN (:versions) ORDER BY id")
     suspend fun getQuestionsByVersions(versions: List<String>): List<QuestionEntity>
     
     /**
@@ -41,7 +41,7 @@ interface QuestionDao {
     /**
      * Get distinct Java versions available in the database
      */
-    @Query("SELECT DISTINCT javaVersion FROM questions ORDER BY CASE WHEN javaVersion = 'Core' THEN 0 WHEN javaVersion = '8' THEN 1 ELSE CAST(javaVersion AS INTEGER) END DESC")
+    @Query("SELECT DISTINCT languageVersion FROM questions ORDER BY CASE WHEN languageVersion = 'Core' THEN 0 WHEN languageVersion = '8' THEN 1 ELSE CAST(languageVersion AS INTEGER) END DESC")
     suspend fun getAvailableVersions(): List<String>
     
     /**
@@ -53,10 +53,10 @@ interface QuestionDao {
     /**
      * Get questions filtered by both version and category as a Flow
      */
-    @Query("SELECT * FROM questions WHERE javaVersion = :version AND category = :category ORDER BY id")
+    @Query("SELECT * FROM questions WHERE languageVersion = :version AND category = :category ORDER BY id")
     fun getQuestionsByVersionAndCategory(version: String, category: String): Flow<List<QuestionEntity>>
     
-    @Query("SELECT * FROM questions WHERE javaVersion IN (:versions) AND category = :category")
+    @Query("SELECT * FROM questions WHERE languageVersion IN (:versions) AND category = :category")
     suspend fun getQuestionsByVersionsAndCategory(versions: List<String>, category: String): List<QuestionEntity>
 
     /**
@@ -68,7 +68,7 @@ interface QuestionDao {
     /**
      * Get distinct categories for a specific Java version
      */
-    @Query("SELECT DISTINCT category FROM questions WHERE javaVersion = :version ORDER BY category")
+    @Query("SELECT DISTINCT category FROM questions WHERE languageVersion = :version ORDER BY category")
     suspend fun getCategoriesByVersion(version: String): List<String>
     
     /**

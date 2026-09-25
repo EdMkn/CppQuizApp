@@ -27,7 +27,7 @@ class QuizActivity : AppCompatActivity() {
     
     // UI references - need these to update the screen
     private lateinit var questionCounter: TextView
-    private lateinit var javaVersionBadge: TextView
+    private lateinit var languageVersionBadge: TextView
     private lateinit var questionText: TextView
     private lateinit var optionButton1: MaterialButton
     private lateinit var optionButton2: MaterialButton
@@ -161,7 +161,7 @@ class QuizActivity : AppCompatActivity() {
      */
     private fun initializeViews() {
         questionCounter = findViewById(R.id.questionCounter)
-        javaVersionBadge = findViewById(R.id.javaVersionBadge)
+        languageVersionBadge = findViewById(R.id.languageVersionBadge)
         questionText = findViewById(R.id.questionText)
         optionButton1 = findViewById(R.id.optionButton1)
         optionButton2 = findViewById(R.id.optionButton2)
@@ -191,7 +191,7 @@ class QuizActivity : AppCompatActivity() {
             
             // Update question counter and version badge
             questionCounter.text = getString(R.string.question_counter, currentQuestionIndex + 1, questions.size)
-            javaVersionBadge.text = getString(R.string.java_version, question.javaVersion)
+            languageVersionBadge.text = getString(R.string.cpp_version, question.languageVersion)
             questionText.text = question.questionText ?: "[No question text]"
             
             // Validate and set answer options

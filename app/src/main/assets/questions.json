@@ -1,3152 +1,856 @@
 [
   {
     "id": 1,
-    "questionText": "What is a sealed class in Java 17?",
+    "questionText": "What is C++?",
     "options": [
-      "A class that cannot be instantiated",
-      "A class that restricts which classes can extend it",
-      "A class that is automatically serializable",
-      "A class that can only be used in interfaces"
+      "A purely functional programming language",
+      "A general-purpose, compiled language that extends C with object-oriented and generic programming features",
+      "A scripting language that runs inside a browser",
+      "A markup language for describing documents"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Sealed classes (and interfaces) restrict which other classes or interfaces may extend or implement them. This is a preview feature in Java 15 and became a standard feature in Java 17.",
-    "javaVersion": "17",
-    "category": "Language Features"
+    "explanation": "C++ is a general-purpose programming language created as an extension of C, adding object-oriented, generic, and (later) functional features while keeping low-level memory control and high performance.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
   },
   {
     "id": 2,
-    "questionText": "Which feature was finalized in Java 17?",
+    "questionText": "What is the main difference between C and C++?",
     "options": [
-      "Pattern matching for switch",
-      "Records",
-      "Text blocks",
-      "All of the above"
+      "C++ is interpreted while C is compiled",
+      "C++ adds object-oriented programming, templates, and the STL on top of C's procedural model",
+      "C and C++ are the same language with different file extensions",
+      "C++ cannot call C libraries"
     ],
-    "correctAnswerIndex": 3,
-    "explanation": "Java 17 (LTS) finalized several features including Records, Pattern matching for switch, and Text blocks that were previously in preview.",
-    "javaVersion": "17",
-    "category": "Language Features"
+    "correctAnswerIndex": 1,
+    "explanation": "C++ was designed as 'C with Classes'. It keeps C's low-level capabilities but adds classes, inheritance, templates, exceptions, and the Standard Template Library.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
   },
   {
     "id": 3,
-    "questionText": "What is the purpose of a record in Java 17?",
+    "questionText": "What is a pointer in C++?",
     "options": [
-      "To store database records",
-      "To create immutable data carriers with less boilerplate",
-      "To record method calls",
-      "To create audio recordings"
+      "A variable that stores a fixed value",
+      "A variable that stores the memory address of another variable",
+      "A type of array",
+      "A function that returns void"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Records are a special kind of class in Java that are designed to be transparent carriers for immutable data. They automatically generate constructors, getters, equals(), hashCode(), and toString().",
-    "javaVersion": "17",
-    "category": "Language Features"
+    "explanation": "A pointer holds the memory address of another variable. It is declared using the * symbol, e.g. int* ptr, and can be dereferenced with * to access the value it points to.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
   },
   {
     "id": 4,
-    "questionText": "What is the Simple Web Server introduced in Java 18?",
+    "questionText": "What is a reference in C++?",
     "options": [
-      "A full-featured web server like Tomcat",
-      "A minimal HTTP server for prototyping and testing",
-      "A web server for production use",
-      "A replacement for Apache HTTP Server"
+      "A pointer that can be reassigned freely",
+      "An alias for an existing variable that must be initialized when declared and cannot be null",
+      "A copy of a variable's value",
+      "A keyword used only in templates"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Java 18 introduced jwebserver, a simple command-line tool to start a minimal web server that serves static files. It's intended for prototyping, testing, and ad-hoc coding.",
-    "javaVersion": "18",
-    "category": "APIs"
+    "explanation": "A reference (declared with &) is an alias for an existing object. Unlike a pointer, it must be bound to a valid object at declaration and cannot later refer to a different object or be null.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
   },
   {
     "id": 5,
-    "questionText": "What does UTF-8 by default mean in Java 18?",
+    "questionText": "What is a key difference between a pointer and a reference?",
     "options": [
-      "All strings are UTF-8 encoded",
-      "The default charset for the standard Java APIs is UTF-8",
-      "Files are automatically saved as UTF-8",
-      "Network protocols use UTF-8"
+      "References can be reseated to point elsewhere; pointers cannot",
+      "Pointers can be null and reassigned; references must be initialized and always refer to the same object",
+      "There is no difference, they are interchangeable in every context",
+      "References use more memory than pointers"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Java 18 changed the default charset for the standard Java APIs from the platform default to UTF-8, ensuring consistent behavior across different platforms.",
-    "javaVersion": "18",
-    "category": "Advanced"
+    "explanation": "Pointers can be null, reassigned, and support pointer arithmetic. References must be bound at initialization, cannot be null, and cannot be made to refer to a different object afterward.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
   },
   {
     "id": 6,
-    "questionText": "What are Virtual Threads (Project Loom) in Java 19?",
+    "questionText": "What does the const keyword do in C++?",
     "options": [
-      "Threads that run in virtual machines",
-      "Lightweight threads managed by the JVM",
-      "Threads that can only run virtual methods",
-      "Threads for virtual reality applications"
+      "It marks a variable as thread-local",
+      "It indicates that a variable, parameter, or method promises not to modify the value it applies to",
+      "It makes a variable global",
+      "It allocates memory on the heap"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Virtual threads are lightweight threads that are scheduled by the Java virtual machine rather than the operating system. They dramatically reduce the effort of writing, maintaining, and observing high-throughput concurrent applications.",
-    "javaVersion": "19",
-    "category": "Concurrency"
+    "explanation": "const declares that a value cannot be modified after initialization. Applied to a member function (e.g. void foo() const), it promises the method will not modify the object's state.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
   },
   {
     "id": 7,
-    "questionText": "What is Pattern Matching for switch expressions in Java 19?",
+    "questionText": "What does the static keyword mean when applied to a class member in C++?",
     "options": [
-      "Using regex patterns in switch",
-      "Matching patterns and extracting components in switch statements",
-      "Switching between design patterns",
-      "Pattern matching for file paths"
+      "The member can only be used once",
+      "The member belongs to the class itself rather than to any single instance, and is shared across all instances",
+      "The member is automatically const",
+      "The member is stored on the stack instead of the heap"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Pattern matching for switch allows you to match patterns and extract components from objects directly in switch expressions and statements, making code more concise and readable.",
-    "javaVersion": "19",
-    "category": "Language Features"
+    "explanation": "A static member belongs to the class rather than to individual objects. There is exactly one copy shared by all instances, and it can be accessed without creating an object.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
   },
   {
     "id": 8,
-    "questionText": "What is Scoped Values in Java 20?",
+    "questionText": "What is the purpose of a header file (.h / .hpp) in C++?",
     "options": [
-      "Values scoped to a method",
-      "Immutable data that can be shared within and across threads",
-      "Values with limited visibility",
-      "Database scoped values"
+      "It contains compiled machine code",
+      "It declares interfaces (classes, functions, constants) so multiple source files can share them via #include",
+      "It stores runtime configuration",
+      "It replaces the need for a compiler"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Scoped Values (preview) enable the sharing of immutable data within and across threads. They are preferred to thread-local variables, especially when using virtual threads.",
-    "javaVersion": "20",
-    "category": "Concurrency"
+    "explanation": "Header files contain declarations (function prototypes, class definitions, constants) that are shared between translation units using #include, separating interface from implementation.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
   },
   {
     "id": 9,
-    "questionText": "What does Record Patterns allow in Java 20?",
+    "questionText": "What are the main stages of building a C++ program?",
     "options": [
-      "Pattern matching on record components",
-      "Recording method patterns",
-      "Patterns for database records",
-      "Recording design patterns"
+      "Writing and running only",
+      "Preprocessing, compilation, assembly, and linking",
+      "Interpretation and garbage collection",
+      "Bytecode generation and JIT compilation"
     ],
-    "correctAnswerIndex": 0,
-    "explanation": "Record Patterns (preview) extend pattern matching to deconstruct record values, allowing you to match patterns and extract components from records directly.",
-    "javaVersion": "20",
-    "category": "Language Features"
+    "correctAnswerIndex": 1,
+    "explanation": "A C++ build pipeline preprocesses source (handling #include/#define), compiles it to assembly, assembles it to object code, then links object files and libraries into an executable.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
   },
   {
     "id": 10,
-    "questionText": "What is the main feature of Java 21 (LTS)?",
+    "questionText": "What is the standard signature of the main function in C++?",
     "options": [
-      "Virtual threads are finalized",
-      "Pattern matching is finalized",
-      "Sequenced Collections are introduced",
-      "All of the above"
+      "void main()",
+      "int main() or int main(int argc, char* argv[])",
+      "public static void main(String[] args)",
+      "def main():"
     ],
-    "correctAnswerIndex": 3,
-    "explanation": "Java 21 is an LTS release that finalizes Virtual Threads, Pattern Matching for switch, and introduces Sequenced Collections, among other features.",
-    "javaVersion": "21",
-    "category": "Language Features"
+    "correctAnswerIndex": 1,
+    "explanation": "The C++ standard requires main to return an int, either taking no parameters or taking argc/argv for command-line arguments. Returning 0 conventionally signals success.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
   },
   {
     "id": 11,
-    "questionText": "What are Sequenced Collections in Java 21?",
+    "questionText": "What is the difference between struct and class in C++?",
     "options": [
-      "Collections that can only store sequences",
-      "New interfaces for collections with a defined encounter order",
-      "Collections for DNA sequences",
-      "Collections that sequence operations"
+      "struct cannot have member functions",
+      "The only difference is the default access level: public for struct, private for class",
+      "class cannot be used with templates",
+      "struct is only for C compatibility and has no other use"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Sequenced Collections introduce new interfaces (SequencedSet, SequencedCollection, SequencedMap) that define collections with a well-defined encounter order, supporting operations at both ends.",
-    "javaVersion": "21",
-    "category": "Collections"
+    "explanation": "In C++, struct and class are almost identical; the only difference is default member and inheritance access, which is public for struct and private for class.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
   },
   {
     "id": 12,
-    "questionText": "What does String Templates (Preview) allow in Java 21?",
+    "questionText": "What is function overloading in C++?",
     "options": [
-      "Templating strings with placeholders",
-      "String interpolation with embedded expressions",
-      "Creating string templates from files",
-      "Template method pattern for strings"
+      "Calling a function too many times",
+      "Defining multiple functions with the same name but different parameter lists",
+      "Overriding a virtual function in a derived class",
+      "Using too many arguments in a single function"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "String Templates (preview) enable string interpolation by embedding expressions in template strings, making it easier to create strings that include computed values.",
-    "javaVersion": "21",
-    "category": "Language Features"
+    "explanation": "Function overloading allows multiple functions to share a name as long as their parameter lists differ in number or type, letting the compiler pick the right one at compile time.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
   },
   {
     "id": 13,
-    "questionText": "What is the instanceof pattern matching introduced in Java 17?",
+    "questionText": "What is a namespace in C++?",
     "options": [
-      "Using instanceof with type casting",
-      "Combining instanceof checks with variable binding",
-      "Pattern matching for instance variables",
-      "Matching instance methods"
+      "A block of memory reserved at runtime",
+      "A declarative region that provides a scope to group identifiers and avoid naming collisions",
+      "A type of template",
+      "A synonym for a header file"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Pattern matching for instanceof allows you to combine type checking and variable binding in a single expression, eliminating the need for explicit casting after instanceof checks.",
-    "javaVersion": "17",
-    "category": "Language Features"
+    "explanation": "A namespace (e.g. namespace std { ... }) groups related identifiers under a named scope, preventing name clashes between libraries or modules.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
   },
   {
     "id": 14,
-    "questionText": "What is the Foreign Function & Memory API in Java 19?",
+    "questionText": "What are default parameters in C++?",
     "options": [
-      "API for foreign key constraints",
-      "API for calling native code and managing off-heap memory",
-      "API for foreign exchange rates",
-      "API for internationalization"
+      "Parameters that are always ignored",
+      "Function parameters that are given a default value used when the caller omits an argument",
+      "Parameters that must be pointers",
+      "Parameters automatically generated by the compiler for every function"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "The Foreign Function & Memory API (preview) enables Java programs to interoperate with code and data outside of the Java runtime, allowing calls to native libraries and management of native memory.",
-    "javaVersion": "19",
-    "category": "APIs"
+    "explanation": "A default parameter (e.g. void greet(std::string name = \"World\")) supplies a value used automatically when the caller does not provide one, reducing the need for overloads.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
   },
   {
     "id": 15,
-    "questionText": "What does Structured Concurrency (Preview) provide in Java 19?",
+    "questionText": "What is the this pointer in C++?",
     "options": [
-      "Structured programming for concurrency",
-      "A structured approach to managing multiple tasks running in different threads",
-      "Concurrency with data structures",
-      "Structured error handling for threads"
+      "A pointer to the parent class",
+      "An implicit pointer available in non-static member functions that points to the object the method was called on",
+      "A pointer to the first element of an array",
+      "A global pointer to the main function"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Structured Concurrency (preview) provides a structured approach to managing multiple tasks running in different threads, treating groups of related tasks as a single unit of work.",
-    "javaVersion": "19",
-    "category": "Concurrency"
+    "explanation": "Inside a non-static member function, this is an implicit pointer to the calling object, used to access its members or to distinguish them from same-named parameters.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
   },
   {
     "id": 16,
-    "questionText": "What is Java?",
+    "questionText": "What is Object-Oriented Programming in the context of C++?",
     "options": [
-      "A low-level programming language",
-      "A high-level, object-oriented programming language designed to run on any platform",
-      "A database management system",
-      "A web browser"
+      "Programming that only uses objects, never functions",
+      "A paradigm organizing code into classes and objects that bundle data with the operations on that data",
+      "A style unique to Java that C++ merely imitates",
+      "A programming style with no data types"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Java is a high-level, class-based, object-oriented programming language designed to have as few implementation dependencies as possible. It follows the 'write once, run anywhere' (WORA) principle.",
-    "javaVersion": "Core",
+    "explanation": "C++ supports OOP by letting you define classes that bundle data (member variables) with behavior (member functions), enabling encapsulation, inheritance, and polymorphism.",
+    "languageVersion": "Core",
     "category": "Core Concepts"
   },
   {
     "id": 17,
-    "questionText": "Explain the JDK, JRE, and JVM.",
+    "questionText": "What are the four main pillars of OOP in C++?",
     "options": [
-      "They are all the same thing",
-      "JDK contains JRE, JRE contains JVM. JDK is for development, JRE is for running applications, JVM executes bytecode",
-      "JVM is the largest, containing both JDK and JRE",
-      "They are unrelated components"
+      "Compilation, Linking, Loading, Execution",
+      "Encapsulation, Abstraction, Inheritance, Polymorphism",
+      "Public, Private, Protected, Static",
+      "Stack, Heap, Global, Local"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "JVM (Java Virtual Machine) executes Java bytecode. JRE (Java Runtime Environment) contains JVM plus libraries needed to run Java applications. JDK (Java Development Kit) contains JRE plus development tools like compiler and debugger.",
-    "javaVersion": "Core",
-    "category": "Advanced"
+    "explanation": "Encapsulation hides internal state, abstraction exposes only essential details, inheritance lets classes derive from others, and polymorphism lets one interface work with multiple types.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
   },
   {
     "id": 18,
-    "questionText": "What are variables in Java?",
+    "questionText": "What is inheritance in C++?",
     "options": [
-      "Methods that store data",
-      "Containers for storing data values with a specific type",
-      "Classes that hold multiple values",
-      "Functions that return values"
+      "Copying a class's code manually into another file",
+      "A mechanism where a derived class acquires members and behavior from a base class",
+      "A way to import a library",
+      "A feature only available for structs, not classes"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Variables are containers for storing data values. In Java, each variable must be declared with a data type that designates the type and quantity of value it can hold. Java is statically typed.",
-    "javaVersion": "Core",
+    "explanation": "Inheritance lets a derived class reuse and extend the members of a base class, expressed with class Derived : public Base { ... } for public inheritance.",
+    "languageVersion": "Core",
     "category": "Core Concepts"
   },
   {
     "id": 19,
-    "questionText": "What is typecasting in Java?",
+    "questionText": "What is polymorphism in C++?",
     "options": [
-      "Converting a variable from one type to another",
-      "Creating new types",
-      "Type checking at runtime",
-      "Type erasure"
+      "Having several variables with the same name",
+      "The ability to call the correct derived-class implementation of a function through a base-class pointer or reference",
+      "Defining a class with multiple constructors",
+      "Using multiple namespaces in one file"
     ],
-    "correctAnswerIndex": 0,
-    "explanation": "Typecasting is the process of converting a variable from one type to another. Widening casting (implicit) converts smaller to larger types automatically. Narrowing casting (explicit) requires explicit conversion from larger to smaller types.",
-    "javaVersion": "Core",
-    "category": "General"
+    "correctAnswerIndex": 1,
+    "explanation": "Runtime polymorphism in C++ lets code that holds a base-class pointer or reference invoke the actual derived-class implementation of a virtual function, chosen at runtime.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
   },
   {
     "id": 20,
-    "questionText": "How do you declare an array in Java?",
+    "questionText": "What is a virtual function in C++?",
     "options": [
-      "array int[] = new int[10]",
-      "int[] myArray = new int[10]",
-      "int myArray = array[10]",
-      "new array int[10]"
+      "A function that exists only during debugging",
+      "A member function declared in a base class that can be overridden in derived classes and is resolved at runtime via dynamic dispatch",
+      "A function that cannot be called directly",
+      "A function that runs on a separate thread"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "An array is declared using: type[] arrayName = new type[size]. For example: int[] myIntArray = new int[10] declares an array of integers with 10 elements.",
-    "javaVersion": "Core",
-    "category": "General"
+    "explanation": "Declaring a base-class method virtual enables dynamic dispatch: calling it through a base pointer/reference invokes the most-derived override, using the object's vtable at runtime.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
   },
   {
     "id": 21,
-    "questionText": "What is the signature of the main method in Java?",
+    "questionText": "What is a pure virtual function and how does it create an abstract class?",
     "options": [
-      "public static void main(String args)",
-      "public static void main(String[] args)",
-      "public void main(String[] args)",
-      "static void main(String[] args)"
+      "A virtual function with an empty body that behaves like any normal function",
+      "A virtual function declared with = 0, which has no implementation in that class and forces any concrete derived class to override it, making the class abstract",
+      "A function that can only be called from main()",
+      "A static function that cannot be inherited"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "The main method is the entry point for any Java program. It must be public (accessible), static (can be called without creating an object), void (returns nothing), and accept a String array as parameter.",
-    "javaVersion": "Core",
+    "explanation": "Declaring virtual void foo() = 0; makes foo a pure virtual function. A class with at least one pure virtual function becomes abstract and cannot be instantiated directly.",
+    "languageVersion": "Core",
     "category": "Core Concepts"
   },
   {
     "id": 22,
-    "questionText": "What are literals in Java?",
+    "questionText": "What is operator overloading in C++?",
     "options": [
-      "Variables that cannot be changed",
-      "Fixed values assigned to variables, like 100, 'A', or \"Hello\"",
-      "Methods that return constant values",
-      "Classes that cannot be modified"
+      "Using too many operators in one expression",
+      "Defining custom behavior for operators (like +, ==, <<) when applied to user-defined types",
+      "A compiler error caused by ambiguous operators",
+      "Overloading only arithmetic operators is allowed"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Literals refer to the fixed values assigned to variables in Java. Examples include: 100 (integer), -90 (integer), 3.14F (float), 'A' (character), and \"Hello\" (string).",
-    "javaVersion": "Core",
-    "category": "General"
+    "explanation": "C++ allows you to redefine what operators like +, ==, or << do for your own classes, e.g. operator+(const T& other), so objects can be used naturally with familiar syntax.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
   },
   {
     "id": 23,
-    "questionText": "What is a constructor in Java?",
+    "questionText": "What is the diamond problem in C++?",
     "options": [
-      "A method that returns a value",
-      "A block of code called when an instance of an object is created, with the same name as the class",
-      "A static method that initializes the class",
-      "A method that destroys objects"
+      "A performance issue related to nested loops",
+      "An ambiguity that arises with multiple inheritance when a class inherits from two classes that share a common base, causing duplicate base subobjects",
+      "A syntax error when using templates",
+      "A memory alignment issue with structs"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "A constructor in Java is a block of code similar to a method that's called when an instance of an object is created. Unlike methods, constructors have no explicit return type and have the same name as the class itself.",
-    "javaVersion": "Core",
+    "explanation": "If classes B and C both inherit from A, and D inherits from both B and C, D ends up with two copies of A's members unless A is inherited virtually (virtual inheritance).",
+    "languageVersion": "Core",
     "category": "Core Concepts"
   },
   {
     "id": 24,
-    "questionText": "What is a package in Java?",
+    "questionText": "What is encapsulation in C++?",
     "options": [
-      "A compressed file format",
-      "A namespace that organizes related classes and interfaces",
-      "A method for packaging applications",
-      "A deployment unit"
+      "Combining every class into a single file",
+      "Bundling data and the methods that operate on it together, restricting direct access to internal state via access specifiers like private",
+      "Compiling code into a single binary",
+      "Wrapping a function in a try/catch block"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "A package in Java is a namespace that organizes a set of related classes and interfaces. Conceptually, you can think of packages as being similar to different folders on your computer.",
-    "javaVersion": "Core",
+    "explanation": "Encapsulation groups data and behavior inside a class and controls access using public, protected, and private specifiers, protecting internal state from unintended external modification.",
+    "languageVersion": "Core",
     "category": "Core Concepts"
   },
   {
     "id": 25,
-    "questionText": "What is Object-Oriented Programming?",
+    "questionText": "What are constructors and destructors in C++?",
     "options": [
-      "Programming with objects only",
-      "A programming paradigm based on objects containing data (fields) and code (methods)",
-      "Programming without functions",
-      "A database programming model"
+      "Functions that must be called manually to create and delete objects",
+      "Special member functions: a constructor initializes an object when it is created, a destructor (~ClassName) cleans up when it is destroyed",
+      "Keywords used only with pointers",
+      "Functions that only exist for structs"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Object-oriented programming (OOP) is a programming paradigm based on the concept of 'objects', which can contain data in the form of fields (attributes or properties) and code in the form of procedures (methods).",
-    "javaVersion": "Core",
+    "explanation": "A constructor (same name as the class) runs automatically when an object is created to initialize it; a destructor (prefixed with ~) runs automatically when the object goes out of scope or is deleted, freeing resources.",
+    "languageVersion": "Core",
     "category": "Core Concepts"
   },
   {
     "id": 26,
-    "questionText": "What are the main principles of OOP?",
+    "questionText": "What is RAII in C++?",
     "options": [
-      "Variables, Methods, Classes, Objects",
-      "Encapsulation, Abstraction, Inheritance, Polymorphism",
-      "Public, Private, Protected, Static",
-      "Compile, Run, Debug, Deploy"
+      "A naming convention for private members",
+      "Resource Acquisition Is Initialization: tying a resource's lifetime to an object's lifetime so it is automatically released when the object is destroyed",
+      "A type of runtime exception",
+      "A keyword for declaring arrays"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "The four main principles of OOP are: Encapsulation (binding data and methods, hiding implementation), Abstraction (hiding complexity, exposing simple interface), Inheritance (acquiring properties from parent class), and Polymorphism (one interface, multiple implementations).",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
+    "explanation": "RAII acquires a resource (memory, file handle, lock) in a constructor and releases it in the destructor, so resources are automatically freed when the owning object goes out of scope, even during exceptions.",
+    "languageVersion": "Core",
+    "category": "Advanced"
   },
   {
     "id": 27,
-    "questionText": "What is inheritance in Java?",
+    "questionText": "What is the difference between new/delete and malloc/free in C++?",
     "options": [
-      "Copying code from one class to another",
-      "A mechanism where one object acquires all properties and behaviors of a parent object",
-      "Sharing variables between classes",
-      "Importing classes from other packages"
+      "They are identical and interchangeable in every case",
+      "new/delete call constructors and destructors and are type-safe; malloc/free only allocate raw memory without initialization",
+      "malloc is faster in all cases so it should always be preferred",
+      "delete cannot free memory allocated by new"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Inheritance in Java is a mechanism where one object acquires all the properties and behaviors of a parent object. It is an important part of OOPs (Object-Oriented programming systems) and promotes code reusability.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
+    "explanation": "new invokes the type's constructor after allocating memory and delete invokes the destructor before freeing it. malloc/free (inherited from C) only manage raw memory and know nothing about object construction.",
+    "languageVersion": "Core",
+    "category": "Advanced"
   },
   {
     "id": 28,
-    "questionText": "What is an interface in Java?",
+    "questionText": "What is a memory leak in C++?",
     "options": [
-      "A class that cannot be instantiated",
-      "A reference type similar to a class that contains only constants, method signatures, default methods, and static methods",
-      "A graphical user interface",
-      "A connection between two classes"
+      "When a program uses too much CPU",
+      "When dynamically allocated memory is never freed, so it remains unreachable but still reserved for the program's lifetime",
+      "When a variable is declared but never used",
+      "When a file is opened but never read"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "An interface in Java is a reference type, similar to a class, that can contain only constants, method signatures, default methods, static methods, and nested types. Interfaces cannot contain instance fields. Methods in interfaces are abstract by default.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
+    "explanation": "A memory leak occurs when memory allocated with new (or malloc) is never released with delete (or free), and no pointer to it remains, so it cannot be reclaimed until the process exits.",
+    "languageVersion": "Core",
+    "category": "Advanced"
   },
   {
     "id": 29,
-    "questionText": "What is the difference between abstract classes and interfaces?",
+    "questionText": "What is a dangling pointer?",
     "options": [
-      "There is no difference",
-      "Abstract classes can have both abstract and non-abstract methods; interfaces typically have abstract methods only. A class can implement multiple interfaces but extend only one class",
-      "Interfaces can have instance fields; abstract classes cannot",
-      "Abstract classes are faster than interfaces"
+      "A pointer that has never been initialized",
+      "A pointer that still refers to memory that has already been freed or gone out of scope",
+      "A pointer that points to a constant",
+      "A pointer used inside a template"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Abstract classes can have both abstract and non-abstract methods and are used to provide a base for subclasses. Interfaces typically contain abstract methods only (though Java 8+ allows default and static methods). A class can implement multiple interfaces but extend only one class.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
+    "explanation": "A dangling pointer points to memory that has been deallocated (e.g. after delete) or to a local variable that has gone out of scope. Dereferencing it causes undefined behavior.",
+    "languageVersion": "Core",
+    "category": "Advanced"
   },
   {
     "id": 30,
-    "questionText": "What is polymorphism in Java?",
+    "questionText": "What is std::unique_ptr (C++11)?",
     "options": [
-      "Having multiple variables with the same name",
-      "The ability of an object to take on many forms, often when a parent class reference refers to a child class object",
-      "Having multiple classes with the same name",
-      "Using multiple inheritance"
+      "A pointer that can be shared by multiple owners simultaneously",
+      "A smart pointer that exclusively owns a dynamically allocated object and automatically deletes it when it goes out of scope",
+      "A raw pointer wrapper with no automatic cleanup",
+      "A pointer only usable inside templates"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Polymorphism in Java is the ability of an object to take on many forms. Most commonly, it is when a parent class reference is used to refer to a child class object. This allows one interface to be used for a general class of actions.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
+    "explanation": "std::unique_ptr provides exclusive ownership of a heap object; it cannot be copied (only moved) and automatically calls delete on the owned object when the unique_ptr is destroyed.",
+    "languageVersion": "11",
+    "category": "Advanced"
   },
   {
     "id": 31,
-    "questionText": "What is method overriding?",
+    "questionText": "What is std::shared_ptr (C++11)?",
     "options": [
-      "Having multiple methods with the same name but different parameters",
-      "A subclass providing a specific implementation of a method already provided by its superclass",
-      "Calling a method multiple times",
-      "Overloading a method with too many parameters"
+      "A pointer that must be manually reference-counted by the programmer",
+      "A smart pointer that allows multiple owners of the same object via reference counting, deleting it once the last owner is destroyed",
+      "A pointer that can never be null",
+      "A pointer that only works with arrays"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Method overriding, in object-oriented programming, is a language feature that allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its superclasses or parent classes.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
+    "explanation": "std::shared_ptr uses an internal reference count so multiple shared_ptr instances can co-own the same object; the object is deleted automatically once the last shared_ptr referencing it is destroyed.",
+    "languageVersion": "11",
+    "category": "Advanced"
   },
   {
     "id": 32,
-    "questionText": "What is method overloading?",
+    "questionText": "What is the Rule of Three (and Rule of Five) in C++?",
     "options": [
-      "A subclass providing a different implementation of a method",
-      "A feature allowing a class to have multiple methods with the same name but different parameter lists",
-      "Calling a method recursively",
-      "Making a method too complex"
+      "A rule limiting classes to three member functions",
+      "If a class manages a resource, it should define its own copy constructor, copy assignment operator, and destructor (and, since C++11, also the move constructor and move assignment operator)",
+      "A rule about how many times a loop can run",
+      "A naming convention for template parameters"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Method overloading is a feature that allows a class to have more than one method having the same name, if their parameter lists are different. It is related to compile-time (or static) polymorphism.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
+    "explanation": "If you must define one of the destructor, copy constructor, or copy assignment operator because a class owns a resource, you generally need all three (Rule of Three); C++11 extends this to five by adding the move constructor and move assignment operator.",
+    "languageVersion": "Core",
+    "category": "Advanced"
   },
   {
     "id": 33,
-    "questionText": "What is the difference between String, StringBuilder, and StringBuffer?",
+    "questionText": "What is the STL in C++?",
     "options": [
-      "They are all the same",
-      "String is immutable; StringBuilder is mutable and not thread-safe; StringBuffer is mutable and thread-safe",
-      "StringBuffer is immutable; StringBuilder is thread-safe",
-      "String is mutable; StringBuilder and StringBuffer are immutable"
+      "A build tool for compiling C++ programs",
+      "The Standard Template Library: a collection of generic containers, iterators, and algorithms",
+      "A GUI framework bundled with the compiler",
+      "A networking library"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "String is immutable - once created, its value cannot be changed. StringBuilder is mutable and not thread-safe, making it faster for single-threaded operations. StringBuffer is mutable and thread-safe due to synchronized methods, but slower than StringBuilder.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
+    "explanation": "The Standard Template Library (STL) provides generic, reusable containers (vector, map, set...), iterators to traverse them, and algorithms (sort, find, accumulate...) that work across container types.",
+    "languageVersion": "Core",
+    "category": "Collections"
   },
   {
     "id": 34,
-    "questionText": "What is the difference between == and .equals() in Java?",
+    "questionText": "What is the difference between std::vector and std::array?",
     "options": [
-      "They are the same",
-      "== compares references; .equals() compares object content (values)",
-      "== compares values; .equals() compares references",
-      ".equals() is only for primitives"
+      "They are exactly the same",
+      "std::vector is a dynamically resizable array on the heap; std::array is a fixed-size array whose size is known at compile time",
+      "std::array can grow at runtime while std::vector cannot",
+      "std::vector cannot store primitive types"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "The == operator compares references, checking if two references point to the same object. The .equals() method compares the content of objects for equality. The default implementation compares references, but many classes override it to compare values.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
+    "explanation": "std::vector manages a dynamically resizable, heap-allocated array that can grow or shrink at runtime. std::array (C++11) is a fixed-size, stack-allocated array whose size is a compile-time constant.",
+    "languageVersion": "Core",
+    "category": "Collections"
   },
   {
     "id": 35,
-    "questionText": "What is the purpose of the final keyword in Java?",
+    "questionText": "What is the difference between std::vector and std::list?",
     "options": [
-      "To mark the last element in a collection",
-      "final variable: cannot be changed; final method: cannot be overridden; final class: cannot be subclassed",
-      "To indicate the end of a program",
-      "To make variables public"
+      "They provide identical performance for every operation",
+      "std::vector stores elements contiguously (fast random access, slower middle insert/erase); std::list is a doubly-linked list (fast insert/erase anywhere, no random access)",
+      "std::list cannot store custom objects",
+      "std::vector is always slower than std::list"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "The final keyword has different meanings: final variable - value cannot be changed once assigned; final method - cannot be overridden by subclasses; final class - cannot be subclassed (extended).",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
+    "explanation": "std::vector keeps elements in contiguous memory, giving O(1) random access but O(n) insertion/removal in the middle. std::list is a doubly-linked list with O(1) insertion/removal anywhere but only sequential access.",
+    "languageVersion": "Core",
+    "category": "Collections"
   },
   {
     "id": 36,
-    "questionText": "What is an exception in Java?",
+    "questionText": "What is std::map in C++?",
     "options": [
-      "A compile-time error",
-      "An event that disrupts the normal flow of the program's instructions",
-      "A warning message",
-      "A syntax error"
+      "An unordered hash table with no sorting guarantees",
+      "An associative container that stores key-value pairs sorted by key, typically implemented as a balanced binary search tree",
+      "A container that can only store strings",
+      "A synonym for std::vector"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "An exception is an event that disrupts the normal flow of the program's instructions. When an exception occurs, an exception object is created and thrown in the method that caused it.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
+    "explanation": "std::map stores unique keys mapped to values, keeping them sorted by key (usually via a red-black tree), giving O(log n) lookup, insertion, and removal.",
+    "languageVersion": "Core",
+    "category": "Collections"
   },
   {
     "id": 37,
-    "questionText": "What is the difference between checked and unchecked exceptions?",
+    "questionText": "What is an iterator in C++?",
     "options": [
-      "There is no difference",
-      "Checked exceptions must be caught or declared; unchecked exceptions (RuntimeException) don't need to be declared",
-      "Unchecked exceptions must be caught; checked exceptions don't need to be declared",
-      "Checked exceptions are faster than unchecked exceptions"
+      "A function that repeats a loop a fixed number of times",
+      "An object that behaves like a pointer, used to traverse elements of a container without exposing its internal representation",
+      "A keyword for declaring a for loop",
+      "A container that stores only integers"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Checked exceptions must be caught or declared in the method signature using throws. They are checked at compile time. Unchecked exceptions (RuntimeException and its subclasses) don't need to be declared and are checked at runtime.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
+    "explanation": "Iterators provide a uniform, pointer-like interface (operator++, operator*, etc.) for traversing containers, letting STL algorithms work with vectors, lists, maps, and more without knowing their internals.",
+    "languageVersion": "Core",
+    "category": "Collections"
   },
   {
     "id": 38,
-    "questionText": "What is the try-catch-finally block?",
+    "questionText": "What does std::sort do, and where does it live?",
     "options": [
-      "A loop structure",
-      "A structure for exception handling: try contains code that might throw, catch handles exceptions, finally always executes",
-      "A conditional statement",
-      "A method declaration"
+      "It is a member function of every container defined in <vector>",
+      "It is a generic algorithm in <algorithm> that sorts a range given by two iterators, typically using an introsort-based approach",
+      "It only works on arrays of integers",
+      "It permanently modifies the type of the container"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "The try-catch-finally block is used for exception handling. The try block contains code that might throw an exception. The catch block handles the exception. The finally block always executes, whether an exception occurs or not.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
+    "explanation": "std::sort, declared in <algorithm>, sorts elements in the range [first, last) given by iterators, and works with any container offering random-access iterators, such as std::vector.",
+    "languageVersion": "Core",
+    "category": "Collections"
   },
   {
     "id": 39,
-    "questionText": "What is the throw keyword used for?",
+    "questionText": "What is the difference between std::map and std::unordered_map?",
     "options": [
-      "To throw away code",
-      "To explicitly throw an exception",
-      "To catch exceptions",
-      "To ignore exceptions"
+      "There is no meaningful difference",
+      "std::map keeps keys sorted using a tree (O(log n) operations); std::unordered_map uses a hash table for average O(1) operations but no ordering",
+      "std::unordered_map can only store one element",
+      "std::map cannot use custom key types"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "The throw keyword is used to explicitly throw an exception. You can throw either checked or unchecked exceptions. The throw statement requires a single argument: a throwable object.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
+    "explanation": "std::map maintains keys in sorted order via a balanced tree, giving O(log n) operations. std::unordered_map (C++11) uses a hash table for average O(1) operations but does not maintain any particular order.",
+    "languageVersion": "11",
+    "category": "Collections"
   },
   {
     "id": 40,
-    "questionText": "What is the throws keyword used for?",
+    "questionText": "What is std::pair (and std::tuple) used for?",
     "options": [
-      "To throw an exception",
-      "To declare that a method might throw an exception",
-      "To catch an exception",
-      "To ignore exceptions"
+      "Only for storing two numbers",
+      "std::pair bundles exactly two values of possibly different types; std::tuple generalizes this to any fixed number of values",
+      "They are containers that can grow dynamically like std::vector",
+      "They replace the need for structs entirely"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "The throws keyword is used in a method signature to declare that the method might throw one or more exceptions. It's used for checked exceptions that the method doesn't handle itself.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
+    "explanation": "std::pair<T1, T2> groups two heterogeneous values (e.g. map entries are std::pair<Key, Value>). std::tuple extends this idea to an arbitrary fixed number of heterogeneous values.",
+    "languageVersion": "Core",
+    "category": "Collections"
   },
   {
     "id": 41,
-    "questionText": "What is the List interface in Java?",
+    "questionText": "What does the auto keyword do in C++11?",
     "options": [
-      "A class for storing arrays",
-      "An interface representing an ordered collection where elements can be accessed by index",
-      "A method for listing files",
-      "A database table structure"
+      "It marks a variable for automatic garbage collection",
+      "It tells the compiler to deduce a variable's type automatically from its initializer",
+      "It makes a variable thread-local",
+      "It is only usable for function return types before C++14"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "The List interface is part of the Java Collections Framework and represents an ordered collection (also known as a sequence). The user can access elements by their integer index (position in the list), and search for elements in the list.",
-    "javaVersion": "Core",
-    "category": "Collections"
+    "explanation": "auto instructs the compiler to infer the variable's type from its initializer at compile time, e.g. auto x = 5; deduces x as int. It does not mean dynamic typing.",
+    "languageVersion": "11",
+    "category": "Language Features"
   },
   {
     "id": 42,
-    "questionText": "What is the difference between ArrayList and LinkedList?",
+    "questionText": "What is a range-based for loop, introduced in C++11?",
     "options": [
-      "They are the same",
-      "ArrayList is a resizable array good for random access; LinkedList is a doubly-linked list good for frequent insertions/deletions",
-      "LinkedList is faster for random access",
-      "ArrayList cannot store objects"
+      "A loop that can only iterate over arrays of fixed size",
+      "A concise for-loop syntax that iterates directly over the elements of a container or array without explicit indices or iterators",
+      "A loop that automatically parallelizes across threads",
+      "A loop that replaces while loops entirely"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "ArrayList is a resizable-array implementation best for storing and accessing data. LinkedList is a doubly-linked list implementation better for operations that require frequent addition and removal of elements from any part of the list.",
-    "javaVersion": "Core",
-    "category": "Collections"
+    "explanation": "Range-based for loops, written as for (auto& elem : container), iterate over every element of a range (container, array, initializer list) without manually managing indices or iterators.",
+    "languageVersion": "11",
+    "category": "Language Features"
   },
   {
     "id": 43,
-    "questionText": "What are Vector and Stack classes?",
+    "questionText": "What is a lambda expression in C++11?",
     "options": [
-      "They don't exist in Java",
-      "Vector is similar to ArrayList but synchronized; Stack extends Vector with stack operations",
-      "They are the same as ArrayList",
-      "Vector is for graphics; Stack is for networking"
+      "A macro that expands at compile time",
+      "An anonymous, inline function object that can capture variables from its enclosing scope",
+      "A special kind of class template",
+      "A function that can only be called once"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Vector is similar to ArrayList, but it is synchronized (thread-safe). Stack extends Vector with five operations that allow a vector to be treated as a stack (LIFO - Last In First Out).",
-    "javaVersion": "Core",
-    "category": "Concurrency"
+    "explanation": "A lambda, e.g. [x](int y) { return x + y; }, defines an unnamed function object inline. The capture list [x] specifies which enclosing variables it can use, by value or reference.",
+    "languageVersion": "11",
+    "category": "Language Features"
   },
   {
     "id": 44,
-    "questionText": "What is the difference between Iterator and ListIterator?",
+    "questionText": "What is nullptr, introduced in C++11?",
     "options": [
-      "They are the same",
-      "Iterator traverses forward only; ListIterator can traverse both directions, modify list, and get current position",
-      "ListIterator is only for arrays",
-      "Iterator is faster than ListIterator"
+      "A macro equal to the integer 0, identical to the old NULL",
+      "A type-safe keyword representing a null pointer value, distinct from integer 0, that avoids overload-resolution ambiguity",
+      "A pointer that always points to the first element of an array",
+      "A reserved variable name that cannot be reassigned"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Iterator can traverse the list in the forward direction only. ListIterator can traverse the list in either direction, modify the list during iteration, and obtain the iterator's current position in the list.",
-    "javaVersion": "Core",
-    "category": "Collections"
+    "explanation": "nullptr has its own type (std::nullptr_t) and unambiguously represents a null pointer, fixing issues where the old NULL macro (often defined as 0) could be confused with an integer in overload resolution.",
+    "languageVersion": "11",
+    "category": "Language Features"
   },
   {
     "id": 45,
-    "questionText": "What is a thread in Java?",
+    "questionText": "What are move semantics and rvalue references (C++11)?",
     "options": [
-      "A type of variable",
-      "A lightweight process that allows concurrent execution of multiple parts of a program",
-      "A collection class",
-      "A method modifier"
+      "A way to physically relocate objects in memory automatically",
+      "A mechanism (using && rvalue references) that lets resources be transferred from a temporary or expiring object instead of deep-copied, improving performance",
+      "A restriction preventing objects from being copied at all",
+      "A feature exclusive to primitive types like int and double"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "A thread is a lightweight process that allows concurrent execution of multiple parts of a program. Threads share the same memory space, making communication between threads easier than between processes.",
-    "javaVersion": "Core",
-    "category": "Concurrency"
+    "explanation": "Rvalue references (T&&) let code detect temporary (movable) objects and 'steal' their internal resources via a move constructor/assignment instead of performing an expensive deep copy.",
+    "languageVersion": "11",
+    "category": "Language Features"
   },
   {
     "id": 46,
-    "questionText": "What is the difference between Thread and Runnable?",
+    "questionText": "What are variadic templates in C++11?",
     "options": [
-      "They are the same",
-      "Thread is a class; Runnable is an interface. Runnable is preferred as Java doesn't support multiple inheritance",
-      "Runnable is a class; Thread is an interface",
-      "Thread is faster than Runnable"
+      "Templates that can only accept exactly two type parameters",
+      "Templates that accept an arbitrary number of template arguments of possibly different types",
+      "A way to define templates without any parameters",
+      "Templates restricted to numeric types only"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Thread is a class that implements Runnable. Runnable is an interface with a single run() method. Using Runnable is preferred because Java doesn't support multiple inheritance, so if you extend Thread, you can't extend another class.",
-    "javaVersion": "Core",
-    "category": "Concurrency"
+    "explanation": "Variadic templates, using a parameter pack (typename... Args), let a template function or class accept any number of arguments of varying types, enabling things like a type-safe printf replacement.",
+    "languageVersion": "11",
+    "category": "Language Features"
   },
   {
     "id": 47,
-    "questionText": "What is synchronization in Java?",
+    "questionText": "What is an enum class (scoped enumeration) in C++11?",
     "options": [
-      "Making code run faster",
-      "A mechanism that ensures only one thread can access a shared resource at a time",
-      "Synchronizing with a database",
-      "Making methods static"
+      "An enum whose values can implicitly convert to int and pollute the surrounding scope",
+      "A strongly-typed enumeration whose enumerators are scoped to the enum's name and do not implicitly convert to int",
+      "A class that behaves exactly like a plain enum",
+      "An enum that can only hold string values"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Synchronization is a mechanism that ensures only one thread can access a shared resource at a time. It prevents thread interference and consistency problems. It can be achieved using synchronized methods or synchronized blocks.",
-    "javaVersion": "Core",
-    "category": "Concurrency"
+    "explanation": "enum class Color { Red, Green }; requires Color::Red to access enumerators, and disallows implicit conversion to int, avoiding the naming collisions and unsafe conversions of plain C-style enums.",
+    "languageVersion": "11",
+    "category": "Language Features"
   },
   {
     "id": 48,
-    "questionText": "What is the difference between wait() and sleep()?",
+    "questionText": "What are generic lambdas, introduced in C++14?",
     "options": [
-      "They are the same",
-      "wait() releases the lock and must be in synchronized context; sleep() doesn't release locks",
-      "sleep() releases the lock; wait() doesn't",
-      "wait() is faster than sleep()"
+      "Lambdas that can never capture variables",
+      "Lambdas whose parameters can be declared auto, letting a single lambda work with multiple argument types like a template",
+      "Lambdas that must specify every type explicitly",
+      "A feature that lets lambdas be recursive by default"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "wait() is called on an object and releases the lock, allowing other threads to acquire it. sleep() is called on Thread and doesn't release any locks. wait() must be called from a synchronized context.",
-    "javaVersion": "Core",
-    "category": "Concurrency"
+    "explanation": "C++14 allows lambda parameters to be declared auto, e.g. [](auto a, auto b) { return a + b; }, making the lambda's operator() effectively a template that works with any compatible types.",
+    "languageVersion": "14",
+    "category": "Language Features"
   },
   {
     "id": 49,
-    "questionText": "What is the Stream API in Java 8?",
+    "questionText": "What does std::make_unique do, added in C++14?",
     "options": [
-      "A way to read files",
-      "A sequence of elements supporting sequential and parallel aggregate operations",
-      "A networking API",
-      "A database streaming API"
+      "It creates a std::shared_ptr",
+      "It safely constructs an object and wraps it in a std::unique_ptr in a single, exception-safe expression",
+      "It converts a raw pointer into a reference",
+      "It duplicates an existing unique_ptr"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "The Stream API in Java 8 provides a functional approach to processing collections of objects. It allows you to perform operations like filter, map, reduce, etc., on collections in a declarative way.",
-    "javaVersion": "8",
-    "category": "Collections"
+    "explanation": "std::make_unique<T>(args...) allocates and constructs a T and returns it owned by a std::unique_ptr, avoiding manual new calls and certain exception-safety pitfalls. (std::make_shared existed since C++11.)",
+    "languageVersion": "14",
+    "category": "Language Features"
   },
   {
     "id": 50,
-    "questionText": "What is the difference between intermediate and terminal operations in Stream API?",
+    "questionText": "What changed with constexpr functions in C++14?",
     "options": [
-      "They are the same",
-      "Intermediate operations return streams and are lazy; terminal operations produce results and trigger execution",
-      "Terminal operations return streams; intermediate operations produce results",
-      "Intermediate operations are faster"
+      "constexpr functions were removed entirely",
+      "Restrictions were relaxed so constexpr functions could contain loops, local variables, and multiple statements, not just a single return expression",
+      "constexpr became the default for every function",
+      "constexpr functions can now throw exceptions at compile time"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Intermediate operations (like filter, map) return a stream and are lazy - they don't execute until a terminal operation is called. Terminal operations (like collect, forEach) produce a result and trigger the execution of the stream pipeline.",
-    "javaVersion": "8",
-    "category": "Collections"
+    "explanation": "C++11 constexpr functions were limited to essentially a single return statement. C++14 relaxed this, allowing loops, conditionals, and multiple local variables inside constexpr functions.",
+    "languageVersion": "14",
+    "category": "Language Features"
   },
   {
     "id": 51,
-    "questionText": "What is the reduce operation in Stream API?",
+    "questionText": "What are structured bindings, introduced in C++17?",
     "options": [
-      "Reducing the size of a collection",
-      "Combining all elements of a stream into a single result using a binary operator",
-      "Removing elements from a stream",
-      "Reducing memory usage"
+      "A way to bind a function to a specific thread",
+      "Syntax that lets you unpack multiple values from a pair, tuple, struct, or array into individually named variables in one declaration",
+      "A feature restricted to arrays of exactly three elements",
+      "A replacement for the auto keyword"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "The reduce operation combines all elements of the stream into a single result by applying a binary operator. This operation takes two parameters: an initial value (optional), and a binary operator function.",
-    "javaVersion": "8",
-    "category": "Collections"
+    "explanation": "Structured bindings, e.g. auto [key, value] = *mapIterator;, let you destructure a pair, tuple, struct, or array into named variables in a single statement.",
+    "languageVersion": "17",
+    "category": "Language Features"
   },
   {
     "id": 52,
-    "questionText": "What is JDBC?",
+    "questionText": "What is std::optional, introduced in C++17?",
     "options": [
-      "A Java database",
-      "Java Database Connectivity - an API that enables Java programs to execute SQL statements",
-      "A Java development tool",
-      "A Java compiler"
+      "A container that can hold an unlimited number of values",
+      "A wrapper type that may or may not contain a value, providing a type-safe alternative to using a sentinel value or a pointer to represent 'no value'",
+      "A replacement for exceptions",
+      "A pointer that is optional to dereference"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "JDBC (Java Database Connectivity) is an API that enables Java programs to execute SQL statements. This allows Java applications to interact with any SQL-compliant database.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
+    "explanation": "std::optional<T> represents a value that may or may not be present, avoiding the need for sentinel values (like -1) or nullable pointers to express 'no result' in a type-safe way.",
+    "languageVersion": "17",
+    "category": "Language Features"
   },
   {
     "id": 53,
-    "questionText": "What are the core components of JDBC?",
+    "questionText": "What does if constexpr do in C++17?",
     "options": [
-      "Classes and methods only",
-      "DriverManager, Driver, Connection, Statement, ResultSet, and SQLException",
-      "Only Connection and Statement",
-      "Database and tables"
+      "It makes a normal if statement run faster at runtime",
+      "It evaluates a condition at compile time and discards the untaken branch entirely, commonly used in templates to select code per type",
+      "It replaces the switch statement",
+      "It forces both branches of an if to always execute"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "The core components of JDBC include DriverManager (manages database drivers), Driver (interface for database drivers), Connection (represents a connection to a database), Statement (executes SQL queries), ResultSet (represents query results), and SQLException (handles database errors).",
-    "javaVersion": "Core",
-    "category": "APIs"
+    "explanation": "if constexpr (condition) evaluates the condition at compile time; the branch not taken is discarded from compilation entirely, which is especially useful for writing templates that behave differently per type without SFINAE tricks.",
+    "languageVersion": "17",
+    "category": "Language Features"
   },
   {
     "id": 54,
-    "questionText": "What is the difference between Statement and PreparedStatement?",
+    "questionText": "What is std::string_view, introduced in C++17?",
     "options": [
-      "They are the same",
-      "Statement is for simple queries with no parameters; PreparedStatement is for parameterized queries and better performance",
-      "PreparedStatement is simpler than Statement",
-      "Statement is only for SELECT queries"
+      "A mutable, owning string type that replaces std::string",
+      "A lightweight, non-owning view over a contiguous sequence of characters, avoiding unnecessary string copies",
+      "A view that can only be created from string literals",
+      "A synchronization primitive for strings shared between threads"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Statement is used to execute a simple SQL query with no parameters. PreparedStatement is used for executing SQL statements multiple times or when you need to bind parameters to the query. PreparedStatement is precompiled and offers better performance and security.",
-    "javaVersion": "Core",
-    "category": "General"
+    "explanation": "std::string_view holds a pointer and length referring to existing character data without owning or copying it, making functions that only need to read a string cheaper to call.",
+    "languageVersion": "17",
+    "category": "Language Features"
   },
   {
     "id": 55,
-    "questionText": "What is ResultSet in JDBC?",
+    "questionText": "What is std::variant, introduced in C++17?",
     "options": [
-      "A database table",
-      "A table of data representing a database result set generated by executing a query",
-      "A SQL statement",
-      "A database connection"
+      "A container that stores multiple values of the same type",
+      "A type-safe tagged union that holds a value which can be one of several specified alternative types",
+      "A replacement for std::optional",
+      "A type used exclusively for error codes"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "ResultSet is a table of data representing a database result set, which is generated by executing a statement that queries the database. It provides methods to navigate through the rows and retrieve column values.",
-    "javaVersion": "Core",
-    "category": "APIs"
+    "explanation": "std::variant<T1, T2, ...> can hold a value of exactly one of its listed alternative types at a time, giving a type-safe alternative to a raw C-style union.",
+    "languageVersion": "17",
+    "category": "Language Features"
   },
   {
     "id": 56,
-    "questionText": "What is Connection Pooling?",
+    "questionText": "What are concepts, introduced in C++20?",
     "options": [
-      "A pool of database tables",
-      "A technique to improve performance by reusing database connections instead of creating new ones",
-      "A way to store connections in a pool",
-      "A database backup method"
+      "A runtime type-checking mechanism",
+      "Named compile-time predicates that constrain what types a template can accept, producing clearer errors than raw SFINAE",
+      "A new kind of comment syntax",
+      "A replacement for the auto keyword everywhere"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Connection pooling is a technique used to improve performance in applications that need to make calls to a database by reusing the connections instead of creating a new one each time. This reduces overhead and improves response time.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
+    "explanation": "Concepts let you express requirements on template parameters directly, e.g. template<std::integral T>, giving readable compile-time constraints and far clearer error messages than traditional SFINAE-based techniques.",
+    "languageVersion": "20",
+    "category": "Language Features"
   },
   {
     "id": 57,
-    "questionText": "What are primitive data types in Java?",
+    "questionText": "What does the Ranges library add in C++20?",
     "options": [
-      "int, float, String, Object",
-      "byte, short, int, long, float, double, char, boolean - basic types that store actual values",
-      "ArrayList, HashMap, String",
-      "Classes and interfaces"
+      "A way to define numeric ranges like Python's range() only",
+      "Composable, lazily-evaluated views and adaptors that let algorithms operate directly on ranges (containers) instead of requiring begin/end iterator pairs, and can be chained with the pipe operator",
+      "A replacement for all STL containers",
+      "A networking API for HTTP ranges"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Primitive data types are the basic types: byte, short, int, long, float, double, char, and boolean. They store actual values (not references) and use less memory than objects. They cannot be null.",
-    "javaVersion": "Core",
-    "category": "General"
+    "explanation": "std::ranges lets algorithms work directly on a whole range instead of iterator pairs, and range adaptors (like views::filter, views::transform) can be composed lazily with the | operator.",
+    "languageVersion": "20",
+    "category": "Language Features"
   },
   {
     "id": 58,
-    "questionText": "What is the difference between primitives and objects in Java?",
+    "questionText": "What are coroutines, introduced in C++20?",
     "options": [
-      "There is no difference",
-      "Primitives store values and use less memory; objects store references, use more memory, can be null, and have methods",
-      "Objects are faster than primitives",
-      "Primitives can have methods"
+      "A way to run multiple threads simultaneously with automatic synchronization",
+      "Functions that can suspend execution and later resume, using co_await, co_yield, or co_return, enabling asynchronous and generator-style code",
+      "A feature exclusive to lambda expressions",
+      "A new kind of exception-handling mechanism"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Primitives store actual values and use less memory. Objects store references to memory locations, use more memory, can be null, and have methods. Primitives are generally faster to access and manipulate.",
-    "javaVersion": "Core",
-    "category": "General"
+    "explanation": "Coroutines are functions whose execution can be suspended with co_await or co_yield and resumed later, providing language-level support for asynchronous operations and generators without manual state machines.",
+    "languageVersion": "20",
+    "category": "Concurrency"
   },
   {
     "id": 59,
-    "questionText": "What is garbage collection in Java?",
+    "questionText": "What is the spaceship operator (<=>), introduced in C++20?",
     "options": [
-      "Manual memory management",
-      "Automatic memory management that reclaims memory occupied by objects that are no longer in use",
-      "Collecting unused code",
-      "A database operation"
+      "An operator used only for comparing pointers",
+      "The three-way comparison operator, which can be defaulted to auto-generate all six relational operators (<, <=, >, >=, ==, !=) for a type",
+      "A bitwise operator for shifting bits",
+      "An operator that replaces the ternary conditional operator"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "Garbage collection is the automatic memory management process in Java. The JVM automatically identifies and removes objects that are no longer referenced, freeing up memory. Developers don't need to manually deallocate memory.",
-    "javaVersion": "Core",
-    "category": "Advanced"
+    "explanation": "The three-way comparison operator <=> returns an ordering result, and declaring auto operator<=>(const T&) const = default; lets the compiler generate all the relational operators automatically.",
+    "languageVersion": "20",
+    "category": "Language Features"
   },
   {
     "id": 60,
-    "questionText": "What is the static keyword in Java?",
+    "questionText": "What does std::expected, introduced in C++23, provide?",
     "options": [
-      "A method that cannot be changed",
-      "A keyword that makes a member belong to the class rather than instances, shared across all instances",
-      "A constant value",
-      "A method modifier for speed"
+      "A container that guarantees a value will never be missing",
+      "A type that holds either an expected value or an error, offering an alternative to exceptions for representing recoverable failures",
+      "A synonym for std::optional with no real difference",
+      "A type used exclusively for parsing JSON"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "The static keyword makes a member (variable or method) belong to the class rather than to instances of the class. Static members are shared across all instances and can be accessed without creating an object.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
+    "explanation": "std::expected<T, E> holds either a valid value of type T or an error of type E, letting functions report recoverable errors as part of their return type instead of throwing exceptions.",
+    "languageVersion": "23",
+    "category": "Language Features"
   },
   {
     "id": 61,
-    "questionText": "What is the this keyword in Java?",
+    "questionText": "What is 'deducing this', introduced in C++23?",
     "options": [
-      "A reference to another object",
-      "A reference to the current object instance",
-      "A method name",
-      "A class name"
+      "A way to remove the this pointer from member functions entirely",
+      "A feature allowing member functions to declare an explicit object parameter, letting a single function template deduce const-ness, value category, and even the derived type of the caller",
+      "A debugging tool for inspecting the this pointer at runtime",
+      "A macro that renames this to self"
     ],
     "correctAnswerIndex": 1,
-    "explanation": "The 'this' keyword is a reference to the current object instance. It can be used to refer to instance variables, call other constructors, or pass the current object as a parameter.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 62,
-    "questionText": "What are access modifiers in Java?",
-    "options": [
-      "public, private, protected, default - they control the visibility and accessibility of classes, methods, and variables",
-      "static, final, abstract",
-      "int, String, boolean",
-      "try, catch, finally"
-    ],
-    "correctAnswerIndex": 0,
-    "explanation": "Access modifiers control the visibility and accessibility of classes, methods, and variables. public (accessible everywhere), private (only within the class), protected (within package and subclasses), and default/package-private (within the same package).",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 63,
-    "questionText": "What is the super keyword in Java?",
-    "options": [
-      "A method that is superior",
-      "A reference to the parent class, used to access parent class members and call parent class constructors",
-      "A class modifier",
-      "A variable type"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The 'super' keyword is a reference to the parent class. It can be used to access parent class members (variables and methods), call parent class constructors, and distinguish between parent and child class members with the same name.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 64,
-    "questionText": "What is autoboxing and unboxing in Java?",
-    "options": [
-      "Packing and unpacking boxes",
-      "Automatic conversion between primitive types and their corresponding wrapper classes",
-      "Converting between different number types",
-      "A database operation"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Autoboxing is the automatic conversion of primitive types to their corresponding wrapper class objects (e.g., int to Integer). Unboxing is the automatic conversion of wrapper class objects to their primitive types (e.g., Integer to int).",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 65,
-    "questionText": "What is a wrapper class in Java?",
-    "options": [
-      "A class that wraps other classes",
-      "A class that wraps primitive types in objects (e.g., Integer for int, Double for double)",
-      "A class for packaging applications",
-      "A class that wraps collections"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Wrapper classes are classes that wrap primitive types in objects. Examples include Integer (for int), Double (for double), Boolean (for boolean), Character (for char), etc. They allow primitives to be used in contexts that require objects.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 66,
-    "questionText": "What is the default value of a boolean instance variable in Java?",
-    "options": [
-      "true",
-      "false",
-      "null",
-      "undefined"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Instance variables of type boolean are initialized to false by default.",
-    "javaVersion": "Core",
-    "category": "General"
-  },
-  {
-    "id": 67,
-    "questionText": "Which keyword is used to inherit a class in Java?",
-    "options": [
-      "implements",
-      "inherits",
-      "extends",
-      "instanceof"
-    ],
-    "correctAnswerIndex": 2,
-    "explanation": "The extends keyword is used by a subclass to inherit another class.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 68,
-    "questionText": "What is the size of an int in Java?",
-    "options": [
-      "8 bits",
-      "16 bits",
-      "32 bits",
-      "64 bits"
-    ],
-    "correctAnswerIndex": 2,
-    "explanation": "An int in Java is always 32 bits regardless of platform.",
-    "javaVersion": "Core",
-    "category": "General"
-  },
-  {
-    "id": 69,
-    "questionText": "Which collection does not allow duplicate elements?",
-    "options": [
-      "List",
-      "Set",
-      "Map",
-      "Queue"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Set implementations do not allow duplicate elements.",
-    "javaVersion": "Core",
-    "category": "Collections"
-  },
-  {
-    "id": 70,
-    "questionText": "What is the purpose of the equals() method?",
-    "options": [
-      "Compare object references",
-      "Compare object contents",
-      "Clone objects",
-      "Destroy objects"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The equals() method is intended to compare object contents for logical equality.",
-    "javaVersion": "Core",
-    "category": "General"
-  },
-  {
-    "id": 71,
-    "questionText": "Which exception is thrown when dividing by zero?",
-    "options": [
-      "NullPointerException",
-      "ArithmeticException",
-      "IllegalArgumentException",
-      "IOException"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Dividing an integer by zero results in an ArithmeticException.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 72,
-    "questionText": "Which keyword prevents method overriding?",
-    "options": [
-      "static",
-      "final",
-      "private",
-      "abstract"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Methods declared as final cannot be overridden by subclasses.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 73,
-    "questionText": "What does JVM stand for?",
-    "options": [
-      "Java Variable Machine",
-      "Java Virtual Machine",
-      "Java Verified Machine",
-      "Java Visual Machine"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "JVM stands for Java Virtual Machine.",
-    "javaVersion": "Core",
-    "category": "Advanced"
-  },
-  {
-    "id": 74,
-    "questionText": "Which Java feature allows treating code as data?",
-    "options": [
-      "Generics",
-      "Annotations",
-      "Lambdas",
-      "Serialization"
-    ],
-    "correctAnswerIndex": 2,
-    "explanation": "Lambda expressions allow behavior (code) to be passed as data.",
-    "javaVersion": "8",
-    "category": "General"
-  },
-  {
-    "id": 75,
-    "questionText": "What is a functional interface?",
-    "options": [
-      "Interface with no methods",
-      "Interface with one abstract method",
-      "Interface with default methods only",
-      "Interface with static methods only"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "A functional interface has exactly one abstract method.",
-    "javaVersion": "8",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 76,
-    "questionText": "Which keyword is used to create an object in Java?",
-    "options": [
-      "create",
-      "new",
-      "make",
-      "object"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The new keyword allocates memory and creates an object.",
-    "javaVersion": "Core",
-    "category": "General"
-  },
-  {
-    "id": 77,
-    "questionText": "What is method overloading resolved at?",
-    "options": [
-      "Runtime",
-      "Compile time",
-      "Link time",
-      "Execution time"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Method overloading is resolved at compile time.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 78,
-    "questionText": "Which collection maintains insertion order?",
-    "options": [
-      "HashSet",
-      "TreeSet",
-      "LinkedHashSet",
-      "Set"
-    ],
-    "correctAnswerIndex": 2,
-    "explanation": "LinkedHashSet maintains insertion order.",
-    "javaVersion": "Core",
-    "category": "Collections"
-  },
-  {
-    "id": 79,
-    "questionText": "What does final on a variable mean?",
-    "options": [
-      "Variable can change",
-      "Variable cannot be reassigned",
-      "Variable is static",
-      "Variable is private"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "A final variable cannot be reassigned after initialization.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 80,
-    "questionText": "Which Java 8 feature enables functional programming?",
-    "options": [
-      "Streams",
-      "Lambdas",
-      "Modules",
-      "Records"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Lambda expressions enable functional programming style.",
-    "javaVersion": "8",
-    "category": "General"
-  },
-  {
-    "id": 81,
-    "questionText": "Which access modifier makes a member visible only within its class?",
-    "options": [
-      "public",
-      "protected",
-      "default",
-      "private"
-    ],
-    "correctAnswerIndex": 3,
-    "explanation": "private members are accessible only within the declaring class.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 82,
-    "questionText": "Which collection allows key\u2013value pairs?",
-    "options": [
-      "List",
-      "Set",
-      "Map",
-      "Queue"
-    ],
-    "correctAnswerIndex": 2,
-    "explanation": "Map stores key\u2013value pairs.",
-    "javaVersion": "Core",
-    "category": "Collections"
-  },
-  {
-    "id": 83,
-    "questionText": "Which Map implementation maintains insertion order?",
-    "options": [
-      "HashMap",
-      "TreeMap",
-      "LinkedHashMap",
-      "ConcurrentHashMap"
-    ],
-    "correctAnswerIndex": 2,
-    "explanation": "LinkedHashMap preserves insertion order.",
-    "javaVersion": "Core",
-    "category": "Collections"
-  },
-  {
-    "id": 84,
-    "questionText": "Which exception is unchecked?",
-    "options": [
-      "IOException",
-      "SQLException",
-      "ClassNotFoundException",
-      "NullPointerException"
-    ],
-    "correctAnswerIndex": 3,
-    "explanation": "NullPointerException is a RuntimeException (unchecked).",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 85,
-    "questionText": "What does the volatile keyword guarantee?",
-    "options": [
-      "Atomicity",
-      "Visibility",
-      "Mutual exclusion",
-      "Ordering only"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "volatile guarantees visibility of changes across threads.",
-    "javaVersion": "Core",
-    "category": "Concurrency"
-  },
-  {
-    "id": 86,
-    "questionText": "Which Java 8 API supports bulk data operations?",
-    "options": [
-      "NIO",
-      "Stream",
-      "Reflection",
-      "RMI"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The Stream API supports bulk operations.",
-    "javaVersion": "8",
-    "category": "Collections"
-  },
-  {
-    "id": 87,
-    "questionText": "What is the terminal operation here: stream.filter(...).count()?",
-    "options": [
-      "filter",
-      "map",
-      "count",
-      "peek"
-    ],
-    "correctAnswerIndex": 2,
-    "explanation": "count() is a terminal operation.",
-    "javaVersion": "8",
-    "category": "Collections"
-  },
-  {
-    "id": 88,
-    "questionText": "Which Optional method returns a default value when empty?",
-    "options": [
-      "get",
-      "orElse",
-      "isPresent",
-      "ifPresent"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "orElse returns a default value if empty.",
-    "javaVersion": "8",
-    "category": "General"
-  },
-  {
-    "id": 89,
-    "questionText": "What does try-with-resources ensure?",
-    "options": [
-      "Faster execution",
-      "Automatic resource closure",
-      "Exception suppression",
-      "Thread safety"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Resources are automatically closed.",
-    "javaVersion": "7",
-    "category": "General"
-  },
-  {
-    "id": 90,
-    "questionText": "Which keyword is used to define a constant?",
-    "options": [
-      "static",
-      "const",
-      "final",
-      "immutable"
-    ],
-    "correctAnswerIndex": 2,
-    "explanation": "final prevents reassignment.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 91,
-    "questionText": "Which class is immutable?",
-    "options": [
-      "String",
-      "StringBuilder",
-      "ArrayList",
-      "HashMap"
-    ],
-    "correctAnswerIndex": 0,
-    "explanation": "String is immutable.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 92,
-    "questionText": "What does GC primarily manage?",
-    "options": [
-      "CPU",
-      "Threads",
-      "Memory",
-      "I/O"
-    ],
-    "correctAnswerIndex": 2,
-    "explanation": "Garbage Collector manages memory.",
-    "javaVersion": "Core",
-    "category": "General"
-  },
-  {
-    "id": 93,
-    "questionText": "Which reference type helps prevent memory leaks?",
-    "options": [
-      "Strong",
-      "Soft",
-      "Weak",
-      "Phantom"
-    ],
-    "correctAnswerIndex": 2,
-    "explanation": "Weak references allow GC when no strong refs exist.",
-    "javaVersion": "Core",
-    "category": "General"
-  },
-  {
-    "id": 94,
-    "questionText": "Which interface enables sorting?",
-    "options": [
-      "Serializable",
-      "Comparable",
-      "Iterable",
-      "Cloneable"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Comparable defines natural ordering.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 95,
-    "questionText": "Which comparator method was added in Java 8?",
-    "options": [
-      "compare",
-      "thenComparing",
-      "sort",
-      "order"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "thenComparing enables chained comparisons.",
-    "javaVersion": "8",
-    "category": "General"
-  },
-  {
-    "id": 96,
-    "questionText": "What is a marker interface?",
-    "options": [
-      "Interface with one method",
-      "Interface with no methods",
-      "Deprecated interface",
-      "Functional interface"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Marker interfaces have no methods.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 97,
-    "questionText": "Which collection is thread-safe by default?",
-    "options": [
-      "ArrayList",
-      "HashMap",
-      "Vector",
-      "LinkedList"
-    ],
-    "correctAnswerIndex": 2,
-    "explanation": "Vector is synchronized.",
-    "javaVersion": "Core",
-    "category": "Concurrency"
-  },
-  {
-    "id": 98,
-    "questionText": "What does synchronized keyword do?",
-    "options": [
-      "Improves speed",
-      "Ensures mutual exclusion",
-      "Makes code static",
-      "Improves memory"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "It ensures mutual exclusion.",
-    "javaVersion": "Core",
-    "category": "Concurrency"
-  },
-  {
-    "id": 99,
-    "questionText": "Which Java version introduced modules?",
-    "options": [
-      "8",
-      "9",
-      "11",
-      "17"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Java 9 introduced the module system.",
-    "javaVersion": "9",
-    "category": "Advanced"
-  },
-  {
-    "id": 100,
-    "questionText": "What is JPMS?",
-    "options": [
-      "Java Package Manager",
-      "Java Platform Module System",
-      "Java Program Memory System",
-      "Java Plugin Module Set"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "JPMS is the Java Platform Module System.",
-    "javaVersion": "9",
-    "category": "Advanced"
-  },
-  {
-    "id": 101,
-    "questionText": "Which class loader loads core classes?",
-    "options": [
-      "System",
-      "Extension",
-      "Bootstrap",
-      "Custom"
-    ],
-    "correctAnswerIndex": 2,
-    "explanation": "Bootstrap class loader loads core classes.",
-    "javaVersion": "Core",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 102,
-    "questionText": "What does record provide by default?",
-    "options": [
-      "Mutability",
-      "Boilerplate reduction",
-      "Inheritance",
-      "Lazy loading"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Records reduce boilerplate.",
-    "javaVersion": "16",
+    "explanation": "Deducing this lets you write an explicit object parameter (e.g. void foo(this Self&& self)) so one function template can replace multiple const/non-const or lvalue/rvalue overloads, and enables patterns like CRTP without inheritance boilerplate.",
+    "languageVersion": "23",
     "category": "Language Features"
-  },
-  {
-    "id": 103,
-    "questionText": "Are records implicitly final?",
-    "options": [
-      "Yes",
-      "No",
-      "Only fields",
-      "Only methods"
-    ],
-    "correctAnswerIndex": 0,
-    "explanation": "Records are implicitly final.",
-    "javaVersion": "16",
-    "category": "Language Features"
-  },
-  {
-    "id": 104,
-    "questionText": "What is the purpose of the permits clause in sealed classes?",
-    "options": [
-      "To allow all classes to extend it",
-      "To explicitly list which classes can extend the sealed class",
-      "To prevent any class from extending it",
-      "To make the class abstract"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The permits clause in a sealed class explicitly lists which classes are allowed to extend it. This provides compile-time control over the class hierarchy.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 105,
-    "questionText": "What is a non-sealed class in the context of sealed hierarchies?",
-    "options": [
-      "A class that cannot be extended",
-      "A class that can be extended by any class",
-      "A class that is part of a sealed hierarchy but allows unrestricted extension",
-      "A sealed class with no permits clause"
-    ],
-    "correctAnswerIndex": 2,
-    "explanation": "A non-sealed class is part of a sealed hierarchy (extends a sealed class) but allows any class to extend it, breaking the sealed constraint for that branch.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 106,
-    "questionText": "What does Text Blocks allow in Java 17?",
-    "options": [
-      "Creating text files",
-      "Multi-line string literals with improved readability",
-      "Text encryption",
-      "Text compression"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Text Blocks (finalized in Java 17) allow you to write multi-line string literals using triple quotes (\"\"\"), making it easier to write strings that span multiple lines.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 107,
-    "questionText": "What is the Helpful NullPointerExceptions feature in Java 17?",
-    "options": [
-      "Preventing NullPointerExceptions",
-      "NullPointerExceptions now include detailed information about which variable was null",
-      "Automatic null checking",
-      "Null-safe operators"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Helpful NullPointerExceptions (JEP 358) enhances NullPointerException messages to include the exact variable or expression that was null, making debugging easier.",
-    "javaVersion": "17",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 108,
-    "questionText": "What is the Foreign Function & Memory API (Preview) in Java 17?",
-    "options": [
-      "API for database foreign keys",
-      "API for calling native code and managing off-heap memory",
-      "API for network functions",
-      "API for file system operations"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The Foreign Function & Memory API (JEP 412) provides an API for Java programs to interoperate with code and data outside the Java runtime, enabling calls to native libraries and management of native memory.",
-    "javaVersion": "17",
-    "category": "APIs"
-  },
-  {
-    "id": 109,
-    "questionText": "What is the Vector API (Second Incubator) in Java 17?",
-    "options": [
-      "API for vector graphics",
-      "API for mathematical vector operations that can be compiled to optimal vector instructions",
-      "API for dynamic arrays",
-      "API for network vectors"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The Vector API (JEP 414) provides a way to express vector computations that compile at runtime to optimal vector instructions on supported CPU architectures.",
-    "javaVersion": "17",
-    "category": "APIs"
-  },
-  {
-    "id": 110,
-    "questionText": "What is the deprecation of the Security Manager in Java 17?",
-    "options": [
-      "Security Manager is removed",
-      "Security Manager is deprecated for removal, as it is no longer the primary means of enforcing security",
-      "Security Manager is enhanced",
-      "Security Manager is made mandatory"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The Security Manager is deprecated for removal in Java 17, as it is no longer the primary means of enforcing security boundaries in Java applications.",
-    "javaVersion": "17",
-    "category": "General"
-  },
-  {
-    "id": 111,
-    "questionText": "What is the Code Snippets in Java API Documentation feature in Java 18?",
-    "options": [
-      "Code examples in Javadoc",
-      "A new @snippet tag for embedding code examples in Javadoc with better formatting",
-      "Code generation from documentation",
-      "Automatic code documentation"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Java 18 introduces the @snippet tag (JEP 413) for JavaDoc, allowing better integration of source code examples in API documentation with syntax highlighting and validation.",
-    "javaVersion": "18",
-    "category": "APIs"
-  },
-  {
-    "id": 112,
-    "questionText": "What is the Internet-Address Resolution SPI in Java 18?",
-    "options": [
-      "A new internet protocol",
-      "A Service Provider Interface for host name and address resolution",
-      "A network security feature",
-      "A web server component"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The Internet-Address Resolution SPI (JEP 418) defines a service-provider interface for host name and address resolution, allowing java.net.InetAddress to use resolvers other than the platform's built-in resolver.",
-    "javaVersion": "18",
-    "category": "APIs"
-  },
-  {
-    "id": 113,
-    "questionText": "What is the Reimplement Core Reflection with Method Handles in Java 18?",
-    "options": [
-      "Removing reflection",
-      "Reimplementing java.lang.reflect using method handles for better performance",
-      "Adding new reflection methods",
-      "Deprecating reflection"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Java 18 (JEP 416) reimplements the core reflection mechanism (Method, Constructor, Field) using method handles, reducing maintenance and development costs while improving performance.",
-    "javaVersion": "18",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 114,
-    "questionText": "What is the main advantage of Virtual Threads over platform threads?",
-    "options": [
-      "They are faster",
-      "They allow creating millions of threads without significant overhead",
-      "They use less CPU",
-      "They are platform-independent"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Virtual threads are lightweight and managed by the JVM, allowing you to create millions of them without the memory overhead associated with platform threads (OS threads).",
-    "javaVersion": "19",
-    "category": "Concurrency"
-  },
-  {
-    "id": 115,
-    "questionText": "How do you create a virtual thread in Java 19?",
-    "options": [
-      "new Thread(() -> {})",
-      "Thread.ofVirtual().start(() -> {})",
-      "Thread.createVirtual(() -> {})",
-      "VirtualThread.create(() -> {})"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Virtual threads are created using Thread.ofVirtual().start(runnable) or Thread.ofVirtual().unstarted(runnable) in Java 19 (preview).",
-    "javaVersion": "19",
-    "category": "Concurrency"
-  },
-  {
-    "id": 116,
-    "questionText": "What is Structured Concurrency (Preview) in Java 19?",
-    "options": [
-      "Structured programming for concurrency",
-      "A structured approach to managing multiple tasks running in different threads as a single unit of work",
-      "Concurrent data structures",
-      "Thread synchronization patterns"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Structured Concurrency (JEP 428) treats multiple tasks running in different threads as a single unit of work, making it easier to reason about and manage concurrent code.",
-    "javaVersion": "19",
-    "category": "Concurrency"
-  },
-  {
-    "id": 117,
-    "questionText": "What is Record Patterns (Preview) in Java 19?",
-    "options": [
-      "Patterns for database records",
-      "Deconstructing record values in pattern matching",
-      "Recording method patterns",
-      "Pattern matching for file records"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Record Patterns (JEP 405) extend pattern matching to deconstruct record values, allowing you to match patterns and extract components from records directly.",
-    "javaVersion": "19",
-    "category": "Language Features"
-  },
-  {
-    "id": 118,
-    "questionText": "What is Pattern Matching for switch (Third Preview) in Java 19?",
-    "options": [
-      "Using regex in switch",
-      "Enhanced switch expressions with pattern matching and null handling",
-      "Switching between patterns",
-      "Pattern-based routing"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Pattern Matching for switch (JEP 427) enhances switch expressions and statements with pattern matching, allowing more expressive and safer code with better null handling.",
-    "javaVersion": "19",
-    "category": "Language Features"
-  },
-  {
-    "id": 119,
-    "questionText": "What is the Linux/RISC-V Port in Java 19?",
-    "options": [
-      "A new Java version",
-      "Porting the JDK to Linux/RISC-V instruction set architecture",
-      "A networking port",
-      "A database port"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Java 19 (JEP 422) ports the JDK to Linux/RISC-V, a free and open-source instruction set architecture, expanding Java's platform support.",
-    "javaVersion": "19",
-    "category": "Collections"
-  },
-  {
-    "id": 120,
-    "questionText": "What are Scoped Values (Preview) in Java 20?",
-    "options": [
-      "Values scoped to methods",
-      "Immutable data that can be shared within and across threads, preferred over thread-local variables",
-      "Database scoped values",
-      "Values with package scope"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Scoped Values (JEP 429) enable sharing immutable data within and across threads. They are preferred to thread-local variables, especially when using virtual threads.",
-    "javaVersion": "20",
-    "category": "Concurrency"
-  },
-  {
-    "id": 121,
-    "questionText": "What is Record Patterns (Second Preview) in Java 20?",
-    "options": [
-      "Second version of record patterns",
-      "Enhanced record patterns with support for nested patterns and type inference",
-      "Patterns for two records",
-      "Duplicate record patterns"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Record Patterns (JEP 432) in Java 20 enhances the preview feature with support for nested patterns, type inference improvements, and better integration with switch expressions.",
-    "javaVersion": "20",
-    "category": "Language Features"
-  },
-  {
-    "id": 122,
-    "questionText": "What is Pattern Matching for switch (Fourth Preview) in Java 20?",
-    "options": [
-      "Fourth iteration of pattern matching",
-      "Further refinements to pattern matching in switch with improved exhaustiveness checking",
-      "Four-way pattern matching",
-      "Pattern matching for four cases"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Pattern Matching for switch (JEP 433) in Java 20 continues to refine the feature with improved exhaustiveness checking and better integration with sealed classes.",
-    "javaVersion": "20",
-    "category": "Language Features"
-  },
-  {
-    "id": 123,
-    "questionText": "What is the Foreign Function & Memory API (Third Preview) in Java 20?",
-    "options": [
-      "Third version of the API",
-      "Further refinements to the API for calling native code and managing memory",
-      "API for three foreign functions",
-      "Triple-preview API"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The Foreign Function & Memory API (JEP 434) in Java 20 continues to evolve with refinements based on feedback, improving the API for interoperability with native code.",
-    "javaVersion": "20",
-    "category": "APIs"
-  },
-  {
-    "id": 124,
-    "questionText": "What is Virtual Threads (Second Preview) in Java 20?",
-    "options": [
-      "Second version of virtual threads",
-      "Refinements to virtual threads based on feedback from Java 19 preview",
-      "Two virtual threads",
-      "Virtual threads for two platforms"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Virtual Threads (JEP 436) in Java 20 includes refinements based on feedback from the Java 19 preview, improving the API and performance.",
-    "javaVersion": "20",
-    "category": "Concurrency"
-  },
-  {
-    "id": 125,
-    "questionText": "What is the main feature of Java 21 as an LTS release?",
-    "options": [
-      "It's a short-term support release",
-      "It's a Long-Term Support release with finalized features from previous versions",
-      "It's a preview release",
-      "It's a beta release"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Java 21 is a Long-Term Support (LTS) release, meaning it will receive updates and support for an extended period. It finalizes many features that were in preview in earlier versions.",
-    "javaVersion": "21",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 126,
-    "questionText": "What are Sequenced Collections in Java 21?",
-    "options": [
-      "Collections that can only store sequences",
-      "New interfaces (SequencedSet, SequencedCollection, SequencedMap) for collections with a defined encounter order",
-      "Collections for DNA sequences",
-      "Collections that sequence operations"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Sequenced Collections (JEP 431) introduce new interfaces that define collections with a well-defined encounter order, supporting operations at both ends (first/last elements).",
-    "javaVersion": "21",
-    "category": "Collections"
-  },
-  {
-    "id": 127,
-    "questionText": "What is String Templates (Preview) in Java 21?",
-    "options": [
-      "Templating strings with placeholders",
-      "String interpolation with embedded expressions using template processors",
-      "Creating string templates from files",
-      "Template method pattern for strings"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "String Templates (JEP 430) enable string interpolation by embedding expressions in template strings. Template processors validate and interpolate templates, making string creation safer and more convenient.",
-    "javaVersion": "21",
-    "category": "Language Features"
-  },
-  {
-    "id": 128,
-    "questionText": "What are Unnamed Patterns and Variables (Preview) in Java 21?",
-    "options": [
-      "Patterns without names",
-      "Patterns and variables that can be unnamed when their values are not needed",
-      "Anonymous patterns",
-      "Patterns for unnamed classes"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Unnamed Patterns and Variables (JEP 443) allow you to use the underscore (_) to denote patterns or variables that are not needed, improving code readability.",
-    "javaVersion": "21",
-    "category": "General"
-  },
-  {
-    "id": 129,
-    "questionText": "What is Unnamed Classes and Instance Main Methods (Preview) in Java 21?",
-    "options": [
-      "Classes without names",
-      "Simplified Java programs for beginners, allowing classes and main methods without explicit declarations",
-      "Anonymous classes",
-      "Classes with unnamed methods"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Unnamed Classes and Instance Main Methods (JEP 445) simplify Java for beginners by allowing programs without explicit class declarations and enabling instance main methods.",
-    "javaVersion": "21",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 130,
-    "questionText": "What is the Generational ZGC in Java 21?",
-    "options": [
-      "A new generation of ZGC",
-      "An enhancement to ZGC that maintains separate generations for young and old objects",
-      "ZGC for multiple generations",
-      "ZGC version 2"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Generational ZGC (JEP 439) improves application performance by maintaining separate generations for young and old objects, enabling more frequent collection of young objects.",
-    "javaVersion": "21",
-    "category": "Collections"
-  },
-  {
-    "id": 131,
-    "questionText": "What is the Record Patterns feature finalized in Java 21?",
-    "options": [
-      "Patterns for database records",
-      "Deconstructing record values in pattern matching, now a standard feature",
-      "Recording method patterns",
-      "Pattern matching for file records"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Record Patterns (JEP 440) is finalized in Java 21, allowing you to deconstruct record values in pattern matching expressions and switch statements.",
-    "javaVersion": "21",
-    "category": "Language Features"
-  },
-  {
-    "id": 132,
-    "questionText": "What is Pattern Matching for switch finalized in Java 21?",
-    "options": [
-      "Using regex in switch",
-      "Pattern matching in switch expressions and statements, now a standard feature",
-      "Switching between patterns",
-      "Pattern-based routing"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Pattern Matching for switch (JEP 441) is finalized in Java 21, allowing pattern matching in switch expressions and statements with improved exhaustiveness checking.",
-    "javaVersion": "21",
-    "category": "Language Features"
-  },
-  {
-    "id": 133,
-    "questionText": "What is Virtual Threads finalized in Java 21?",
-    "options": [
-      "Virtual threads are removed",
-      "Virtual threads are now a standard feature, no longer in preview",
-      "Virtual threads are deprecated",
-      "Virtual threads are optional"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Virtual Threads (JEP 444) is finalized in Java 21, making it a standard feature. Virtual threads enable high-throughput concurrent applications with millions of threads.",
-    "javaVersion": "21",
-    "category": "Concurrency"
-  },
-  {
-    "id": 134,
-    "questionText": "What is the Scoped Values feature finalized in Java 21?",
-    "options": [
-      "Values scoped to methods",
-      "Immutable data sharing within and across threads, now a standard feature",
-      "Database scoped values",
-      "Values with package scope"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Scoped Values (JEP 446) is finalized in Java 21, providing a way to share immutable data within and across threads, preferred over thread-local variables.",
-    "javaVersion": "21",
-    "category": "Concurrency"
-  },
-  {
-    "id": 135,
-    "questionText": "What is the Structured Concurrency feature finalized in Java 21?",
-    "options": [
-      "Structured programming for concurrency",
-      "A structured approach to managing concurrent tasks, now a standard feature",
-      "Concurrent data structures",
-      "Thread synchronization patterns"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Structured Concurrency (JEP 453) is finalized in Java 21, providing a structured approach to managing multiple tasks running in different threads as a single unit of work.",
-    "javaVersion": "21",
-    "category": "Concurrency"
-  },
-  {
-    "id": 136,
-    "questionText": "What is the Foreign Function & Memory API finalized in Java 21?",
-    "options": [
-      "API for database foreign keys",
-      "API for calling native code and managing off-heap memory, now a standard feature",
-      "API for network functions",
-      "API for file system operations"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The Foreign Function & Memory API (JEP 442) is finalized in Java 21, providing a standard API for Java programs to interoperate with code and data outside the Java runtime.",
-    "javaVersion": "21",
-    "category": "APIs"
-  },
-  {
-    "id": 137,
-    "questionText": "What is the Key Encapsulation Mechanism API in Java 21?",
-    "options": [
-      "API for key management",
-      "An API for key encapsulation mechanisms used in post-quantum cryptography",
-      "API for encryption keys",
-      "API for key-value storage"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The Key Encapsulation Mechanism API (JEP 452) provides an API for key encapsulation mechanisms (KEMs), an encryption technique used in post-quantum cryptography algorithms.",
-    "javaVersion": "21",
-    "category": "APIs"
-  },
-  {
-    "id": 138,
-    "questionText": "What is the deprecation of Windows 32-bit x86 port in Java 21?",
-    "options": [
-      "Windows 32-bit is removed",
-      "The Windows 32-bit x86 port is deprecated for removal in a future release",
-      "Windows 32-bit is enhanced",
-      "Windows 32-bit is made mandatory"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Java 21 (JEP 449) deprecates the Windows 32-bit x86 port for removal in a future release, as 32-bit systems are becoming obsolete.",
-    "javaVersion": "21",
-    "category": "General"
-  },
-  {
-    "id": 139,
-    "questionText": "What is the difference between a sealed class and a final class?",
-    "options": [
-      "There is no difference",
-      "A final class cannot be extended; a sealed class can be extended but only by permitted classes",
-      "A sealed class cannot be extended; a final class can be extended",
-      "Both cannot be extended"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "A final class cannot be extended by any class. A sealed class can be extended, but only by classes explicitly listed in its permits clause, providing controlled extensibility.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 140,
-    "questionText": "What is the purpose of the compact constructor in records?",
-    "options": [
-      "To make records compact",
-      "To perform validation or normalization of record components",
-      "To reduce memory usage",
-      "To make records faster"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "A compact constructor in a record allows you to perform validation or normalization of the record's components without explicitly listing parameters, as they are implicitly available.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 141,
-    "questionText": "What is the instanceof pattern matching syntax in Java 17?",
-    "options": [
-      "obj instanceof Type",
-      "obj instanceof Type variable",
-      "obj instanceof Type var && var.method()",
-      "obj instanceof Type var"
-    ],
-    "correctAnswerIndex": 3,
-    "explanation": "Pattern matching for instanceof in Java 17 allows you to declare a variable in the instanceof expression: 'obj instanceof Type var'. The variable is automatically cast and available in the scope.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 142,
-    "questionText": "What is the purpose of the yield keyword in switch expressions?",
-    "options": [
-      "To yield control to another thread",
-      "To return a value from a switch expression case",
-      "To pause execution",
-      "To throw an exception"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The yield keyword is used in switch expressions to return a value from a case. It's required when a case has multiple statements and needs to return a value.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 143,
-    "questionText": "What is the difference between switch expressions and switch statements?",
-    "options": [
-      "There is no difference",
-      "Switch expressions return a value; switch statements don't",
-      "Switch statements return a value; switch expressions don't",
-      "Switch expressions are faster"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Switch expressions (introduced in Java 14, finalized in Java 17) return a value and can be used as expressions. Switch statements are traditional statements that don't return values.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 144,
-    "questionText": "What is the purpose of the sealed keyword on interfaces?",
-    "options": [
-      "To prevent implementation",
-      "To restrict which classes can implement the interface",
-      "To make the interface final",
-      "To seal the interface from modification"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "A sealed interface restricts which classes can implement it. The implementing classes must be listed in the permits clause or be in the same module/package.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 145,
-    "questionText": "What is the Vector API used for?",
-    "options": [
-      "Vector graphics",
-      "High-performance mathematical computations that can utilize SIMD instructions",
-      "Dynamic arrays",
-      "Network vectors"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The Vector API is designed for high-performance mathematical computations. It can be compiled at runtime to optimal vector instructions on supported CPU architectures, improving performance for numerical computations.",
-    "javaVersion": "17",
-    "category": "APIs"
-  },
-  {
-    "id": 146,
-    "questionText": "What is the main benefit of UTF-8 as the default charset in Java 18?",
-    "options": [
-      "Faster string operations",
-      "Consistent behavior across different platforms regardless of the system default charset",
-      "Smaller memory usage",
-      "Better encryption"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Making UTF-8 the default charset ensures consistent behavior across different platforms, as UTF-8 is the same regardless of the operating system's default charset setting.",
-    "javaVersion": "18",
-    "category": "Collections"
-  },
-  {
-    "id": 147,
-    "questionText": "What is the jwebserver tool in Java 18?",
-    "options": [
-      "A production web server",
-      "A simple command-line tool for serving static files, useful for prototyping",
-      "A replacement for Apache",
-      "A full application server"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "jwebserver is a simple command-line tool introduced in Java 18 that starts a minimal HTTP server for serving static files. It's intended for prototyping, testing, and ad-hoc coding, not production use.",
-    "javaVersion": "18",
-    "category": "APIs"
-  },
-  {
-    "id": 148,
-    "questionText": "What is the advantage of using method handles over reflection?",
-    "options": [
-      "Method handles are simpler",
-      "Method handles provide better performance and are more type-safe",
-      "Method handles are easier to use",
-      "Method handles support more features"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Method handles (java.lang.invoke.MethodHandle) provide better performance than reflection and are more type-safe. They are used internally by the JVM and are the preferred way for dynamic method invocation.",
-    "javaVersion": "18",
-    "category": "Advanced"
-  },
-  {
-    "id": 149,
-    "questionText": "What is the main use case for Virtual Threads?",
-    "options": [
-      "CPU-intensive tasks",
-      "High-throughput concurrent applications with many blocking I/O operations",
-      "Real-time systems",
-      "Low-level system programming"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Virtual threads are ideal for high-throughput concurrent applications, especially those with many blocking I/O operations (like web servers), where you need many concurrent tasks but they spend most time waiting.",
-    "javaVersion": "19",
-    "category": "Concurrency"
-  },
-  {
-    "id": 150,
-    "questionText": "What is the difference between a virtual thread and a platform thread?",
-    "options": [
-      "Virtual threads are faster",
-      "Virtual threads are managed by the JVM; platform threads are OS threads",
-      "Virtual threads are platform-independent",
-      "There is no difference"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Virtual threads are lightweight threads managed by the JVM, while platform threads are OS threads. Virtual threads are mapped to platform threads by the JVM, allowing millions of virtual threads with minimal overhead.",
-    "javaVersion": "19",
-    "category": "Concurrency"
-  },
-  {
-    "id": 151,
-    "questionText": "What is the StructuredTaskScope class used for?",
-    "options": [
-      "Scoping variables",
-      "Managing a group of related tasks as a single unit of work in structured concurrency",
-      "Task scheduling",
-      "Thread scoping"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "StructuredTaskScope (part of Structured Concurrency) manages a group of related tasks as a single unit of work. If any task fails, other tasks are cancelled, and the scope ensures all tasks complete before proceeding.",
-    "javaVersion": "19",
-    "category": "Concurrency"
-  },
-  {
-    "id": 152,
-    "questionText": "What is the purpose of Scoped Values over ThreadLocal?",
-    "options": [
-      "Scoped Values are faster",
-      "Scoped Values are immutable and work better with virtual threads, avoiding memory leaks",
-      "Scoped Values are simpler",
-      "Scoped Values support more types"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Scoped Values are immutable and have a bounded lifetime, making them safer than ThreadLocal. They work better with virtual threads (which can be very numerous) and avoid the memory leak issues associated with ThreadLocal.",
-    "javaVersion": "20",
-    "category": "Concurrency"
-  },
-  {
-    "id": 153,
-    "questionText": "What is the benefit of Sequenced Collections in Java 21?",
-    "options": [
-      "They are faster",
-      "They provide a consistent API for accessing first and last elements across different collection types",
-      "They use less memory",
-      "They are thread-safe"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Sequenced Collections provide a consistent API (getFirst(), getLast(), addFirst(), addLast(), etc.) for collections with a defined encounter order, making it easier to work with ordered collections.",
-    "javaVersion": "21",
-    "category": "Collections"
-  },
-  {
-    "id": 154,
-    "questionText": "What is String Templates used for in Java 21?",
-    "options": [
-      "Creating string templates from files",
-      "String interpolation with embedded expressions, making string formatting safer and more convenient",
-      "Template method pattern",
-      "String pattern matching"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "String Templates (preview) allow embedding expressions in strings using template processors, making string formatting safer than concatenation and more convenient than String.format().",
-    "javaVersion": "21",
-    "category": "Language Features"
-  },
-  {
-    "id": 155,
-    "questionText": "What is the syntax for String Templates in Java 21?",
-    "options": [
-      "\"Hello {name}\"",
-      "STR.\"Hello \\{name}\"",
-      "\"Hello $name\"",
-      "\"Hello %s\".format(name)"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "String Templates use the syntax STR.\"template\" where expressions are embedded using \\{expression}. The STR processor is a built-in template processor.",
-    "javaVersion": "21",
-    "category": "Language Features"
-  },
-  {
-    "id": 156,
-    "questionText": "What is the purpose of Unnamed Patterns in Java 21?",
-    "options": [
-      "To create anonymous patterns",
-      "To ignore components in pattern matching when their values are not needed",
-      "To hide pattern names",
-      "To create pattern templates"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Unnamed Patterns allow you to use the underscore (_) to ignore components in pattern matching when you don't need their values, improving code readability.",
-    "javaVersion": "21",
-    "category": "Language Features"
-  },
-  {
-    "id": 157,
-    "questionText": "What is an Unnamed Variable in Java 21?",
-    "options": [
-      "A variable without a name",
-      "A variable declared with underscore (_) when its value is not used",
-      "An anonymous variable",
-      "A hidden variable"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Unnamed Variables (preview) allow you to declare variables with underscore (_) when you need to declare a variable but don't use its value, making code intent clearer.",
-    "javaVersion": "21",
-    "category": "General"
-  },
-  {
-    "id": 158,
-    "questionText": "What is the main benefit of Generational ZGC?",
-    "options": [
-      "Faster garbage collection",
-      "Improved application performance by collecting young objects more frequently",
-      "Smaller memory footprint",
-      "Better thread safety"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Generational ZGC maintains separate generations for young and old objects, enabling more frequent collection of young objects (which are more likely to be garbage), improving overall application performance.",
-    "javaVersion": "21",
-    "category": "Collections"
-  },
-  {
-    "id": 159,
-    "questionText": "What is the Key Encapsulation Mechanism API used for?",
-    "options": [
-      "Key management",
-      "Post-quantum cryptography algorithms that use key encapsulation",
-      "Database encryption",
-      "Network key exchange"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The Key Encapsulation Mechanism (KEM) API provides support for post-quantum cryptography algorithms that use key encapsulation, preparing Java for quantum computing threats.",
-    "javaVersion": "21",
-    "category": "APIs"
-  },
-  {
-    "id": 160,
-    "questionText": "What is the difference between a record and a regular class?",
-    "options": [
-      "Records are faster",
-      "Records are immutable data carriers with automatically generated methods; regular classes are more flexible",
-      "Records can have mutable fields",
-      "There is no difference"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Records are designed as immutable data carriers with automatically generated constructors, getters, equals(), hashCode(), and toString() methods. Regular classes offer more flexibility but require manual implementation of these methods.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 161,
-    "questionText": "Can a record extend another class?",
-    "options": [
-      "Yes, records can extend any class",
-      "No, records cannot extend classes, but they can implement interfaces",
-      "Yes, but only abstract classes",
-      "Yes, but only other records"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Records cannot extend classes (they implicitly extend java.lang.Record), but they can implement interfaces. This restriction maintains the simplicity and immutability guarantees of records.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 162,
-    "questionText": "What is the purpose of the permits clause in sealed classes?",
-    "options": [
-      "To permit all classes",
-      "To explicitly list which classes can extend the sealed class",
-      "To prevent extension",
-      "To make the class abstract"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The permits clause explicitly lists which classes are allowed to extend a sealed class. This provides compile-time control over the class hierarchy and enables exhaustive pattern matching.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 163,
-    "questionText": "What is a non-sealed class in a sealed hierarchy?",
-    "options": [
-      "A class that cannot be extended",
-      "A class that extends a sealed class but allows unrestricted extension",
-      "A sealed class without a permits clause",
-      "An abstract sealed class"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "A non-sealed class is part of a sealed hierarchy (extends a sealed class) but uses the non-sealed modifier to allow any class to extend it, breaking the sealed constraint for that branch.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 164,
-    "questionText": "What is the benefit of pattern matching in switch expressions?",
-    "options": [
-      "Faster execution",
-      "More expressive code with automatic type checking and variable binding",
-      "Smaller code size",
-      "Better memory usage"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Pattern matching in switch expressions allows you to match patterns and automatically bind variables, eliminating the need for explicit casting and making code more expressive and safer.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 165,
-    "questionText": "What is the syntax for a Text Block in Java 17?",
-    "options": [
-      "\"\"\"text\"\"\"",
-      "\"text\"",
-      "'text'",
-      "`text`"
-    ],
-    "correctAnswerIndex": 0,
-    "explanation": "Text Blocks use triple double quotes (\"\"\") to delimit multi-line string literals. They preserve formatting and make it easier to write strings that span multiple lines.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 166,
-    "questionText": "What is the Helpful NullPointerExceptions improvement?",
-    "options": [
-      "NullPointerExceptions are prevented",
-      "NullPointerException messages now indicate which variable or expression was null",
-      "NullPointerExceptions are automatically caught",
-      "NullPointerExceptions are converted to warnings"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Helpful NullPointerExceptions (JEP 358) enhance NullPointerException messages to include the exact variable, field, or array element that was null, making debugging significantly easier.",
-    "javaVersion": "17",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 167,
-    "questionText": "What is the Foreign Function & Memory API primarily used for?",
-    "options": [
-      "Database operations",
-      "Interoperating with native libraries and managing native memory",
-      "Network programming",
-      "File I/O"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The Foreign Function & Memory API enables Java programs to call native libraries (written in C/C++) and manage memory outside the Java heap, replacing the need for JNI in many cases.",
-    "javaVersion": "17",
-    "category": "APIs"
-  },
-  {
-    "id": 168,
-    "questionText": "What is the Vector API designed to optimize?",
-    "options": [
-      "Vector graphics",
-      "Mathematical computations that can benefit from SIMD (Single Instruction Multiple Data) instructions",
-      "Dynamic arrays",
-      "Network vectors"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The Vector API is designed for high-performance mathematical computations. It can be compiled to SIMD instructions on supported CPUs, significantly improving performance for numerical operations.",
-    "javaVersion": "17",
-    "category": "APIs"
-  },
-  {
-    "id": 169,
-    "questionText": "What is the benefit of UTF-8 as default charset in Java 18?",
-    "options": [
-      "Faster string operations",
-      "Platform-independent behavior, ensuring consistent charset handling across different operating systems",
-      "Smaller memory footprint",
-      "Better encryption support"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "UTF-8 as the default charset ensures that Java applications behave consistently across different platforms, regardless of the operating system's default charset setting.",
-    "javaVersion": "18",
-    "category": "Collections"
-  },
-  {
-    "id": 170,
-    "questionText": "What is the jwebserver command used for?",
-    "options": [
-      "Starting a production web server",
-      "Quickly serving static files for prototyping and testing",
-      "Replacing Apache HTTP Server",
-      "Running Java web applications"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "jwebserver is a simple command-line tool that starts a minimal HTTP server for serving static files. It's useful for prototyping, testing, and ad-hoc development, not for production use.",
-    "javaVersion": "18",
-    "category": "APIs"
-  },
-  {
-    "id": 171,
-    "questionText": "What is the Code Snippets feature in Java 18?",
-    "options": [
-      "Code generation",
-      "A @snippet tag for embedding and validating code examples in JavaDoc",
-      "Code templates",
-      "Automatic code documentation"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Code Snippets (JEP 413) introduces the @snippet tag for JavaDoc, allowing better integration of source code examples with syntax highlighting, validation, and improved formatting.",
-    "javaVersion": "18",
-    "category": "APIs"
-  },
-  {
-    "id": 172,
-    "questionText": "What is the Internet-Address Resolution SPI?",
-    "options": [
-      "A new internet protocol",
-      "A service provider interface that allows custom implementations of host name and address resolution",
-      "A network security feature",
-      "A DNS server"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The Internet-Address Resolution SPI (JEP 418) defines a service-provider interface for host name and address resolution, allowing java.net.InetAddress to use custom resolvers.",
-    "javaVersion": "18",
-    "category": "APIs"
-  },
-  {
-    "id": 173,
-    "questionText": "What is the main advantage of Virtual Threads for I/O-bound applications?",
-    "options": [
-      "They use less CPU",
-      "They allow handling millions of concurrent connections without the overhead of OS threads",
-      "They are faster",
-      "They use less memory per thread"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Virtual threads are lightweight and managed by the JVM, allowing applications to handle millions of concurrent I/O operations (like HTTP requests) without the memory overhead of creating millions of OS threads.",
-    "javaVersion": "19",
-    "category": "Concurrency"
-  },
-  {
-    "id": 174,
-    "questionText": "How are Virtual Threads scheduled?",
-    "options": [
-      "By the operating system",
-      "By the JVM, which maps them to a smaller pool of platform threads",
-      "By a separate scheduler",
-      "They are not scheduled"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Virtual threads are scheduled by the JVM, not the OS. The JVM maps many virtual threads to a smaller pool of platform threads (carrier threads), enabling efficient concurrency.",
-    "javaVersion": "19",
-    "category": "Concurrency"
-  },
-  {
-    "id": 175,
-    "questionText": "What is Structured Concurrency designed to solve?",
-    "options": [
-      "Thread creation overhead",
-      "Managing the lifecycle of related concurrent tasks as a single unit, preventing orphaned tasks",
-      "Thread synchronization",
-      "Memory management"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Structured Concurrency ensures that related concurrent tasks are managed as a single unit. If the parent scope completes or fails, all child tasks are automatically cancelled, preventing orphaned tasks.",
-    "javaVersion": "19",
-    "category": "Concurrency"
-  },
-  {
-    "id": 176,
-    "questionText": "What is Record Patterns used for?",
-    "options": [
-      "Pattern matching on database records",
-      "Deconstructing record values in pattern matching expressions",
-      "Recording method patterns",
-      "Pattern matching for file records"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Record Patterns allow you to deconstruct record values in pattern matching. You can match a record and extract its components in a single expression, making code more concise.",
-    "javaVersion": "19",
-    "category": "Language Features"
-  },
-  {
-    "id": 177,
-    "questionText": "What is the benefit of Scoped Values over ThreadLocal?",
-    "options": [
-      "Scoped Values are faster",
-      "Scoped Values are immutable, have bounded lifetime, and work better with virtual threads",
-      "Scoped Values support more types",
-      "Scoped Values are easier to use"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Scoped Values are immutable and have a bounded lifetime (tied to a scope), making them safer than ThreadLocal. They avoid memory leaks and work better with the large number of virtual threads.",
-    "javaVersion": "20",
-    "category": "Concurrency"
-  },
-  {
-    "id": 178,
-    "questionText": "What is the SequencedCollection interface?",
-    "options": [
-      "A collection that can only store sequences",
-      "A collection with a defined encounter order and operations to access elements at both ends",
-      "A collection for DNA sequences",
-      "A collection that sequences operations"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "SequencedCollection is an interface for collections with a defined encounter order, providing methods like getFirst(), getLast(), addFirst(), addLast(), and reversed().",
-    "javaVersion": "21",
-    "category": "Collections"
-  },
-  {
-    "id": 179,
-    "questionText": "What is the SequencedMap interface?",
-    "options": [
-      "A map that can only store sequences",
-      "A map with a defined encounter order and operations to access entries at both ends",
-      "A map for DNA sequences",
-      "A map that sequences operations"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "SequencedMap is an interface for maps with a defined encounter order, providing methods like firstEntry(), lastEntry(), pollFirstEntry(), pollLastEntry(), and reversed().",
-    "javaVersion": "21",
-    "category": "Collections"
-  },
-  {
-    "id": 180,
-    "questionText": "What is the purpose of String Templates?",
-    "options": [
-      "Template method pattern",
-      "Safer and more convenient string interpolation with embedded expressions",
-      "Creating templates from files",
-      "Pattern matching for strings"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "String Templates provide a safer and more convenient way to create strings with embedded expressions, using template processors to validate and interpolate templates.",
-    "javaVersion": "21",
-    "category": "Language Features"
-  },
-  {
-    "id": 181,
-    "questionText": "What is an Unnamed Class in Java 21?",
-    "options": [
-      "A class without a name",
-      "A simplified class declaration for beginners, allowing code without explicit class declaration",
-      "An anonymous class",
-      "A hidden class"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Unnamed Classes (preview) allow you to write Java programs without an explicit class declaration, making Java more accessible to beginners and suitable for simple scripts.",
-    "javaVersion": "21",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 182,
-    "questionText": "What is an Instance Main Method in Java 21?",
-    "options": [
-      "A main method in an instance",
-      "A main method that doesn't need to be static, allowing instance methods as entry points",
-      "A main method for instances",
-      "A non-static main method"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Instance Main Methods (preview) allow the main method to be an instance method (non-static), making Java more beginner-friendly by removing the need to understand static methods initially.",
-    "javaVersion": "21",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 183,
-    "questionText": "What is the benefit of Generational ZGC over regular ZGC?",
-    "options": [
-      "Faster garbage collection",
-      "Better performance by maintaining separate generations and collecting young objects more frequently",
-      "Smaller memory usage",
-      "Better thread safety"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Generational ZGC maintains separate generations for young and old objects. Young objects (which are more likely to be garbage) are collected more frequently, improving overall application performance.",
-    "javaVersion": "21",
-    "category": "Advanced"
-  },
-  {
-    "id": 184,
-    "questionText": "What is the Key Encapsulation Mechanism API?",
-    "options": [
-      "API for managing encryption keys",
-      "API for post-quantum cryptography algorithms that use key encapsulation",
-      "API for database keys",
-      "API for network key exchange"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The Key Encapsulation Mechanism (KEM) API provides support for post-quantum cryptography algorithms, preparing Java applications for the era of quantum computing.",
-    "javaVersion": "21",
-    "category": "APIs"
-  },
-  {
-    "id": 185,
-    "questionText": "What is the difference between a record and a data class?",
-    "options": [
-      "Records are Java; data classes are Kotlin",
-      "Records are immutable; data classes can be mutable",
-      "There is no difference",
-      "Records are faster"
-    ],
-    "correctAnswerIndex": 0,
-    "explanation": "Records are a Java feature (Java 14+), while data classes are a Kotlin feature. Both serve similar purposes but are language-specific features.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 186,
-    "questionText": "What is the purpose of the sealed modifier on interfaces?",
-    "options": [
-      "To prevent implementation",
-      "To restrict which classes can implement the sealed interface",
-      "To make the interface final",
-      "To seal the interface"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "A sealed interface restricts which classes can implement it. The implementing classes must be explicitly permitted in the permits clause or be in the same module/package.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 187,
-    "questionText": "What is the benefit of pattern matching with sealed classes?",
-    "options": [
-      "Faster execution",
-      "Exhaustiveness checking - the compiler can verify all cases are handled",
-      "Smaller code",
-      "Better memory usage"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "When pattern matching with sealed classes, the compiler can perform exhaustiveness checking, ensuring all permitted subclasses are handled in switch expressions, making code safer.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 188,
-    "questionText": "What is the compact constructor in a record?",
-    "options": [
-      "A constructor that takes no parameters",
-      "A constructor without parameter list that can validate or normalize components",
-      "A private constructor",
-      "A static constructor"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "A compact constructor in a record doesn't have a parameter list. The parameters are implicit, and you can use them to validate or normalize the record's components.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 189,
-    "questionText": "What is the yield statement used for in switch expressions?",
-    "options": [
-      "To yield control",
-      "To return a value from a case in a switch expression",
-      "To pause execution",
-      "To throw an exception"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The yield statement is used in switch expressions to return a value from a case. It's required when a case has multiple statements and needs to return a value.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 190,
-    "questionText": "What is the difference between switch expressions and traditional switch statements?",
-    "options": [
-      "Switch expressions are faster",
-      "Switch expressions return values and are more concise; switch statements don't return values",
-      "Switch statements are more modern",
-      "There is no difference"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Switch expressions (Java 14+) return values and can be used as expressions. They're more concise and support pattern matching. Traditional switch statements are statements that don't return values.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 191,
-    "questionText": "What is the Text Blocks feature used for?",
-    "options": [
-      "Text encryption",
-      "Writing multi-line string literals with improved readability",
-      "Text compression",
-      "Text validation"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Text Blocks (Java 15+, finalized in Java 17) allow you to write multi-line string literals using triple quotes, making it easier to write strings that span multiple lines, such as JSON, SQL, or HTML.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 192,
-    "questionText": "What information does Helpful NullPointerExceptions provide?",
-    "options": [
-      "Stack trace only",
-      "The exact variable, field, or array element that was null",
-      "Line numbers only",
-      "Method names only"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Helpful NullPointerExceptions (JEP 358) provide detailed information about which variable, field, or array element was null, making it much easier to identify and fix the issue.",
-    "javaVersion": "17",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 193,
-    "questionText": "What is the Foreign Function & Memory API replacing?",
-    "options": [
-      "Java Native Interface (JNI)",
-      "Reflection API",
-      "Serialization",
-      "Networking API"
-    ],
-    "correctAnswerIndex": 0,
-    "explanation": "The Foreign Function & Memory API is designed to replace or supplement JNI (Java Native Interface) for calling native code, providing a safer and more efficient way to interoperate with native libraries.",
-    "javaVersion": "17",
-    "category": "APIs"
-  },
-  {
-    "id": 194,
-    "questionText": "What is the Vector API optimized for?",
-    "options": [
-      "Vector graphics rendering",
-      "Mathematical computations that can utilize CPU SIMD instructions",
-      "Dynamic array operations",
-      "Network vector operations"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The Vector API is optimized for mathematical computations that can benefit from SIMD (Single Instruction Multiple Data) instructions available on modern CPUs, significantly improving performance for numerical operations.",
-    "javaVersion": "17",
-    "category": "APIs"
-  },
-  {
-    "id": 195,
-    "questionText": "What is the main benefit of UTF-8 as default in Java 18?",
-    "options": [
-      "Performance improvement",
-      "Consistent behavior across platforms, independent of OS default charset",
-      "Memory savings",
-      "Better encryption"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "UTF-8 as the default charset ensures that Java applications behave consistently across different platforms, regardless of the operating system's default charset, reducing platform-specific bugs.",
-    "javaVersion": "18",
-    "category": "Collections"
-  },
-  {
-    "id": 196,
-    "questionText": "What is jwebserver suitable for?",
-    "options": [
-      "Production web applications",
-      "Quick prototyping, testing, and serving static files during development",
-      "Replacing application servers",
-      "Running Java web applications"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "jwebserver is a simple tool for quickly serving static files during development, prototyping, and testing. It's not intended for production use or running full web applications.",
-    "javaVersion": "18",
-    "category": "APIs"
-  },
-  {
-    "id": 197,
-    "questionText": "What is the @snippet tag used for?",
-    "options": [
-      "Code generation",
-      "Embedding code examples in JavaDoc with better formatting and validation",
-      "Code templates",
-      "Automatic documentation"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The @snippet tag (JEP 413) allows you to embed code examples in JavaDoc with improved formatting, syntax highlighting, and validation, making API documentation more useful.",
-    "javaVersion": "18",
-    "category": "General"
-  },
-  {
-    "id": 198,
-    "questionText": "What is the Internet-Address Resolution SPI used for?",
-    "options": [
-      "Creating internet addresses",
-      "Providing a pluggable way to customize host name and address resolution",
-      "Network security",
-      "DNS management"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The Internet-Address Resolution SPI (JEP 418) provides a service-provider interface that allows you to plug in custom implementations for host name and address resolution, useful for testing or custom networking scenarios.",
-    "javaVersion": "18",
-    "category": "APIs"
-  },
-  {
-    "id": 199,
-    "questionText": "What is the main use case for Virtual Threads?",
-    "options": [
-      "CPU-intensive computations",
-      "High-throughput applications with many concurrent blocking I/O operations",
-      "Real-time systems",
-      "Low-level system programming"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Virtual threads are ideal for high-throughput concurrent applications, especially those with many blocking I/O operations (web servers, database connections), where you need many concurrent tasks.",
-    "javaVersion": "19",
-    "category": "Concurrency"
-  },
-  {
-    "id": 200,
-    "questionText": "How do Virtual Threads differ from traditional threads?",
-    "options": [
-      "They are faster",
-      "They are lightweight, JVM-managed threads that can number in the millions",
-      "They are platform-independent",
-      "They don't block"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Virtual threads are lightweight threads managed by the JVM, not the OS. You can create millions of them with minimal overhead, unlike traditional OS threads which are expensive to create.",
-    "javaVersion": "19",
-    "category": "Concurrency"
-  },
-  {
-    "id": 201,
-    "questionText": "What is StructuredTaskScope used for?",
-    "options": [
-      "Scoping variables",
-      "Managing related concurrent tasks as a single unit with automatic cancellation",
-      "Task scheduling",
-      "Thread management"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "StructuredTaskScope (part of Structured Concurrency) manages a group of related tasks as a single unit. If the scope completes or any task fails, all tasks are automatically cancelled, preventing resource leaks.",
-    "javaVersion": "19",
-    "category": "Concurrency"
-  },
-  {
-    "id": 202,
-    "questionText": "What is Record Patterns used for?",
-    "options": [
-      "Pattern matching on database records",
-      "Deconstructing record values and extracting components in pattern matching",
-      "Recording patterns",
-      "File record patterns"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Record Patterns allow you to deconstruct record values in pattern matching expressions. You can match a record and extract its components in a single, concise expression.",
-    "javaVersion": "19",
-    "category": "Language Features"
-  },
-  {
-    "id": 203,
-    "questionText": "What is the advantage of Scoped Values?",
-    "options": [
-      "They are faster than ThreadLocal",
-      "They are immutable, have bounded lifetime, and work better with virtual threads",
-      "They support more data types",
-      "They are easier to use"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Scoped Values are immutable and have a bounded lifetime tied to a scope. They avoid the memory leak issues of ThreadLocal and work efficiently with the large number of virtual threads.",
-    "javaVersion": "20",
-    "category": "Concurrency"
-  },
-  {
-    "id": 204,
-    "questionText": "What is the SequencedSet interface?",
-    "options": [
-      "A set that can only store sequences",
-      "A Set with a defined encounter order and operations to access elements at both ends",
-      "A set for DNA sequences",
-      "A set that sequences operations"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "SequencedSet is an interface for sets with a defined encounter order, providing methods like getFirst(), getLast(), addFirst(), addLast(), and reversed(), while maintaining set semantics (no duplicates).",
-    "javaVersion": "21",
-    "category": "Collections"
-  },
-  {
-    "id": 205,
-    "questionText": "What is the reversed() method in Sequenced Collections?",
-    "options": [
-      "A method that reverses the collection",
-      "A method that returns a reversed view of the collection",
-      "A method that sorts in reverse",
-      "A method that removes elements in reverse"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The reversed() method returns a reversed view of the sequenced collection. Changes to the view are reflected in the original collection, and vice versa.",
-    "javaVersion": "21",
-    "category": "Collections"
-  },
-  {
-    "id": 206,
-    "questionText": "What is the STR template processor in String Templates?",
-    "options": [
-      "A string processor",
-      "A built-in template processor that performs string interpolation",
-      "A custom processor",
-      "A pattern matcher"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "STR is a built-in template processor in Java 21 that performs string interpolation, replacing embedded expressions in template strings with their string representations.",
-    "javaVersion": "21",
-    "category": "Language Features"
-  },
-  {
-    "id": 207,
-    "questionText": "What is the FMT template processor used for?",
-    "options": [
-      "Formatting strings",
-      "String interpolation with format specifiers, similar to String.format()",
-      "File formatting",
-      "Pattern matching"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "FMT is a built-in template processor that performs string interpolation with format specifiers, similar to String.format(), allowing you to format embedded expressions.",
-    "javaVersion": "21",
-    "category": "General"
-  },
-  {
-    "id": 208,
-    "questionText": "What is the purpose of Unnamed Patterns?",
-    "options": [
-      "To create anonymous patterns",
-      "To ignore record components in pattern matching when their values are not needed",
-      "To hide pattern names",
-      "To create pattern templates"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Unnamed Patterns (preview) allow you to use the underscore (_) to ignore record components in pattern matching when you don't need their values, improving code readability.",
-    "javaVersion": "21",
-    "category": "Language Features"
-  },
-  {
-    "id": 209,
-    "questionText": "What is an Unnamed Variable used for?",
-    "options": [
-      "To create anonymous variables",
-      "To declare a variable when you need to assign a value but don't use it",
-      "To hide variable names",
-      "To create variable templates"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Unnamed Variables (preview) allow you to declare variables with underscore (_) when you need to assign a value but don't use it, making code intent clearer and avoiding compiler warnings.",
-    "javaVersion": "21",
-    "category": "General"
-  },
-  {
-    "id": 210,
-    "questionText": "What is the benefit of Generational ZGC?",
-    "options": [
-      "Faster collection",
-      "Improved performance by maintaining separate generations and collecting young objects more frequently",
-      "Smaller memory footprint",
-      "Better thread safety"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Generational ZGC maintains separate generations for young and old objects. Young objects are collected more frequently since they're more likely to be garbage, improving overall application performance.",
-    "javaVersion": "21",
-    "category": "Advanced"
-  },
-  {
-    "id": 211,
-    "questionText": "What is the Key Encapsulation Mechanism API designed for?",
-    "options": [
-      "Traditional encryption",
-      "Post-quantum cryptography algorithms that use key encapsulation",
-      "Database encryption",
-      "Network security"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The Key Encapsulation Mechanism (KEM) API provides support for post-quantum cryptography algorithms, preparing Java applications for the security challenges posed by quantum computing.",
-    "javaVersion": "21",
-    "category": "APIs"
-  },
-  {
-    "id": 212,
-    "questionText": "What is the difference between a sealed class and an abstract class?",
-    "options": [
-      "Sealed classes cannot be extended; abstract classes can",
-      "Sealed classes can be extended by permitted classes; abstract classes cannot be instantiated but can be extended",
-      "Abstract classes are sealed",
-      "There is no difference"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "A sealed class can be extended, but only by classes listed in its permits clause. An abstract class cannot be instantiated but can be extended by any class (unless it's also sealed or final).",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 213,
-    "questionText": "Can a record have instance fields?",
-    "options": [
-      "Yes, records can have any fields",
-      "No, records can only have the components declared in the record header",
-      "Yes, but only final fields",
-      "Yes, but only static fields"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Records can only have the components declared in the record header. These components automatically become private final fields. You cannot add additional instance fields, though you can add static fields and methods.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 214,
-    "questionText": "What is the purpose of the permits clause?",
-    "options": [
-      "To permit all classes",
-      "To explicitly control which classes can extend a sealed class or implement a sealed interface",
-      "To prevent extension",
-      "To make classes abstract"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The permits clause explicitly lists which classes are allowed to extend a sealed class or implement a sealed interface, providing compile-time control over the type hierarchy.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 215,
-    "questionText": "What is a non-sealed class used for?",
-    "options": [
-      "To prevent extension",
-      "To allow unrestricted extension of a sealed class in a specific branch of the hierarchy",
-      "To make a class abstract",
-      "To seal a class partially"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "A non-sealed class extends a sealed class but allows any class to extend it, breaking the sealed constraint for that specific branch while maintaining it for other branches.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 216,
-    "questionText": "What is pattern matching in switch expressions?",
-    "options": [
-      "Using regex in switch",
-      "Matching patterns and automatically binding variables in switch expressions",
-      "Switching between patterns",
-      "Pattern-based routing"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Pattern matching in switch expressions allows you to match patterns (like type patterns, record patterns) and automatically bind variables, eliminating the need for explicit casting and instanceof checks.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 217,
-    "questionText": "What is the syntax for Text Blocks?",
-    "options": [
-      "\"\"\"text\"\"\"",
-      "\"text\"",
-      "'text'",
-      "`text`"
-    ],
-    "correctAnswerIndex": 0,
-    "explanation": "Text Blocks use triple double quotes (\"\"\") to delimit multi-line string literals. They preserve formatting and automatically handle indentation, making it easier to write strings that span multiple lines.",
-    "javaVersion": "17",
-    "category": "Language Features"
-  },
-  {
-    "id": 218,
-    "questionText": "What does Helpful NullPointerExceptions tell you?",
-    "options": [
-      "Only the line number",
-      "The exact variable, field, or array element that was null",
-      "Only the method name",
-      "Only the class name"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Helpful NullPointerExceptions (JEP 358) provide detailed information about which specific variable, field, or array element was null, making debugging much easier.",
-    "javaVersion": "17",
-    "category": "Core Concepts"
-  },
-  {
-    "id": 219,
-    "questionText": "What is the Foreign Function & Memory API replacing?",
-    "options": [
-      "Java Native Interface (JNI) for many use cases",
-      "Reflection API",
-      "Serialization API",
-      "Networking API"
-    ],
-    "correctAnswerIndex": 0,
-    "explanation": "The Foreign Function & Memory API is designed to replace or supplement JNI for calling native code and managing native memory, providing a safer, more efficient, and more maintainable alternative.",
-    "javaVersion": "17",
-    "category": "APIs"
-  },
-  {
-    "id": 220,
-    "questionText": "What is the Vector API optimized for?",
-    "options": [
-      "Vector graphics",
-      "Mathematical computations that can utilize CPU SIMD instructions for parallel processing",
-      "Dynamic arrays",
-      "Network operations"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "The Vector API is optimized for mathematical computations that can benefit from SIMD (Single Instruction Multiple Data) instructions on modern CPUs, enabling parallel processing of multiple values simultaneously.",
-    "javaVersion": "17",
-    "category": "APIs"
-  },
-  {
-    "id": 221,
-    "questionText": "What is the main benefit of UTF-8 as default charset?",
-    "options": [
-      "Performance",
-      "Consistent behavior across all platforms, independent of OS settings",
-      "Memory efficiency",
-      "Security"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "UTF-8 as the default charset ensures that Java applications behave consistently across different platforms and operating systems, regardless of the system's default charset configuration.",
-    "javaVersion": "18",
-    "category": "Collections"
-  },
-  {
-    "id": 222,
-    "questionText": "What is jwebserver intended for?",
-    "options": [
-      "Production web servers",
-      "Quick prototyping, testing, and serving static files during development",
-      "Full web applications",
-      "Replacing application servers"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "jwebserver is a simple command-line tool for quickly serving static files during development, prototyping, and testing. It's not designed for production use or running complex web applications.",
-    "javaVersion": "18",
-    "category": "APIs"
-  },
-  {
-    "id": 223,
-    "questionText": "What is the primary use case for Virtual Threads?",
-    "options": [
-      "CPU-intensive tasks",
-      "High-throughput concurrent applications with many blocking I/O operations",
-      "Real-time systems",
-      "System programming"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Virtual threads are ideal for high-throughput concurrent applications, especially those with many blocking I/O operations (web servers, database connections), where you need to handle many concurrent tasks efficiently.",
-    "javaVersion": "19",
-    "category": "Concurrency"
-  },
-  {
-    "id": 224,
-    "questionText": "What is Structured Concurrency designed to prevent?",
-    "options": [
-      "Thread creation",
-      "Orphaned tasks and resource leaks in concurrent code",
-      "Thread synchronization",
-      "Memory allocation"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Structured Concurrency ensures that related concurrent tasks are managed as a single unit. If the parent scope completes or fails, all child tasks are automatically cancelled, preventing orphaned tasks and resource leaks.",
-    "javaVersion": "19",
-    "category": "Concurrency"
-  },
-  {
-    "id": 225,
-    "questionText": "What is the main advantage of Sequenced Collections?",
-    "options": [
-      "They are faster",
-      "They provide a consistent API for accessing first and last elements across different collection types",
-      "They use less memory",
-      "They are always thread-safe"
-    ],
-    "correctAnswerIndex": 1,
-    "explanation": "Sequenced Collections provide a consistent API (getFirst(), getLast(), addFirst(), addLast(), reversed()) for collections with a defined encounter order, making it easier to work with ordered collections regardless of the specific implementation.",
-    "javaVersion": "21",
-    "category": "Collections"
   }
 ]

@@ -32,10 +32,10 @@
                 android:layout_marginTop="16dp" />
 
             <TextView
-                android:id="@+id/javaVersionBadge"
+                android:id="@+id/languageVersionBadge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/java_version"
+                android:text="@string/cpp_version"
                 android:textSize="14sp"
                 android:textColor="@color/white"
                 android:background="@color/primary"

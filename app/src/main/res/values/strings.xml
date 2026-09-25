@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Java Quiz App</string>
-    <string name="welcome_title">Java 17-21 Quiz</string>
-    <string name="welcome_subtitle">Test your knowledge of modern Java features</string>
+    <string name="app_name">C++ Quiz App</string>
+    <string name="welcome_title">C++ 11-21 Quiz</string>
+    <string name="welcome_subtitle">Test your knowledge of modern C++ features</string>
     <string name="start_quiz">Start Quiz</string>
     <string name="question_counter">Question %1$d of %2$d</string>
     <string name="next_question">Next Question</string>
@@ -15,7 +15,7 @@
     <string name="correct_answer">Correct!</string>
     <string name="incorrect_answer">Incorrect</string>
     <string name="explanation">Explanation:</string>
-    <string name="java_version">Java %1$s</string>
+    <string name="cpp_version">C++ %1$s</string>
     <string name="results">Results</string>
     <string name="question_text_goes_here">Question text goes here</string>
     <string name="option_1">Option 1</string>
@@ -41,23 +41,23 @@
     
     <!-- Category selection strings -->
     <string name="category_selection_title">Choose a Category</string>
-    <string name="category_selection_subtitle">Select a Java version or topic category to focus your quiz</string>
+    <string name="category_selection_subtitle">Select a C++ version or topic category to focus your quiz</string>
     <string name="category_all">All Questions</string>
     <string name="select_category">Select a category</string>
-    <string name="select_java_version">Select Java Version</string>
+    <string name="select_cpp_version">Select C++ Version</string>
     <string name="selected_category">Category: %s</string>
     <string name="all_categories">All Categories</string>
     <string name="back">Back</string>
-    <string name="core_java">Core Java</string>
-    <string name="java_versions_label">Java Versions</string>
-    <string name="category_java_21">Java 21 (LTS)</string>
-    <string name="category_java_20">Java 20</string>
-    <string name="category_java_19">Java 19</string>
-    <string name="category_java_18">Java 18</string>
-    <string name="category_java_17">Java 17 (LTS)</string>
-    <string name="category_java_8">Java 8</string>
-    <string name="core_java_label">Core Java</string>
-    <string name="category_core_java">Core Java Fundamentals</string>
+    <string name="core_cpp">Core C++</string>
+    <string name="cpp_versions_label">C++ Versions</string>
+    <string name="category_cpp_26">C++ 26</string>
+    <string name="category_cpp_23">C++ 23</string>
+    <string name="category_cpp_20">C++ 20</string>
+    <string name="category_cpp_17">C++ 17</string>
+    <string name="category_cpp_14">C++ 14</string>
+    <string name="category_cpp_11">C++ 11</string>
+    <string name="core_cpp_label">Core C++</string>
+    <string name="category_core_cpp">Core C++ Fundamentals</string>
     <string name="categories_label">Topic Categories</string>
     <string name="category_language_features">Language Features</string>
     <string name="category_concurrency">Concurrency</string>

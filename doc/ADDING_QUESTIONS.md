@@ -191,14 +191,14 @@ Edit `app/src/main/assets/questions.json`:
   ],
   "correctAnswerIndex": 0,
   "explanation": "Detailed explanation here.",
-  "javaVersion": "17"
+  "languageVersion": "17"
 }
 ```
 
 **Important:** 
 - IDs must be unique and sequential
 - `correctAnswerIndex` is 0-based (0, 1, 2, or 3)
-- `javaVersion` should be "17", "18", "19", "20", "21", "8", or "Core"
+- `languageVersion` should be "17", "18", "19", "20", "21", "8", or "Core"
 
 ### Method 2: Add to QuestionBank.kt
 
@@ -216,7 +216,7 @@ Question(
     ),
     correctAnswerIndex = 0,
     explanation = "Detailed explanation here.",
-    javaVersion = "17"
+    languageVersion = "17"
 ),
 ```
 
@@ -278,7 +278,7 @@ This iterative approach ensures quality.
   ],
   "correctAnswerIndex": 1,
   "explanation": "Records automatically generate several boilerplate methods including equals(), hashCode(), and toString(), reducing the amount of code you need to write for simple data carriers. This is one of the main benefits of using records.",
-  "javaVersion": "17"
+  "languageVersion": "17"
 }
 ```
 

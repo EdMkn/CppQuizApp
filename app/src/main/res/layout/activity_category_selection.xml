@@ -162,7 +162,7 @@
                 android:id="@+id/versionSelectionTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/select_java_version"
+                android:text="@string/select_cpp_version"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@+id/selectedCategoryText"

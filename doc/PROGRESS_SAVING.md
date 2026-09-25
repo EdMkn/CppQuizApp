@@ -64,7 +64,7 @@ data class QuizProgress(
     val currentQuestionIndex: Int,     // Current position (0-based)
     val score: Int,                     // Current score
     val selectedAnswers: List<Int?>,    // Answers selected so far (null = not answered)
-    val javaVersion: String?,           // Selected Java version filter (null = all)
+    val languageVersion: String?,           // Selected Java version filter (null = all)
     val timestamp: Long                 // When quiz was started
 ) {
     companion object {
@@ -165,15 +165,15 @@ override fun onCreate(savedInstanceState: Bundle?) {
 }
 
 private fun startNewQuiz() {
-    val selectedJavaVersion = intent.getStringExtra("javaVersion")
+    val selectedlanguageVersion = intent.getStringExtra("languageVersion")
     val questionCount = preferencesManager.getQuestionCount()
     
     lifecycleScope.launch {
         try {
             questions = if (questionCount >= 999) {
-                questionRepository.getQuestionsByVersion(selectedJavaVersion).first().shuffled()
+                questionRepository.getQuestionsByVersion(selectedlanguageVersion).first().shuffled()
             } else {
-                questionRepository.getRandomQuestionsByVersion(questionCount, selectedJavaVersion)
+                questionRepository.getRandomQuestionsByVersion(questionCount, selectedlanguageVersion)
             }
             
             if (questions.isNotEmpty()) {
@@ -318,7 +318,7 @@ private fun saveProgress() {
             currentQuestionIndex = currentQuestionIndex,
             score = score,
             selectedAnswers = selectedAnswers.toList(),
-            javaVersion = intent.getStringExtra("javaVersion"),
+            languageVersion = intent.getStringExtra("languageVersion"),
             timestamp = System.currentTimeMillis()
         )
         preferencesManager.saveQuizProgress(progress)
@@ -389,7 +389,7 @@ data class QuizSession(
     val selectedAnswers: List<Int?>,
     val score: Int,
     val totalQuestions: Int,
-    val javaVersion: String?,
+    val languageVersion: String?,
     val startTime: Long,
     val endTime: Long? = null,
     val isCompleted: Boolean = false,

@@ -95,7 +95,7 @@ Question(
     options = listOf("Option 1", "Option 2", "Option 3", "Option 4"),
     correctAnswerIndex = 0, // 0-based index
     explanation = "Why this answer is correct",
-    javaVersion = "21"
+    languageVersion = "21"
 )
 ```
 

@@ -1,0 +1,606 @@
+2025-12-24 00:17:51.671  9558-9558  ViewRootImpl            com.javaguiz.app                     D  Skipping stats log for color mode
+2025-12-24 00:17:51.992  9558-9558  InsetsController        com.javaguiz.app                     D  hide(ime(), fromIme=false)
+2025-12-24 00:17:51.992  9558-9558  ImeTracker              com.javaguiz.app                     I  com.javaguiz.app:43946ff0: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+2025-12-24 00:17:52.439  9558-9558  VRI[SettingsActivity]   com.javaguiz.app                     D  visibilityChanged oldVisibility=true newVisibility=false
+2025-12-24 00:17:52.482  9558-9558  WindowOnBackDispatcher  com.javaguiz.app                     W  sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda13@841992f
+2025-12-24 00:17:52.483  9558-9558  ViewRootImpl            com.javaguiz.app                     D  Skipping stats log for color mode
+2025-12-24 00:17:56.588  9558-9558  om.javaguiz.app         com.javaguiz.app                     I  AssetManager2(0x78c85145b338) locale list changing from [] to [en-US]
+2025-12-24 00:17:57.243  9558-9558  InsetsController        com.javaguiz.app                     D  hide(ime(), fromIme=false)
+2025-12-24 00:17:57.243  9558-9558  ImeTracker              com.javaguiz.app                     I  com.javaguiz.app:5ff8fd0: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+2025-12-24 00:17:57.604  9558-9558  VRI[MainActivity]       com.javaguiz.app                     D  visibilityChanged oldVisibility=true newVisibility=false
+2025-12-24 00:18:02.923  9558-9558  QuizActivity            com.javaguiz.app                     D  onOptionSelected called with index: 1
+2025-12-24 00:18:02.923  9558-9558  QuizActivity            com.javaguiz.app                     D  Selected answer index: 1, Correct answer index: 1
+2025-12-24 00:18:02.924  9558-9558  QuizActivity            com.javaguiz.app                     D  Answer is correct: true
+2025-12-24 00:18:02.924  9558-9558  QuizActivity            com.javaguiz.app                     D  Score updated to: 1
+2025-12-24 00:18:02.924  9558-9558  QuizActivity            com.javaguiz.app                     D  Calling provideFeedback with isCorrect=true
+2025-12-24 00:18:02.924  9558-9558  QuizActivity            com.javaguiz.app                     D  === provideFeedback called ===
+2025-12-24 00:18:02.924  9558-9558  QuizActivity            com.javaguiz.app                     D  isCorrect: true
+2025-12-24 00:18:02.924  9558-9558  PreferencesManager      com.javaguiz.app                     D  isSoundEnabled() called
+2025-12-24 00:18:02.924  9558-9558  PreferencesManager      com.javaguiz.app                     D    Key: sound_enabled
+2025-12-24 00:18:02.924  9558-9558  PreferencesManager      com.javaguiz.app                     D    Default value: true
+2025-12-24 00:18:02.924  9558-9558  PreferencesManager      com.javaguiz.app                     D    Stored value: true
+2025-12-24 00:18:02.924  9558-9558  PreferencesManager      com.javaguiz.app                     D    Preference exists: true
+2025-12-24 00:18:02.924  9558-9558  QuizActivity            com.javaguiz.app                     D  Sound enabled in preferences: true
+2025-12-24 00:18:02.924  9558-9558  QuizActivity            com.javaguiz.app                     D  Sound preference key: sound_enabled
+2025-12-24 00:18:02.924  9558-9558  QuizActivity            com.javaguiz.app                     D  Vibration enabled in preferences: true
+2025-12-24 00:18:02.924  9558-9558  QuizActivity            com.javaguiz.app                     D  Attempting to provide vibration feedback...
+2025-12-24 00:18:02.928  9558-9558  QuizActivity            com.javaguiz.app                     D  Vibrator is available, triggering vibration...
+2025-12-24 00:18:02.935  9558-9558  QuizActivity            com.javaguiz.app                     D  Vibration triggered (API 26+): 50ms
+2025-12-24 00:18:02.935  9558-9558  QuizActivity            com.javaguiz.app                     D  Sound is enabled, but sound feedback is NOT YET IMPLEMENTED
+2025-12-24 00:18:02.935  9558-9558  QuizActivity            com.javaguiz.app                     W  TODO: Implement sound feedback using MediaPlayer or SoundPool
+2025-12-24 00:18:02.935  9558-9558  QuizActivity            com.javaguiz.app                     D  Sound feedback code path reached but no implementation exists
+2025-12-24 00:18:02.935  9558-9558  QuizActivity            com.javaguiz.app                     D  === provideFeedback completed ===
+2025-12-24 00:18:06.588  9558-9558  QuizActivity            com.javaguiz.app                     D  onOptionSelected called with index: 3
+2025-12-24 00:18:06.588  9558-9558  QuizActivity            com.javaguiz.app                     D  Selected answer index: 3, Correct answer index: 1
+2025-12-24 00:18:06.589  9558-9558  QuizActivity            com.javaguiz.app                     D  Answer is correct: false
+2025-12-24 00:18:06.589  9558-9558  QuizActivity            com.javaguiz.app                     D  Calling provideFeedback with isCorrect=false
+2025-12-24 00:18:06.589  9558-9558  QuizActivity            com.javaguiz.app                     D  === provideFeedback called ===
+2025-12-24 00:18:06.589  9558-9558  QuizActivity            com.javaguiz.app                     D  isCorrect: false
+2025-12-24 00:18:06.589  9558-9558  PreferencesManager      com.javaguiz.app                     D  isSoundEnabled() called
+2025-12-24 00:18:06.589  9558-9558  PreferencesManager      com.javaguiz.app                     D    Key: sound_enabled
+2025-12-24 00:18:06.589  9558-9558  PreferencesManager      com.javaguiz.app                     D    Default value: true
+2025-12-24 00:18:06.589  9558-9558  PreferencesManager      com.javaguiz.app                     D    Stored value: true
+2025-12-24 00:18:06.589  9558-9558  PreferencesManager      com.javaguiz.app                     D    Preference exists: true
+2025-12-24 00:18:06.589  9558-9558  QuizActivity            com.javaguiz.app                     D  Sound enabled in preferences: true
+2025-12-24 00:18:06.589  9558-9558  QuizActivity            com.javaguiz.app                     D  Sound preference key: sound_enabled
+2025-12-24 00:18:06.589  9558-9558  QuizActivity            com.javaguiz.app                     D  Vibration enabled in preferences: true
+2025-12-24 00:18:06.589  9558-9558  QuizActivity            com.javaguiz.app                     D  Attempting to provide vibration feedback...
+2025-12-24 00:18:06.589  9558-9558  QuizActivity            com.javaguiz.app                     D  Vibrator is available, triggering vibration...
+2025-12-24 00:18:06.592  9558-9558  QuizActivity            com.javaguiz.app                     D  Vibration triggered (API 26+): 100ms
+2025-12-24 00:18:06.592  9558-9558  QuizActivity            com.javaguiz.app                     D  Sound is enabled, but sound feedback is NOT YET IMPLEMENTED
+2025-12-24 00:18:06.592  9558-9558  QuizActivity            com.javaguiz.app                     W  TODO: Implement sound feedback using MediaPlayer or SoundPool
+2025-12-24 00:18:06.592  9558-9558  QuizActivity            com.javaguiz.app                     D  Sound feedback code path reached but no implementation exists
+2025-12-24 00:18:06.592  9558-9558  QuizActivity            com.javaguiz.app                     D  === provideFeedback completed ===
+2025-12-24 00:18:09.340  9558-9558  QuizActivity            com.javaguiz.app                     D  onOptionSelected called with index: 1
+2025-12-24 00:18:09.340  9558-9558  QuizActivity            com.javaguiz.app                     D  Selected answer index: 1, Correct answer index: 1
+2025-12-24 00:18:09.341  9558-9558  QuizActivity            com.javaguiz.app                     D  Answer is correct: true
+2025-12-24 00:18:09.341  9558-9558  QuizActivity            com.javaguiz.app                     D  Score updated to: 2
+2025-12-24 00:18:09.341  9558-9558  QuizActivity            com.javaguiz.app                     D  Calling provideFeedback with isCorrect=true
+2025-12-24 00:18:09.341  9558-9558  QuizActivity            com.javaguiz.app                     D  === provideFeedback called ===
+2025-12-24 00:18:09.341  9558-9558  QuizActivity            com.javaguiz.app                     D  isCorrect: true
+2025-12-24 00:18:09.341  9558-9558  PreferencesManager      com.javaguiz.app                     D  isSoundEnabled() called
+2025-12-24 00:18:09.341  9558-9558  PreferencesManager      com.javaguiz.app                     D    Key: sound_enabled
+2025-12-24 00:18:09.341  9558-9558  PreferencesManager      com.javaguiz.app                     D    Default value: true
+2025-12-24 00:18:09.341  9558-9558  PreferencesManager      com.javaguiz.app                     D    Stored value: true
+2025-12-24 00:18:09.341  9558-9558  PreferencesManager      com.javaguiz.app                     D    Preference exists: true
+2025-12-24 00:18:09.341  9558-9558  QuizActivity            com.javaguiz.app                     D  Sound enabled in preferences: true
+2025-12-24 00:18:09.341  9558-9558  QuizActivity            com.javaguiz.app                     D  Sound preference key: sound_enabled
+2025-12-24 00:18:09.341  9558-9558  QuizActivity            com.javaguiz.app                     D  Vibration enabled in preferences: true
+2025-12-24 00:18:09.341  9558-9558  QuizActivity            com.javaguiz.app                     D  Attempting to provide vibration feedback...
+2025-12-24 00:18:09.341  9558-9558  QuizActivity            com.javaguiz.app                     D  Vibrator is available, triggering vibration...
+2025-12-24 00:18:09.342  9558-9558  QuizActivity            com.javaguiz.app                     D  Vibration triggered (API 26+): 50ms
+2025-12-24 00:18:09.342  9558-9558  QuizActivity            com.javaguiz.app                     D  Sound is enabled, but sound feedback is NOT YET IMPLEMENTED
+2025-12-24 00:18:09.342  9558-9558  QuizActivity            com.javaguiz.app                     W  TODO: Implement sound feedback using MediaPlayer or SoundPool
+2025-12-24 00:18:09.342  9558-9558  QuizActivity            com.javaguiz.app                     D  Sound feedback code path reached but no implementation exists
+2025-12-24 00:18:09.342  9558-9558  QuizActivity            com.javaguiz.app                     D  === provideFeedback completed ===
+2025-12-24 00:18:14.648  9558-9558  QuizActivity            com.javaguiz.app                     D  onOptionSelected called with index: 0
+2025-12-24 00:18:14.648  9558-9558  QuizActivity            com.javaguiz.app                     D  Selected answer index: 0, Correct answer index: 1
+2025-12-24 00:18:14.649  9558-9558  QuizActivity            com.javaguiz.app                     D  Answer is correct: false
+2025-12-24 00:18:14.649  9558-9558  QuizActivity            com.javaguiz.app                     D  Calling provideFeedback with isCorrect=false
+2025-12-24 00:18:14.649  9558-9558  QuizActivity            com.javaguiz.app                     D  === provideFeedback called ===
+2025-12-24 00:18:14.649  9558-9558  QuizActivity            com.javaguiz.app                     D  isCorrect: false
+2025-12-24 00:18:14.649  9558-9558  PreferencesManager      com.javaguiz.app                     D  isSoundEnabled() called
+2025-12-24 00:18:14.649  9558-9558  PreferencesManager      com.javaguiz.app                     D    Key: sound_enabled
+2025-12-24 00:18:14.649  9558-9558  PreferencesManager      com.javaguiz.app                     D    Default value: true
+2025-12-24 00:18:14.649  9558-9558  PreferencesManager      com.javaguiz.app                     D    Stored value: true
+2025-12-24 00:18:14.649  9558-9558  PreferencesManager      com.javaguiz.app                     D    Preference exists: true
+2025-12-24 00:18:14.649  9558-9558  QuizActivity            com.javaguiz.app                     D  Sound enabled in preferences: true
+2025-12-24 00:18:14.649  9558-9558  QuizActivity            com.javaguiz.app                     D  Sound preference key: sound_enabled
+2025-12-24 00:18:14.650  9558-9558  QuizActivity            com.javaguiz.app                     D  Vibration enabled in preferences: true
+2025-12-24 00:18:14.650  9558-9558  QuizActivity            com.javaguiz.app                     D  Attempting to provide vibration feedback...
+2025-12-24 00:18:14.650  9558-9558  QuizActivity            com.javaguiz.app                     D  Vibrator is available, triggering vibration...
+2025-12-24 00:18:14.652  9558-9558  QuizActivity            com.javaguiz.app                     D  Vibration triggered (API 26+): 100ms
+2025-12-24 00:18:14.652  9558-9558  QuizActivity            com.javaguiz.app                     D  Sound is enabled, but sound feedback is NOT YET IMPLEMENTED
+2025-12-24 00:18:14.652  9558-9558  QuizActivity            com.javaguiz.app                     W  TODO: Implement sound feedback using MediaPlayer or SoundPool
+2025-12-24 00:18:14.652  9558-9558  QuizActivity            com.javaguiz.app                     D  Sound feedback code path reached but no implementation exists
+2025-12-24 00:18:14.652  9558-9558  QuizActivity            com.javaguiz.app                     D  === provideFeedback completed ===
+2025-12-24 00:18:18.092  9558-9558  QuizActivity            com.javaguiz.app                     D  onOptionSelected called with index: 2
+2025-12-24 00:18:18.092  9558-9558  QuizActivity            com.javaguiz.app                     D  Selected answer index: 2, Correct answer index: 1
+2025-12-24 00:18:18.092  9558-9558  QuizActivity            com.javaguiz.app                     D  Answer is correct: false
+2025-12-24 00:18:18.092  9558-9558  QuizActivity            com.javaguiz.app                     D  Calling provideFeedback with isCorrect=false
+2025-12-24 00:18:18.092  9558-9558  QuizActivity            com.javaguiz.app                     D  === provideFeedback called ===
+2025-12-24 00:18:18.092  9558-9558  QuizActivity            com.javaguiz.app                     D  isCorrect: false
+2025-12-24 00:18:18.092  9558-9558  PreferencesManager      com.javaguiz.app                     D  isSoundEnabled() called
+2025-12-24 00:18:18.092  9558-9558  PreferencesManager      com.javaguiz.app                     D    Key: sound_enabled
+2025-12-24 00:18:18.092  9558-9558  PreferencesManager      com.javaguiz.app                     D    Default value: true
+2025-12-24 00:18:18.092  9558-9558  PreferencesManager      com.javaguiz.app                     D    Stored value: true
+2025-12-24 00:18:18.092  9558-9558  PreferencesManager      com.javaguiz.app                     D    Preference exists: true
+2025-12-24 00:18:18.092  9558-9558  QuizActivity            com.javaguiz.app                     D  Sound enabled in preferences: true
+2025-12-24 00:18:18.092  9558-9558  QuizActivity            com.javaguiz.app                     D  Sound preference key: sound_enabled
+2025-12-24 00:18:18.092  9558-9558  QuizActivity            com.javaguiz.app                     D  Vibration enabled in preferences: true
+2025-12-24 00:18:18.092  9558-9558  QuizActivity            com.javaguiz.app                     D  Attempting to provide vibration feedback...
+2025-12-24 00:18:18.092  9558-9558  QuizActivity            com.javaguiz.app                     D  Vibrator is available, triggering vibration...
+2025-12-24 00:18:18.093  9558-9558  QuizActivity            com.javaguiz.app                     D  Vibration triggered (API 26+): 100ms
+2025-12-24 00:18:18.093  9558-9558  QuizActivity            com.javaguiz.app                     D  Sound is enabled, but sound feedback is NOT YET IMPLEMENTED
+2025-12-24 00:18:18.093  9558-9558  QuizActivity            com.javaguiz.app                     W  TODO: Implement sound feedback using MediaPlayer or SoundPool
+2025-12-24 00:18:18.093  9558-9558  QuizActivity            com.javaguiz.app                     D  Sound feedback code path reached but no implementation exists
+2025-12-24 00:18:18.093  9558-9558  QuizActivity            com.javaguiz.app                     D  === provideFeedback completed ===
+2025-12-24 00:18:22.609  9558-9558  QuizActivity            com.javaguiz.app                     D  onOptionSelected called with index: 1
+2025-12-24 00:18:22.609  9558-9558  QuizActivity            com.javaguiz.app                     D  Selected answer index: 1, Correct answer index: 1
+2025-12-24 00:18:22.609  9558-9558  QuizActivity            com.javaguiz.app                     D  Answer is correct: true
+2025-12-24 00:18:22.609  9558-9558  QuizActivity            com.javaguiz.app                     D  Score updated to: 3
+2025-12-24 00:18:22.610  9558-9558  QuizActivity            com.javaguiz.app                     D  Calling provideFeedback with isCorrect=true
+2025-12-24 00:18:22.610  9558-9558  QuizActivity            com.javaguiz.app                     D  === provideFeedback called ===
+2025-12-24 00:18:22.610  9558-9558  QuizActivity            com.javaguiz.app                     D  isCorrect: true
+2025-12-24 00:18:22.610  9558-9558  PreferencesManager      com.javaguiz.app                     D  isSoundEnabled() called
+2025-12-24 00:18:22.610  9558-9558  PreferencesManager      com.javaguiz.app                     D    Key: sound_enabled
+2025-12-24 00:18:22.610  9558-9558  PreferencesManager      com.javaguiz.app                     D    Default value: true
+2025-12-24 00:18:22.610  9558-9558  PreferencesManager      com.javaguiz.app                     D    Stored value: true
+2025-12-24 00:18:22.610  9558-9558  PreferencesManager      com.javaguiz.app                     D    Preference exists: true
+2025-12-24 00:18:22.610  9558-9558  QuizActivity            com.javaguiz.app                     D  Sound enabled in preferences: true
+2025-12-24 00:18:22.610  9558-9558  QuizActivity            com.javaguiz.app                     D  Sound preference key: sound_enabled
+2025-12-24 00:18:22.610  9558-9558  QuizActivity            com.javaguiz.app                     D  Vibration enabled in preferences: true
+2025-12-24 00:18:22.610  9558-9558  QuizActivity            com.javaguiz.app                     D  Attempting to provide vibration feedback...
+2025-12-24 00:18:22.610  9558-9558  QuizActivity            com.javaguiz.app                     D  Vibrator is available, triggering vibration...
+2025-12-24 00:18:22.610  9558-9558  QuizActivity            com.javaguiz.app                     D  Vibration triggered (API 26+): 50ms
+2025-12-24 00:18:22.610  9558-9558  QuizActivity            com.javaguiz.app                     D  Sound is enabled, but sound feedback is NOT YET IMPLEMENTED
+2025-12-24 00:18:22.610  9558-9558  QuizActivity            com.javaguiz.app                     W  TODO: Implement sound feedback using MediaPlayer or SoundPool
+2025-12-24 00:18:22.610  9558-9558  QuizActivity            com.javaguiz.app                     D  Sound feedback code path reached but no implementation exists
+2025-12-24 00:18:22.610  9558-9558  QuizActivity            com.javaguiz.app                     D  === provideFeedback completed ===
+2025-12-24 00:18:33.635  9558-9558  WindowOnBackDispatcher  com.javaguiz.app                     W  sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda13@f1a49f
+2025-12-24 00:18:33.639  9558-9558  ViewRootImpl            com.javaguiz.app                     D  Skipping stats log for color mode
+2025-12-24 00:18:33.646  9558-9558  WindowOnBackDispatcher  com.javaguiz.app                     W  sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda13@b0e1fc8
+2025-12-24 00:18:33.651  9558-9558  ViewRootImpl            com.javaguiz.app                     D  Skipping stats log for color mode
+---------------------------- PROCESS ENDED (9558) for package com.javaguiz.app ----------------------------
+---------------------------- PROCESS STARTED (9650) for package com.javaguiz.app ----------------------------
+2025-12-24 00:21:15.637  9650-9650  nativeloader            com.javaguiz.app                     D  Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+2025-12-24 00:21:15.723  9650-9650  nativeloader            com.javaguiz.app                     D  Load /data/user/0/com.javaguiz.app/code_cache/startup_agents/69b40b6c-agent.so using system ns (caller=<unknown>): ok
+2025-12-24 00:21:15.714  9650-9650  re-initialized>         com.javaguiz.app                     W  type=1400 audit(0.0:1970): avc:  granted  { execute } for  path="/data/data/com.javaguiz.app/code_cache/startup_agents/69b40b6c-agent.so" dev="dm-55" ino=360832 scontext=u:r:untrusted_app:s0:c219,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c219,c256,c512,c768 tclass=file app=com.javaguiz.app
+2025-12-24 00:21:15.738  9650-9650  om.javaguiz.app         com.javaguiz.app                     W  hiddenapi: DexFile /data/data/com.javaguiz.app/code_cache/.studio/instruments-cbb5ff5f.jar is in boot class path but is not in a known location
+2025-12-24 00:21:15.976  9650-9650  om.javaguiz.app         com.javaguiz.app                     W  Redefining intrinsic method java.lang.Thread java.lang.Thread.currentThread(). This may cause the unexpected use of the original definition of java.lang.Thread java.lang.Thread.currentThread()in methods that have already been compiled.
+2025-12-24 00:21:15.976  9650-9650  om.javaguiz.app         com.javaguiz.app                     W  Redefining intrinsic method boolean java.lang.Thread.interrupted(). This may cause the unexpected use of the original definition of boolean java.lang.Thread.interrupted()in methods that have already been compiled.
+2025-12-24 00:21:15.982  9650-9650  CompatChangeReporter    com.javaguiz.app                     D  Compat change id reported: 242716250; UID 10219; state: ENABLED
+2025-12-24 00:21:16.026  9650-9650  ApplicationLoaders      com.javaguiz.app                     D  Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+2025-12-24 00:21:16.026  9650-9650  ApplicationLoaders      com.javaguiz.app                     D  Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+2025-12-24 00:21:16.174  9650-9650  nativeloader            com.javaguiz.app                     D  Configuring clns-9 for other apk /data/app/~~EycsDL-phFWGlPDCL_0DMQ==/com.javaguiz.app--wPulj5TsDp3pw4D5mVBVA==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~EycsDL-phFWGlPDCL_0DMQ==/com.javaguiz.app--wPulj5TsDp3pw4D5mVBVA==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.javaguiz.app
+2025-12-24 00:21:16.180  9650-9650  om.javaguiz.app         com.javaguiz.app                     I  AssetManager2(0x78c85144a678) locale list changing from [] to [en-US]
+2025-12-24 00:21:16.181  9650-9650  om.javaguiz.app         com.javaguiz.app                     I  AssetManager2(0x78c8514513d8) locale list changing from [] to [en-US]
+2025-12-24 00:21:16.184  9650-9650  GraphicsEnvironment     com.javaguiz.app                     V  Currently set values for:
+2025-12-24 00:21:16.184  9650-9650  GraphicsEnvironment     com.javaguiz.app                     V    angle_gl_driver_selection_pkgs=[]
+2025-12-24 00:21:16.184  9650-9650  GraphicsEnvironment     com.javaguiz.app                     V    angle_gl_driver_selection_values=[]
+2025-12-24 00:21:16.184  9650-9650  GraphicsEnvironment     com.javaguiz.app                     V  com.javaguiz.app is not listed in per-application setting
+2025-12-24 00:21:16.184  9650-9650  GraphicsEnvironment     com.javaguiz.app                     V  ANGLE allowlist from config: 
+2025-12-24 00:21:16.184  9650-9650  GraphicsEnvironment     com.javaguiz.app                     V  com.javaguiz.app is not listed in ANGLE allowlist or settings, returning default
+2025-12-24 00:21:16.184  9650-9650  GraphicsEnvironment     com.javaguiz.app                     V  Neither updatable production driver nor prerelease driver is supported.
+2025-12-24 00:21:16.207  9650-9666  DisplayManager          com.javaguiz.app                     I  Choreographer implicitly registered for the refresh rate.
+2025-12-24 00:21:16.208  9650-9650  om.javaguiz.app         com.javaguiz.app                     I  AssetManager2(0x78c85144bf78) locale list changing from [] to [en-US]
+2025-12-24 00:21:16.238  9650-9650  AppCompatDelegate       com.javaguiz.app                     D  Checking for metadata for AppLocalesMetadataHolderService : Service not found
+2025-12-24 00:21:16.239  9650-9650  om.javaguiz.app         com.javaguiz.app                     I  AssetManager2(0x78c851455bb8) locale list changing from [] to [en-US]
+2025-12-24 00:21:16.280  9650-9650  ashmem                  com.javaguiz.app                     E  Pinning is deprecated since Android Q. Please use trim or other methods.
+2025-12-24 00:21:16.297  9650-9666  EGL_emulation           com.javaguiz.app                     I  Opening libGLESv1_CM_emulation.so
+2025-12-24 00:21:16.298  9650-9666  EGL_emulation           com.javaguiz.app                     I  Opening libGLESv2_emulation.so
+2025-12-24 00:21:16.314  9650-9666  HWUI                    com.javaguiz.app                     W  Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+2025-12-24 00:21:16.314  9650-9666  HWUI                    com.javaguiz.app                     W  Failed to initialize 101010-2 format, error = EGL_SUCCESS
+2025-12-24 00:21:16.316  9650-9650  DesktopModeFlags        com.javaguiz.app                     D  Toggle override initialized to: OVERRIDE_UNSET
+2025-12-24 00:21:16.355  9650-9650  HWUI                    com.javaguiz.app                     W  Image decoding logging dropped!
+2025-12-24 00:21:16.362  9650-9650  om.javaguiz.app         com.javaguiz.app                     I  hiddenapi: Accessing hidden method Landroid/view/View;->computeFitSystemWindows(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z (runtime_flags=0, domain=platform, api=unsupported) from Landroidx/appcompat/widget/ViewUtils; (domain=app) using reflection: allowed
+2025-12-24 00:21:16.362  9650-9650  om.javaguiz.app         com.javaguiz.app                     I  hiddenapi: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (runtime_flags=0, domain=platform, api=unsupported) from Landroidx/appcompat/widget/ViewUtils; (domain=app) using reflection: allowed
+2025-12-24 00:21:16.396  9650-9650  HWUI                    com.javaguiz.app                     W  Image decoding logging dropped!
+2025-12-24 00:21:16.502  9650-9650  HWUI                    com.javaguiz.app                     W  Unknown dataspace 0
+2025-12-24 00:21:16.665  9650-9655  om.javaguiz.app         com.javaguiz.app                     I  Compiler allocated 5042KB to compile void android.view.ViewRootImpl.performTraversals()
+2025-12-24 00:21:17.043  9650-9650  Choreographer           com.javaguiz.app                     I  Skipped 30 frames!  The application may be doing too much work on its main thread.
+2025-12-24 00:21:17.066  9650-9650  InsetsController        com.javaguiz.app                     D  hide(ime(), fromIme=false)
+2025-12-24 00:21:17.067  9650-9650  ImeTracker              com.javaguiz.app                     I  com.javaguiz.app:561c27e: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+2025-12-24 00:21:20.650  9650-9650  om.javaguiz.app         com.javaguiz.app                     I  AssetManager2(0x78c85145c918) locale list changing from [] to [en-US]
+2025-12-24 00:21:20.683  9650-9650  HWUI                    com.javaguiz.app                     W  Image decoding logging dropped!
+2025-12-24 00:21:20.716  9650-9650  SettingsActivity        com.javaguiz.app                     D  Setting entries: [5 Questions, 10 Questions, 15 Questions, 20 Questions, 25 Questions, All Questions]
+2025-12-24 00:21:20.716  9650-9650  SettingsActivity        com.javaguiz.app                     D  Setting entryValues: [5, 10, 15, 20, 25, 999]
+2025-12-24 00:21:20.830  9650-9650  HWUI                    com.javaguiz.app                     W  Image decoding logging dropped!
+2025-12-24 00:21:20.831  9650-9650  HWUI                    com.javaguiz.app                     W  Image decoding logging dropped!
+2025-12-24 00:21:20.832  9650-9650  HWUI                    com.javaguiz.app                     W  Image decoding logging dropped!
+2025-12-24 00:21:21.381  9650-9650  InsetsController        com.javaguiz.app                     D  hide(ime(), fromIme=false)
+2025-12-24 00:21:21.381  9650-9650  ImeTracker              com.javaguiz.app                     I  com.javaguiz.app:996ef8f2: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+2025-12-24 00:21:21.480  9650-9680  ProfileInstaller        com.javaguiz.app                     D  Installing profile for com.javaguiz.app
+2025-12-24 00:21:21.724  9650-9650  VRI[MainActivity]       com.javaguiz.app                     D  visibilityChanged oldVisibility=true newVisibility=false
+2025-12-24 00:21:23.272  9650-9650  ViewRootImpl            com.javaguiz.app                     D  Skipping stats log for color mode
+2025-12-24 00:21:23.412  9650-9650  InsetsController        com.javaguiz.app                     D  hide(ime(), fromIme=false)
+2025-12-24 00:21:23.412  9650-9650  ImeTracker              com.javaguiz.app                     I  com.javaguiz.app:5216f955: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+2025-12-24 00:21:23.789  9650-9650  VRI[SettingsActivity]   com.javaguiz.app                     D  visibilityChanged oldVisibility=true newVisibility=false
+2025-12-24 00:21:23.805  9650-9666  HWUI                    com.javaguiz.app                     D  endAllActiveAnimators on 0x78c761490760 (RippleDrawable) with handle 0x78c941488860
+2025-12-24 00:21:23.811  9650-9650  WindowOnBackDispatcher  com.javaguiz.app                     W  sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda13@a68ce10
+2025-12-24 00:21:23.811  9650-9650  ViewRootImpl            com.javaguiz.app                     D  Skipping stats log for color mode
+2025-12-24 00:21:24.627  9650-9650  PreferencesManager      com.javaguiz.app                     D  isSoundEnabled() called
+2025-12-24 00:21:24.627  9650-9650  PreferencesManager      com.javaguiz.app                     D    Key: sound_enabled
+2025-12-24 00:21:24.627  9650-9650  PreferencesManager      com.javaguiz.app                     D    Default value: true
+2025-12-24 00:21:24.627  9650-9650  PreferencesManager      com.javaguiz.app                     D    Stored value: true
+2025-12-24 00:21:24.627  9650-9650  PreferencesManager      com.javaguiz.app                     D    Preference exists: true
+2025-12-24 00:21:24.817  9650-9650  QuizActivity            com.javaguiz.app                     D  MediaActionSound initialized and sounds preloaded
+2025-12-24 00:21:25.052  9650-9684  MediaCodecList          com.javaguiz.app                     D  codecHandlesFormat: no format, so no extra checks
+2025-12-24 00:21:25.062  9650-9683  MediaCodecList          com.javaguiz.app                     D  codecHandlesFormat: no format, so no extra checks
+2025-12-24 00:21:25.082  9650-9687  CCodec                  com.javaguiz.app                     D  allocate(c2.android.vorbis.decoder)
+2025-12-24 00:21:25.086  9650-9686  CCodec                  com.javaguiz.app                     D  allocate(c2.android.vorbis.decoder)
+2025-12-24 00:21:25.094  9650-9650  InsetsController        com.javaguiz.app                     D  hide(ime(), fromIme=false)
+2025-12-24 00:21:25.094  9650-9650  ImeTracker              com.javaguiz.app                     I  com.javaguiz.app:475b8eaa: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+2025-12-24 00:21:25.135  9650-9687  ApexCodecsLazy          com.javaguiz.app                     I  Failed to load libcom.android.media.swcodec.apexcodecs.so: dlopen failed: library "libcom.android.media.swcodec.apexcodecs.so" not found
+2025-12-24 00:21:25.136  9650-9687  Codec2Client            com.javaguiz.app                     I  Available Codec2 services: "default" "software"
+2025-12-24 00:21:25.183  9650-9686  CCodec                  com.javaguiz.app                     I  setting up 'default' as default (vendor) store
+2025-12-24 00:21:25.190  9650-9687  CCodec                  com.javaguiz.app                     I  setting up 'default' as default (vendor) store
+2025-12-24 00:21:25.363  9650-9686  CCodec                  com.javaguiz.app                     I  Created component [c2.android.vorbis.decoder] for [c2.android.vorbis.decoder]
+2025-12-24 00:21:25.363  9650-9687  CCodec                  com.javaguiz.app                     I  Created component [c2.android.vorbis.decoder] for [c2.android.vorbis.decoder]
+2025-12-24 00:21:25.364  9650-9686  CCodecConfig            com.javaguiz.app                     D  read media type: audio/vorbis
+2025-12-24 00:21:25.364  9650-9687  CCodecConfig            com.javaguiz.app                     D  read media type: audio/vorbis
+2025-12-24 00:21:25.366  9650-9686  ReflectedParamUpdater   com.javaguiz.app                     D  extent() != 1 for single value type: algo.buffers.max-count.values
+2025-12-24 00:21:25.367  9650-9686  ReflectedParamUpdater   com.javaguiz.app                     D  extent() != 1 for single value type: output.subscribed-indices.values
+2025-12-24 00:21:25.367  9650-9686  ReflectedParamUpdater   com.javaguiz.app                     D  extent() != 1 for single value type: input.buffers.allocator-ids.values
+2025-12-24 00:21:25.367  9650-9687  ReflectedParamUpdater   com.javaguiz.app                     D  extent() != 1 for single value type: algo.buffers.max-count.values
+2025-12-24 00:21:25.367  9650-9686  ReflectedParamUpdater   com.javaguiz.app                     D  extent() != 1 for single value type: output.buffers.allocator-ids.values
+2025-12-24 00:21:25.367  9650-9686  ReflectedParamUpdater   com.javaguiz.app                     D  extent() != 1 for single value type: algo.buffers.allocator-ids.values
+2025-12-24 00:21:25.367  9650-9687  ReflectedParamUpdater   com.javaguiz.app                     D  extent() != 1 for single value type: output.subscribed-indices.values
+2025-12-24 00:21:25.368  9650-9686  ReflectedParamUpdater   com.javaguiz.app                     D  extent() != 1 for single value type: output.buffers.pool-ids.values
+2025-12-24 00:21:25.368  9650-9687  ReflectedParamUpdater   com.javaguiz.app                     D  extent() != 1 for single value type: input.buffers.allocator-ids.values
+2025-12-24 00:21:25.368  9650-9686  ReflectedParamUpdater   com.javaguiz.app                     D  extent() != 1 for single value type: algo.buffers.pool-ids.values
+2025-12-24 00:21:25.368  9650-9687  ReflectedParamUpdater   com.javaguiz.app                     D  extent() != 1 for single value type: output.buffers.allocator-ids.values
+2025-12-24 00:21:25.368  9650-9687  ReflectedParamUpdater   com.javaguiz.app                     D  extent() != 1 for single value type: algo.buffers.allocator-ids.values
+2025-12-24 00:21:25.368  9650-9687  ReflectedParamUpdater   com.javaguiz.app                     D  extent() != 1 for single value type: output.buffers.pool-ids.values
+2025-12-24 00:21:25.369  9650-9687  ReflectedParamUpdater   com.javaguiz.app                     D  extent() != 1 for single value type: algo.buffers.pool-ids.values
+2025-12-24 00:21:25.380  9650-9686  CCodecConfig            com.javaguiz.app                     I  query failed after returning 8 values (BAD_INDEX)
+2025-12-24 00:21:25.381  9650-9686  CCodecConfig            com.javaguiz.app                     D  c2 config diff is Dict {
+                                                                                                      c2::u32 coded.bitrate.value = 64000
+                                                                                                      c2::u32 input.buffers.max-size.value = 32768
+                                                                                                      c2::u32 input.delay.value = 0
+                                                                                                      string input.media-type.value = "audio/vorbis"
+                                                                                                      c2::u32 output.large-frame.max-size = 0
+                                                                                                      c2::u32 output.large-frame.threshold-size = 0
+                                                                                                      string output.media-type.value = "audio/raw"
+                                                                                                      c2::u32 raw.channel-count.value = 1
+                                                                                                      c2::u32 raw.sample-rate.value = 48000
+                                                                                                    }
+2025-12-24 00:21:25.386  9650-9687  CCodecConfig            com.javaguiz.app                     I  query failed after returning 8 values (BAD_INDEX)
+2025-12-24 00:21:25.386  9650-9687  CCodecConfig            com.javaguiz.app                     D  c2 config diff is Dict {
+                                                                                                      c2::u32 coded.bitrate.value = 64000
+                                                                                                      c2::u32 input.buffers.max-size.value = 32768
+                                                                                                      c2::u32 input.delay.value = 0
+                                                                                                      string input.media-type.value = "audio/vorbis"
+                                                                                                      c2::u32 output.large-frame.max-size = 0
+                                                                                                      c2::u32 output.large-frame.threshold-size = 0
+                                                                                                      string output.media-type.value = "audio/raw"
+                                                                                                      c2::u32 raw.channel-count.value = 1
+                                                                                                      c2::u32 raw.sample-rate.value = 48000
+                                                                                                    }
+2025-12-24 00:21:25.391  9650-9684  MediaCodec              com.javaguiz.app                     E  Media Quality Service not found.
+2025-12-24 00:21:25.392  9650-9686  CCodec                  com.javaguiz.app                     D  [c2.android.vorbis.decoder] buffers are bound to CCodec for this session
+2025-12-24 00:21:25.392  9650-9686  CCodecConfig            com.javaguiz.app                     D  no c2 equivalents for durationUs
+2025-12-24 00:21:25.392  9650-9686  CCodecConfig            com.javaguiz.app                     D  no c2 equivalents for track-id
+2025-12-24 00:21:25.392  9650-9686  CCodecConfig            com.javaguiz.app                     D  no c2 equivalents for csd-1
+2025-12-24 00:21:25.392  9650-9686  CCodecConfig            com.javaguiz.app                     D  no c2 equivalents for flags
+2025-12-24 00:21:25.394  9650-9686  CCodecConfig            com.javaguiz.app                     D  c2 config diff is   c2::u32 coded.bitrate.value = 112000
+                                                                                                      c2::u32 raw.channel-count.value = 2
+                                                                                                      c2::u32 raw.sample-rate.value = 44100
+2025-12-24 00:21:25.396  9650-9683  MediaCodec              com.javaguiz.app                     E  Media Quality Service not found.
+2025-12-24 00:21:25.397  9650-9687  CCodec                  com.javaguiz.app                     D  [c2.android.vorbis.decoder] buffers are bound to CCodec for this session
+2025-12-24 00:21:25.397  9650-9687  CCodecConfig            com.javaguiz.app                     D  no c2 equivalents for durationUs
+2025-12-24 00:21:25.397  9650-9687  CCodecConfig            com.javaguiz.app                     D  no c2 equivalents for track-id
+2025-12-24 00:21:25.397  9650-9687  CCodecConfig            com.javaguiz.app                     D  no c2 equivalents for csd-1
+2025-12-24 00:21:25.397  9650-9687  CCodecConfig            com.javaguiz.app                     D  no c2 equivalents for flags
+2025-12-24 00:21:25.398  9650-9686  Codec2Client            com.javaguiz.app                     W  query -- param skipped: index = 1107298332.
+2025-12-24 00:21:25.398  9650-9686  CCodec                  com.javaguiz.app                     D  encoding statistics level = 0
+2025-12-24 00:21:25.398  9650-9686  CCodec                  com.javaguiz.app                     D  setup formats input: AMessage(what = 0x00000000) = {
+                                                                                                      int32_t bitrate = 112000
+                                                                                                      int32_t channel-count = 2
+                                                                                                      int32_t max-input-size = 32768
+                                                                                                      string mime = "audio/vorbis"
+                                                                                                      int32_t sample-rate = 44100
+                                                                                                    }
+2025-12-24 00:21:25.398  9650-9686  CCodec                  com.javaguiz.app                     D  setup formats output: AMessage(what = 0x00000000) = {
+                                                                                                      int32_t buffer-batch-max-output-size = 0
+                                                                                                      int32_t buffer-batch-threshold-output-size = 0
+                                                                                                      int32_t channel-count = 2
+                                                                                                      string mime = "audio/raw"
+                                                                                                      int32_t sample-rate = 44100
+                                                                                                      int32_t channel-mask = 3
+                                                                                                      int32_t android._config-pcm-encoding = 2
+                                                                                                    }
+2025-12-24 00:21:25.398  9650-9686  CCodecConfig            com.javaguiz.app                     I  query failed after returning 8 values (BAD_INDEX)
+2025-12-24 00:21:25.399  9650-9687  CCodecConfig            com.javaguiz.app                     D  c2 config diff is   c2::u32 coded.bitrate.value = 48000
+2025-12-24 00:21:25.400  9650-9686  om.javaguiz.app         com.javaguiz.app                     E  Failed to query component interface for required system resources: 6
+2025-12-24 00:21:25.400  9650-9687  Codec2Client            com.javaguiz.app                     W  query -- param skipped: index = 1107298332.
+2025-12-24 00:21:25.400  9650-9687  CCodec                  com.javaguiz.app                     D  encoding statistics level = 0
+2025-12-24 00:21:25.400  9650-9687  CCodec                  com.javaguiz.app                     D  setup formats input: AMessage(what = 0x00000000) = {
+                                                                                                      int32_t bitrate = 48000
+                                                                                                      int32_t channel-count = 1
+                                                                                                      int32_t max-input-size = 32768
+                                                                                                      string mime = "audio/vorbis"
+                                                                                                      int32_t sample-rate = 48000
+                                                                                                    }
+2025-12-24 00:21:25.400  9650-9687  CCodec                  com.javaguiz.app                     D  setup formats output: AMessage(what = 0x00000000) = {
+                                                                                                      int32_t buffer-batch-max-output-size = 0
+                                                                                                      int32_t buffer-batch-threshold-output-size = 0
+                                                                                                      int32_t channel-count = 1
+                                                                                                      string mime = "audio/raw"
+                                                                                                      int32_t sample-rate = 48000
+                                                                                                      int32_t channel-mask = 1
+                                                                                                      int32_t android._config-pcm-encoding = 2
+                                                                                                    }
+2025-12-24 00:21:25.400  9650-9687  CCodecConfig            com.javaguiz.app                     I  query failed after returning 8 values (BAD_INDEX)
+2025-12-24 00:21:25.400  9650-9687  om.javaguiz.app         com.javaguiz.app                     E  Failed to query component interface for required system resources: 6
+2025-12-24 00:21:25.402  9650-9687  Codec2Client            com.javaguiz.app                     W  query -- param skipped: index = 1342179345.
+2025-12-24 00:21:25.402  9650-9687  Codec2Client            com.javaguiz.app                     W  query -- param skipped: index = 2415921170.
+2025-12-24 00:21:25.402  9650-9686  Codec2Client            com.javaguiz.app                     W  query -- param skipped: index = 1342179345.
+2025-12-24 00:21:25.402  9650-9686  Codec2Client            com.javaguiz.app                     W  query -- param skipped: index = 2415921170.
+2025-12-24 00:21:25.407  9650-9686  C2Store                 com.javaguiz.app                     D  Using DMABUF Heaps
+2025-12-24 00:21:25.412  9650-9686  CCodecBufferChannel     com.javaguiz.app                     D  [c2.android.vorbis.decoder#218] Created input block pool with allocatorID 16 => poolID 17 - OK (0)
+2025-12-24 00:21:25.413  9650-9687  CCodecBufferChannel     com.javaguiz.app                     D  [c2.android.vorbis.decoder#275] Created input block pool with allocatorID 16 => poolID 18 - OK (0)
+2025-12-24 00:21:25.416  9650-9687  CCodecBufferChannel     com.javaguiz.app                     I  [c2.android.vorbis.decoder#275] Created output block pool with allocatorID 16 => poolID 38 - OK
+2025-12-24 00:21:25.416  9650-9686  CCodecBufferChannel     com.javaguiz.app                     I  [c2.android.vorbis.decoder#218] Created output block pool with allocatorID 16 => poolID 37 - OK
+2025-12-24 00:21:25.417  9650-9687  CCodecBufferChannel     com.javaguiz.app                     D  [c2.android.vorbis.decoder#275] Configured output block pool ids 38 => OK
+2025-12-24 00:21:25.417  9650-9686  CCodecBufferChannel     com.javaguiz.app                     D  [c2.android.vorbis.decoder#218] Configured output block pool ids 37 => OK
+2025-12-24 00:21:25.424  9650-9686  DMABUFHEAPS             com.javaguiz.app                     I  Using DMA-BUF heap named: system
+2025-12-24 00:21:25.458  9650-9650  VRI[MainActivity]       com.javaguiz.app                     D  visibilityChanged oldVisibility=true newVisibility=false
+2025-12-24 00:21:25.468  9650-9686  hw-BpHwBinder           com.javaguiz.app                     I  onLastStrongRef automatically unlinking death recipients
+2025-12-24 00:21:25.505  9650-9687  CCodecBufferChannel     com.javaguiz.app                     D  [c2.android.vorbis.decoder#275] MediaCodec discarded an unknown buffer
+2025-12-24 00:21:25.505  9650-9687  CCodecBufferChannel     com.javaguiz.app                     D  [c2.android.vorbis.decoder#275] MediaCodec discarded an unknown buffer
+2025-12-24 00:21:25.505  9650-9687  CCodecBufferChannel     com.javaguiz.app                     D  [c2.android.vorbis.decoder#275] MediaCodec discarded an unknown buffer
+2025-12-24 00:21:25.507  9650-9687  hw-BpHwBinder           com.javaguiz.app                     I  onLastStrongRef automatically unlinking death recipients
+2025-12-24 00:21:26.176  9650-9656  om.javaguiz.app         com.javaguiz.app                     W  Cleared Reference was only reachable from finalizer (only reported once)
+2025-12-24 00:21:26.262  9650-9650  QuizActivity            com.javaguiz.app                     D  onOptionSelected called with index: 2
+2025-12-24 00:21:26.262  9650-9650  QuizActivity            com.javaguiz.app                     D  Selected answer index: 2, Correct answer index: 1
+2025-12-24 00:21:26.275  9650-9650  QuizActivity            com.javaguiz.app                     D  Answer is correct: false
+2025-12-24 00:21:26.275  9650-9650  QuizActivity            com.javaguiz.app                     D  Calling provideFeedback with isCorrect=false
+2025-12-24 00:21:26.275  9650-9650  QuizActivity            com.javaguiz.app                     D  === provideFeedback called ===
+2025-12-24 00:21:26.276  9650-9650  QuizActivity            com.javaguiz.app                     D  isCorrect: false
+2025-12-24 00:21:26.276  9650-9650  PreferencesManager      com.javaguiz.app                     D  isSoundEnabled() called
+2025-12-24 00:21:26.276  9650-9650  PreferencesManager      com.javaguiz.app                     D    Key: sound_enabled
+2025-12-24 00:21:26.276  9650-9650  PreferencesManager      com.javaguiz.app                     D    Default value: true
+2025-12-24 00:21:26.276  9650-9650  PreferencesManager      com.javaguiz.app                     D    Stored value: true
+2025-12-24 00:21:26.276  9650-9650  PreferencesManager      com.javaguiz.app                     D    Preference exists: true
+2025-12-24 00:21:26.276  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound enabled in preferences: true
+2025-12-24 00:21:26.276  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound preference key: sound_enabled
+2025-12-24 00:21:26.276  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibration enabled in preferences: true
+2025-12-24 00:21:26.276  9650-9650  QuizActivity            com.javaguiz.app                     D  Attempting to provide vibration feedback...
+2025-12-24 00:21:26.278  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibrator is available, triggering vibration...
+2025-12-24 00:21:26.281  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibration triggered (API 26+): 100ms
+2025-12-24 00:21:26.281  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound is enabled, attempting to play sound...
+2025-12-24 00:21:26.281  9650-9650  MediaActionSound        com.javaguiz.app                     E  load() called in wrong state: android.media.MediaActionSound$SoundState@f30d84b for sound: 1
+2025-12-24 00:21:26.284  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound played successfully: incorrect (FOCUS_COMPLETE)
+2025-12-24 00:21:26.284  9650-9650  QuizActivity            com.javaguiz.app                     D  === provideFeedback completed ===
+2025-12-24 00:21:26.301  9650-9656  om.javaguiz.app         com.javaguiz.app                     I  Background concurrent mark compact GC freed 3839KB AllocSpace bytes, 4(80KB) LOS objects, 49% free, 4285KB/8571KB, paused 89us,3.428ms total 145.175ms
+2025-12-24 00:21:26.302  9650-9696  AudioSystem             com.javaguiz.app                     D  onNewServiceWithAdapter: media.audio_flinger service obtained 0x78c941449170
+2025-12-24 00:21:26.306  9650-9696  AudioSystem             com.javaguiz.app                     D  getService: checking for service media.audio_flinger: 0x78c9314acca0
+2025-12-24 00:21:26.351   846-2585  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:21:26.352   846-2585  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:21:26.757   846-1391  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:21:26.757   846-1391  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:21:30.440  9650-9690  BufferPoolAccessor2.0   com.javaguiz.app                     D  bufferpool2 0x78c95147bce8 : 0(0 size) total buffers - 0(0 size) used buffers - 1/7 (recycle/alloc) - 6/50 (fetch/transfer)
+2025-12-24 00:21:30.440  9650-9690  BufferPoolAccessor2.0   com.javaguiz.app                     D  bufferpool2 0x78c951471668 : 0(0 size) total buffers - 0(0 size) used buffers - 2/7 (recycle/alloc) - 5/74 (fetch/transfer)
+2025-12-24 00:21:30.440  9650-9690  BufferPoolAccessor2.0   com.javaguiz.app                     D  evictor expired: 2, evicted: 2
+2025-12-24 00:21:45.918  9650-9650  QuizActivity            com.javaguiz.app                     D  onOptionSelected called with index: 1
+2025-12-24 00:21:45.918  9650-9650  QuizActivity            com.javaguiz.app                     D  Selected answer index: 1, Correct answer index: 1
+2025-12-24 00:21:45.918  9650-9650  QuizActivity            com.javaguiz.app                     D  Answer is correct: true
+2025-12-24 00:21:45.918  9650-9650  QuizActivity            com.javaguiz.app                     D  Score updated to: 1
+2025-12-24 00:21:45.918  9650-9650  QuizActivity            com.javaguiz.app                     D  Calling provideFeedback with isCorrect=true
+2025-12-24 00:21:45.918  9650-9650  QuizActivity            com.javaguiz.app                     D  === provideFeedback called ===
+2025-12-24 00:21:45.918  9650-9650  QuizActivity            com.javaguiz.app                     D  isCorrect: true
+2025-12-24 00:21:45.918  9650-9650  PreferencesManager      com.javaguiz.app                     D  isSoundEnabled() called
+2025-12-24 00:21:45.918  9650-9650  PreferencesManager      com.javaguiz.app                     D    Key: sound_enabled
+2025-12-24 00:21:45.918  9650-9650  PreferencesManager      com.javaguiz.app                     D    Default value: true
+2025-12-24 00:21:45.918  9650-9650  PreferencesManager      com.javaguiz.app                     D    Stored value: true
+2025-12-24 00:21:45.918  9650-9650  PreferencesManager      com.javaguiz.app                     D    Preference exists: true
+2025-12-24 00:21:45.918  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound enabled in preferences: true
+2025-12-24 00:21:45.918  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound preference key: sound_enabled
+2025-12-24 00:21:45.918  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibration enabled in preferences: true
+2025-12-24 00:21:45.918  9650-9650  QuizActivity            com.javaguiz.app                     D  Attempting to provide vibration feedback...
+2025-12-24 00:21:45.918  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibrator is available, triggering vibration...
+2025-12-24 00:21:45.919  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibration triggered (API 26+): 50ms
+2025-12-24 00:21:45.919  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound is enabled, attempting to play sound...
+2025-12-24 00:21:45.919  9650-9650  MediaActionSound        com.javaguiz.app                     E  load() called in wrong state: android.media.MediaActionSound$SoundState@e896558 for sound: 0
+2025-12-24 00:21:45.919  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound played successfully: correct (SHUTTER_CLICK)
+2025-12-24 00:21:45.919  9650-9650  QuizActivity            com.javaguiz.app                     D  === provideFeedback completed ===
+2025-12-24 00:21:45.925   846-2760  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:21:45.926   846-2760  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:21:46.343   846-1391  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:21:46.343   846-1391  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:21:55.331  9650-9650  QuizActivity            com.javaguiz.app                     D  onOptionSelected called with index: 2
+2025-12-24 00:21:55.331  9650-9650  QuizActivity            com.javaguiz.app                     D  Selected answer index: 2, Correct answer index: 1
+2025-12-24 00:21:55.331  9650-9650  QuizActivity            com.javaguiz.app                     D  Answer is correct: false
+2025-12-24 00:21:55.331  9650-9650  QuizActivity            com.javaguiz.app                     D  Calling provideFeedback with isCorrect=false
+2025-12-24 00:21:55.331  9650-9650  QuizActivity            com.javaguiz.app                     D  === provideFeedback called ===
+2025-12-24 00:21:55.331  9650-9650  QuizActivity            com.javaguiz.app                     D  isCorrect: false
+2025-12-24 00:21:55.331  9650-9650  PreferencesManager      com.javaguiz.app                     D  isSoundEnabled() called
+2025-12-24 00:21:55.331  9650-9650  PreferencesManager      com.javaguiz.app                     D    Key: sound_enabled
+2025-12-24 00:21:55.331  9650-9650  PreferencesManager      com.javaguiz.app                     D    Default value: true
+2025-12-24 00:21:55.331  9650-9650  PreferencesManager      com.javaguiz.app                     D    Stored value: true
+2025-12-24 00:21:55.332  9650-9650  PreferencesManager      com.javaguiz.app                     D    Preference exists: true
+2025-12-24 00:21:55.332  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound enabled in preferences: true
+2025-12-24 00:21:55.332  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound preference key: sound_enabled
+2025-12-24 00:21:55.332  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibration enabled in preferences: true
+2025-12-24 00:21:55.332  9650-9650  QuizActivity            com.javaguiz.app                     D  Attempting to provide vibration feedback...
+2025-12-24 00:21:55.332  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibrator is available, triggering vibration...
+2025-12-24 00:21:55.424  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibration triggered (API 26+): 100ms
+2025-12-24 00:21:55.424  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound is enabled, attempting to play sound...
+2025-12-24 00:21:55.424  9650-9650  MediaActionSound        com.javaguiz.app                     E  load() called in wrong state: android.media.MediaActionSound$SoundState@f30d84b for sound: 1
+2025-12-24 00:21:55.424  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound played successfully: incorrect (FOCUS_COMPLETE)
+2025-12-24 00:21:55.424  9650-9650  QuizActivity            com.javaguiz.app                     D  === provideFeedback completed ===
+2025-12-24 00:21:55.431   846-1391  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:21:55.431   846-1391  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:21:55.974   846-2760  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:21:55.975   846-2760  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:00.923  9650-9650  QuizActivity            com.javaguiz.app                     D  onOptionSelected called with index: 3
+2025-12-24 00:22:00.923  9650-9650  QuizActivity            com.javaguiz.app                     D  Selected answer index: 3, Correct answer index: 3
+2025-12-24 00:22:00.924  9650-9650  QuizActivity            com.javaguiz.app                     D  Answer is correct: true
+2025-12-24 00:22:00.924  9650-9650  QuizActivity            com.javaguiz.app                     D  Score updated to: 2
+2025-12-24 00:22:00.924  9650-9650  QuizActivity            com.javaguiz.app                     D  Calling provideFeedback with isCorrect=true
+2025-12-24 00:22:00.924  9650-9650  QuizActivity            com.javaguiz.app                     D  === provideFeedback called ===
+2025-12-24 00:22:00.924  9650-9650  QuizActivity            com.javaguiz.app                     D  isCorrect: true
+2025-12-24 00:22:00.924  9650-9650  PreferencesManager      com.javaguiz.app                     D  isSoundEnabled() called
+2025-12-24 00:22:00.924  9650-9650  PreferencesManager      com.javaguiz.app                     D    Key: sound_enabled
+2025-12-24 00:22:00.924  9650-9650  PreferencesManager      com.javaguiz.app                     D    Default value: true
+2025-12-24 00:22:00.924  9650-9650  PreferencesManager      com.javaguiz.app                     D    Stored value: true
+2025-12-24 00:22:00.924  9650-9650  PreferencesManager      com.javaguiz.app                     D    Preference exists: true
+2025-12-24 00:22:00.924  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound enabled in preferences: true
+2025-12-24 00:22:00.924  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound preference key: sound_enabled
+2025-12-24 00:22:00.924  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibration enabled in preferences: true
+2025-12-24 00:22:00.924  9650-9650  QuizActivity            com.javaguiz.app                     D  Attempting to provide vibration feedback...
+2025-12-24 00:22:00.924  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibrator is available, triggering vibration...
+2025-12-24 00:22:00.924  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibration triggered (API 26+): 50ms
+2025-12-24 00:22:00.924  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound is enabled, attempting to play sound...
+2025-12-24 00:22:00.925  9650-9650  MediaActionSound        com.javaguiz.app                     E  load() called in wrong state: android.media.MediaActionSound$SoundState@e896558 for sound: 0
+2025-12-24 00:22:00.925  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound played successfully: correct (SHUTTER_CLICK)
+2025-12-24 00:22:00.925  9650-9650  QuizActivity            com.javaguiz.app                     D  === provideFeedback completed ===
+2025-12-24 00:22:00.929   846-2760  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:00.929   846-2760  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:01.357   846-2760  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:01.357   846-2760  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:02.837  9650-9650  QuizActivity            com.javaguiz.app                     D  onOptionSelected called with index: 1
+2025-12-24 00:22:02.837  9650-9650  QuizActivity            com.javaguiz.app                     D  Selected answer index: 1, Correct answer index: 1
+2025-12-24 00:22:02.838  9650-9650  QuizActivity            com.javaguiz.app                     D  Answer is correct: true
+2025-12-24 00:22:02.838  9650-9650  QuizActivity            com.javaguiz.app                     D  Score updated to: 3
+2025-12-24 00:22:02.838  9650-9650  QuizActivity            com.javaguiz.app                     D  Calling provideFeedback with isCorrect=true
+2025-12-24 00:22:02.838  9650-9650  QuizActivity            com.javaguiz.app                     D  === provideFeedback called ===
+2025-12-24 00:22:02.838  9650-9650  QuizActivity            com.javaguiz.app                     D  isCorrect: true
+2025-12-24 00:22:02.838  9650-9650  PreferencesManager      com.javaguiz.app                     D  isSoundEnabled() called
+2025-12-24 00:22:02.838  9650-9650  PreferencesManager      com.javaguiz.app                     D    Key: sound_enabled
+2025-12-24 00:22:02.838  9650-9650  PreferencesManager      com.javaguiz.app                     D    Default value: true
+2025-12-24 00:22:02.838  9650-9650  PreferencesManager      com.javaguiz.app                     D    Stored value: true
+2025-12-24 00:22:02.838  9650-9650  PreferencesManager      com.javaguiz.app                     D    Preference exists: true
+2025-12-24 00:22:02.838  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound enabled in preferences: true
+2025-12-24 00:22:02.838  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound preference key: sound_enabled
+2025-12-24 00:22:02.838  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibration enabled in preferences: true
+2025-12-24 00:22:02.838  9650-9650  QuizActivity            com.javaguiz.app                     D  Attempting to provide vibration feedback...
+2025-12-24 00:22:02.838  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibrator is available, triggering vibration...
+2025-12-24 00:22:02.839  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibration triggered (API 26+): 50ms
+2025-12-24 00:22:02.839  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound is enabled, attempting to play sound...
+2025-12-24 00:22:02.839  9650-9650  MediaActionSound        com.javaguiz.app                     E  load() called in wrong state: android.media.MediaActionSound$SoundState@e896558 for sound: 0
+2025-12-24 00:22:02.839  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound played successfully: correct (SHUTTER_CLICK)
+2025-12-24 00:22:02.839  9650-9650  QuizActivity            com.javaguiz.app                     D  === provideFeedback completed ===
+2025-12-24 00:22:02.840   846-1391  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:02.840   846-1391  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:03.257   846-2760  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:03.279   846-1390  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:06.007  9650-9650  QuizActivity            com.javaguiz.app                     D  onOptionSelected called with index: 1
+2025-12-24 00:22:06.007  9650-9650  QuizActivity            com.javaguiz.app                     D  Selected answer index: 1, Correct answer index: 1
+2025-12-24 00:22:06.008  9650-9650  QuizActivity            com.javaguiz.app                     D  Answer is correct: true
+2025-12-24 00:22:06.008  9650-9650  QuizActivity            com.javaguiz.app                     D  Score updated to: 4
+2025-12-24 00:22:06.008  9650-9650  QuizActivity            com.javaguiz.app                     D  Calling provideFeedback with isCorrect=true
+2025-12-24 00:22:06.008  9650-9650  QuizActivity            com.javaguiz.app                     D  === provideFeedback called ===
+2025-12-24 00:22:06.008  9650-9650  QuizActivity            com.javaguiz.app                     D  isCorrect: true
+2025-12-24 00:22:06.008  9650-9650  PreferencesManager      com.javaguiz.app                     D  isSoundEnabled() called
+2025-12-24 00:22:06.008  9650-9650  PreferencesManager      com.javaguiz.app                     D    Key: sound_enabled
+2025-12-24 00:22:06.008  9650-9650  PreferencesManager      com.javaguiz.app                     D    Default value: true
+2025-12-24 00:22:06.008  9650-9650  PreferencesManager      com.javaguiz.app                     D    Stored value: true
+2025-12-24 00:22:06.008  9650-9650  PreferencesManager      com.javaguiz.app                     D    Preference exists: true
+2025-12-24 00:22:06.008  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound enabled in preferences: true
+2025-12-24 00:22:06.008  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound preference key: sound_enabled
+2025-12-24 00:22:06.008  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibration enabled in preferences: true
+2025-12-24 00:22:06.008  9650-9650  QuizActivity            com.javaguiz.app                     D  Attempting to provide vibration feedback...
+2025-12-24 00:22:06.008  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibrator is available, triggering vibration...
+2025-12-24 00:22:06.009  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibration triggered (API 26+): 50ms
+2025-12-24 00:22:06.009  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound is enabled, attempting to play sound...
+2025-12-24 00:22:06.009  9650-9650  MediaActionSound        com.javaguiz.app                     E  load() called in wrong state: android.media.MediaActionSound$SoundState@e896558 for sound: 0
+2025-12-24 00:22:06.009  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound played successfully: correct (SHUTTER_CLICK)
+2025-12-24 00:22:06.009  9650-9650  QuizActivity            com.javaguiz.app                     D  === provideFeedback completed ===
+2025-12-24 00:22:06.010   846-1391  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:06.010   846-1391  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:06.427   846-2760  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:06.427   846-1391  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:08.748  9650-9650  QuizActivity            com.javaguiz.app                     D  onOptionSelected called with index: 1
+2025-12-24 00:22:08.748  9650-9650  QuizActivity            com.javaguiz.app                     D  Selected answer index: 1, Correct answer index: 1
+2025-12-24 00:22:08.748  9650-9650  QuizActivity            com.javaguiz.app                     D  Answer is correct: true
+2025-12-24 00:22:08.748  9650-9650  QuizActivity            com.javaguiz.app                     D  Score updated to: 5
+2025-12-24 00:22:08.748  9650-9650  QuizActivity            com.javaguiz.app                     D  Calling provideFeedback with isCorrect=true
+2025-12-24 00:22:08.748  9650-9650  QuizActivity            com.javaguiz.app                     D  === provideFeedback called ===
+2025-12-24 00:22:08.748  9650-9650  QuizActivity            com.javaguiz.app                     D  isCorrect: true
+2025-12-24 00:22:08.748  9650-9650  PreferencesManager      com.javaguiz.app                     D  isSoundEnabled() called
+2025-12-24 00:22:08.748  9650-9650  PreferencesManager      com.javaguiz.app                     D    Key: sound_enabled
+2025-12-24 00:22:08.748  9650-9650  PreferencesManager      com.javaguiz.app                     D    Default value: true
+2025-12-24 00:22:08.748  9650-9650  PreferencesManager      com.javaguiz.app                     D    Stored value: true
+2025-12-24 00:22:08.748  9650-9650  PreferencesManager      com.javaguiz.app                     D    Preference exists: true
+2025-12-24 00:22:08.748  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound enabled in preferences: true
+2025-12-24 00:22:08.748  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound preference key: sound_enabled
+2025-12-24 00:22:08.748  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibration enabled in preferences: true
+2025-12-24 00:22:08.748  9650-9650  QuizActivity            com.javaguiz.app                     D  Attempting to provide vibration feedback...
+2025-12-24 00:22:08.748  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibrator is available, triggering vibration...
+2025-12-24 00:22:08.758  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibration triggered (API 26+): 50ms
+2025-12-24 00:22:08.758  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound is enabled, attempting to play sound...
+2025-12-24 00:22:08.758  9650-9650  MediaActionSound        com.javaguiz.app                     E  load() called in wrong state: android.media.MediaActionSound$SoundState@e896558 for sound: 0
+2025-12-24 00:22:08.758  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound played successfully: correct (SHUTTER_CLICK)
+2025-12-24 00:22:08.758  9650-9650  QuizActivity            com.javaguiz.app                     D  === provideFeedback completed ===
+2025-12-24 00:22:08.760   846-1390  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:08.760   846-1390  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:09.189   846-2491  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:09.189   846-2491  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:11.517  9650-9650  QuizActivity            com.javaguiz.app                     D  onOptionSelected called with index: 0
+2025-12-24 00:22:11.517  9650-9650  QuizActivity            com.javaguiz.app                     D  Selected answer index: 0, Correct answer index: 1
+2025-12-24 00:22:11.517  9650-9650  QuizActivity            com.javaguiz.app                     D  Answer is correct: false
+2025-12-24 00:22:11.517  9650-9650  QuizActivity            com.javaguiz.app                     D  Calling provideFeedback with isCorrect=false
+2025-12-24 00:22:11.517  9650-9650  QuizActivity            com.javaguiz.app                     D  === provideFeedback called ===
+2025-12-24 00:22:11.517  9650-9650  QuizActivity            com.javaguiz.app                     D  isCorrect: false
+2025-12-24 00:22:11.518  9650-9650  PreferencesManager      com.javaguiz.app                     D  isSoundEnabled() called
+2025-12-24 00:22:11.518  9650-9650  PreferencesManager      com.javaguiz.app                     D    Key: sound_enabled
+2025-12-24 00:22:11.518  9650-9650  PreferencesManager      com.javaguiz.app                     D    Default value: true
+2025-12-24 00:22:11.518  9650-9650  PreferencesManager      com.javaguiz.app                     D    Stored value: true
+2025-12-24 00:22:11.518  9650-9650  PreferencesManager      com.javaguiz.app                     D    Preference exists: true
+2025-12-24 00:22:11.518  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound enabled in preferences: true
+2025-12-24 00:22:11.518  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound preference key: sound_enabled
+2025-12-24 00:22:11.518  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibration enabled in preferences: true
+2025-12-24 00:22:11.518  9650-9650  QuizActivity            com.javaguiz.app                     D  Attempting to provide vibration feedback...
+2025-12-24 00:22:11.518  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibrator is available, triggering vibration...
+2025-12-24 00:22:11.518  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibration triggered (API 26+): 100ms
+2025-12-24 00:22:11.518  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound is enabled, attempting to play sound...
+2025-12-24 00:22:11.518  9650-9650  MediaActionSound        com.javaguiz.app                     E  load() called in wrong state: android.media.MediaActionSound$SoundState@f30d84b for sound: 1
+2025-12-24 00:22:11.518  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound played successfully: incorrect (FOCUS_COMPLETE)
+2025-12-24 00:22:11.518  9650-9650  QuizActivity            com.javaguiz.app                     D  === provideFeedback completed ===
+2025-12-24 00:22:11.543   846-2491  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:11.544   846-1391  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:11.958   846-2491  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:11.958   846-2491  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:14.388  9650-9650  QuizActivity            com.javaguiz.app                     D  onOptionSelected called with index: 3
+2025-12-24 00:22:14.388  9650-9650  QuizActivity            com.javaguiz.app                     D  Selected answer index: 3, Correct answer index: 1
+2025-12-24 00:22:14.389  9650-9650  QuizActivity            com.javaguiz.app                     D  Answer is correct: false
+2025-12-24 00:22:14.389  9650-9650  QuizActivity            com.javaguiz.app                     D  Calling provideFeedback with isCorrect=false
+2025-12-24 00:22:14.389  9650-9650  QuizActivity            com.javaguiz.app                     D  === provideFeedback called ===
+2025-12-24 00:22:14.389  9650-9650  QuizActivity            com.javaguiz.app                     D  isCorrect: false
+2025-12-24 00:22:14.389  9650-9650  PreferencesManager      com.javaguiz.app                     D  isSoundEnabled() called
+2025-12-24 00:22:14.389  9650-9650  PreferencesManager      com.javaguiz.app                     D    Key: sound_enabled
+2025-12-24 00:22:14.389  9650-9650  PreferencesManager      com.javaguiz.app                     D    Default value: true
+2025-12-24 00:22:14.389  9650-9650  PreferencesManager      com.javaguiz.app                     D    Stored value: true
+2025-12-24 00:22:14.389  9650-9650  PreferencesManager      com.javaguiz.app                     D    Preference exists: true
+2025-12-24 00:22:14.389  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound enabled in preferences: true
+2025-12-24 00:22:14.389  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound preference key: sound_enabled
+2025-12-24 00:22:14.389  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibration enabled in preferences: true
+2025-12-24 00:22:14.389  9650-9650  QuizActivity            com.javaguiz.app                     D  Attempting to provide vibration feedback...
+2025-12-24 00:22:14.389  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibrator is available, triggering vibration...
+2025-12-24 00:22:14.391  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibration triggered (API 26+): 100ms
+2025-12-24 00:22:14.391  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound is enabled, attempting to play sound...
+2025-12-24 00:22:14.391  9650-9650  MediaActionSound        com.javaguiz.app                     E  load() called in wrong state: android.media.MediaActionSound$SoundState@f30d84b for sound: 1
+2025-12-24 00:22:14.391  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound played successfully: incorrect (FOCUS_COMPLETE)
+2025-12-24 00:22:14.391  9650-9650  QuizActivity            com.javaguiz.app                     D  === provideFeedback completed ===
+2025-12-24 00:22:14.392   846-2760  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:14.392   846-1391  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:14.809   846-2760  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:14.809   846-2760  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:16.560  9650-9650  QuizActivity            com.javaguiz.app                     D  onOptionSelected called with index: 1
+2025-12-24 00:22:16.560  9650-9650  QuizActivity            com.javaguiz.app                     D  Selected answer index: 1, Correct answer index: 1
+2025-12-24 00:22:16.560  9650-9650  QuizActivity            com.javaguiz.app                     D  Answer is correct: true
+2025-12-24 00:22:16.561  9650-9650  QuizActivity            com.javaguiz.app                     D  Score updated to: 6
+2025-12-24 00:22:16.561  9650-9650  QuizActivity            com.javaguiz.app                     D  Calling provideFeedback with isCorrect=true
+2025-12-24 00:22:16.561  9650-9650  QuizActivity            com.javaguiz.app                     D  === provideFeedback called ===
+2025-12-24 00:22:16.561  9650-9650  QuizActivity            com.javaguiz.app                     D  isCorrect: true
+2025-12-24 00:22:16.561  9650-9650  PreferencesManager      com.javaguiz.app                     D  isSoundEnabled() called
+2025-12-24 00:22:16.561  9650-9650  PreferencesManager      com.javaguiz.app                     D    Key: sound_enabled
+2025-12-24 00:22:16.561  9650-9650  PreferencesManager      com.javaguiz.app                     D    Default value: true
+2025-12-24 00:22:16.561  9650-9650  PreferencesManager      com.javaguiz.app                     D    Stored value: true
+2025-12-24 00:22:16.561  9650-9650  PreferencesManager      com.javaguiz.app                     D    Preference exists: true
+2025-12-24 00:22:16.561  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound enabled in preferences: true
+2025-12-24 00:22:16.561  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound preference key: sound_enabled
+2025-12-24 00:22:16.561  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibration enabled in preferences: true
+2025-12-24 00:22:16.561  9650-9650  QuizActivity            com.javaguiz.app                     D  Attempting to provide vibration feedback...
+2025-12-24 00:22:16.561  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibrator is available, triggering vibration...
+2025-12-24 00:22:16.561  9650-9650  QuizActivity            com.javaguiz.app                     D  Vibration triggered (API 26+): 50ms
+2025-12-24 00:22:16.561  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound is enabled, attempting to play sound...
+2025-12-24 00:22:16.561  9650-9650  MediaActionSound        com.javaguiz.app                     E  load() called in wrong state: android.media.MediaActionSound$SoundState@e896558 for sound: 0
+2025-12-24 00:22:16.561  9650-9650  QuizActivity            com.javaguiz.app                     D  Sound played successfully: correct (SHUTTER_CLICK)
+2025-12-24 00:22:16.562  9650-9650  QuizActivity            com.javaguiz.app                     D  === provideFeedback completed ===
+2025-12-24 00:22:16.579   846-2491  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:16.579   846-2491  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:17.007   846-2585  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:17.007   846-2585  AppOps                  system_server                        E  attributionTag  not declared in manifest of com.javaguiz.app
+2025-12-24 00:22:18.026  9650-9650  om.javaguiz.app         com.javaguiz.app                     I  AssetManager2(0x78c851478b18) locale list changing from [] to [en-US]
+2025-12-24 00:22:18.037  9650-9650  HWUI                    com.javaguiz.app                     W  Image decoding logging dropped!
+2025-12-24 00:22:18.064  9650-9650  HWUI                    com.javaguiz.app                     W  Image decoding logging dropped!
+2025-12-24 00:22:18.326  9650-9650  InsetsController        com.javaguiz.app                     D  hide(ime(), fromIme=false)
+2025-12-24 00:22:18.326  9650-9650  ImeTracker              com.javaguiz.app                     I  com.javaguiz.app:c6b4d94a: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+2025-12-24 00:22:18.656  9650-9650  VRI[QuizActivity]       com.javaguiz.app                     D  visibilityChanged oldVisibility=true newVisibility=false
+2025-12-24 00:22:18.671  9650-9666  HWUI                    com.javaguiz.app                     D  endAllActiveAnimators on 0x78c761499b70 (RippleDrawable) with handle 0x78c9414a9b60
+2025-12-24 00:22:18.707  9650-9650  QuizActivity            com.javaguiz.app                     D  MediaActionSound released
+2025-12-24 00:22:18.707  9650-9650  WindowOnBackDispatcher  com.javaguiz.app                     W  sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda13@748f20a
+2025-12-24 00:22:18.708  9650-9650  ViewRootImpl            com.javaguiz.app                     D  Skipping stats log for color mode

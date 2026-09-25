@@ -116,7 +116,7 @@ class CategorySelectionActivity : AppCompatActivity() {
             } catch (e: Exception) {
                 Log.e("CategorySelection", "Error loading versions", e)
                 // Fallback to default versions if there's an error
-                setupVersionButtons(listOf("21", "20", "19", "18", "17", "8", "Core"))
+                setupVersionButtons(listOf("23", "20", "17", "14", "11", "Core"))
             }
         }
     }
@@ -124,13 +124,13 @@ class CategorySelectionActivity : AppCompatActivity() {
     private fun setupCategoryButtons(categories: List<String>) {
         val categoryButtonMap: Map<Int, String> = mapOf(
             R.id.categoryAllButton to getString(R.string.all_categories),
-            R.id.categoryLanguageFeaturesButton to "Language Features",
-            R.id.categoryConcurrencyButton to "Concurrency",
-            R.id.categoryCollectionsButton to "Collections",
-            R.id.categoryAPIsButton to "APIs",
-            R.id.categoryCoreConceptsButton to "Core Concepts",
-            R.id.categoryAdvancedButton to "Advanced",
-            R.id.categoryGeneralButton to "General"
+            R.id.categoryLanguageFeaturesButton to getString(R.string.category_language_features),
+            R.id.categoryConcurrencyButton to getString(R.string.category_concurrency),
+            R.id.categoryCollectionsButton to getString(R.string.category_collections),
+            R.id.categoryAPIsButton to getString(R.string.category_apis),
+            R.id.categoryCoreConceptsButton to getString(R.string.category_core_concepts),
+            R.id.categoryAdvancedButton to getString(R.string.category_advanced),
+            R.id.categoryGeneralButton to getString(R.string.category_general)
         )
         categoryButtonMap.forEach { (buttonId, category) ->
             val button = findViewById<MaterialButton>(buttonId)
@@ -214,8 +214,8 @@ private class VersionAdapter(
             override fun onBindViewHolder(holder: VersionViewHolder, position: Int) {
                 val version = versions[position]
                 holder.button.text = when (version) {
-                    "Core" -> holder.button.context.getString(R.string.core_java)
-                    else -> "Java $version"
+                    "Core" -> holder.button.context.getString(R.string.core_cpp)
+                    else -> "C++ $version"
                 }
                 
                 // Update the button's appearance based on selection
