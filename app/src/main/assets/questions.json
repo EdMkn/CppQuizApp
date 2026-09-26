@@ -852,5 +852,2063 @@
     "explanation": "Deducing this lets you write an explicit object parameter (e.g. void foo(this Self&& self)) so one function template can replace multiple const/non-const or lvalue/rvalue overloads, and enables patterns like CRTP without inheritance boilerplate.",
     "languageVersion": "23",
     "category": "Language Features"
+  },
+  {
+    "id": 62,
+    "questionText": "What is an array in C++?",
+    "options": [
+      "A resizable collection that can grow at runtime",
+      "A fixed-size collection of elements of the same type stored contiguously in memory",
+      "A key-value data structure",
+      "A pointer to a function"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A C-style array has a fixed size determined at compile time and stores its elements contiguously in memory, allowing constant-time indexed access via pointer arithmetic.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
+  },
+  {
+    "id": 63,
+    "questionText": "What is the key difference between a C-style string and std::string?",
+    "options": [
+      "There is no difference, they are the same type",
+      "A C-style string is a null-terminated char array with manual memory management, while std::string manages its own memory and size automatically",
+      "std::string cannot hold more than 255 characters",
+      "C-style strings automatically resize themselves"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A C-style string is a null-terminated array of char that requires manual buffer management, while std::string is a class that owns its buffer, tracks its length, and resizes automatically.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
+  },
+  {
+    "id": 64,
+    "questionText": "What is function overloading in C++?",
+    "options": [
+      "Defining a function that calls itself",
+      "Defining multiple functions with the same name but different parameter lists, resolved at compile time",
+      "Replacing a base class function with a derived class version at runtime",
+      "Declaring a function without a body"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Function overloading lets multiple functions share a name as long as their parameter lists differ; the compiler picks the right one at compile time based on the argument types.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
+  },
+  {
+    "id": 65,
+    "questionText": "What are default arguments in C++?",
+    "options": [
+      "Values a compiler assigns randomly to uninitialized parameters",
+      "Values used for parameters when the caller omits the corresponding arguments",
+      "Arguments that must always be passed by reference",
+      "Arguments that can only be used in constructors"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A default argument, specified in a function's declaration (e.g. void f(int x = 10)), is used automatically when the caller does not supply that argument.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
+  },
+  {
+    "id": 66,
+    "questionText": "What is the purpose of namespaces in C++?",
+    "options": [
+      "To improve runtime performance",
+      "To group related identifiers together and avoid naming collisions between different parts of a program or libraries",
+      "To make all members of a class public",
+      "To allocate memory on the heap"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Namespaces (e.g. namespace myapp { ... }) group identifiers under a named scope, preventing name clashes when different libraries or modules use the same identifier names.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
+  },
+  {
+    "id": 67,
+    "questionText": "Why is writing 'using namespace std;' in a header file generally discouraged?",
+    "options": [
+      "It is illegal C++ and will not compile",
+      "It pulls the entire std namespace into every file that includes the header, increasing the risk of name collisions",
+      "It makes the program run more slowly",
+      "It disables the standard library entirely"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Placing 'using namespace std;' in a header propagates that directive to every translation unit that includes it, greatly increasing the chance of ambiguous or unintended name clashes.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
+  },
+  {
+    "id": 68,
+    "questionText": "What is a key advantage of constexpr variables over preprocessor #define macros?",
+    "options": [
+      "Macros are type-checked while constexpr is not",
+      "constexpr values are type-checked, scoped, and visible to the debugger, while macros are simple text substitutions with no type safety",
+      "constexpr is resolved at runtime while macros are resolved at compile time",
+      "There is no difference between them"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A constexpr variable is a real, typed, scoped entity evaluated at compile time, whereas a #define macro is a blind text substitution performed by the preprocessor with no type checking or scoping.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
+  },
+  {
+    "id": 69,
+    "questionText": "What problem do header guards (or #pragma once) solve?",
+    "options": [
+      "They speed up runtime execution",
+      "They prevent a header file's contents from being included multiple times in the same translation unit, avoiding redefinition errors",
+      "They encrypt header file contents",
+      "They allow circular includes without any restriction"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Header guards (#ifndef/#define/#endif) or #pragma once ensure a header's contents are processed only once per translation unit, preventing duplicate declaration/definition errors.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
+  },
+  {
+    "id": 70,
+    "questionText": "What is a translation unit in C++?",
+    "options": [
+      "A single line of code",
+      "The source file after preprocessing (with headers expanded), which the compiler compiles as one unit",
+      "A compiled binary executable",
+      "A single function definition"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A translation unit is a source (.cpp) file together with all the headers and files it includes after preprocessing; the compiler compiles each translation unit independently before linking.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
+  },
+  {
+    "id": 71,
+    "questionText": "What does the One Definition Rule (ODR) state?",
+    "options": [
+      "Every variable must be defined exactly once per program, but functions may be defined multiple times",
+      "An entity such as a function, class, or non-inline variable must have exactly one definition across the entire program",
+      "Only one header file may be included per source file",
+      "Only one namespace may exist per project"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The One Definition Rule requires that non-inline functions, variables, classes, and templates have exactly one definition across the whole program to avoid undefined behavior and linker errors.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
+  },
+  {
+    "id": 72,
+    "questionText": "When is static_cast appropriate in C++?",
+    "options": [
+      "For converting between unrelated pointer types with no compile-time check",
+      "For well-defined, compile-time-checked conversions such as numeric conversions or upcasting/downcasting within a known related class hierarchy",
+      "Only for casting away const",
+      "Only for reinterpreting raw memory bytes"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "static_cast performs conversions the compiler can verify at compile time, such as int to double, or pointer conversions within a related class hierarchy where the relationship is known.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
+  },
+  {
+    "id": 73,
+    "questionText": "What does dynamic_cast do in C++?",
+    "options": [
+      "It converts any pointer type to any other pointer type with no checks",
+      "It performs a runtime-checked cast, typically for downcasting through a polymorphic hierarchy, returning nullptr (or throwing for references) if the cast is invalid",
+      "It removes const qualification from a pointer",
+      "It is only usable on primitive numeric types"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "dynamic_cast uses run-time type information (RTTI) to safely downcast within a polymorphic class hierarchy, yielding nullptr for pointers (or throwing std::bad_cast for references) on failure.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
+  },
+  {
+    "id": 74,
+    "questionText": "What is const_cast used for in C++?",
+    "options": [
+      "Converting a pointer type to an unrelated pointer type",
+      "Adding or removing the const (or volatile) qualifier from a variable, most often to call a non-const API on data that is logically not modified",
+      "Performing arithmetic conversions between numeric types",
+      "Casting a base class pointer to a derived class pointer"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "const_cast adds or strips const/volatile qualifiers. Using it to modify data that was originally declared const is undefined behavior; it is mainly meant for interoperating with APIs that lack proper const-correctness.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
+  },
+  {
+    "id": 75,
+    "questionText": "What does reinterpret_cast do, and why is it considered dangerous?",
+    "options": [
+      "It safely converts between numeric types with rounding",
+      "It reinterprets the bit pattern of one type as another unrelated type with no safety checks, which can easily lead to undefined behavior if misused",
+      "It is identical to static_cast in every way",
+      "It can only be used with smart pointers"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "reinterpret_cast performs low-level reinterpretation of an object's bits as a different, often unrelated type. It bypasses type safety entirely, so misuse (like aliasing violations) is undefined behavior.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
+  },
+  {
+    "id": 76,
+    "questionText": "What is the default member/inheritance access difference between struct and class in C++?",
+    "options": [
+      "There is no difference at all between struct and class",
+      "Members and base classes are public by default in a struct, and private by default in a class",
+      "struct cannot have member functions",
+      "class cannot have public members"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The only language difference between struct and class is the default access specifier: public by default for struct, private by default for class. Both can have constructors, methods, and inheritance.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
+  },
+  {
+    "id": 77,
+    "questionText": "Why are scoped enumerations (enum class) generally preferred over plain enums in modern C++?",
+    "options": [
+      "They use less memory than plain enums",
+      "They do not implicitly convert to int and their enumerators are scoped to the enum name, preventing name clashes and accidental misuse",
+      "They can hold floating-point values",
+      "They are required for use in switch statements"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "enum class enumerators live in the enum's own scope (Color::Red, not just Red) and do not implicitly convert to int, avoiding the naming collisions and unsafe comparisons common with plain enums.",
+    "languageVersion": "11",
+    "category": "Core Concepts"
+  },
+  {
+    "id": 78,
+    "questionText": "What is a union in C++?",
+    "options": [
+      "A class that combines multiple base classes",
+      "A special class where all members share the same memory location, so only one member can hold a valid value at a time",
+      "A collection type that stores key-value pairs",
+      "A synonym for namespace"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "In a union, all data members occupy the same memory location, so its size is that of its largest member and only one member is valid to read at any given time.",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
+  },
+  {
+    "id": 79,
+    "questionText": "What does the sizeof operator return in C++?",
+    "options": [
+      "The number of elements in a container",
+      "The size, in bytes, that an object or type occupies in memory, evaluated at compile time",
+      "The number of bits set in a value",
+      "The memory address of a variable"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "sizeof is a compile-time operator that yields the size in bytes of a type or object, useful for buffer allocation and understanding memory layout (e.g. sizeof(int), sizeof(myStruct)).",
+    "languageVersion": "Core",
+    "category": "Core Concepts"
+  },
+  {
+    "id": 80,
+    "questionText": "What does decltype do in C++11?",
+    "options": [
+      "It declares a new type alias, similar to typedef",
+      "It yields the compile-time type of an expression, which is useful in templates and for return type deduction",
+      "It converts an expression's runtime value to a string",
+      "It forces a variable to be allocated on the heap"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "decltype(expr) inspects an expression at compile time and yields its type, without evaluating it at runtime. It is often paired with auto for trailing return types in templates.",
+    "languageVersion": "11",
+    "category": "Language Features"
+  },
+  {
+    "id": 81,
+    "questionText": "What does the override specifier do in C++11?",
+    "options": [
+      "It makes a function run faster",
+      "It tells the compiler that a member function is intended to override a virtual function from a base class, producing a compile error if it does not actually override one",
+      "It prevents a class from being inherited",
+      "It marks a function as deprecated"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "override documents intent and lets the compiler verify that the function actually overrides a base class virtual function (matching signature), catching typos like mismatched parameter types at compile time.",
+    "languageVersion": "11",
+    "category": "Language Features"
+  },
+  {
+    "id": 82,
+    "questionText": "What does the final specifier do in C++11?",
+    "options": [
+      "It marks a variable as constant",
+      "It prevents a virtual function from being overridden further, or prevents a class from being inherited from, when applied to a class",
+      "It forces early evaluation of a constexpr expression",
+      "It marks a function as the program's entry point"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Applied to a virtual function, final forbids derived classes from overriding it further; applied to a class definition (class Foo final), it forbids any class from inheriting from Foo.",
+    "languageVersion": "11",
+    "category": "Language Features"
+  },
+  {
+    "id": 83,
+    "questionText": "What is uniform initialization ({}) introduced in C++11?",
+    "options": [
+      "A way to initialize only arrays, not other types",
+      "A consistent brace-based syntax ({}) that can initialize aggregates, containers, and objects, and which helps prevent narrowing conversions",
+      "A macro used only in template metaprogramming",
+      "A deprecated feature removed in later standards"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Uniform (brace) initialization, e.g. int x{5}; or std::vector<int> v{1,2,3};, provides one consistent syntax for initializing many kinds of objects and disallows implicit narrowing conversions.",
+    "languageVersion": "11",
+    "category": "Language Features"
+  },
+  {
+    "id": 84,
+    "questionText": "What does static_assert do in C++11?",
+    "options": [
+      "It checks a condition at runtime and logs a warning",
+      "It checks a constant expression at compile time and stops compilation with a custom message if the condition is false",
+      "It asserts that a variable is declared static",
+      "It is a synonym for the assert() macro from <cassert>"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "static_assert(condition, \"message\") is evaluated at compile time; if the condition is false, compilation fails immediately with the given message, useful for validating template parameters or type sizes.",
+    "languageVersion": "11",
+    "category": "Language Features"
+  },
+  {
+    "id": 85,
+    "questionText": "What are delegating constructors, introduced in C++11?",
+    "options": [
+      "Constructors that must be called manually after object creation",
+      "Constructors that call another constructor of the same class in their initializer list to reuse initialization logic",
+      "Constructors that are automatically generated for derived classes",
+      "A way to delegate object destruction to a helper function"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A delegating constructor calls another constructor of the same class from its member-initializer list (e.g. Foo() : Foo(0) {}), avoiding duplicated initialization code across overloads.",
+    "languageVersion": "11",
+    "category": "Language Features"
+  },
+  {
+    "id": 86,
+    "questionText": "What do the =default and =delete function specifiers do in C++11?",
+    "options": [
+      "=default removes a function entirely, and =delete generates a compiler default implementation",
+      "=default explicitly requests the compiler-generated implementation of a special member function, while =delete marks a function as unusable, causing a compile error if called",
+      "They are only usable on virtual functions",
+      "They control whether a function is inlined"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "'= default' asks the compiler to generate the default implementation of a special member function (like a copy constructor), while '= delete' explicitly disables a function, making any use a compile-time error.",
+    "languageVersion": "11",
+    "category": "Language Features"
+  },
+  {
+    "id": 87,
+    "questionText": "What is a trailing return type in C++11, such as auto add(int a, int b) -> int?",
+    "options": [
+      "A way to return multiple values from a function",
+      "An alternative return type syntax placed after the parameter list, useful when the return type depends on the parameters (e.g. via decltype)",
+      "A type that can only be used with lambdas",
+      "A deprecated syntax removed in C++14"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Trailing return type syntax (auto func(params) -> Type) places the return type after the parameters, which is necessary when the type depends on the parameters themselves, e.g. via decltype(a + b).",
+    "languageVersion": "11",
+    "category": "Language Features"
+  },
+  {
+    "id": 88,
+    "questionText": "What changed for constexpr functions in C++11 compared to regular functions?",
+    "options": [
+      "constexpr functions can never be called at runtime",
+      "A constexpr function can be evaluated at compile time when given constant expression arguments, while still being callable normally at runtime with non-constant arguments",
+      "constexpr functions cannot take any parameters",
+      "constexpr functions are automatically inlined into machine code as a macro"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A C++11 constexpr function can produce a compile-time constant when its arguments are constant expressions, but it remains an ordinary callable function usable at runtime with non-constant arguments too.",
+    "languageVersion": "11",
+    "category": "Language Features"
+  },
+  {
+    "id": 89,
+    "questionText": "What is the [[noreturn]] attribute, introduced in C++11, used for?",
+    "options": [
+      "To mark a function that always returns a value",
+      "To indicate to the compiler that a function never returns to its caller (e.g. it always throws or calls std::exit), enabling better diagnostics and optimizations",
+      "To prevent a function from being called recursively",
+      "To disable return value optimization"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "[[noreturn]] tells the compiler a function will never return control to its caller (it always throws, aborts, or loops forever), which can suppress false 'missing return' warnings and enable optimizations.",
+    "languageVersion": "11",
+    "category": "Language Features"
+  },
+  {
+    "id": 90,
+    "questionText": "What are init-captures (generalized lambda captures), introduced in C++14?",
+    "options": [
+      "A way to capture variables by reference only",
+      "A lambda capture syntax that allows declaring and initializing a new variable in the capture list, e.g. [x = std::move(y)]",
+      "A restriction that forbids capturing local variables",
+      "A feature exclusive to global lambdas"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "C++14 init-captures let a lambda's capture list introduce a new variable with its own initializer, e.g. [value = computeSomething()], which is also how you move a variable into a lambda's closure.",
+    "languageVersion": "14",
+    "category": "Language Features"
+  },
+  {
+    "id": 91,
+    "questionText": "What are binary literals and digit separators, both introduced in C++14?",
+    "options": [
+      "Features for formatting output streams",
+      "Binary literals let you write integers in base 2 with a 0b prefix (0b1010), and digit separators use a single quote to group digits for readability (1'000'000)",
+      "A way to convert strings to binary data",
+      "A deprecated numeric formatting style"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "C++14 added 0b/0B binary integer literals (e.g. 0b1010 == 10) and the digit separator ' to make large numeric literals easier to read, e.g. 1'000'000.",
+    "languageVersion": "14",
+    "category": "Language Features"
+  },
+  {
+    "id": 92,
+    "questionText": "What is the [[deprecated]] attribute, introduced in C++14?",
+    "options": [
+      "It removes a function from the binary entirely",
+      "It marks a declaration as discouraged for use, causing the compiler to emit a warning at each use site",
+      "It forces a function to be inlined",
+      "It disables all warnings for that function"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "[[deprecated]] (optionally with a message, [[deprecated(\"use bar() instead\")]]) marks an entity as discouraged, so the compiler warns callers without breaking existing builds.",
+    "languageVersion": "14",
+    "category": "Language Features"
+  },
+  {
+    "id": 93,
+    "questionText": "What did C++14 add regarding return type deduction for ordinary functions?",
+    "options": [
+      "Nothing changed; auto return types were always allowed for regular functions",
+      "C++14 allows a regular function to use plain auto as its return type, letting the compiler deduce it from the return statement(s), extending what C++11 only allowed for lambdas",
+      "It removed the ability to specify explicit return types",
+      "It only applies to constructors"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "C++11 allowed auto return type deduction only for lambdas (with a single return statement). C++14 extended this to ordinary functions and lambdas with multiple returns, as long as all returns agree on type.",
+    "languageVersion": "14",
+    "category": "Language Features"
+  },
+  {
+    "id": 94,
+    "questionText": "What is std::any, introduced in C++17?",
+    "options": [
+      "A container that can only hold integers",
+      "A type-safe container that can hold a value of virtually any single type, queried and retrieved via std::any_cast",
+      "A synonym for void*",
+      "A container for holding multiple unrelated values simultaneously like a tuple"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::any is a type-safe container for a single value of any copyable type, decided at runtime. Its contained value is retrieved with std::any_cast<T>, which throws std::bad_any_cast on a type mismatch.",
+    "languageVersion": "17",
+    "category": "Language Features"
+  },
+  {
+    "id": 95,
+    "questionText": "What is Class Template Argument Deduction (CTAD), introduced in C++17?",
+    "options": [
+      "A way to forbid templates from being instantiated with certain types",
+      "A feature that lets the compiler deduce a class template's type parameters from constructor arguments, so you can write std::pair p(1, 2.0); instead of specifying template arguments explicitly",
+      "A runtime mechanism for checking template types",
+      "A feature exclusive to function templates"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "CTAD lets you write std::vector v{1, 2, 3}; or std::pair p(1, 2.0); and have the compiler deduce the template arguments from the constructor call, without needing to spell them out explicitly.",
+    "languageVersion": "17",
+    "category": "Language Features"
+  },
+  {
+    "id": 96,
+    "questionText": "What are fold expressions, introduced in C++17?",
+    "options": [
+      "A way to fold (compress) a data structure to save memory",
+      "A concise syntax for applying a binary operator over all elements of a parameter pack in a variadic template, e.g. (args + ...)",
+      "A technique for folding recursive function calls into loops automatically",
+      "A method for merging two classes into one at compile time"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Fold expressions let you write (args + ...) or (... + args) to apply a binary operator across all elements of a parameter pack in a variadic template, avoiding manual recursive unpacking.",
+    "languageVersion": "17",
+    "category": "Language Features"
+  },
+  {
+    "id": 97,
+    "questionText": "What are inline variables, introduced in C++17?",
+    "options": [
+      "Variables that are always stored in CPU registers",
+      "Variables that can be defined in a header file and included in multiple translation units without violating the One Definition Rule",
+      "Variables that cannot be modified after initialization",
+      "A synonym for constexpr variables"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "An inline variable (inline int counter = 0;) may be defined identically in multiple translation units (e.g. via a header) without ODR violations, similar to how inline functions have long worked.",
+    "languageVersion": "17",
+    "category": "Language Features"
+  },
+  {
+    "id": 98,
+    "questionText": "What does an if or switch statement with an init-statement, introduced in C++17, look like and do?",
+    "options": [
+      "if (int x; x > 0) is invalid syntax in C++17",
+      "It lets you declare and initialize a variable scoped to the if/switch statement itself, e.g. if (auto it = m.find(k); it != m.end()) { ... }, keeping the variable out of the enclosing scope",
+      "It replaces the need for braces around if bodies",
+      "It only works with switch statements, not if statements"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "C++17 allows an init-statement inside if/switch, e.g. if (auto it = m.find(key); it != m.end()) {...}, scoping the declared variable to the statement and its branches instead of leaking into the surrounding scope.",
+    "languageVersion": "17",
+    "category": "Language Features"
+  },
+  {
+    "id": 99,
+    "questionText": "What does the [[nodiscard]] attribute, introduced in C++17, do?",
+    "options": [
+      "It forces a function's return value to be discarded automatically",
+      "It causes the compiler to warn if a function's return value is ignored by the caller, helping catch bugs like ignoring an error code",
+      "It prevents a function from being called more than once",
+      "It marks a variable as unused"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "[[nodiscard]] on a function (or type) makes the compiler emit a warning if the caller discards its return value, which is useful for catching ignored error codes or accidentally-unused results.",
+    "languageVersion": "17",
+    "category": "Language Features"
+  },
+  {
+    "id": 100,
+    "questionText": "What does the [[maybe_unused]] attribute, introduced in C++17, do?",
+    "options": [
+      "It marks a variable for garbage collection",
+      "It suppresses compiler warnings about an entity (variable, parameter, etc.) that is intentionally left unused",
+      "It forces a variable to always be used at least once",
+      "It deletes a variable at compile time"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "[[maybe_unused]] tells the compiler not to warn about an unused entity, useful for parameters that are only used conditionally (e.g. only in debug builds) but must still appear in the signature.",
+    "languageVersion": "17",
+    "category": "Language Features"
+  },
+  {
+    "id": 101,
+    "questionText": "What is std::byte, introduced in C++17?",
+    "options": [
+      "A synonym for int used to save memory",
+      "A distinct type representing raw memory as a single byte, supporting only bitwise operations rather than arithmetic or implicit conversion to/from integers or characters",
+      "A container that stores exactly 8 bits as a bitset",
+      "A deprecated alias for unsigned char"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::byte is an enum class-based type meant to represent raw memory. It supports bitwise operators but, unlike char or unsigned char, does not implicitly convert to/from integer types, improving type safety.",
+    "languageVersion": "17",
+    "category": "Language Features"
+  },
+  {
+    "id": 102,
+    "questionText": "What are C++20 modules intended to replace or improve upon?",
+    "options": [
+      "The dynamic linker at runtime",
+      "The traditional #include header mechanism, by allowing code to be organized into modules that are compiled once and imported, improving build times and reducing macro/name leakage",
+      "The C++ template system entirely",
+      "The standard library's container classes"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Modules (import std; or user-defined modules) let code be compiled once and imported elsewhere without textual header inclusion, avoiding repeated parsing, macro leakage, and many ODR pitfalls of headers.",
+    "languageVersion": "20",
+    "category": "Language Features"
+  },
+  {
+    "id": 103,
+    "questionText": "What does consteval, introduced in C++20, mean when applied to a function?",
+    "options": [
+      "The function can optionally run at compile time or runtime, like constexpr",
+      "The function must be evaluated entirely at compile time; calling it in a context that requires a runtime value is a compile error",
+      "The function can only be called from constexpr contexts, but always executes at runtime",
+      "It marks a function as thread-safe"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Unlike constexpr (which may or may not run at compile time), a consteval function is an 'immediate function' that must produce a compile-time constant every time it is called, or the program fails to compile.",
+    "languageVersion": "20",
+    "category": "Language Features"
+  },
+  {
+    "id": 104,
+    "questionText": "What does constinit, introduced in C++20, guarantee?",
+    "options": [
+      "That a variable is initialized lazily on first use",
+      "That a variable with static storage duration is initialized with a constant expression at compile time, preventing the 'static initialization order fiasco', while still allowing the variable to be mutable afterward",
+      "That a variable can never be modified after initialization",
+      "That a variable is thread-local"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "constinit ensures a variable is initialized at compile time (avoiding dynamic/static initialization order issues across translation units) but, unlike constexpr, does not make the variable itself immutable afterward.",
+    "languageVersion": "20",
+    "category": "Language Features"
+  },
+  {
+    "id": 105,
+    "questionText": "What is std::span, introduced in C++20?",
+    "options": [
+      "An owning container similar to std::vector",
+      "A lightweight, non-owning view over a contiguous sequence of elements (such as an array or part of a vector), providing bounds information without copying data",
+      "A fixed-size replacement for std::array",
+      "A type used exclusively for string manipulation"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::span<T> is a non-owning 'view' referring to a contiguous block of elements (e.g. a C array, std::vector, or std::array) along with its size, without copying or owning the underlying data.",
+    "languageVersion": "20",
+    "category": "Language Features"
+  },
+  {
+    "id": 106,
+    "questionText": "What are designated initializers, introduced in C++20?",
+    "options": [
+      "A way to initialize only the first member of an aggregate",
+      "A syntax that lets you initialize specific named members of an aggregate (struct) by name, e.g. Point p{.x = 1, .y = 2}",
+      "A feature for initializing pointers to null automatically",
+      "A macro-based initialization technique"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Designated initializers allow aggregate initialization to name the members being set, e.g. Point p{.x = 1, .y = 2}, improving clarity about which member receives which value.",
+    "languageVersion": "20",
+    "category": "Language Features"
+  },
+  {
+    "id": 107,
+    "questionText": "What is char8_t, introduced in C++20?",
+    "options": [
+      "A synonym for char that behaves identically in every context",
+      "A distinct type for representing UTF-8 code units, used for u8 string literals, distinguishing UTF-8 text from plain char or unsigned char data",
+      "An 8-bit floating point type",
+      "A type used only for file paths"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "char8_t is a new distinct type (not just an alias for char) used for UTF-8 code units in u8\"...\" literals, giving UTF-8 text a distinct type from ordinary char or unsigned char data.",
+    "languageVersion": "20",
+    "category": "Language Features"
+  },
+  {
+    "id": 108,
+    "questionText": "What does std::format, introduced in C++20, provide?",
+    "options": [
+      "A way to format hard disks from within a C++ program",
+      "A type-safe, Python-style string formatting facility (e.g. std::format(\"{} is {}\", name, age)) as a safer alternative to printf-style formatting",
+      "A replacement for the entire iostream library",
+      "A tool for formatting source code automatically"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::format offers positional, type-safe string formatting similar to Python's str.format, e.g. std::format(\"{} is {} years old\", name, age), catching type mismatches at compile time where possible.",
+    "languageVersion": "20",
+    "category": "Language Features"
+  },
+  {
+    "id": 109,
+    "questionText": "What is std::print, introduced in C++23?",
+    "options": [
+      "A macro identical to the C printf function",
+      "A convenient function that combines std::format-style formatting with direct output to a stream (defaulting to stdout), without needing std::cout or a separate format call",
+      "A debugging tool that only works in debug builds",
+      "A function that can only print to files, not to the console"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::print(\"{} plus {} is {}\\n\", a, b, a + b) combines std::format's safe formatting with direct output, letting you print formatted text in one call without manually building a string or chaining << operators.",
+    "languageVersion": "23",
+    "category": "Language Features"
+  },
+  {
+    "id": 110,
+    "questionText": "What does 'if consteval', introduced in C++23, let you do?",
+    "options": [
+      "Check at runtime whether a value is a compile-time constant",
+      "Branch a function's logic based on whether it is currently being evaluated in a compile-time (constant evaluation) context or at runtime, useful inside constexpr functions",
+      "Replace all if statements in constexpr functions",
+      "Force a function to always evaluate at compile time"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "'if consteval { ... } else { ... }' lets a constexpr function choose different code paths depending on whether it is currently executing during compile-time evaluation or at runtime.",
+    "languageVersion": "23",
+    "category": "Language Features"
+  },
+  {
+    "id": 111,
+    "questionText": "What does the C++23 multidimensional subscript operator allow you to write?",
+    "options": [
+      "Nothing new; operator[] never accepted more than one argument",
+      "operator[] can now take multiple arguments, e.g. matrix[row, col], instead of requiring a workaround like matrix[row][col] or matrix(row, col)",
+      "It removes support for operator[] entirely in favor of .at()",
+      "It only applies to std::vector, not to user-defined types"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Before C++23, operator[] accepted exactly one argument, so multi-dimensional access needed operator() or chained [][]. C++23 allows operator[] to take multiple arguments, e.g. matrix[row, col].",
+    "languageVersion": "23",
+    "category": "Language Features"
+  },
+  {
+    "id": 112,
+    "questionText": "What does the C++23 std::stacktrace library provide?",
+    "options": [
+      "A way to manually manage the call stack's memory",
+      "A portable, standard way to capture and print the current call stack for diagnostics, without relying on platform-specific debugging APIs",
+      "A replacement for exception handling entirely",
+      "A tool exclusively for measuring function execution time"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::stacktrace lets code capture the current call stack (e.g. std::stacktrace::current()) and print it, giving portable diagnostic output similar to what debuggers show, without OS-specific APIs.",
+    "languageVersion": "23",
+    "category": "Language Features"
+  },
+  {
+    "id": 113,
+    "questionText": "What is an abbreviated function template, a C++20 feature that lets you write void f(auto x) instead of a template<typename T> declaration?",
+    "options": [
+      "A syntax error in all versions of C++",
+      "A shorthand where using auto as a function parameter type implicitly makes the function a template, deducing the parameter's type from the call site just like a normal template parameter",
+      "A way to declare a function without specifying any parameter types at all",
+      "A feature that only works for lambda parameters, not regular functions"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "C++20 allows 'auto' as a function parameter type, e.g. void f(auto x), which implicitly turns f into a function template equivalent to template<typename T> void f(T x), deducing T per call.",
+    "languageVersion": "20",
+    "category": "Language Features"
+  },
+  {
+    "id": 114,
+    "questionText": "How does std::vector typically grow its internal storage as elements are added, and what does capacity() vs size() mean?",
+    "options": [
+      "It reallocates on every single push_back call, so capacity always equals size",
+      "It grows its capacity in larger chunks (often doubling) as needed, so size() is the number of elements while capacity() is how many elements can be held before the next reallocation",
+      "It never reallocates once created; the initial capacity is fixed forever",
+      "capacity() and size() always return the same value"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::vector amortizes growth by allocating extra capacity (commonly doubling) so push_back is amortized O(1). size() is the current element count; capacity() is how many elements fit before a reallocation is needed.",
+    "languageVersion": "Core",
+    "category": "Collections"
+  },
+  {
+    "id": 115,
+    "questionText": "How does std::array (C++11) differ from a plain C-style array?",
+    "options": [
+      "std::array can resize itself at runtime, unlike a C-style array",
+      "std::array wraps a fixed-size C-style array in a class that knows its own size, supports iterators, bounds-checked access via at(), and works well with STL algorithms",
+      "std::array is always slower than a C-style array",
+      "std::array can only store pointers"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::array<T, N> is a thin, zero-overhead wrapper around a fixed-size array that adds a size() method, iterators, bounds-checked at() access, and compatibility with STL algorithms, all with compile-time fixed size.",
+    "languageVersion": "11",
+    "category": "Collections"
+  },
+  {
+    "id": 116,
+    "questionText": "What is the underlying structure and main trade-off of std::list?",
+    "options": [
+      "It is a contiguous array offering O(1) random access but slow insertion",
+      "It is a doubly linked list offering O(1) insertion/removal anywhere given an iterator, but only sequential (not random) access to elements",
+      "It is a hash table with no ordering guarantees",
+      "It is identical in performance characteristics to std::vector"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::list is a doubly linked list: inserting or erasing at any position is O(1) given an iterator to that position, but there is no random access, so reaching the nth element takes O(n).",
+    "languageVersion": "Core",
+    "category": "Collections"
+  },
+  {
+    "id": 117,
+    "questionText": "What is std::forward_list, introduced in C++11?",
+    "options": [
+      "A doubly linked list identical to std::list",
+      "A singly linked list, more memory-efficient than std::list since each node stores only one 'next' pointer, but without operations like size() or backward traversal",
+      "A container that only stores forward iterators",
+      "A thread-safe version of std::list"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::forward_list is a singly linked list, using less memory per node than std::list (no 'previous' pointer) at the cost of not supporting backward traversal or an O(1) size() member.",
+    "languageVersion": "11",
+    "category": "Collections"
+  },
+  {
+    "id": 118,
+    "questionText": "What is std::deque, and how does it differ from std::vector?",
+    "options": [
+      "It is identical to std::vector in every respect",
+      "A double-ended queue that supports efficient O(1) insertion/removal at both the front and back, unlike std::vector which is only efficient at the back",
+      "It only supports insertion at the front, never at the back",
+      "It cannot be accessed with the [] operator"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::deque provides random access like std::vector, but also supports efficient O(1) push_front/pop_front, unlike std::vector where inserting at the front is O(n) since all elements must shift.",
+    "languageVersion": "Core",
+    "category": "Collections"
+  },
+  {
+    "id": 119,
+    "questionText": "What guarantees does std::set provide about its elements?",
+    "options": [
+      "Elements are unordered and duplicates are allowed",
+      "Elements are unique and automatically kept in sorted order (by operator< or a custom comparator), typically implemented as a balanced binary search tree with O(log n) operations",
+      "Elements are stored in insertion order with no sorting",
+      "It allows duplicate elements but keeps them sorted"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::set stores unique elements in sorted order, usually backed by a red-black tree, giving O(log n) insertion, lookup, and removal, with in-order iteration producing sorted output.",
+    "languageVersion": "Core",
+    "category": "Collections"
+  },
+  {
+    "id": 120,
+    "questionText": "How does std::multiset differ from std::set?",
+    "options": [
+      "std::multiset does not keep elements sorted",
+      "std::multiset allows multiple elements that compare equal (duplicates), while std::set requires all elements to be unique",
+      "std::multiset can only store numeric types",
+      "std::multiset is unordered, like std::unordered_set"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::multiset has the same sorted, tree-based structure as std::set, but permits multiple elements with equivalent keys, whereas std::set enforces uniqueness.",
+    "languageVersion": "Core",
+    "category": "Collections"
+  },
+  {
+    "id": 121,
+    "questionText": "How does std::map determine the order in which keys are stored and iterated?",
+    "options": [
+      "By insertion order only",
+      "Keys are kept sorted according to operator< by default, or a custom comparator supplied as a template argument, since std::map is typically backed by a balanced binary search tree",
+      "By the hash value of each key",
+      "std::map does not guarantee any particular order"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::map keeps its key-value pairs sorted by key, using operator< by default (or a custom comparator), backed by a balanced tree, so in-order traversal visits keys in ascending order.",
+    "languageVersion": "Core",
+    "category": "Collections"
+  },
+  {
+    "id": 122,
+    "questionText": "How does std::multimap differ from std::map?",
+    "options": [
+      "std::multimap does not associate keys with values",
+      "std::multimap allows multiple entries with the same key, while std::map requires each key to be unique",
+      "std::multimap is hash-based while std::map is tree-based",
+      "std::multimap cannot be iterated in sorted order"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::multimap has the same sorted, tree-based design as std::map, but allows several entries to share the same key, unlike std::map where each key maps to exactly one value.",
+    "languageVersion": "Core",
+    "category": "Collections"
+  },
+  {
+    "id": 123,
+    "questionText": "What must be true of a key type used in std::unordered_map, introduced in C++11?",
+    "options": [
+      "The key type must support operator< for ordering",
+      "The key type must be hashable (via std::hash or a custom hash functor) and support equality comparison, since the container uses a hash table rather than sorted order",
+      "The key type must be a built-in numeric type",
+      "The key type must be copyable but not movable"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::unordered_map is backed by a hash table, so keys need a valid hash (via std::hash<Key> or a custom specialization) and an equality comparison, giving average O(1) lookup/insert but no ordering.",
+    "languageVersion": "11",
+    "category": "Collections"
+  },
+  {
+    "id": 124,
+    "questionText": "What is std::unordered_set, introduced in C++11?",
+    "options": [
+      "A sorted collection of unique keys, like std::set but hash-based instead of tree-based",
+      "A hash-table-based container storing unique elements with no defined iteration order, offering average O(1) insertion, lookup, and removal",
+      "A container that allows duplicate elements and preserves insertion order",
+      "A synonym for std::unordered_map with no values"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::unordered_set stores unique elements in a hash table, trading the sorted order and O(log n) operations of std::set for average O(1) operations, with an unspecified iteration order.",
+    "languageVersion": "11",
+    "category": "Collections"
+  },
+  {
+    "id": 125,
+    "questionText": "What kind of container is std::stack, and what is its underlying default container?",
+    "options": [
+      "It is a first-in-first-out (FIFO) adapter always backed by std::list",
+      "It is a container adapter providing last-in-first-out (LIFO) access (push/pop/top), by default implemented on top of std::deque",
+      "It is a raw memory buffer with no push/pop operations",
+      "It is always backed by std::vector and cannot use any other container"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::stack is a container adapter exposing only LIFO operations (push, pop, top). It wraps an underlying sequence container, std::deque by default, though std::vector or std::list can also be used.",
+    "languageVersion": "Core",
+    "category": "Collections"
+  },
+  {
+    "id": 126,
+    "questionText": "What kind of container is std::queue, and what access pattern does it provide?",
+    "options": [
+      "A LIFO (last-in-first-out) adapter identical to std::stack",
+      "A container adapter providing first-in-first-out (FIFO) access, with elements pushed at the back and popped from the front",
+      "A container that allows random access to any element by index",
+      "A container that automatically sorts its elements"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::queue is a FIFO container adapter: elements are added with push() at the back and removed with pop() from the front, modeling a waiting line, typically backed by std::deque.",
+    "languageVersion": "Core",
+    "category": "Collections"
+  },
+  {
+    "id": 127,
+    "questionText": "What does std::priority_queue provide, and what is its default underlying container?",
+    "options": [
+      "FIFO ordering backed by std::list",
+      "A container adapter that always gives access to the largest element first (a max-heap by default), typically implemented using std::vector with heap algorithms",
+      "Strict insertion-order access with no reordering",
+      "Sorted iteration over all elements, like std::set"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::priority_queue keeps elements in a heap structure (max-heap by default) so top() always returns the largest element per the comparator; it is typically implemented atop std::vector using make_heap/push_heap/pop_heap.",
+    "languageVersion": "Core",
+    "category": "Collections"
+  },
+  {
+    "id": 128,
+    "questionText": "What does std::tie, used with std::tuple, let you do?",
+    "options": [
+      "Merge two tuples into a single larger tuple",
+      "Unpack a tuple's (or pair's) elements into existing variables by reference, e.g. std::tie(a, b) = someTuple;",
+      "Convert a tuple into a std::vector",
+      "Compare two tuples for equality"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::tie(a, b, c) creates a tuple of references to the given variables, so assigning a tuple to it (std::tie(a, b) = getPair();) unpacks the tuple's values into those existing variables.",
+    "languageVersion": "11",
+    "category": "Collections"
+  },
+  {
+    "id": 129,
+    "questionText": "How do you access an individual element of a std::tuple by position?",
+    "options": [
+      "Using the [] operator, like tuple[0]",
+      "Using std::get<N>(myTuple), where N is a compile-time index (or the element's type, if unique in the tuple)",
+      "Using the .at(N) member function",
+      "Tuple elements cannot be accessed individually, only as a whole"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::tuple elements are accessed with the free function std::get<N>(t), where N is a compile-time constant index, since tuple elements can have different types and operator[] cannot express that.",
+    "languageVersion": "11",
+    "category": "Collections"
+  },
+  {
+    "id": 130,
+    "questionText": "What is the difference between an iterator and a const_iterator in the STL?",
+    "options": [
+      "There is no difference; they are interchangeable in all containers",
+      "A const_iterator allows read access to elements but prevents modifying them through the iterator, while a plain iterator allows both reading and writing",
+      "const_iterator can only be used with std::vector",
+      "A const_iterator is always slower than a regular iterator"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Both traverse a container the same way, but dereferencing a const_iterator yields a reference-to-const, preventing modification of the underlying element, while a plain iterator allows mutation.",
+    "languageVersion": "Core",
+    "category": "Collections"
+  },
+  {
+    "id": 131,
+    "questionText": "What are the requirements and typical complexity of std::sort from <algorithm>?",
+    "options": [
+      "It works on any container and runs in O(n) time",
+      "It requires random-access iterators (like those of std::vector or std::array) and has an average/worst-case complexity of O(n log n)",
+      "It only works on already-partially-sorted ranges",
+      "It requires the elements to be unique"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::sort needs random-access iterators, so it works directly on std::vector, std::array, or deque (but not std::list, which has its own sort() member), and guarantees O(n log n) complexity.",
+    "languageVersion": "Core",
+    "category": "Collections"
+  },
+  {
+    "id": 132,
+    "questionText": "What does std::find, from <algorithm>, return when searching a range for a value?",
+    "options": [
+      "The index of the value as an integer",
+      "An iterator to the first matching element, or the end iterator of the range if no match is found",
+      "A boolean indicating whether the value exists",
+      "A copy of the entire range with the value removed"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::find(first, last, value) performs a linear O(n) scan and returns an iterator to the first element equal to value, or the 'last' iterator if the value is not present in the range.",
+    "languageVersion": "Core",
+    "category": "Collections"
+  },
+  {
+    "id": 133,
+    "questionText": "What does std::transform, from <algorithm>, do?",
+    "options": [
+      "It sorts a range in place",
+      "It applies a given function to each element of an input range and writes the results to a destination range (which can be the same range)",
+      "It removes all elements matching a predicate",
+      "It converts a container to a different container type automatically"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::transform(first, last, dest, func) applies func to each element in [first, last) and stores each result into the destination range starting at dest, which may overlap with the source.",
+    "languageVersion": "Core",
+    "category": "Collections"
+  },
+  {
+    "id": 134,
+    "questionText": "What does std::accumulate, from <numeric>, do?",
+    "options": [
+      "It counts the number of elements in a range",
+      "It folds a range into a single value by repeatedly applying an operation (addition by default, or a custom binary function) starting from an initial value",
+      "It sorts elements and removes duplicates",
+      "It reserves memory for a container in advance"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::accumulate(first, last, init) combines all elements in the range with init using operator+ by default (or a custom binary function passed as a fourth argument), commonly used to sum a range.",
+    "languageVersion": "Core",
+    "category": "Collections"
+  },
+  {
+    "id": 135,
+    "questionText": "What is the key difference between push_back and emplace_back on containers like std::vector, introduced in C++11?",
+    "options": [
+      "They are completely identical with no difference at all",
+      "emplace_back constructs the new element in place using the given arguments (forwarding them to the element's constructor), potentially avoiding a temporary object and extra copy/move that push_back may require",
+      "push_back is faster than emplace_back in every case",
+      "emplace_back can only be used with primitive types like int"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "emplace_back forwards its arguments directly to the element type's constructor, constructing the object in place inside the container's storage, whereas push_back typically takes an already-constructed object to copy or move in.",
+    "languageVersion": "11",
+    "category": "Collections"
+  },
+  {
+    "id": 136,
+    "questionText": "What can happen to existing iterators and references when std::vector reallocates due to push_back exceeding capacity?",
+    "options": [
+      "Nothing; iterators and references always remain valid",
+      "All existing iterators, pointers, and references to elements become invalidated because the elements are moved or copied to a new memory block",
+      "Only the end() iterator becomes invalid",
+      "Only references become invalid, but iterators stay valid"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "When a vector's size exceeds its capacity, it allocates a new, larger buffer and moves/copies all elements there, invalidating every iterator, pointer, and reference into the old buffer.",
+    "languageVersion": "Core",
+    "category": "Collections"
+  },
+  {
+    "id": 137,
+    "questionText": "What does std::unique, from <algorithm>, actually do to a range?",
+    "options": [
+      "It removes all duplicate values anywhere in the range, regardless of order",
+      "It removes consecutive duplicate elements, moving unique elements to the front and returning a new logical end; it must be run on an already-sorted range to remove all duplicates",
+      "It sorts the range and removes the smallest half of the elements",
+      "It throws an exception if any duplicate elements are found"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::unique only removes adjacent (consecutive) duplicates, returning an iterator marking the new logical end; to eliminate all duplicates regardless of position, the range must be sorted first.",
+    "languageVersion": "Core",
+    "category": "Collections"
+  },
+  {
+    "id": 138,
+    "questionText": "What is std::bitset, and how does it differ from std::vector<bool>?",
+    "options": [
+      "It is a dynamically resizable array of booleans",
+      "It represents a fixed-size (compile-time-known) sequence of bits with efficient bitwise operations (AND, OR, XOR, shifts) and no dynamic resizing",
+      "It stores each bit as a full byte, wasting memory",
+      "It can only be used to store true/false flags, with no bitwise operators"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::bitset<N> has a fixed size N known at compile time and provides efficient bitwise operators and functions like count(), set(), flip(), unlike std::vector<bool> which is dynamically sized.",
+    "languageVersion": "Core",
+    "category": "Collections"
+  },
+  {
+    "id": 139,
+    "questionText": "What is a function template in C++?",
+    "options": [
+      "A function that can only be called once",
+      "A blueprint for generating functions that work with different types, where the compiler generates a concrete function for each type it is instantiated with",
+      "A function pointer stored in a struct",
+      "A macro that expands into multiple functions"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A function template, e.g. template<typename T> T max(T a, T b), lets the compiler generate a type-specific version of the function for each distinct type it is called with, avoiding repetitive overloads.",
+    "languageVersion": "Core",
+    "category": "Advanced"
+  },
+  {
+    "id": 140,
+    "questionText": "What is a class template in C++?",
+    "options": [
+      "A class that can never be instantiated",
+      "A blueprint for generating classes parameterized by one or more types, such as std::vector<T>, where the compiler generates a concrete class for each type used",
+      "An abstract base class with only pure virtual functions",
+      "A class restricted to holding exactly one member variable"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A class template (e.g. template<typename T> class Box {...}) defines a family of classes parameterized by type; std::vector, std::map, and similar containers are all class templates.",
+    "languageVersion": "Core",
+    "category": "Advanced"
+  },
+  {
+    "id": 141,
+    "questionText": "What is full template specialization?",
+    "options": [
+      "Making a template work with any type by adding more parameters",
+      "Providing a completely custom implementation of a template for one specific set of template arguments, overriding the generic template for that exact case",
+      "Deleting a template so it can no longer be instantiated",
+      "A way to make templates run faster automatically for all types"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Full specialization (template<> class Box<int> {...}) provides a distinct implementation used only when the template is instantiated with that exact set of arguments, overriding the generic definition.",
+    "languageVersion": "Core",
+    "category": "Advanced"
+  },
+  {
+    "id": 142,
+    "questionText": "What is partial template specialization?",
+    "options": [
+      "Specializing a template for exactly one specific type only",
+      "Providing a specialized implementation of a class template that still has some template parameters left generic, e.g. specializing Box<T*> for all pointer types T",
+      "A feature available only for function templates, not class templates",
+      "Removing part of a template's member functions"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Partial specialization customizes a class template for a subset of possible arguments while keeping some parameters generic, e.g. template<typename T> class Box<T*> {...} specializes for any pointer type.",
+    "languageVersion": "Core",
+    "category": "Advanced"
+  },
+  {
+    "id": 143,
+    "questionText": "What does SFINAE ('Substitution Failure Is Not An Error') mean in template metaprogramming?",
+    "options": [
+      "Any substitution failure in a template always causes a hard compile error",
+      "When substituting template arguments produces an invalid type or expression for a candidate, that candidate is simply removed from overload resolution instead of causing a compile error, as long as other viable candidates exist",
+      "Templates cannot fail to compile under any circumstances",
+      "It refers to a runtime error-handling mechanism"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "SFINAE means that if substituting specific template arguments into a candidate produces an invalid construct, that candidate is silently dropped from overload resolution rather than causing a hard error, enabling techniques like enable_if.",
+    "languageVersion": "Core",
+    "category": "Advanced"
+  },
+  {
+    "id": 144,
+    "questionText": "What do type traits, such as std::is_integral or std::is_pointer from <type_traits>, provide?",
+    "options": [
+      "Runtime functions for converting between types",
+      "Compile-time boolean or type information about a given type, usable in template metaprogramming to enable or disable code paths based on type properties",
+      "A way to change a variable's type after it has been declared",
+      "Tools for serializing objects to disk"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Type traits like std::is_integral<T>::value are compile-time constants describing properties of a type, commonly used with if constexpr or SFINAE to select different template code paths based on the type.",
+    "languageVersion": "11",
+    "category": "Advanced"
+  },
+  {
+    "id": 145,
+    "questionText": "Why is std::make_shared generally preferred over std::shared_ptr<T>(new T(...))?",
+    "options": [
+      "make_shared disables reference counting for better performance",
+      "make_shared allocates the control block and the managed object together in a single memory allocation, improving performance and exception safety compared to two separate allocations",
+      "make_shared can only be used with primitive types",
+      "There is no difference between the two approaches"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::shared_ptr<T>(new T()) performs two allocations (the object and a separate control block), while std::make_shared<T>() combines them into a single allocation, which is faster and safer against certain exception scenarios.",
+    "languageVersion": "11",
+    "category": "Advanced"
+  },
+  {
+    "id": 146,
+    "questionText": "What does inheriting from std::enable_shared_from_this allow a class to do?",
+    "options": [
+      "Automatically delete itself when no longer needed",
+      "Safely obtain a std::shared_ptr to 'this' from within a member function, sharing ownership with any existing shared_ptr instances that manage the object",
+      "Prevent the object from ever being managed by a shared_ptr",
+      "Convert itself into a weak_ptr automatically"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A class inheriting from std::enable_shared_from_this<T> can call shared_from_this() inside a member function to get a valid shared_ptr to itself that correctly shares the existing control block, rather than creating a separate, conflicting one.",
+    "languageVersion": "11",
+    "category": "Advanced"
+  },
+  {
+    "id": 147,
+    "questionText": "What problem does std::weak_ptr, introduced in C++11, solve?",
+    "options": [
+      "It makes shared_ptr objects thread-safe",
+      "It allows observing an object managed by shared_ptr without contributing to its reference count, breaking reference cycles that would otherwise prevent shared_ptrs from ever reaching zero references",
+      "It replaces shared_ptr entirely for all use cases",
+      "It converts raw pointers into shared_ptr automatically"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::weak_ptr holds a non-owning reference to an object managed by shared_ptr, letting code check if the object still exists (via lock()) without keeping it alive, which breaks reference cycles between shared_ptrs.",
+    "languageVersion": "11",
+    "category": "Advanced"
+  },
+  {
+    "id": 148,
+    "questionText": "What is copy elision / Named Return Value Optimization (NRVO)?",
+    "options": [
+      "A runtime technique for compressing copied objects",
+      "A compiler optimization that avoids constructing and then copying/moving a temporary object, instead constructing it directly at its final destination, such as directly in the caller's storage when returning by value",
+      "A rule that forbids returning objects by value",
+      "A feature that only applies to primitive types like int"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Copy elision (including NRVO) lets the compiler construct a returned object directly in the caller's destination storage, skipping the copy or move construction that would otherwise occur, improving performance.",
+    "languageVersion": "Core",
+    "category": "Advanced"
+  },
+  {
+    "id": 149,
+    "questionText": "What does marking a single-argument constructor explicit prevent?",
+    "options": [
+      "It prevents the constructor from ever being called",
+      "It prevents the constructor from being used for implicit conversions, e.g. it stops code like MyClass obj = 5; from silently converting 5 into a MyClass",
+      "It forces the constructor to always throw an exception",
+      "It makes the class unable to be copied"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Without explicit, a single-argument (or otherwise convertible) constructor allows implicit conversions, e.g. passing an int where a MyClass is expected. Marking it explicit requires callers to construct the object directly.",
+    "languageVersion": "Core",
+    "category": "Advanced"
+  },
+  {
+    "id": 150,
+    "questionText": "What is Argument-Dependent Lookup (ADL), also known as Koenig lookup?",
+    "options": [
+      "A rule that forbids overloaded functions from being called with arguments of different types",
+      "A lookup rule where, for a function call, the compiler also searches namespaces associated with the argument types, not just the immediately visible scope, which is why calling swap(a, b) can find a namespace-specific swap overload",
+      "A runtime mechanism for resolving virtual function calls",
+      "A feature exclusive to template metaprogramming"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "ADL extends unqualified name lookup for function calls to also search the namespaces of the argument types, which is why std::swap can be found and overridden by a type-specific swap in that type's own namespace.",
+    "languageVersion": "Core",
+    "category": "Advanced"
+  },
+  {
+    "id": 151,
+    "questionText": "What is the 'Rule of Zero' in modern C++ class design?",
+    "options": [
+      "Every class must explicitly define all five special member functions",
+      "A class should avoid manually managing raw resources at all, instead composing it from members like smart pointers and standard containers that already manage their own resources, so no special member functions need to be written by hand",
+      "Classes should never have any member variables",
+      "Constructors should never take any parameters"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The Rule of Zero says that by delegating resource management to members like std::unique_ptr, std::vector, or std::string, a class needs no custom destructor, copy, or move operations at all, since the compiler-generated defaults already do the right thing.",
+    "languageVersion": "11",
+    "category": "Advanced"
+  },
+  {
+    "id": 152,
+    "questionText": "What is operator overloading, and what is one important limitation on it in C++?",
+    "options": [
+      "It lets you define custom behavior for operators like + or == on user-defined types, but you cannot invent new operator symbols or change an operator's arity/precedence",
+      "It allows creating entirely new operators with custom symbols",
+      "It lets you change how built-in types like int behave with existing operators",
+      "It only works for the assignment operator"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Operator overloading lets a class define what operators like +, ==, or << mean for its objects, but C++ does not allow inventing new operator tokens or changing an existing operator's number of operands or precedence.",
+    "languageVersion": "Core",
+    "category": "Advanced"
+  },
+  {
+    "id": 153,
+    "questionText": "How does a virtual function enable dynamic (runtime) polymorphism in C++?",
+    "options": [
+      "The compiler always calls the base class version, regardless of the actual object type",
+      "A call through a base class pointer or reference is resolved at runtime via a vtable lookup, invoking the most-derived override for the object's actual dynamic type",
+      "Virtual functions are resolved entirely at compile time based on the static type",
+      "Virtual functions can only be called on stack-allocated objects"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "When a function is declared virtual, calling it through a base class pointer/reference is dispatched at runtime using a vtable, so the override defined in the object's actual (most-derived) type is executed.",
+    "languageVersion": "Core",
+    "category": "Advanced"
+  },
+  {
+    "id": 154,
+    "questionText": "What is a pure virtual function, and what does it make a class?",
+    "options": [
+      "A virtual function with no implementation at all, declared with '= 0', which makes the class abstract and unable to be instantiated directly",
+      "A function that can only be called once per object",
+      "A virtual function that is automatically inlined",
+      "A function that must be implemented identically in every derived class"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "A pure virtual function (virtual void f() = 0;) has no implementation in that class, making the class abstract; it cannot be instantiated until a derived class provides an override for every pure virtual function.",
+    "languageVersion": "Core",
+    "category": "Advanced"
+  },
+  {
+    "id": 155,
+    "questionText": "Why should a base class's destructor be declared virtual if the class is meant to be used polymorphically?",
+    "options": [
+      "It is never necessary; all destructors behave the same regardless",
+      "Without a virtual destructor, deleting a derived object through a base class pointer only calls the base class destructor, skipping the derived class's cleanup and causing undefined behavior or resource leaks",
+      "A virtual destructor makes object construction faster",
+      "It is only needed for classes with no member variables"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "If delete is called on a base class pointer to a derived object and the destructor is not virtual, only the base class's destructor runs, leaving the derived part's resources uncleaned - a common source of bugs and leaks.",
+    "languageVersion": "Core",
+    "category": "Advanced"
+  },
+  {
+    "id": 156,
+    "questionText": "What is the 'diamond problem' in multiple inheritance?",
+    "options": [
+      "A performance issue that only affects template classes",
+      "When a class inherits from two classes that both inherit from a common base, the derived class ends up with two separate copies of that common base's members unless virtual inheritance is used",
+      "A syntax error that prevents multiple inheritance from compiling",
+      "An issue that only occurs with virtual functions, never with data members"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "If classes B and C both inherit from A, and class D inherits from both B and C, D ends up with two separate A subobjects (ambiguous access) unless A is inherited virtually by B and C, giving D a single shared A subobject.",
+    "languageVersion": "Core",
+    "category": "Advanced"
+  },
+  {
+    "id": 157,
+    "questionText": "How does virtual inheritance solve the diamond problem?",
+    "options": [
+      "It removes the shared base class entirely from the hierarchy",
+      "It ensures that only a single shared instance of the common base class is included in the most-derived object, no matter how many paths lead to it in the inheritance hierarchy",
+      "It makes all inherited functions virtual automatically",
+      "It forbids classes from inheriting from more than one base class"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "When intermediate classes inherit from a common base using 'virtual' (e.g. class B : public virtual A), the most-derived class contains only one shared subobject of A, eliminating the ambiguity of the diamond problem.",
+    "languageVersion": "Core",
+    "category": "Advanced"
+  },
+  {
+    "id": 158,
+    "questionText": "What does the friend keyword allow in C++?",
+    "options": [
+      "It lets any class access the private members of any other class automatically",
+      "It grants a specific external function or class explicit access to the private and protected members of the class that declares it as a friend",
+      "It makes a class's members public permanently",
+      "It creates a copy of a class with all members made public"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Declaring 'friend class X;' or 'friend void f();' inside a class grants that specific class or function access to the declaring class's private and protected members, as an explicit, targeted exception to encapsulation.",
+    "languageVersion": "Core",
+    "category": "Advanced"
+  },
+  {
+    "id": 159,
+    "questionText": "How does exception handling with try/catch/throw work in C++?",
+    "options": [
+      "throw silently logs an error and continues execution normally",
+      "throw raises an exception object which propagates up the call stack, unwinding it (destroying local objects along the way) until a matching catch block handles it",
+      "Exceptions can only be caught in the same function where they are thrown",
+      "catch blocks must always be written before the corresponding try block"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "When 'throw expr;' executes, the runtime unwinds the call stack, calling destructors of local objects along the way, until it finds a catch block whose parameter type matches the thrown exception's type.",
+    "languageVersion": "Core",
+    "category": "Advanced"
+  },
+  {
+    "id": 160,
+    "questionText": "What is the difference between the basic and strong exception safety guarantees?",
+    "options": [
+      "They are the same thing with different names",
+      "The basic guarantee ensures no resources are leaked and invariants hold after an exception, while the strong guarantee additionally ensures the operation either fully succeeds or leaves the object completely unchanged (as if it never happened)",
+      "The strong guarantee only applies to constructors",
+      "The basic guarantee means no exceptions can ever be thrown"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Basic guarantee: after an exception, no leaks occur and the object remains in a valid (but possibly modified) state. Strong guarantee: the operation is transactional - it either completes fully or has no visible effect at all.",
+    "languageVersion": "Core",
+    "category": "Advanced"
+  },
+  {
+    "id": 161,
+    "questionText": "What does the noexcept specifier, introduced in C++11, communicate about a function?",
+    "options": [
+      "That the function's body contains no exception-related code at all, checked by the compiler",
+      "That the function promises not to throw any exceptions; if it does throw anyway, std::terminate is called instead of normal stack unwinding",
+      "That the function can only be called inside a try block",
+      "That the function is automatically optimized to run faster with no other effect"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "noexcept declares that a function will not throw. If a noexcept function does throw, std::terminate is invoked immediately rather than propagating the exception, and it also enables certain optimizations (e.g. in std::vector's move operations).",
+    "languageVersion": "11",
+    "category": "Advanced"
+  },
+  {
+    "id": 162,
+    "questionText": "How do you define a custom exception type that integrates well with standard exception handling?",
+    "options": [
+      "By defining any unrelated class and throwing an instance of it",
+      "By deriving from std::exception (or one of its standard subclasses like std::runtime_error) and overriding the what() member function to describe the error",
+      "Custom exception types are not supported in C++; only built-in types can be thrown",
+      "By making the exception type a template with no base class"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Deriving from std::exception (or std::runtime_error/std::logic_error) and overriding what() lets custom exceptions be caught generically via catch (const std::exception&) while still providing a descriptive message.",
+    "languageVersion": "Core",
+    "category": "Advanced"
+  },
+  {
+    "id": 163,
+    "questionText": "What is placement new used for in C++?",
+    "options": [
+      "It allocates a new block of heap memory, just like a normal new expression",
+      "It constructs an object at a specific, already-allocated memory address, without allocating new memory itself, which is useful for custom allocators and memory pools",
+      "It is a synonym for malloc that also zero-initializes memory",
+      "It replaces the need for destructors entirely"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Placement new, 'new (ptr) T(args)', constructs a T object at the pre-allocated address 'ptr' rather than allocating new storage, commonly used in custom allocators, memory pools, and low-level containers.",
+    "languageVersion": "Core",
+    "category": "Advanced"
+  },
+  {
+    "id": 164,
+    "questionText": "What is alignas, introduced in C++11, used for?",
+    "options": [
+      "To reduce the memory footprint of a type as much as possible",
+      "To specify a stricter (larger) memory alignment requirement for a variable or type than its natural default, which can matter for SIMD instructions or hardware requirements",
+      "To disable memory alignment entirely for a type",
+      "To align text output printed to the console"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "alignas(N) lets you request that a type or object be aligned to an N-byte boundary, which can be required for SIMD data types, cache-line alignment, or interfacing with hardware/DMA buffers that have alignment requirements.",
+    "languageVersion": "11",
+    "category": "Advanced"
+  },
+  {
+    "id": 165,
+    "questionText": "What is a bit-field in a C++ struct or class, such as 'unsigned int flag : 1;'?",
+    "options": [
+      "A member that must always occupy a full byte regardless of its declared width",
+      "A member declared to occupy a specific number of bits rather than a whole byte or word, useful for tightly packing flags or small values, though layout details are implementation-defined",
+      "A special kind of virtual function",
+      "A synonym for std::bitset"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A bit-field like 'unsigned int flag : 1;' tells the compiler to pack that member into just 1 bit (or however many are specified) rather than a full storage unit, useful for compact flag storage, though exact packing/order is implementation-defined.",
+    "languageVersion": "Core",
+    "category": "Advanced"
+  },
+  {
+    "id": 166,
+    "questionText": "What is the Curiously Recurring Template Pattern (CRTP)?",
+    "options": [
+      "A pattern where a class inherits from itself directly",
+      "A pattern where a class Derived inherits from a base class template instantiated with Derived itself, e.g. class Derived : public Base<Derived>, enabling static (compile-time) polymorphism without virtual functions",
+      "A naming convention for recursive functions",
+      "A deprecated technique replaced entirely by concepts in C++20"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "In CRTP, 'class Derived : public Base<Derived>' lets Base access Derived's members via static_cast<Derived*>(this), achieving compile-time ('static') polymorphism with no virtual function call overhead.",
+    "languageVersion": "Core",
+    "category": "Advanced"
+  },
+  {
+    "id": 167,
+    "questionText": "What is the PImpl (Pointer to Implementation) idiom used for?",
+    "options": [
+      "To make a class's private members public",
+      "To hide a class's implementation details behind a pointer to a forward-declared implementation class, reducing header dependencies and improving compile-time isolation and binary compatibility",
+      "To automatically implement a class's virtual functions",
+      "To convert a class into a template"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "PImpl moves a class's private data/implementation into a separate class accessed via a pointer, with only a forward declaration in the header, which hides implementation details, speeds up rebuilds, and can preserve ABI stability.",
+    "languageVersion": "Core",
+    "category": "Advanced"
+  },
+  {
+    "id": 168,
+    "questionText": "What do std::function and std::bind, introduced in C++11, provide?",
+    "options": [
+      "std::function is a container for storing multiple functions of different signatures together",
+      "std::function is a general-purpose, type-erased wrapper that can hold any callable (function pointer, lambda, functor) matching a given signature, and std::bind creates a new callable by binding some arguments of an existing callable",
+      "They are both deprecated in favor of raw function pointers",
+      "std::bind is used only for binding network sockets"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::function<Ret(Args...)> can store any callable matching that signature (lambda, function pointer, functor), while std::bind(f, arg1, std::placeholders::_1) produces a new callable with some arguments pre-bound.",
+    "languageVersion": "11",
+    "category": "Advanced"
+  },
+  {
+    "id": 169,
+    "questionText": "What does std::thread, introduced in C++11, represent?",
+    "options": [
+      "A lightweight coroutine that runs cooperatively on the same OS thread",
+      "An object representing a single thread of execution, which begins running a given callable as soon as the std::thread object is constructed",
+      "A pool of reusable worker threads managed automatically",
+      "A synonym for std::async"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A std::thread object launches a new thread of execution immediately upon construction, running the callable passed to its constructor concurrently with the thread that created it.",
+    "languageVersion": "11",
+    "category": "Concurrency"
+  },
+  {
+    "id": 170,
+    "questionText": "What is the difference between calling join() and detach() on a std::thread?",
+    "options": [
+      "They behave identically; both simply stop the thread immediately",
+      "join() blocks the calling thread until the thread finishes execution, while detach() lets the thread run independently in the background, with the std::thread object no longer able to be joined",
+      "detach() blocks until completion, while join() runs the thread in the background",
+      "join() can only be called once per program, while detach() can be called multiple times"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "join() waits for the thread to complete before continuing, while detach() separates the std::thread object from the actual thread of execution, allowing it to continue running independently and cleanup automatically when it finishes.",
+    "languageVersion": "11",
+    "category": "Concurrency"
+  },
+  {
+    "id": 171,
+    "questionText": "What is std::mutex used for in concurrent C++ programs?",
+    "options": [
+      "To speed up single-threaded code",
+      "To provide mutual exclusion, ensuring that only one thread can hold the lock (and therefore access a protected shared resource) at a time",
+      "To automatically parallelize a loop across multiple threads",
+      "To convert blocking calls into non-blocking ones"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::mutex provides a lock that only one thread can hold at a time; a thread calling lock() blocks until it acquires the mutex, protecting shared data from concurrent, unsynchronized access by multiple threads.",
+    "languageVersion": "11",
+    "category": "Concurrency"
+  },
+  {
+    "id": 172,
+    "questionText": "Why is std::lock_guard preferred over manually calling mutex.lock() and mutex.unlock()?",
+    "options": [
+      "It makes the mutex lock faster to acquire",
+      "It follows RAII, automatically unlocking the mutex when the lock_guard goes out of scope, even if an exception is thrown, preventing forgotten or skipped unlocks",
+      "It allows the same mutex to be locked recursively without restriction",
+      "It removes the need for a mutex altogether"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::lock_guard locks the mutex in its constructor and unlocks it in its destructor, so the mutex is guaranteed to be released when the guard goes out of scope, including during stack unwinding from an exception.",
+    "languageVersion": "11",
+    "category": "Concurrency"
+  },
+  {
+    "id": 173,
+    "questionText": "What extra flexibility does std::unique_lock offer compared to std::lock_guard?",
+    "options": [
+      "None; they are functionally identical in every way",
+      "std::unique_lock supports deferred locking, manual unlock/relock, timed locking, and transfer of ownership, whereas std::lock_guard only locks on construction and unlocks on destruction",
+      "std::unique_lock can only be used with recursive_mutex",
+      "std::unique_lock does not release the mutex automatically at all"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::unique_lock is a more flexible RAII lock wrapper: it supports deferring the lock, unlocking early and relocking, timed/try locks, and can be moved, at the cost of slightly more overhead than lock_guard.",
+    "languageVersion": "11",
+    "category": "Concurrency"
+  },
+  {
+    "id": 174,
+    "questionText": "What does std::recursive_mutex allow that a plain std::mutex does not?",
+    "options": [
+      "It allows multiple different threads to hold the lock simultaneously",
+      "It allows the same thread that already holds the lock to lock it again (recursively) without deadlocking, as long as it unlocks it the same number of times",
+      "It automatically prevents deadlocks between different threads",
+      "It removes the need for locking altogether in recursive functions"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::recursive_mutex can be locked multiple times by the same thread without blocking that thread, useful when a locked function calls another function that also needs the same lock, as long as unlock() is called a matching number of times.",
+    "languageVersion": "11",
+    "category": "Concurrency"
+  },
+  {
+    "id": 175,
+    "questionText": "What is a deadlock in concurrent programming?",
+    "options": [
+      "A situation where a thread runs faster than expected",
+      "A situation where two or more threads are each waiting for a resource held by another, so none of them can ever proceed",
+      "A crash caused by accessing invalid memory",
+      "A compiler error that occurs when using multiple mutexes"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A deadlock occurs when threads form a cycle of waiting - e.g. thread A holds mutex 1 and waits for mutex 2, while thread B holds mutex 2 and waits for mutex 1 - so neither can make progress.",
+    "languageVersion": "Core",
+    "category": "Concurrency"
+  },
+  {
+    "id": 176,
+    "questionText": "What is a data race in C++, and why is it undefined behavior?",
+    "options": [
+      "Any situation where two threads read the same variable at the same time",
+      "When two or more threads access the same memory location concurrently, at least one of them writing, without any synchronization to order the accesses, which the standard defines as undefined behavior",
+      "A performance issue that only slows down the program, with no correctness impact",
+      "A situation that can only occur with global variables, never with local ones"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A data race happens when unsynchronized concurrent accesses to the same memory location include at least one write; the C++ standard specifies this as undefined behavior, which can manifest as corrupted data or worse.",
+    "languageVersion": "Core",
+    "category": "Concurrency"
+  },
+  {
+    "id": 177,
+    "questionText": "What does std::atomic, introduced in C++11, provide?",
+    "options": [
+      "A way to make an entire function execute as a single transaction",
+      "Types whose operations (like increment, load, store) are guaranteed to be indivisible and free of data races when accessed concurrently from multiple threads, without needing an explicit mutex",
+      "A container for storing atomic weights and chemical data",
+      "A replacement for all uses of std::thread"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::atomic<T> wraps a value so that operations on it (like fetch_add, load, store, compare_exchange) are indivisible and safe under concurrent access, often implemented with lock-free hardware instructions.",
+    "languageVersion": "11",
+    "category": "Concurrency"
+  },
+  {
+    "id": 178,
+    "questionText": "What does std::condition_variable, introduced in C++11, allow threads to do?",
+    "options": [
+      "It lets a thread permanently pause another thread from outside",
+      "It allows a thread to block (wait) until notified by another thread that some condition may have changed, typically used together with a mutex to avoid busy-waiting",
+      "It replaces the need for mutexes when sharing data between threads",
+      "It converts a synchronous function into an asynchronous one automatically"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::condition_variable lets a thread wait efficiently (without busy-looping) until another thread calls notify_one()/notify_all() after changing some shared state, typically checked under a std::unique_lock.",
+    "languageVersion": "11",
+    "category": "Concurrency"
+  },
+  {
+    "id": 179,
+    "questionText": "What does std::async, introduced in C++11, do?",
+    "options": [
+      "It immediately blocks the calling thread until the given function finishes",
+      "It runs a callable, potentially asynchronously on a separate thread (or lazily on demand), and returns a std::future through which the result can later be retrieved",
+      "It permanently detaches a thread with no way to retrieve a result",
+      "It is a synonym for std::thread with no differences"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::async(func, args...) launches func (possibly on a new thread, depending on the launch policy) and returns a std::future that will hold the result once the computation completes, retrievable via future.get().",
+    "languageVersion": "11",
+    "category": "Concurrency"
+  },
+  {
+    "id": 180,
+    "questionText": "What does std::future represent in C++11's concurrency support?",
+    "options": [
+      "A guaranteed prediction of a program's runtime behavior",
+      "A handle to a result that will become available at some point, typically produced by std::async, std::promise, or std::packaged_task, retrieved by calling get() (which blocks until ready)",
+      "A container that stores multiple asynchronous results",
+      "A type used only for scheduling timers"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A std::future represents a not-yet-available result of an asynchronous operation. Calling get() blocks until the result is ready and returns it (or rethrows an exception if the operation failed).",
+    "languageVersion": "11",
+    "category": "Concurrency"
+  },
+  {
+    "id": 181,
+    "questionText": "What is std::promise used for, in relation to std::future?",
+    "options": [
+      "It is a synonym for std::future with no real difference",
+      "A std::promise lets one thread set a value (or exception) that becomes available through an associated std::future obtained from that promise, enabling manual producer/consumer communication between threads",
+      "It automatically retries a failed asynchronous operation",
+      "It is used only for guaranteeing memory allocation will succeed"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::promise<T> lets a producer thread call set_value() (or set_exception()) to deliver a result, which becomes retrievable through the std::future<T> obtained via promise.get_future(), used by a consumer thread.",
+    "languageVersion": "11",
+    "category": "Concurrency"
+  },
+  {
+    "id": 182,
+    "questionText": "What does std::packaged_task, introduced in C++11, do?",
+    "options": [
+      "It compresses a task's data to reduce memory usage",
+      "It wraps a callable so that its result (or exception) is stored and made available through an associated std::future, decoupling task creation from the decision of when and where it runs",
+      "It automatically schedules a task to run at a specific time",
+      "It is only usable with lambda expressions, not regular functions"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::packaged_task wraps a callable and connects it to a std::future; invoking the packaged_task runs the callable and stores its result for retrieval via the future, useful for queuing tasks to run on a thread pool.",
+    "languageVersion": "11",
+    "category": "Concurrency"
+  },
+  {
+    "id": 183,
+    "questionText": "How can std::call_once, introduced in C++11, be used to implement a thread-safe singleton or one-time initialization?",
+    "options": [
+      "It cannot be used for this purpose; a mutex must always be used manually instead",
+      "std::call_once, together with a std::once_flag, guarantees that a given callable runs exactly once across all threads, even if multiple threads call it concurrently",
+      "It runs a callable once per thread, so it executes multiple times across a multi-threaded program",
+      "It is a synonym for std::atomic with no special initialization semantics"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::call_once(flag, func) ensures func runs exactly once total, even if many threads call std::call_once with the same std::once_flag concurrently, making it a clean way to implement thread-safe lazy initialization.",
+    "languageVersion": "11",
+    "category": "Concurrency"
+  },
+  {
+    "id": 184,
+    "questionText": "What is std::jthread, introduced in C++20, and how does it improve on std::thread?",
+    "options": [
+      "It is identical to std::thread with a different name",
+      "It automatically joins in its destructor if still joinable, and supports cooperative cancellation via an associated std::stop_token, reducing the risk of forgetting to call join()",
+      "It can only run lambdas, not free functions",
+      "It removes the need for any synchronization primitives"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::jthread ('joining thread') automatically calls join() in its destructor if the thread is still joinable, and integrates a std::stop_token/std::stop_source mechanism for requesting cooperative cancellation.",
+    "languageVersion": "20",
+    "category": "Concurrency"
+  },
+  {
+    "id": 185,
+    "questionText": "What do std::latch and std::barrier, introduced in C++20, provide?",
+    "options": [
+      "They are synonyms for std::mutex with different names",
+      "They are synchronization primitives that let a group of threads wait until a certain number of operations complete; a latch is single-use, while a barrier can be reused across multiple synchronization phases",
+      "They replace std::atomic entirely",
+      "They are used only for file I/O synchronization"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::latch is a single-use countdown synchronization point that threads can wait on until the count reaches zero, while std::barrier is reusable, letting a fixed group of threads repeatedly synchronize at multiple points in their execution.",
+    "languageVersion": "20",
+    "category": "Concurrency"
+  },
+  {
+    "id": 186,
+    "questionText": "What is 'false sharing' in the context of multithreaded performance?",
+    "options": [
+      "A bug where two threads read the same incorrect value",
+      "A performance problem where independent variables used by different threads happen to sit on the same CPU cache line, causing unnecessary cache invalidation traffic between cores even though there is no actual data race",
+      "A synonym for a data race that always produces incorrect results",
+      "An issue that only affects single-threaded programs"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "False sharing occurs when logically independent variables accessed by different threads happen to reside on the same cache line; writes by one thread invalidate the cache line for others, hurting performance despite there being no logical data race.",
+    "languageVersion": "Core",
+    "category": "Concurrency"
+  },
+  {
+    "id": 187,
+    "questionText": "What is a race condition, and how does it differ from a data race?",
+    "options": [
+      "They are exactly the same thing with no distinction",
+      "A race condition is a broader term for when the correctness of a program depends on the relative timing of events, while a data race specifically refers to unsynchronized concurrent access to the same memory with at least one writer",
+      "A race condition can only happen in single-threaded programs",
+      "A data race is always safe as long as no exception is thrown"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A race condition is a general timing-dependent correctness bug (which may or may not involve undefined behavior), while a data race is the specific, formally-defined case of unsynchronized concurrent memory access with a write, which the C++ standard deems undefined behavior.",
+    "languageVersion": "Core",
+    "category": "Concurrency"
+  },
+  {
+    "id": 188,
+    "questionText": "What does memory ordering (e.g. std::memory_order_relaxed vs std::memory_order_seq_cst) control when used with std::atomic operations?",
+    "options": [
+      "How much memory an atomic variable occupies",
+      "How operations on atomics are allowed to be reordered relative to other memory operations, and what visibility guarantees other threads have about the order of writes, trading strictness for performance",
+      "The physical memory address where the atomic variable is stored",
+      "Whether an atomic variable is stored on the stack or the heap"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Memory order parameters control the compiler/CPU's freedom to reorder memory operations around an atomic operation and what other threads are guaranteed to observe; std::memory_order_seq_cst is the strictest default, while relaxed orderings allow more reordering for performance in careful lock-free code.",
+    "languageVersion": "11",
+    "category": "Concurrency"
+  },
+  {
+    "id": 189,
+    "questionText": "What does std::chrono::duration, from the <chrono> header introduced in C++11, represent?",
+    "options": [
+      "A specific point in calendar time, like a date",
+      "A span of time expressed as a count of a given tick period (e.g. std::chrono::seconds, std::chrono::milliseconds), used for measuring or specifying time intervals",
+      "A timer that automatically triggers a callback",
+      "A synonym for time_t from the C standard library"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::chrono::duration<Rep, Period> represents a length of time as a count of ticks of a given period, e.g. std::chrono::milliseconds(500) represents 500 milliseconds, and durations of different units can be converted between each other.",
+    "languageVersion": "11",
+    "category": "APIs"
+  },
+  {
+    "id": 190,
+    "questionText": "What is the difference between std::chrono::system_clock and std::chrono::steady_clock?",
+    "options": [
+      "They are identical and interchangeable in all situations",
+      "system_clock represents wall-clock (calendar) time and can jump backward or forward (e.g. due to NTP sync), while steady_clock never goes backward, making it suitable for measuring elapsed time/durations",
+      "steady_clock is used only for calendar dates, while system_clock is used only for timers",
+      "system_clock is more precise than steady_clock in every implementation"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "system_clock reflects real-world wall-clock time and can be adjusted (e.g. by NTP), so it can jump. steady_clock is monotonic and guaranteed never to go backward, making it the right choice for measuring elapsed durations.",
+    "languageVersion": "11",
+    "category": "APIs"
+  },
+  {
+    "id": 191,
+    "questionText": "What do std::cin and std::cout, from <iostream>, represent?",
+    "options": [
+      "Functions for reading and writing files on disk",
+      "Global stream objects representing standard input and standard output, used with the >> and << operators to read from the console and write formatted text to it",
+      "Classes that must be instantiated manually before use",
+      "Deprecated C-style I/O functions replaced by printf and scanf"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::cin and std::cout are predefined global stream objects for standard input and output; >> extracts data from cin into variables, and << inserts data into cout to be printed to the console.",
+    "languageVersion": "Core",
+    "category": "APIs"
+  },
+  {
+    "id": 192,
+    "questionText": "What do stream manipulators like std::setw and std::setprecision, from <iomanip>, do?",
+    "options": [
+      "They permanently change a value's underlying data type",
+      "They control how subsequent output is formatted, such as std::setw(10) setting a minimum field width and std::setprecision(2) controlling the number of digits shown for floating-point values",
+      "They validate user input for errors",
+      "They can only be used with std::cin, not std::cout"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Manipulators like std::setw(n), std::setprecision(n), and std::fixed adjust how values are formatted when inserted into a stream, controlling things like field width, decimal precision, and number formatting.",
+    "languageVersion": "Core",
+    "category": "APIs"
+  },
+  {
+    "id": 193,
+    "questionText": "What are std::ifstream and std::ofstream, from <fstream>, used for?",
+    "options": [
+      "For formatting numbers with fixed precision",
+      "For reading from files (ifstream) and writing to files (ofstream) using the same stream-based interface (>> and <<) as std::cin and std::cout",
+      "For creating in-memory-only streams with no file access",
+      "For managing network sockets"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::ifstream (input file stream) and std::ofstream (output file stream) let you read from and write to files using the familiar >> and << stream operators, treating file I/O consistently with console I/O.",
+    "languageVersion": "Core",
+    "category": "APIs"
+  },
+  {
+    "id": 194,
+    "questionText": "What is std::stringstream, from <sstream>, commonly used for?",
+    "options": [
+      "For compressing strings to save memory",
+      "For treating a std::string as an in-memory stream, useful for parsing values out of a string or building up a string incrementally using << and >>",
+      "For encrypting string data",
+      "For comparing two strings for equality"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "std::stringstream lets you use stream operators (<<, >>) on an in-memory string buffer, which is a common technique for parsing tokens out of text or building formatted strings piece by piece.",
+    "languageVersion": "Core",
+    "category": "APIs"
+  },
+  {
+    "id": 195,
+    "questionText": "What is a common trade-off between using printf-style functions from <cstdio> versus iostream for output?",
+    "options": [
+      "printf is type-safe, while iostream is not",
+      "printf-style functions can be more concise for complex formatting but are not type-safe (mismatched format specifiers cause undefined behavior), while iostream is type-safe but historically more verbose for complex formatting",
+      "There is no difference between them at all",
+      "iostream cannot be used to print to the console, only to files"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "printf-family functions use format strings checked (if at all) only by compiler extensions, so a mismatched %d/%s is undefined behavior, whereas iostream's << operator is type-safe at compile time, though traditionally more verbose for complex number formatting.",
+    "languageVersion": "Core",
+    "category": "APIs"
+  },
+  {
+    "id": 196,
+    "questionText": "What kinds of functions does the <cmath> header provide?",
+    "options": [
+      "String manipulation functions like strlen and strcpy",
+      "Mathematical functions such as sqrt, pow, sin, cos, floor, and ceil for floating-point computations",
+      "Functions for managing dynamic memory allocation",
+      "Functions exclusively for random number generation"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "<cmath> provides common mathematical functions like std::sqrt, std::pow, std::sin, std::cos, std::floor, and std::ceil, operating on floating-point types.",
+    "languageVersion": "Core",
+    "category": "APIs"
+  },
+  {
+    "id": 197,
+    "questionText": "Why are C-string functions from <cstring>, like strcpy, considered risky?",
+    "options": [
+      "They are risky because they run too slowly compared to std::string",
+      "Functions like strcpy do not check the destination buffer's size, so copying a string longer than the buffer causes a buffer overflow, a classic source of memory corruption and security vulnerabilities",
+      "They can only operate on wide character strings, not regular char arrays",
+      "They automatically throw exceptions on any error, making them hard to use"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "strcpy and similar functions blindly copy until a null terminator is found, with no bounds checking, so an oversized source string can overflow the destination buffer, corrupting memory - a common source of security vulnerabilities.",
+    "languageVersion": "Core",
+    "category": "APIs"
+  },
+  {
+    "id": 198,
+    "questionText": "What kinds of tools does the <algorithm> header provide?",
+    "options": [
+      "Only sorting algorithms and nothing else",
+      "A broad collection of generic algorithms that operate on iterator ranges, such as sort, find, count, transform, reverse, and copy, working across many different container types",
+      "Only mathematical algorithms for numeric computation",
+      "Networking and file transfer algorithms"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "<algorithm> provides generic, container-agnostic algorithms (sort, find, count, transform, reverse, copy, and many more) that operate on iterator ranges, working uniformly across vectors, lists, arrays, and other containers.",
+    "languageVersion": "Core",
+    "category": "APIs"
+  },
+  {
+    "id": 199,
+    "questionText": "What does the <regex> library, standardized in C++11, provide?",
+    "options": [
+      "A way to compress and decompress text data",
+      "Support for regular expressions, allowing pattern matching and searching/replacing within strings using std::regex, std::regex_match, and std::regex_search",
+      "A replacement for std::string with automatic validation",
+      "A tool exclusively for parsing XML and JSON"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "<regex> brings regular expression support to the standard library, with std::regex representing a compiled pattern and functions like std::regex_search/std::regex_match/std::regex_replace for using it against strings.",
+    "languageVersion": "11",
+    "category": "APIs"
+  },
+  {
+    "id": 200,
+    "questionText": "Why is the <random> library, introduced in C++11, generally preferred over the old C rand() function?",
+    "options": [
+      "rand() is faster and produces higher-quality randomness in every case",
+      "<random> separates the random number engine (e.g. std::mt19937) from the distribution (e.g. std::uniform_int_distribution), providing better statistical quality and more control than rand()'s single global generator",
+      "rand() cannot generate numbers within a specific range at all",
+      "<random> can only generate floating-point numbers, not integers"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "<random> cleanly separates the pseudo-random engine (like std::mt19937) from how numbers are distributed (like std::uniform_int_distribution), offering better statistical properties and more control than rand(), which is a single, often low-quality, global generator.",
+    "languageVersion": "11",
+    "category": "APIs"
+  },
+  {
+    "id": 201,
+    "questionText": "What does the <filesystem> library, standardized in C++17, provide?",
+    "options": [
+      "A way to compress files automatically",
+      "A portable API for working with file system paths and operations, such as checking if a file exists, iterating a directory, and creating or removing files/directories, via std::filesystem::path and related functions",
+      "A replacement for std::fstream that cannot read file contents",
+      "A tool exclusively for network file transfers"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "<filesystem> (std::filesystem) offers a portable way to manipulate paths and query/modify the file system, e.g. std::filesystem::exists(), directory_iterator, create_directory(), and remove(), without relying on platform-specific APIs.",
+    "languageVersion": "17",
+    "category": "APIs"
+  },
+  {
+    "id": 202,
+    "questionText": "What does the <stdexcept> header provide, and how are its exception types typically organized?",
+    "options": [
+      "A single generic exception type used for all error cases",
+      "A hierarchy of standard exception classes such as std::logic_error and std::runtime_error (with further subclasses like std::out_of_range and std::invalid_argument), all deriving from std::exception",
+      "Only exceptions related to file input/output errors",
+      "A macro-based error handling system that does not use C++ exceptions at all"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "<stdexcept> defines a hierarchy rooted at std::exception, split broadly into std::logic_error (e.g. std::out_of_range, std::invalid_argument) for programming errors and std::runtime_error (e.g. std::overflow_error) for runtime conditions.",
+    "languageVersion": "Core",
+    "category": "APIs"
+  },
+  {
+    "id": 203,
+    "questionText": "What kinds of tools does the <numeric> header provide, distinct from <algorithm>?",
+    "options": [
+      "String formatting utilities",
+      "Numeric algorithms for combining ranges of values, such as std::accumulate for folding/summing a range, std::inner_product, and std::iota for filling a range with sequentially increasing values",
+      "Only trigonometric functions like sin and cos",
+      "Random number generation engines"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "<numeric> focuses on numeric operations over ranges, including std::accumulate (fold/sum), std::inner_product, std::iota (fills a range with increasing values starting from a given value), and related algorithms like std::gcd.",
+    "languageVersion": "Core",
+    "category": "APIs"
+  },
+  {
+    "id": 204,
+    "questionText": "What common utilities does the <utility> header provide?",
+    "options": [
+      "Only mathematical constants like pi",
+      "General-purpose utilities including std::pair, std::swap, std::move, and std::forward, which are foundational tools used throughout the standard library",
+      "Only file path manipulation functions",
+      "Multithreading primitives like mutexes"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "<utility> is a small but foundational header providing std::pair, std::swap, and the C++11 additions std::move and std::forward, which are used extensively throughout the rest of the standard library.",
+    "languageVersion": "11",
+    "category": "APIs"
+  },
+  {
+    "id": 205,
+    "questionText": "Which header declares the smart pointer types std::unique_ptr, std::shared_ptr, and std::weak_ptr?",
+    "options": [
+      "<utility>",
+      "<memory>",
+      "<pointer>",
+      "<smart_ptr>"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The <memory> header declares std::unique_ptr, std::shared_ptr, std::weak_ptr, std::make_unique, std::make_shared, and other memory-management utilities.",
+    "languageVersion": "11",
+    "category": "APIs"
+  },
+  {
+    "id": 206,
+    "questionText": "What does the <thread> header, introduced in C++11, declare?",
+    "options": [
+      "Only mutex and lock types",
+      "The std::thread class itself, along with the std::this_thread namespace containing functions like sleep_for, sleep_until, and get_id",
+      "Only atomic types like std::atomic<int>",
+      "File I/O streams for reading thread dumps"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "<thread> declares std::thread for creating and managing threads, plus the std::this_thread namespace with utilities such as std::this_thread::sleep_for and std::this_thread::get_id.",
+    "languageVersion": "11",
+    "category": "APIs"
+  },
+  {
+    "id": 207,
+    "questionText": "What does the assert macro, from <cassert>, do?",
+    "options": [
+      "It always terminates the program regardless of build configuration",
+      "It checks a condition at runtime and, if false, prints diagnostic information and aborts the program, but is typically compiled out entirely in release builds when NDEBUG is defined",
+      "It logs a warning to a file without stopping execution",
+      "It is a compile-time check identical to static_assert"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "assert(condition) checks a runtime condition and calls std::abort with diagnostic info if it is false, but including the NDEBUG macro during compilation strips out all assert checks, so it should not be relied on for release-build error handling.",
+    "languageVersion": "Core",
+    "category": "APIs"
+  },
+  {
+    "id": 208,
+    "questionText": "What does the <cstdint> header, standardized in C++11 (based on C99), provide?",
+    "options": [
+      "String conversion functions like stoi and to_string",
+      "Fixed-width integer types such as int32_t, uint64_t, and int8_t, whose exact bit width is guaranteed, unlike int or long whose sizes can vary across platforms",
+      "Only floating-point types with guaranteed precision",
+      "Container types for storing large integers of arbitrary precision"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "<cstdint> defines fixed-width integer types like int8_t, uint32_t, and int64_t with a guaranteed exact bit width, which is important for portable code where the size of int or long could otherwise vary by platform.",
+    "languageVersion": "11",
+    "category": "APIs"
   }
 ]
