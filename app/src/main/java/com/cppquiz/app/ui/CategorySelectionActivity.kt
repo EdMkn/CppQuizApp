@@ -230,6 +230,7 @@ private class VersionAdapter(
                     } else {
                         selectedVersions.remove(version)
                     }
+                    updateButtonAppearance(holder.button, holder.button.isChecked)
                     onVersionsSelected(selectedVersions)
                 }
             }
